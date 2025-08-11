@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+:root {
+    --srrrole-black: rgba(0,0,0,1);
+    --srrrole-black-tpr: rgba(0,0,0,0.2);
+    --srrrole-black-txt: white;
+    --srrrole-black-box: rgba(0,0,0,0.7);
+    --srrrole-black-logo: url(https://i.imgur.com/IZRjxfN.png);
+
+    --srrrole-white: rgba(255,255,255,1);
+    --srrrole-white-tpr: rgba(255,255,255,0.2);
+    --srrrole-white-txt: black;
+    --srrrole-white-box: rgba(255,255,255,0.7);
+    --srrrole-white-logo: url(https://i.imgur.com/QUBYZtm.png);
+
+    --srrrole-bgcolor: var(--srrrole-black);
+    --srrrole-bgcolor-tpr: var(--srrrole-black-tpr);
+    --srrrole-box: var(--srrrole-black-box);
+    --srrrole-txtcolor: var(--srrrole-black-txt);
+
+    --srrrole-bgpic: url(https://i.imgur.com/M8sJbDK.png);
+    --srrrole-font: 'Bai Jamjuree';
+    --srrrole-pic: #000;
+    --srrrole-pos: center;
+    --srrrole-size: cover;
+    --srrrole-logo: var(--srrrole-black-logo);
+}
+
+#sumranrom { position: relative; }
+#sumransom * { box-sizing: border-box; }
+
+.srrrolebg {
+    max-width: 80%;
+    margin: auto;
+    background: linear-gradient(to top, var(--srrrole-bgcolor) 5%, var(--srrrole-bgcolor-tpr)), var(--srrrole-bgpic) center/cover no-repeat;
+    border-radius: 20px;
+    padding: 40px;
+    font-family: var(--srrrole-font), sans-serif;
+    font-size: clamp(14px, 1vw, 17px);
+    color: var(--srrrole-txtcolor);
+}
+
+.srrrolebox {
+    background: var(--srrrole-box);
+    border: 1px solid var(--srrrole-txtcolor);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.srrrolehead {
+    display: flex;
+    gap: 25px;
+    margin-top: -90px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.srrrolepic {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: 2px solid var(--srrrole-txtcolor);
+    background: var(--srrrole-pic) var(--srrrole-pos)/var(--srrrole-size) no-repeat;
+}
+
+.srrrolename {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: flex-end;
+    font-size: 17pt;
+}
+
+.srrroleadd {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.srrrolelogo {
+    max-width: 100px;
+    height: 40px;
+    margin: auto;
+    background: var(--srrrole-logo) center/contain no-repeat;
+}
+
+.srrrolebox hr { background: var(--srrrole-txtcolor); }

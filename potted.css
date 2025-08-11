@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://db.onlinewebfonts.com/c/9e23421978544d8e00a00eb47740d280?family=High+Tower+Text');
+@import url('https://fonts.cdnfonts.com/css/strange-tales');
+@import url('https://fonts.cdnfonts.com/css/dearjoe4');
+
+:root {
+    --ptg-beige: #e1dbcf;
+    --ptg-brown: #282119;
+    --ptg-green-m: #a9b388;
+    --ptg-green-l: #beccb5;
+    --ptg-green-d: #5f6f52;
+
+    --ptg-pic: gray;
+    --ptg-pos: center;
+    --ptg-size: cover;
+}
+
+#PottedGreenhouse { position: relative; }
+#PottedGreenhouse * { box-sizing: border-box; }
+
+#PottedGreenhouse a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#PottedGreenhouse a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#PottedGreenhouse::after {
+    display: block;
+    content: "᯽";
+    font-family: sans-serif;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#PottedGreenhouse:hover::after { content: "potted ᯽ greenhouse"; }
+
+#PottedGreenhouse details + br, #PottedGreenhouse summary + br, #PottedGreenhouse label + br { display: none; }
+#PottedGreenhouse summary { cursor: pointer; }
+#PottedGreenhouse summary::marker { content: ""; }
+#PottedGreenhouse summary::-webkit-details-marker { display: none; }
+
+.potted-thread {
+    input, input + br { display: none; }
+
+    width: 1000px;
+    max-width: 100%;
+    margin-inline: auto;
+    font-size: clamp(14px, 1vw, 17px);
+
+    .potted-head {
+        width: 100%;
+        aspect-ratio: 2;
+        background: linear-gradient(rgba(40,33,25,0.25) 50%, rgba(40,33,25,1)), var(--ptg-pic) var(--ptg-pos)/var(--ptg-size) no-repeat;
+        background-blend-mode: multiply;
+    }
+
+    .potted-paper-area { margin-block-start: -20%; }
+
+    .potted-triangle-area {
+        position: relative;
+        width: 50%;
+        aspect-ratio: 3;
+        margin-inline: auto;
+
+        .potted-triangle {
+            position: absolute;
+            z-index: 2;
+            top: calc(1rem + 5px);
+            left: 50%;
+            transform: translateX(-50%);
+    
+            height: calc(100% - 0.9rem);
+            aspect-ratio: 3;
+            clip-path: polygon(0% 100%, 50% 0, 100% 100%);
+            background: var(--ptg-beige);
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-block-start: 2rem;
+        }
+
+        logo {
+            display: block;
+            width: 50%;
+            aspect-ratio: 800/646;
+            position: absolute;
+            z-index: 3;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url(https://iili.io/26bUs1a.png) center/contain no-repeat;
+        }
+    }
+
+    .potted-triangle-area::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+        background: var(--ptg-beige);
+    }
+    
+    .potted-triangle-area::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        height: calc(100% - 0.9rem);
+        aspect-ratio: 3;
+        clip-path: polygon(0% 100%, 50% 0, 100% 100%);
+        background: var(--ptg-brown);
+    }
+
+    .potted-paper {
+        display: block;
+        width: 100%;
+        background: var(--ptg-beige);
+        margin-block-start: -1rem;
+        padding: 1rem;
+
+        .potted-content {
+            width: 100%;
+            border: 4px solid var(--ptg-brown);
+            color: var(--ptg-brown);
+            font-family: 'Bai Jamjuree', sans-serif;
+            padding: 4rem;
+
+            hr {
+                background: var(--ptg-brown);
+                margin-block: 2rem;
+            }
+        }
+    }
+
+    .potted-quote {
+        display: flex;
+        column-gap: 1rem;
+        margin-block: 1rem 2rem;
+        min-height: 100px;
+
+        i.gazebo {
+            display: block;
+            width: calc(100px + 1rem);
+            background: url(https://iili.io/2L1Bqjs.png) center/contain no-repeat content-box;
+            padding-inline-end: 1rem;
+            border-inline-end: 1px solid var(--ptg-brown);
+        }
+
+        div {
+            flex: 1;
+            font-family: 'High Tower Text', serif;
+            display: flex;
+            align-items: center;
+            
+            p {
+                margin-block: 0;
+            }
+        }
+    }
+
+    h1 {
+        font: normal clamp(2.5rem, 3vw, 3rem) 'Strange Tales', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        margin-block: 2rem;
+    }
+
+    h1 + br, h6 + br, h2 + br, h3 + br { display: none; }
+
+    .potters-set {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-family: 'High Tower Text', serif;
+
+        .potters {
+            position: relative;
+            min-width: 300px;
+            aspect-ratio: 532/406;
+            background: url(https://iili.io/2trUB6v.png) center/contain no-repeat;
+
+            a::before {
+                content: "";
+
+                position: absolute;
+                top: 7.05%;
+                left: 50%;
+                transform: translateX(-50%);
+                
+                width: 85.9%;
+                aspect-ratio: 457/266;
+                background: var(--potter-pic) center/contain no-repeat;
+            }
+
+            .potters-name {
+                position: absolute;
+                bottom: 7.05%;
+                left: 50%;
+                transform: translateX(-50%);
+                
+                width: 83.9%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1 {
+                    margin-block: 0 -0.5rem;
+                    font-family: 'dearJoe4', sans-serif;
+                    text-transform: unset;
+                    line-height: 1;
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    
+    ps {
+        display: block;
+        text-align: center;
+        color: #b22222;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .codeblock {
+        background: var(--ptg-brown);
+        color: var(--ptg-beige);
+        user-select: all;
+    }
+
+    .codeblock *::selection {
+        background: var(--ptg-green-d);
+    }
+
+    .potted-collection-set:has(a.potted-collection:nth-of-type(1):last-of-type) { justify-content: center; }
+
+    .potted-collection-set {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        
+        width: 600px;
+        max-width: 75%;
+        margin: auto;
+
+        a.potted-collection {
+            display: block;
+            width: 292px;
+            position: relative;
+            border-image: url(https://iili.io/2trUB6v.png) 15 / min(10px, 0.6vw) / 0;
+            padding: 1rem;
+            color: var(--ptg-brown);
+
+            .potted-merchandise {
+                aspect-ratio: 1;
+                padding: 1rem;
+                background: var(--ptg-merch) var(--ptg-pos)/var(--ptg-size) content-box no-repeat, url(https://iili.io/2DFJlln.png) center/100% 100% no-repeat;
+                --ptg-size: contain;
+            }
+
+            h1 {
+                width: 90%;
+                margin: max(-1rem, -1vw) auto 0;
+                font-family: 'dearJoe4', sans-serif;
+                text-transform: unset;
+                line-height: 1;
+                font-size: min(2.5vw, 3rem);
+                text-align: start;
+                rotate: -5deg;
+                filter: drop-shadow(0.2vw -0.05vw var(--ptg-beige));
+            }
+
+            h1 + br { display: none; }
+
+            .potted-info {
+                position: absolute;
+                bottom: 1rem;
+                right: 1.5rem;
+                font-family: 'High Tower Text', serif;
+                text-align: end;
+                font-size: min(1vw, 1rem);
+            }
+        }
+
+        @media screen and (max-width: 1447px) {
+            a.potted-collection {
+                flex: 1;
+                max-width: 292px;
+            }
+            
+            a.potted-collection:nth-of-type(1):last-of-type {
+                border-image: url(https://iili.io/2trUB6v.png) 15 / 10px / 0;
+
+                h1 {
+                    margin: -1rem auto 0;
+                    font-size: 3rem;
+                    filter: drop-shadow(3px -1px var(--ptg-beige));
+                }
+                
+                .potted-info {
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+        a.potted-collection > br:first-child, a.potted-collection + br { display: none; }
+    }
+
+    .potted-merch {
+        details > summary > h2 { margin-block-end: 0.7rem; }
+        details[open] > summary > h2 { margin-block-end: 2rem; }
+    }
+
+    .potted-merch {
+        width: 100%;
+        border: 4px solid var(--ptg-brown);
+        color: var(--ptg-brown);
+        font-family: 'Bai Jamjuree', sans-serif;
+        padding: 4rem;
+        
+        a {
+            color: var(--ptg-green-d);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        h2 {
+            font: normal clamp(2.5rem, 3vw, 3rem) 'Strange Tales', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            margin-block: 2rem;
+        }
+
+        h3 { 
+            text-align: center;
+            color: var(--ptg-green-d);
+            margin-block-end: 0;
+        }
+
+        h3 + ol, h3 + ul { margin-block-start: 0.5rem;}
+
+        hr {
+            background: var(--ptg-brown);
+            margin-block: 2rem;
+        }
+
+        h1 {
+            text-transform: unset;
+            font: normal clamp(3rem, 4vw, 4rem) / 1 'dearJoe4', sans-serif;
+            margin-block: 1rem 2rem;
+        }
+
+        h6 {
+            font: normal 1rem/1 'High Tower Text', serif;
+            text-align: center;
+            margin-block: 2rem 0;
+        }
+
+        .merch-info {
+            max-width: 450px;
+            margin-inline: auto;
+            text-align: justify;
+        }
+
+        .merch-price {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+
+            p {
+                margin-block: 0;
+                font-family: 'High Tower Text', serif;
+            }
+
+            h1 {
+                margin-block: 0;
+                margin-inline-start: 1rem;
+            }
+        }
+
+        .merch-date {
+            h1 { margin-block: 0; }
+
+            p {
+                margin-block: 0;
+                font-family: 'High Tower Text', serif;
+                text-align: center;
+            }
+        }
+
+        .potted-shelf, .potted-shelf-special {
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 1rem;
+                background: url(https://iili.io/2Dfzgyl.png), var(--ptg-green-m);
+                background-blend-mode: overlay;
+                opacity: 0.5;
+                mix-blend-mode: luminosity;
+            }
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid var(--ptg-brown);
+            padding: 1rem;
+            position: relative;
+
+            .potted-item {
+                cursor: pointer;
+                flex: 1;
+                min-width: 200px;
+                max-width: 266px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                z-index: 1;
+                
+                &::before {
+                    content: "";
+                    width: 100%;
+                    aspect-ratio: 1;
+                    background: var(--ptg-item) center/contain no-repeat;
+                    filter: drop-shadow(3px 5px 5px var(--ptg-brown));
+                }
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 1rem;
+                    background: var(--ptg-brown);
+                    margin-block-end: 2rem;
+                }
+            }
+
+            .potted-data {
+                opacity: 0;
+                transition: .2s linear;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                z-index: 0;
+
+                width: 80%;
+                max-width: 450px;
+                background: var(--ptg-beige);
+                padding: calc(100px + 2rem) 3rem 2rem;
+                filter: drop-shadow(0 0 0.5rem var(--ptg-brown));
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 1rem;
+                    border: 1px solid var(--ptg-brown);
+                }
+
+                .potted-img {
+                    position: absolute;
+                    top: 2rem;
+                    left: 50%;
+                    translate: -50% -50%;
+                    width: 200px;
+                    aspect-ratio: 1;
+                    background: var(--ptg-item) var(--ptg-pos)/var(--ptg-size) no-repeat;
+                    filter: drop-shadow(0 0 5px var(--ptg-beige)) drop-shadow(0 0 10px var(--ptg-beige)) drop-shadow(0 0 25px var(--ptg-beige));
+                }
+
+                h1 {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .potted-shelf-special {
+            justify-content: space-evenly;
+
+            .potted-item { min-width: 266px; }
+        }
+    }
+
+    .potted-label {
+        max-width: fit-content;
+        margin-inline: auto;
+        font: normal clamp(2rem, 2.5vw, 2.5rem) 'Strange Tales', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        margin-block-start: 2rem;
+        color: var(--ptg-beige);
+        background: url(https://iili.io/2DFJlln.png) center/100% 100% no-repeat;
+        padding: 0.5rem 2rem 0.8rem;
+        border-radius: 1rem;
+    }
+
+    h3 {
+        color: var(--ptg-green-d);
+        margin-block-end: 0;
+    }
+
+    h3 + ol, h3 + ul { margin-block-start: 0.5rem; }
+
+    .potted-table {
+        max-width: 100%;
+        overflow: auto;
+        padding-block-end: 3px;
+
+        table#benefit {
+            width: clamp(500px, 45vw, 800px);
+            margin: auto;
+            border-collapse: collapse;
+            color: inherit;
+            font-size: inherit;
+            
+            thead > tr > th {
+                border: 1px solid var(--ptg-brown);
+                background: var(--ptg-green-m);
+                text-align: center;
+                padding: 0.5rem 1rem;
+                line-height: 1.2;
+            }
+            
+            thead > tr > th:not(:first-child) { width: clamp(120px, 12vw, 180px); }
+            
+            tbody > tr > td {
+                border: 1px solid var(--ptg-brown);
+                padding: 1rem;
+            }
+            
+            tbody > tr > td:not(:first-child) {
+                text-align: center;
+                .sm { font-size: 0.65rem; }
+            }
+        }
+    }
+
+    .potted-table::-webkit-scrollbar { height: 6px; }
+    .potted-table::-webkit-scrollbar-thumb { background: var(--ptg-brown); }
+}
+
+[data-group] input[data-item="item1"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf > .potted-data[item="item1"],
+[data-group] input[data-item="item2"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf > .potted-data[item="item2"],
+[data-group] input[data-item="item3"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf > .potted-data[item="item3"],
+[data-group] input[data-item="item4"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf > .potted-data[item="item4"],
+[data-group] input[data-item="item5"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf > .potted-data[item="item5"],
+[data-group] input[data-item="item6"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf > .potted-data[item="item6"] { opacity: 1;z-index: 2; }
+
+[data-group] input[data-item="itemsp1"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf-special > .potted-data[item="itemsp1"],
+[data-group] input[data-item="itemsp2"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf-special > .potted-data[item="itemsp2"],
+[data-group] input[data-item="itemsp3"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf-special > .potted-data[item="itemsp3"],
+[data-group] input[data-item="itemsp4"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf-special > .potted-data[item="itemsp4"],
+[data-group] input[data-item="itemsp5"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf-special > .potted-data[item="itemsp5"],
+[data-group] input[data-item="itemsp6"]:checked ~ .potted-paper-area > .potted-paper > .potted-merch > .potted-shelf-special > .potted-data[item="itemsp6"] { opacity: 1;z-index: 2; }
+
+.potted-role {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin-inline: auto;
+    display: flex;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: clamp(14px, 1vw, 17px);
+    color: var(--ptg-brown);
+
+    .potted-tag {
+        position: absolute;
+        width: 61px;
+        height: calc(200px + 1rem);
+        background: var(--ptg-beige);
+        border-radius: 6px 0 0 6px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            aspect-ratio: 143/500;
+            background: url(https://iili.io/2tijiH7.png) center right/85% no-repeat;
+            top: 50%;
+            left: 5px;
+            translate: 0 -50%;
+        }
+    }
+
+    .potted-area {
+        width: 740px;
+        max-width: calc(100% - 60px);
+        margin-inline-start: auto;
+        background: var(--ptg-beige);
+        padding: 1rem;
+
+        .potted-border {
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--ptg-brown);
+
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 200px;
+                background: var(--ptg-pic) var(--ptg-pos)/var(--ptg-size) no-repeat;
+                border-block-end: 1px solid var(--ptg-brown);
+            }
+
+            h1 {
+                text-align: center;
+                font: normal italic clamp(3rem, 4vw, 4rem)/1 'High Tower Text', serif;
+                padding-inline: 2rem;
+                margin-block: 2rem;
+            }
+
+            h1 + br { display: none; }
+
+            .potted-content { padding: 0 2rem 2rem; }
+
+            .potted-footer {
+                border-block-start: 1px solid var(--ptg-brown);
+                display: flex;
+                min-height: 100px;
+
+                div:first-child {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem 2rem;
+                }
+
+                .potted-flower {
+                    width: calc(100px + 4rem);
+                    background: var(--ptg-flower) center/contain content-box no-repeat;
+                    border-inline-start: 1px solid var(--ptg-brown);
+                    padding: 5px 2rem;
+                }
+            }
+        }
+    }
+}
+
+.potted-flower[flower="moringa"] { --ptg-flower: url(https://iili.io/2ts0COv.png); }
+.potted-flower[flower="jojoba"] { --ptg-flower: url(https://iili.io/2ts0qJa.png); } 
+.potted-flower[flower="teatree"] { --ptg-flower: url(https://iili.io/2ts0B5J.png); }
+.potted-flower[flower="geranium"] { --ptg-flower: url(https://iili.io/2ts0KUg.png); }
+.potted-flower[flower="calendula"] { --ptg-flower: url(https://iili.io/2ts0nbR.png); }
+.potted-flower[flower="macadamia"] { --ptg-flower: url(https://iili.io/2ts0zWN.png); }
+.potted-flower[flower="charmomile"] { --ptg-flower: url(https://iili.io/2ts0uft.png); }
+.potted-flower[flower="rosemary"] { --ptg-flower: url(https://iili.io/2ts0A0X.png); }
+.potted-flower[flower="tulip"] { --ptg-flower: url(https://iili.io/2ts0Rgn.png); }
+.potted-flower[flower="waxflower"] { --ptg-flower: url(https://iili.io/2ts07Js.png); }
+.potted-flower[flower="cinnamon"] { --ptg-flower: url(https://iili.io/2ts0Y5G.png); }
+.potted-flower[flower="leek"] { --ptg-flower: url(https://iili.io/2ts0aef.png); }
+.potted-flower[flower="larkspur"] { --ptg-flower: url(https://iili.io/2ts0cb4.png); }
+.potted-flower[flower="forgetmenot"] { --ptg-flower: url(https://iili.io/2ts00zl.png); }
+.potted-flower[flower="shaffron"] { --ptg-flower: url(https://iili.io/2ts01X2.png); }
+.potted-flower[flower="melissa"] { --ptg-flower: url(https://iili.io/2ts0EsS.png); }
+.potted-flower[flower="basil"] { --ptg-flower: url(https://iili.io/2ts0Mq7.png); }
+.potted-flower[flower="terragon"] { --ptg-flower: url(https://iili.io/2ts0V19.png); }
+.potted-flower[flower="eucalyptus"] { --ptg-flower: url(https://iili.io/2ts0Wge.png); }
+.potted-flower[flower="celery"] { --ptg-flower: url(https://iili.io/2ts0hdu.png); }
+.potted-flower[flower="lavender1"] { --ptg-flower: url(https://iili.io/2ts0j5b.png); }
+.potted-flower[flower="lavender2"] { --ptg-flower: url(https://iili.io/2ts0wej.png); }
+.potted-flower[flower="dill"] { --ptg-flower: url(https://iili.io/2ts0ezQ.png); }
+.potted-flower[flower="thyme"] { --ptg-flower: url(https://iili.io/2ts0Nmx.png); }
+
+.potted-order {
+    width: 600px;
+    max-width: 100%;
+    margin-inline: auto;
+    background: var(--ptg-beige);
+    color: var(--ptg-brown);
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: clamp(14px, 1vw, 17px);
+    padding: 1rem;
+
+    .potted-border {
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--ptg-brown);
+
+        i.potted {
+            display: block;
+            width: 80px;
+            height: 80px;
+            background: url(https://iili.io/2tZgw21.png) center/contain no-repeat;
+            margin: auto;
+            margin-block-start: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            font: normal italic clamp(3rem, 4vw, 4rem)/1 'High Tower Text', serif;
+            padding-inline: 2rem;
+            margin-block: 0.5rem 2rem;
+        }
+
+        h1 + br { display: none; }
+
+        .potted-content { padding: 2rem; }
+    }
+}
+
+.potted-bd-card {
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    color: var(--ptg-brown);
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: clamp(14px, 1vw, 17px);
+
+    .potted-switch {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        z-index: 5;
+        
+        width: 150px;
+        height: 150px;
+        background: var(--ptg-beige);
+        cursor: pointer;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            inset: 1rem;
+            border: 4px solid var(--ptg-brown);
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            inset: 25px;
+            background: var(--ptg-month) center/contain no-repeat;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .potted-switch:has(input:checked) ~ .potted-content {
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .potted-content {
+        position: relative;
+        z-index: 0;
+        opacity: 0;
+        transition: .2s linear;
+
+        .potted-card {
+            width: 80%;
+            max-width: 450px;
+            margin-inline: auto;
+            margin-block-end: 2rem;
+            background: var(--ptg-beige);
+            padding: 2rem 3rem;
+            filter: drop-shadow(0 0 0.5rem var(--ptg-brown));
+            position: relative;
+            text-align: center;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 1rem;
+                border: 1px solid var(--ptg-brown);
+            }
+
+            .potted-logo {
+                width: 80px;
+                aspect-ratio: 1;
+                background: url(https://iili.io/2tZgw21.png) center/contain no-repeat;
+                margin: auto;
+            }
+
+            h1 {
+                font: normal clamp(3rem, 4vw, 4rem) / 1 'dearJoe4', sans-serif;
+                margin-block: 2rem;
+            }
+
+            h1 + br { display: none; }
+
+            .potted-close {
+                position: absolute;
+                bottom: 0.5rem;
+                left: 50%;
+                transform: translate(-50%, 50%);
+
+                background: var(--ptg-green-m);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                input { display: none; }
+            }
+        }
+
+        img.potted-coupon {
+            display: block;
+            margin: auto;
+            width: 80%;
+            max-width: 450px;
+        }
+    }
+}
+
+.potted-bd-card[month="jan"] { --ptg-month: url(https://iili.io/3XIG33g.png); }
+.potted-bd-card[month="feb"] { --ptg-month: url(https://iili.io/3XTDgcB.png); } 
+.potted-bd-card[month="mar"] { --ptg-month: url(https://iili.io/3XTDiwg.png); }
+.potted-bd-card[month="apr"] { --ptg-month: url(https://iili.io/3XTDsta.png); }
+.potted-bd-card[month="may"] { --ptg-month: url(https://iili.io/3XTDZMv.png); }
+.potted-bd-card[month="jun"] { --ptg-month: url(https://iili.io/3XTDpSI.png); }
+.potted-bd-card[month="jul"] { --ptg-month: url(https://iili.io/3XTboH7.png); }
+.potted-bd-card[month="aug"] { --ptg-month: url(https://iili.io/3XTbzNe.png); }
+.potted-bd-card[month="sep"] { --ptg-month: url(https://iili.io/3XTbRix.png); }
+.potted-bd-card[month="oct"] { --ptg-month: url(https://iili.io/3XTblHP.png); }
+.potted-bd-card[month="nov"] { --ptg-month: url(https://iili.io/3XTbEDg.png); }
+.potted-bd-card[month="dec"] { --ptg-month: url(https://iili.io/3XTbVWJ.png); }

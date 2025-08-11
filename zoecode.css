@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+    --zoe-maincolor: #ff8c00;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.zoecodebox {
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    border: 1px solid var(--zoe-maincolor);
+    border-radius: 1rem;
+    font-size: clamp(12px, 1vw, 15px);
+}
+
+.zoecodebg {
+    height: 250px;
+    background: url(https://i.imgur.com/ITH3H9L.png) bottom/cover no-repeat;
+    border-radius: 1rem 1rem 0 0;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.5) 50%, transparent);
+    mask-image: linear-gradient(rgba(0, 0, 0, 0.5) 50%, transparent);
+}
+
+.zoecodehead {
+    font: 3rem 'Oswald';
+    margin-top: -1.5rem;
+    line-height: 1;
+    color: var(--zoe-maincolor);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.zoecodenote {
+    max-width: 350px;
+    margin: 1rem auto;
+    border-block: 1px solid var(--zoe-maincolor);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.zoecodecontent {
+    padding: 1rem 2rem 2rem;
+    text-align: center;
+}
+
+.zoecodetopic {
+    font-family: 'Oswald';
+    color: darkgrey;
+    text-align: center;
+    margin-block: 2rem 1rem;
+}
+
+.zoecodebtngroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.zoecodebtn {
+    display: inline-block;
+    border: 1px solid var(--zoe-maincolor);
+    border-radius: 0.4rem;
+    padding: 0.6rem 1rem;
+    background: #202020;
+    text-align: center;
+    text-decoration: none;
+    color: #ccc !important;
+    line-height: 1;
+}
+
+.zoecodebtn + br { display: none; }
+
+.zoecodehr {
+    margin: 2rem auto;
+    width: 350px;
+    background: var(--zoe-maincolor);
+}
+
+.zoecodelist { text-align: left; }
+
+.zoecodelist li a[href="https://discord.com/users/625292873914515456/"] {
+    position: relative !important;
+    color: var(--zoe-maincolor);
+}
+
+.zoecodeprops {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.zoecodeprop {
+    flex: 1;
+    min-width: fit-content;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.zoecodeprop img[src="https://em-content.zobj.net/source/twitter/408/check-mark-button_2705.png"] { height: 1rem; }
+
+.zoecodecompair {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.zoecodecompaircol {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: #181818;
+    border-radius: 0.5rem;
+}
+
+.zoecodecompairhead {
+    background: #202020;
+    color: var(--zoe-maincolor);
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding-block: 0.5rem;
+    font: 400 1.5rem / 1 'Oswald';
+    text-transform: uppercase;
+}
+
+.zoecodecompairbody {
+    padding-block: 0.3rem;
+    border-bottom: 1px dashed #333;
+}
+
+.zoecodecompairbody:last-child { border-bottom: 0; }
+.zoecodecompairbody summary { cursor: pointer; }
+.zoecodecompairbody summary::marker { content: ''; }
+.zoecodecompairbody summary::-webkit-details-marker, .zoecodecompairbody summary + br { display: none; }

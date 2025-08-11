@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Libre+Barcode+39&family=Orbitron:wght@500;900&display=swap');
+
+.ssneon {
+    box-sizing: border-box;
+    border: 1px solid #3db4c1;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #3db4c1, 0 0 5px #3db4c1 inset;
+    background: rgba(0,133,150,0.05);
+    background-blend-mode: overlay;
+    padding: 50px;
+}
+    
+.sstop {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #3db4c1;
+}
+    
+.ssdata {
+    font-family: 'Orbitron';
+    font-size: 14px;
+    color: #9ed9e0;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.ssname {
+    font-weight: 900;
+    font-size: 36px;
+    color: white;
+}
+
+.ssbar {
+    padding-top: 10px;
+    font-family: 'Libre Barcode 39';
+}
+
+.sstext {
+    padding: 25px 0;
+    border-bottom: 1px solid #3db4c1;
+    margin-bottom: 25px;
+}

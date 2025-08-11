@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --goodfonten: 'Architects Daughter';
+    --goodfontth: 'Mali';
+
+    --goodpic: gray;
+    --goodpos: center;
+    --goodsize: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.goodday {
+    width: 800px;
+    max-width: 100%;
+    margin-inline: auto;
+    font-family: var(--goodfontth);
+    font-size: clamp(14px, 1vw, 17px);
+
+    h1, h2 {
+        margin-block: 0;
+        text-align: center;
+        font-family: 'Montserrat', 'Noto Sans Thai';
+    }
+
+    h1 + br, h2 + br { display: none; }
+}
+
+.goodporaloidarea {
+    width: 3.5in;
+    min-height: 4.2in;
+    perspective: 600px;
+    display: flex;
+    padding-block: 4rem 5rem;
+    margin-inline: auto;
+    color: #000;
+}
+
+.goodporaloid {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    -webkit-animation: cardUnFlip 0.275s linear forwards;
+            animation: cardUnFlip 0.275s linear forwards;
+}
+
+.goodporaloid:hover {
+    -webkit-animation: cardFlip 0.275s linear .1s forwards;
+            animation: cardFlip 0.275s linear .1s forwards;
+}
+
+@-webkit-keyframes cardFlip {
+    0% { transform: rotateZ(0deg) rotateY(180deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(0deg); }
+}
+
+@keyframes cardFlip {
+    0% { transform: rotateZ(0deg) rotateY(180deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(0deg); }
+}
+
+@-webkit-keyframes cardUnFlip {
+    0% { transform: rotateZ(0deg) rotateY(0deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(180deg); }
+}
+
+@keyframes cardUnFlip {
+    0% { transform: rotateZ(0deg) rotateY(0deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(180deg); }
+}
+
+.goodporaloid-f, .goodporaloid-b {
+    position: absolute;
+    
+    width: 3.5in;
+    min-height: 4.2in;
+    background: #f2f2f2;
+    padding: 0.2in;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.goodporaloid-f {
+    z-index: 4;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2in;
+    transform: rotateY(180deg);
+}
+
+.goodpic {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--goodpic) var(--goodpos)/var(--goodsize) no-repeat;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goodtext {
+    color: black;
+    font-size: 0.15in;
+    font-family: var(--goodfonten), var(--goodfontth);
+}
+
+.goodtext-activity {
+    font-size: 0.2in;
+    margin-block-end: 0.1in;
+}
+
+.goodtext-place, .goodporaloid-b a {
+    text-align: right;
+}
+
+.goodporaloid-b {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1in;
+    justify-content: center;
+}

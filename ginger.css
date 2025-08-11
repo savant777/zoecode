@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Oswald:wght@700&display=swap');
+
+:root {
+    --ggfont: 'Bai Jamjuree', sans-serif;
+    --ggwidth: 1.5vw;
+    --ggpic: url(https://images.pexels.com/photos/1937743/pexels-photo-1937743.jpeg);
+    --ggcolor: #ff8c00;
+}
+
+.ginger-container {
+    width: 800px;
+    max-width: 90%;
+    margin: auto;
+    font-family: var(--ggfont);
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.ginger-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+    ;align-items: center;
+    grid-gap: var(--ggwidth);
+}
+
+.ginger-pic {
+    flex: 1;
+    min-width: 100px;
+    background: var(--ggpic, url(https://images.pexels.com/photos/1937743/pexels-photo-1937743.jpeg)) center/cover no-repeat;
+    color: transparent;
+    margin-top: 1%;
+}
+
+.ginger-pic::before {
+    content: "P";
+}
+
+.ginger-name, .ginger-pic {
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+    text-align: end;
+    font-size: 7vw;
+    letter-spacing: var(--ggwidth);
+    line-height: 85%;
+    text-transform: uppercase;
+}
+
+.ginger-name {
+    color: var(--ggcolor);
+}
+
+.ginger-content {
+    padding: 25px 0;
+}
+
+.ginger-hr {
+    background-color: var(--ggcolor);
+    margin-bottom: 25px;
+}

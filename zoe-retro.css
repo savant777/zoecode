@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css');
+
+:root {
+    --retro-primary: #ff8c00;
+    --retro-secondary: #eaeaea;
+    --retro-pic: url(https://imgur.com/XM1IY7S.png);
+    --retro-h: 44;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#zzzcode summary { cursor: pointer; }
+#zzzcode summary::marker { content: ''; }
+#zzzcode summary::-webkit-details-marker { display: none; }
+
+.zoeretro-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 800px;
+    max-width: 95%;
+    margin: auto;
+    color: var(--retro-secondary);
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.zoeretro-whitebox {
+    border: 1px solid var(--retro-secondary);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-transform: uppercase;
+    font: 800 1rem/1 'Montserrat';
+    letter-spacing: 0.25rem;
+}
+
+.zoeretro-name {
+    width: 100%;
+    aspect-ratio: 800/var(--retro-h);
+    background: var(--retro-pic) center/contain no-repeat;
+    margin-block: 1rem;
+}
+
+.zoeretro-pic {
+    width: 100%;
+    aspect-ratio: 21/9;
+    background: url(https://i.imgur.com/QnhIXOy.png) center/cover no-repeat;
+    border: 1px solid rgba(100,100,100,0.2);
+}
+
+.zoeretro-whitebox.txtcenter {
+    justify-content: center;
+    text-align: center;
+}
+
+.zoeretro-monitorflex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.zoeretro-monitor-orange {
+    flex: 1;
+    height: 10vw;
+    border: 1px solid var(--retro-primary);
+    background: var(--retro-wing) center/contain no-repeat, url(https://i.imgur.com/8xjaGQE.png) center/100% 100% no-repeat;
+    background-blend-mode: lighten;
+}
+
+.zoeretro-monitor-center {
+    flex: 1;
+    aspect-ratio: 1/1;
+    background: url(https://i.imgur.com/iqaFXry.png) center/contain no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: #fff;
+    text-shadow: 0 0 10px var(--retro-primary), 0 0 20px var(--retro-primary), 0 0 30px var(--retro-primary);
+}
+
+.zoeretro-monitor-orange.wing-l { --retro-wing: url(https://i.imgur.com/jWPyOWG.png); }
+.zoeretro-monitor-orange.wing-r { --retro-wing: url(https://i.imgur.com/qpOJlts.png); }
+
+.zoeretro-content-flex {
+    display: flex;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.zoeretro-contents {
+    flex: 1;
+    min-width: 300px;
+}
+
+.zoeretro-content p {
+    text-indent: 50px;
+    margin-block: 0;
+}
+
+.zoeretro-content bc, .zoeretro-contents bc {
+    font-weight: bold;
+    color: var(--retro-primary);
+}
+
+.zoeretro-whitebox-items { flex: 1; }
+.zoeretro-whitebox-items:nth-child(2) {
+    height: 1rem;
+    aspect-ratio: 1;
+    background: url(https://i.imgur.com/ohXioNb.png) center/contain no-repeat;
+}
+.zoeretro-whitebox-items:last-child { text-align: right; }
+
+.zoeretro-content ul { margin-block: 0; }

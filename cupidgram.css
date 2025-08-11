@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --cupidcode: #000;
+    --cupidsup: #d71920;
+    --cupidwhite: #fff;
+    --cupidgray: #cfcfcf;
+    --cupidligray: #eee;
+    --cupiddagray: #888;
+}
+
+#CupidGram { position: relative; }
+#CupidGram * { box-sizing: border-box; }
+#CupidGram > div:first-of-type { position: relative; }
+  
+#CupidGram::after {
+    display: block;
+    content: "♡";
+    font-family: 'Georgia', serif;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#CupidGram:hover::after {
+    content: "CupidGram";
+    font-style: italic;
+}
+
+#CupidGram h1 + br { display: none; }
+
+#CupidGram {
+    .cpokbox {
+        width: 520px;
+        max-width: calc(100% - 3rem);
+        font-family: 'Bai Jamjuree', sans-serif;
+        color: var(--cupidcode);
+        font-size: 16px;
+        margin: auto;
+    }
+
+    .cphyper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 70px;
+        background: var(--cupidcode);
+        color: var(--cupidwhite);
+
+        padding: 0 2.5rem;
+        margin-bottom: 1rem;
+        border-radius: 50px 20px 0 50px;
+    }
+
+    .cparrowxx {
+        width: 100%;
+        background: var(--cupidwhite);
+        padding: 3rem;
+        border-radius: 20px;
+        border: 5px solid var(--cupidcode);
+        position: relative;
+    }
+    
+    #cpauright, #cpauleft, #cpauheart, #cpauplus {
+        width: 40px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--cupidwhite);
+        border: 5px solid var(--cupidcode);
+        color: var(--cupidcode);
+        
+        position: absolute;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #cpauright {
+        top: 50%;
+        right: 0;
+        transform: translate(calc(50% + 2.5px), -50%);
+    }
+    
+    #cpauleft {
+        top: 50%;
+        left: 0;
+        transform: translate(calc(-50% - 2.5px), -50%);
+    }
+    
+    #cpauheart {
+        bottom: 0;
+        right: 6rem;
+        transform: translate(0, calc(50% + 2.5px));
+    }
+    
+    #cpauplus {
+        bottom: 0;
+        right: 2.75rem;
+        transform: translate(0, calc(50% + 2.5px));
+    }
+    
+    .cpdk {
+        width: 100%;
+        align-items: center;
+        color: var(--cupidcode);
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .cpiiel {
+        width: 90%;
+        margin: 40px auto 20px auto;
+    }
+    
+    #loyflat {
+        position: absolute;
+        top: 45%;
+        right: -2%;
+        color: var(--cupidwhite);
+        background: var(--cupidsup);
+        font-size: clamp(0.9rem, 0.9vw, 1rem);
+        text-align: center;
+        align-content: center;
+        width: 23px;
+        aspect-ratio: 30 / 50;
+        border-radius: 6px;
+    }
+    
+    #gramimg {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background: var(--imggram),gray;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    #cpot {
+        text-align: center;
+        user-select: none;
+        font-size: 15px;
+    }
+
+    rdt {color: var(--cupidsup);}
+
+    .cpflat {
+        display: flex;
+        justify-content: space-between;
+        font-size: clamp(1rem, 1vw, 1.2rem);
+    }
+
+    bm {margin-top: 1.5%;}
+    
+    .cpigname {
+        margin: auto;
+        font-family: Bai Jamjuree;
+        color: var(--cupidcode);
+        font-size: clamp(0.9rem, 0.9vw, 1rem);
+    }
+    
+    .cption {
+        color: gray;
+        margin-top: -1px;
+        line-height: 1.2;
+    }
+
+    #cpnote {
+        background: #c6c6c6;
+        box-sizing: border-box;
+        padding: 2px 10px;
+        display: flex;
+        gap: 2%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        font-size: clamp(0.9rem, 0.9vw, 1rem);
+        color: var(--cupidwhite);
+    }
+
+    #cptextn {
+        line-height: 1;
+        font-family: Mitr;
+    }
+
+    mla {margin-left: auto;}
+
+}

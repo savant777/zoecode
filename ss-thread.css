@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Libre+Barcode+39&family=Orbitron:wght@500;900&display=swap');
+
+.ssbg {
+    max-width: 90%;
+    height: 350px;
+    margin: auto;
+    background: linear-gradient(rgba(19,19,19,0.75) 0 0),url(https://i.imgur.com/vc8RV6y.jpg) center/cover no-repeat;
+    -webkit-mask-image: linear-gradient(black 80%, transparent);
+    mask-image: linear-gradient(black 80%, transparent);
+}
+
+.sstopic {
+    font-family: 'Orbitron';
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.sscontent {
+    margin: 15px auto;
+    border: 1px solid #3db4c1;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #3db4c1, 0 0 5px #3db4c1 inset;
+    background: rgba(0,133,150,0.1);
+    padding: 25px;
+}
+
+.ssitem {
+    box-sizing: border-box;
+    border: 1px solid #3db4c1;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #3db4c1, 0 0 5px #3db4c1 inset;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    background-blend-mode: overlay;
+}

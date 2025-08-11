@@ -1,0 +1,10 @@
+i.butterfly {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 1rem;
+    aspect-ratio: 1;
+    background-color: var(--icon-color);
+    mask: url(https://i.imgur.com/F0kVued.png) center / cover no-repeat;
+    margin-inline: 0.1rem;
+    vertical-align: middle;
+}

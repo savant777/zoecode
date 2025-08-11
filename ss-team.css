@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Libre+Barcode+39&family=Orbitron:wght@500;900&display=swap');
+
+:root {
+    --pic: url("https://i.imgur.com/pI0yAa9.png");
+    --one: #c18c3d;
+    --one-light: #e0c69e;
+    --one-rgb: rgba(150,92,0,0.5);
+    --one-rgba: rgba(150,92,0,0.1);
+
+    --two: #813dc1;
+    --two-light: #c09ee0;
+    --two-rgb: rgba(79,0,150,0.5);
+    --two-rgba: rgba(79,0,150,0.1);
+    
+    --three: #3dc16b;
+    --three-light: #9ee0b5;
+    --three-rgb: rgba(0,150,54,0.5);
+    --three-rgba: rgba(0,150,54,0.1);
+}
+
+.ssname {
+    font-weight: 900;
+    font-size: 36px;
+    color: white;
+}
+
+.ssbar {
+    padding-top: 10px;
+    font-family: 'Libre Barcode 39';
+}
+
+.ssbar::before {
+    content: "secretservice";
+}
+
+/* ----- TEAM ONE ----- */
+
+.ssneon-1 {
+    border: 1px solid var(--one);
+    border-radius: 3px;
+    box-shadow: 0 0 5px var(--one), 0 0 5px var(--one) inset;
+    background: var(--one-rgba);
+    box-sizing: border-box;
+    background-blend-mode: overlay;
+    padding: 50px;
+}
+
+.sspic-1 {
+    min-width: 150px;
+    height: 200px;
+    background: linear-gradient(var(--one-rgb) 0 0), var(--pic) center/cover no-repeat;
+}
+
+.sstop-1 {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--one);
+}
+    
+.ssdata-1 {
+    font-family: 'Orbitron';
+    font-size: 14px;
+    color: var(--one-light);
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.sstext-1 {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--one);
+    margin-bottom: 25px;
+}
+
+/* ----- TEAM TWO ----- */
+
+.ssneon-2 {
+    border: 1px solid var(--two);
+    border-radius: 3px;
+    box-shadow: 0 0 5px var(--two), 0 0 5px var(--two) inset;
+    background: var(--two-rgba);
+    box-sizing: border-box;
+    background-blend-mode: overlay;
+    padding: 50px;
+}
+
+.sspic-2 {
+    min-width: 150px;
+    height: 200px;
+    background: linear-gradient(var(--two-rgb) 0 0), var(--pic) center/cover no-repeat;
+}
+
+.sstop-2 {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--two);
+}
+    
+.ssdata-2 {
+    font-family: 'Orbitron';
+    font-size: 14px;
+    color: var(--two-light);
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.sstext-2 {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--two);
+    margin-bottom: 25px;
+}
+
+/* ----- TEAM THREE ----- */
+
+.ssneon-3 {
+    border: 1px solid var(--three);
+    border-radius: 3px;
+    box-shadow: 0 0 5px var(--three), 0 0 5px var(--three) inset;
+    background: var(--three-rgba);
+    box-sizing: border-box;
+    background-blend-mode: overlay;
+    padding: 50px;
+}
+
+.sspic-3 {
+    min-width: 150px;
+    height: 200px;
+    background: linear-gradient(var(--three-rgb) 0 0), var(--pic) center/cover no-repeat;
+}
+
+.sstop-3 {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--three);
+}
+    
+.ssdata-3 {
+    font-family: 'Orbitron';
+    font-size: 14px;
+    color: var(--three-light);
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.sstext-3 {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--three);
+    margin-bottom: 25px;
+}

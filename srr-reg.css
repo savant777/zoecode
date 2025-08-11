@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Inter&display=swap');
+
+:root {
+    --srrreg-main-color: #000;
+    --srrreg-hover: #000;
+    --srrreg-topic-bd: var(--srrreg-main-color);
+    --srrreg-pic: #000;
+    --srrreg-fpic: url(https://i.imgur.com/RZopSYy.png);
+    --srrreg-pos: center;
+    --srrreg-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+#zzzcode:hover::after { content: "zzzcode"; }
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+
+.srrregbox {
+    max-width: 100%;
+    width: 800px;
+    margin: auto;
+    font-family: 'Inter','Bai Jamjuree';
+    font-size: clamp(13px, 1vw, 16px);
+}
+
+.srrreghead {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.srrreghead-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: var(--srrreg-pic) var(--srrreg-pos)/var(--srrreg-size) no-repeat;
+}
+
+.srrreghead-right {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.srrreghead-name {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.srrreghead-desc, .srrregfriend-desc { color: darkgrey; }
+
+.srrregbutton {
+    display: inline-block;
+    background: var(--srrreg-main-color);
+    border-radius: 6px;
+    margin-top: 1rem;
+    padding: 5px 0;
+    text-align: center;
+    text-decoration: none !important;
+    color: #131313 !important;
+}
+
+.srrregbutton:hover {
+    background: var(--srrreg-hover);
+}
+
+.srrregdivide {
+    display: flex;
+    border-top: 1px solid var(--srrreg-main-color);
+    border-bottom: 1px solid var(--srrreg-main-color);
+    margin: 25px 0;
+    text-align: center;
+    line-height: 1;
+}
+
+.srrregdivide-data {
+    flex: 1;
+    border-right: 1px solid var(--srrreg-main-color);
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.srrregdivide-data:last-child {
+    border-right: 0;
+}
+
+.srrregcontent {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.srrregcontent-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.srrregcontent-left { 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 25px;
+}
+
+.srrregtopic {
+    width: 100%;
+    border-bottom: 1px solid var(--srrreg-topic-bd);
+    padding-bottom: 10px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--srrreg-main-color);
+}
+
+.srrregdata { margin: 10px; }
+
+.srrregdata p { 
+    margin: 0;
+    margin-bottom: 1rem;
+    text-indent: 50px;
+}
+
+.srrregfriendbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.srrregfriend {
+    display: flex;
+    grid-gap: 1.5rem;
+    align-items: center;
+    border: 1px solid var(--srrreg-main-color);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.srrregfriend-pic {
+    min-width: 80px;
+    min-height: 80px;
+    border-radius: 100%;
+    border: 1px solid var(--srrreg-main-color);
+    background: var(--srrreg-fpic) var(--srrreg-pos)/var(--srrreg-size) no-repeat;
+}
+
+.srrregfriend-data {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.srrregfriend-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#srrregscroll::-webkit-scrollbar-track
+{
+	background-color: rgba(0,0,0,0);
+}
+
+#srrregscroll::-webkit-scrollbar
+{
+	width: 6px;
+}
+
+#srrregscroll::-webkit-scrollbar-thumb
+{
+	background-color: rgba(0,0,0,0);
+}
+
+#srrregscroll.srrregfriendbox:hover::-webkit-scrollbar-thumb {
+    background-color: var(--srrreg-main-color);
+}

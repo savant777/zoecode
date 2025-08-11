@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Libre+Barcode+39&family=Orbitron:wght@500;900&display=swap');
+
+:root {
+    --pic: url("https://i.imgur.com/pI0yAa9.png");
+    --logo: url("https://i.imgur.com/cKGMjug.png");
+}
+
+.ssneon, .sscontent, .ssitem, .sscost {
+    border: 1px solid #3db4c1;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #3db4c1, 0 0 5px #3db4c1 inset;
+    background: rgba(0,133,150,0.1);
+}
+
+.sscontainer {
+    box-sizing: border-box;
+    margin: auto;
+    width: 800px;
+    max-width: 90%;
+    background: linear-gradient(rgba(19,19,19,0),rgba(19,19,19,1) 250px);
+}
+
+.ssneon {
+    box-sizing: border-box;
+    background-blend-mode: overlay;
+    padding: 50px;
+}
+
+.sspic {
+    min-width: 150px;
+    height: 200px;
+    background: linear-gradient(rgba(0,133,150,1) 0 0), var(--pic) center/cover no-repeat;
+}
+
+.sstop {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #3db4c1;
+}
+    
+.ssdata {
+    font-family: 'Orbitron';
+    font-size: 14px;
+    color: #9ed9e0;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.ssname {
+    font-weight: 900;
+    font-size: 36px;
+    color: white;
+}
+
+.ssbar {
+    padding-top: 10px;
+    font-family: 'Libre Barcode 39';
+}
+
+.ssbar::before {
+    content: "secretservice";
+}
+
+.sstext {
+    padding: 25px 0;
+    border-bottom: 1px solid #3db4c1;
+    margin-bottom: 25px;
+}
+
+.ssbg {
+    max-width: 90%;
+    height: 350px;
+    margin: auto;
+    background: linear-gradient(rgba(19,19,19,0.75) 0 0),url(https://i.imgur.com/vc8RV6y.jpg) center/cover no-repeat;
+    -webkit-mask-image: linear-gradient(black 80%, transparent);
+    mask-image: linear-gradient(black 80%, transparent);
+}
+
+.ssback {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(19,19,19,0.75) 0 0),url(https://i.imgur.com/vc8RV6y.jpg) center/cover no-repeat;
+    padding: 50px;
+}
+
+.sstopic, .sstopicform {
+    font-family: 'Orbitron';
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.sstopicform {
+    font-size: 84px;
+}
+
+.sslogo {
+    max-width: 400px;
+    height: 250px;
+    margin: auto;
+    background: url(https://i.imgur.com/cKGMjug.png) center/contain no-repeat;
+}
+
+.sscontent {
+    margin: 15px auto;
+    padding: 25px;
+}
+
+.sscost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Orbitron';
+    font-weight: bold;
+    color: #9ed9e0;
+    padding: 5px;
+}
+
+.ssitem {
+    box-sizing: border-box;
+    width: 150px;
+    height: 200px;
+    padding: 10px;
+    background-blend-mode: overlay;
+    background: linear-gradient(rgba(0,133,150,0.25) 0 0), var(--pic) center/contain no-repeat content-box;
+}
+
+.ssitemdata {
+    border-top: 1px solid #3db4c1;
+    padding: 10px 0;
+    margin-top: 10px;
+    flex-grow: 1;
+    height: 115px;
+    overflow-y: auto;
+}
+
+#ssscroll::-webkit-scrollbar-track
+{
+	background-color: rgba(0,133,150,0);
+}
+
+#ssscroll::-webkit-scrollbar {
+	width: 6px;
+	background-color: rgba(0,0,0,0);
+}
+
+#ssscroll::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,0);
+}
+
+#ssscroll.ssitemdata:hover::-webkit-scrollbar-thumb {
+    background-color: #3db4c1;
+}
+
+#ssscroll.ssitemdata:hover::-webkit-scrollbar-track {
+	background-color: rgba(0,133,150,0.25);
+}
+
+#ssscroll.ssitemdata:hover::-webkit-scrollbar {
+	width: 6px;
+	background-color: #131313;
+}
+
+.ssdropup, .ssdropbtn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+}
+
+.ssdropbtn {
+
+    outline: none;
+    border: 1px solid #3db4c1;
+    box-shadow: 0 0 5px #3db4c1, 0 0 5px #3db4c1 inset;
+    background: #111f20;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 3px !important;
+    font-size: 18px;
+}
+
+.ssdropup-content {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: 5px;
+    background-color: #111f20;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.ssdropup-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+}
+
+.ssdropup-content a:hover {
+    background-color: #0f2a2b;
+}
+  
+.ssdropup:hover .ssdropup-content {
+    display: block;
+}
+
+#sstag {
+    display: inline-block;
+    padding: 0 15px;
+    border-radius: 25px;
+    margin: 10px 10px 0 0;
+    font-size: 15px;
+}
+
+#sstag.hacker, #sstag.technic, #sstag.medic, #sstag.none {
+    margin-bottom: 10px;
+}
+
+.request {
+    background-color: #c85151;
+}
+
+.request::before {
+    content: "เบิกเท่านั้น";
+}
+
+.recipe {
+    background-color: #d2802d;
+}
+
+.recipe::before {
+    content: "ขอพิมพ์เขียวก่อน";
+}
+
+.customize {
+    background-color: #c2963d;
+}
+
+.customize::before {
+    content: "ดัดแปลงได้";
+}
+
+.hacker, .hacker-ask {
+    background-color: #138656;
+}
+
+.hacker::before {
+    content: "The Hacker";
+}
+
+.medic, .medic-ask {
+    background-color: #1a7fb3;
+}
+
+.medic::before {
+    content: "The Medic";
+}
+
+.technic, .technic-ask {
+    background-color: #801ab3;
+}
+
+.technic::before {
+    content: "The Technician";
+}
+
+.hacker-ask::before, .medic-ask::before, .technic-ask::before {
+    content: "ขอให้สร้าง";
+}
+
+.upgrade {
+    background-color: hsl(325, 52%, 50%);
+}
+
+.upgrade::before {
+    content: "ใช้เพื่ออัปเกรดได้";
+}
+
+.none {
+    background-color: #9ed9e0;
+    color: black;
+}
+
+.none::before {
+    content: "None";
+}
+
+ol.ssorder {
+    margin: 0;
+    padding-left: 25px;
+}
+
+input[type=search] {
+    background-color: #0f2a2c;
+    border: 1px solid #3db4c1;
+    border-radius: 3px;
+}
+
+input[type=text], input[type=number], button[type=submit], input[type=search], select, textarea{
+    width: 100%;
+    padding: 12px !important;
+    color: white;
+    font-size: 17px;
+    box-shadow: none;
+    font-family: 'Bai Jamjuree', sans-serif;
+    cursor: pointer;
+}
+
+input[type=number] {
+    width: 40%;
+}
+
+input[type=text]:focus,input[type=number]:focus,input[type=search]:focus,button[type=submit]:hover {
+    box-shadow: 0 0 5px #3db4c1, 0 0 5px #3db4c1 inset;
+}
+  
+/* Style the label to display next to the inputs */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+button[type=submit] {
+    flex: 1;
+    min-width: 200px;
+}
+
+button[type=submit]:hover {
+    background: rgba(0,133,150,0.3);
+}
+  
+/* Style the container */
+.ssformcontain {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+/* Floating column for labels: 25% width */
+.sslabel {
+    flex: 1;
+    max-width: 150px;
+}
+  
+/* Floating column for inputs: 75% width */
+.ssinput {
+    flex: 1;
+    min-width: 200px;
+}
+  
+/* Clear floats after the columns */
+.ssrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .sstopicform {
+        font-size: 5vh;
+    }
+
+    .sslogo {
+        height: 100px;
+        margin-bottom: 20px;
+    }
+}

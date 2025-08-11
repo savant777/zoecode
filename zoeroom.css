@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --zroom-pic: black;
+    --zroom-pos: center;
+    --zroom-size: cover;
+    --zroom-color: #ff8c00;
+}
+
+#zzzcode { position: relative; }
+#zzzcode div { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.zroom-container {
+    margin: auto;
+    width: 800px;
+    max-width: 90%;
+    background: #f2f2f2;
+    color: #131313;
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.zroom-pic {
+    aspect-ratio: 5/4;
+    background: linear-gradient(to bottom, rgb(235 235 235 / 90%) 2rem, transparent 50%), var(--zroom-pic) var(--zroom-pos)/var(--zroom-size);
+    padding: 2rem;
+    color: var(--zroom-color);
+}
+
+.zroom-top {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font: 17px/1 'Oswald';
+}
+
+.zroom-line {
+    flex: 1;
+    height: 1px;
+    background: var(--zroom-color);
+}
+
+.zroom-paper {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.zroom-left { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.zroom-topic { font: 2rem 'Oswald'; }
+
+.zroom-detail { font-size: 15px; }
+
+.zroom-member {
+    display: flex;
+    justify-content: space-between;
+    font: 13px/1 'Oswald';
+    color: var(--zroom-color);
+}
+
+.zroom-bcode {
+    width: 4rem;
+    background: url(https://i.imgur.com/txXtTgr.png) center / contain repeat-y;
+}
