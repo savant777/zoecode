@@ -2,21 +2,21 @@
 
 @font-face {
     font-family: 'iannnnn-DOG';
-    src: url('https://dl.dropbox.com/scl/fi/01hd622lt5nx33v41bh8w/iannnnn-DOG-Regular.ttf?rlkey=wle04bn40kerd9ki7zyrqz6u8&st=qtkzv3xx') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/iannnnn-DOG-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'iannnnn-DOG';
-    src: url('https://dl.dropbox.com/scl/fi/se9gxfawi1yebz389chzi/iannnnn-DOG-Bold.ttf?rlkey=8v1sl7r0nm2c7abo932dd86bq&st=qwxu0kt4') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/iannnnn-DOG-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'iannnnn-DOG';
-    src: url('https://dl.dropbox.com/scl/fi/cxziwgrenpanbuprruayf/iannnnn-DOG-Light.ttf?rlkey=gq4xkjtr3dzx2so7iu2sn8spa&st=cieb2p0k') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/iannnnn-DOG-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }

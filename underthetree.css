@@ -2,13 +2,13 @@
 
 @font-face {
     font-family: 'Claire Murphy';
-    src: url('https://dl.dropbox.com/scl/fi/1b9t7cz6z4jgjduyez43z/claire-murphy-claire-murphy-400.ttf?rlkey=bbk6jtscfselchl6ec7r0o13c&st=i3ov32lr') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/claire-murphy-claire-murphy-400.ttf') format('truetype');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'KhongYangKhitthueng';
-    src: url('https://dl.dropbox.com/scl/fi/23tcvrg7gskwllw90o52k/TorsilpKhongYangKhitthueng.ttf?rlkey=uet7f4uj7kvd1u4qz19ov5iet&st=68drw18b') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/TorsilpKhongYangKhitthueng.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }

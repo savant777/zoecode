@@ -2,18 +2,18 @@
 
 @font-face {
     font-family: '2548_D5';
-    src: url('https://dl.dropbox.com/scl/fi/acokilepfvr6tu035umcr/2548_D5N.ttf?rlkey=sr3ta91biw1j93d5nocg6eblo&st=3i8wiot9') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/2548_D5N.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'DB Adman X';
-    src: url('https://dl.dropbox.com/scl/fi/rffblq3i0ao1nek94h695/DB-Adman-X-Li.ttf?rlkey=8oomt8hlbqa2b3tev37omn6d4&st=s1q7e6z1') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/DB-Adman-X-Li.ttf') format('truetype');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'DB Adman X';
-    src: url('https://dl.dropbox.com/scl/fi/9w3wjmb4bkzk1c7jihlx7/DB-Adman-X-Li-It-v3.2.ttf?rlkey=kiv1xweug34fa768g20sskofe&st=jem7q8nq') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/DB%20Adman%20X%20Li%20It%20v3.2.ttf') format('truetype');
     font-style: italic;
 }
 

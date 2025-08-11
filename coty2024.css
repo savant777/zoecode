@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'SOV KlabBaan';
-    src: url('https://dl.dropbox.com/scl/fi/m65o2k6bq5ta4etzm7azc/SOV_KlabBaan.ttf?rlkey=kwceh5kx64od8yre4cluz1cqi&st=2h5yu4fe') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/SOV_KlabBaan.ttf') format('truetype');
 }
 
 :root {
