@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+@font-face {
+    font-family: 'Segoe UI Emoji';
+    src: url('https://dl.dropbox.com/scl/fi/8l06pnqq0npqj21h5k3wx/SEGUIEMJ.TTF?rlkey=zd5c37tjj9fxg8iqogj0v18lc&st=p1ve31x0') format('truetype');
+}
+
+
+:root {
+    --memphis-width: 800px;
+    --memphis-shadow: #000;
+    --memphis-fontth: 'Noto Sans Thai';
+    --memphis-fonten: 'Poppins';
+    --memphis-maincolor: #fee026;
+    --memphis-pic: url(https://wallpapers.com/images/hd/netflix-profile-pictures-5yup5hd2i60x7ew3.jpg);
+    --memphis-pos: center;
+    --memphis-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.memphisbg {
+    background: var(--memphis-maincolor);
+    color: #000;
+    padding: 4rem;
+    padding-right: 5rem;
+    font-size: clamp(14px, 1vw, 18px);    
+}
+
+.tpr { 
+    background: transparent;
+    padding-block: 1rem;
+}
+
+.memphisbox {
+    width: var(--memphis-width);
+    max-width: 100%;
+    margin: auto;
+    border: 5px solid #000;
+    filter: drop-shadow(12px 12px var(--memphis-shadow));
+    background: #f2f2f2;
+    padding: 2rem;
+    font-family: var(--memphis-fontth), sans-serif;
+}
+
+.memphishead {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: var(--memphis-fonten), var(--memphis-fontth), sans-serif;
+}
+
+.memphispic {
+    width: 100px;
+    height: 100px;
+    border: 4px solid #000;
+    border-radius: 100%;
+    background: var(--memphis-pic) var(--memphis-pos)/var(--memphis-size) no-repeat;
+}
+
+.memphisflex {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-block: 0.5rem;
+}
+
+.memphisname {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.memphisdesc {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.memphiscontent { margin-block: 2rem; }
+
+.memphisfoot {
+    display: flex;
+    gap: 1rem;
+}
+
+.memphispsbox {
+    width: fit-content;
+    height: fit-content;
+    background: var(--memphis-maincolor);
+    border: 4px solid #000;
+    padding: 0 1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.memphisps {
+    flex: 1;
+    padding-top: 4px;
+}
+
+.memphisbg.black { 
+    color: #f2f2f2;
+
+    .memphisbox {
+        background: #000;
+        outline: 1px solid var(--memphis-maincolor);
+    }
+
+    .memphisname { color: var(--memphis-maincolor); }
+}

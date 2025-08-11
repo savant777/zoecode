@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --oc-bgcolor: #181818;
+    --oc-txtcolor: #ccc;
+    --oc-namebg: #101010;
+    --oc-nametxt: #fff;
+    --oc-boxbg: #151515;
+    --oc-maincolor: #ff8c00;
+    --oc-pfpic: url(https://i.imgur.com/t02k3NN.png);
+    --oc-pic: url(https://i.imgur.com/t02k3NN.png);
+    --oc-pos: center;
+    --oc-size: cover;
+    --oc-fonten: 'Inter';
+    --oc-fontth: 'Noto Sans Thai';
+    --oc-fonttopic: 'Oswald';
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode .ocleft a[href="https://discord.com/users/625292873914515456/"] {
+    height: auto;
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#zzzcode summary {
+    cursor: pointer;
+}
+
+#zzzcode summary::marker {
+    content: '';
+}
+
+#zzzcode summary::-webkit-details-marker {
+    display: none;
+}
+
+#zzzcode .occontainer details br { display: block; }
+
+.octopic {
+    margin: auto;
+    text-align: center;
+    font: 4rem/1 var(--oc-fonttopic);
+    text-transform: uppercase;
+}
+
+.octopic span { color: var(--oc-maincolor); }
+
+.octopic a { color: #fff !important; }
+
+.occontainer {
+    margin: auto;
+    max-width: 100%;
+    font-size: clamp(13px, 1vw, 16px);
+    display: flex;
+    gap: 1rem;
+    font-family: var(--oc-fonten), var(--oc-fontth);
+}
+
+.ocleft {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 250px;
+    background: var(--oc-bgcolor);
+    border-radius: 6px;
+    padding: 2rem;
+    color: var(--oc-txtcolor);
+}
+
+@media screen and (max-width: 1150px) {
+    .occontainer, .ocsymbol-flex { flex-direction: column; }
+    .ocleft { width: 100%; }
+}
+
+.ocleft i { color: var(--oc-maincolor); }
+
+.ocprofile-pic {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background: var(--oc-pfpic) var(--oc-pos)/var(--oc-size) no-repeat;
+}
+
+.ocprofile-name {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 6px;
+    background: var(--oc-namebg);
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--oc-nametxt);
+    font-weight: bold;
+}
+
+.ocprofile-desc { width: 100%; text-align: center; }
+
+.ocleft-flex {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.ocleft-box {
+    flex: 1;
+    min-width: 150px;
+    max-width: 300px;
+    background: var(--oc-boxbg);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.ochead, .ocsymbol-head {
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--oc-nametxt);
+    border-bottom: 1px solid #333;
+}
+
+.ocstyle-flex, .occontact-flex { display: flex;gap: 0 0.5rem;flex-wrap: wrap;}
+
+.ocstyle-content, .occontact-content { flex: 1;min-width: 100px; }
+
+.ocright {
+    flex: 1;
+    background: var(--oc-bgcolor);
+    border-radius: 6px;
+    padding: 2rem;
+}
+
+.ocright summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background: var(--oc-namebg);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+}
+
+.ocright summary::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--oc-nametxt);
+    border-inline: 7px solid transparent;
+    transition: 0.2s;
+}
+
+.ocright details[open] > summary::after { transform: rotate(-180deg); }
+
+.ocright summary:hover {
+    background-color: var(--oc-boxbg);
+}
+
+.ocsymbol-flex {
+    display: flex;
+    gap: 2rem 1rem;
+    flex-wrap: wrap;
+    background: var(--oc-boxbg);
+    border-radius: 0 0 6px 6px;
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: -5px;
+    font-size: 0.825rem;
+}
+
+.ocsymbol-content { flex: 1;min-width: 200px; }
+
+.ocsymbol-head {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+/* Roleplay Status */
+.green { color: limegreen; }
+.yellow { color: yellow; }
+.orange { color: orange; }
+.gray { color: gray; }
+
+/* Relationships Status */
+.pink { color: #f43f5e; }
+.blue { color: #3b82f6; }
+.purple { color: #a855f7; }
+
+.ocsymbol-content i { padding-right: 0.25rem; }
+
+.oclist-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.oclist-box { background: var(--oc-boxbg);border-radius: 6px; }
+
+.oclist-name {
+    background: var(--oc-namebg);
+    width: 100%;
+    color: var(--oc-nametxt);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px 6px 0 0;
+    padding: 0.5rem 0;
+}
+
+.oclist-pic {
+    position: relative;
+    margin: 1rem;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+    background: var(--oc-pic) var(--oc-pos)/var(--oc-size) no-repeat;
+}
+
+.ocstatus { 
+    position: absolute;
+    background: var(--oc-boxbg);
+    border: 0.5rem solid var(--oc-boxbg);
+    border-radius: 50%;
+}
+
+.tplf { top: -0.5rem; left: -0.5rem; }
+.btrt { bottom: -0.5rem; right: -0.5rem; }
+
+.ocstar { text-align: center; color: var(--oc-nametxt); }
+
+.oclist-txt { padding: 1rem; padding-top: 0; }
+
+.ocactivity {
+    color: #ccc;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+}

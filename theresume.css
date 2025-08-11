@@ -1,0 +1,86 @@
+:root {
+    --rsm-bg-color: #101010;
+    --rsm-txt-color: #e5e5e5;
+    --rsm-border: #333;
+    --rsm-main-color: #888;
+    --rsm-txt-highlight: #181818;
+    --rsm-pic: url(https://picsum.photos/200);
+    --rsm-pos: center;
+    --rsm-sz: cover;
+    --rsm-pic-bg: transparent;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.rsmbox {
+    width: 800px;
+    max-width: 80%;
+    margin: auto;
+    border-radius: 2rem;
+    border: 1px solid var(--rsm-border);
+    background: var(--rsm-bg-color);
+    padding: 5rem;
+    color: var(--rsm-txt-color);
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.rsmbox hr {
+    background: var(--rsm-border);
+    margin: 1rem 0;
+}
+
+.rsmpic {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 1px solid var(--rsm-border);
+    background: var(--rsm-pic) var(--rsm-pos)/var(--rsm-sz) no-repeat, var(--rsm-pic-bg);
+}
+
+@media only screen and (max-width: 1150px) {
+    .rsmbox {
+        padding: 3rem;
+    }
+    .rsmpic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.rsmname {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.rsmhl {
+    background: var(--rsm-main-color);
+    color: var(--rsm-txt-highlight);
+    font-weight: bold;
+    padding: 0 0.25rem;
+}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/feeling-passionate');                
+
+:root {
+    --glassw-bg: #452a21;
+    --glassw-bd: #181818;
+    --glassw-fontth: 'Bai Jamjuree';
+    --glassw-fonten: 'Cinzel';
+    --glassw-bgpic: url(https://i.imgur.com/5PyPc2G.png);
+    --glassw-pos: center;
+    --glassw-size: cover;
+
+    --glassw-fontsize: 4rem;
+    --glassw-color: #ff8c00;
+    --glassw-light: rgba(255, 255, 255, 0.2);
+    --glassw-move: translateX(-25%);
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.glassw-container {
+    position: relative;
+    width: 600px;
+    max-width: 90%;
+    margin: 1rem auto 0;
+    background: var(--glassw-bg);
+    border-radius: 10px;
+    border: 2px solid var(--glassw-bd);
+    font-family: var(--glassw-fontth);
+    font-size: clamp(14px, 1vw, 18px);
+    box-shadow: 5px 5px 15px #000;
+}
+
+.glassw-quote {
+    position: absolute;
+    z-index: 2;
+    width: fit-content;
+    font-family: 'Feeling Passionate';
+    font-size: var(--glassw-fontsize);
+    line-height: 1;
+    text-align: center;
+    top: 0;
+    left: 0;
+    transform: var(--glassw-move) rotate(-30deg);
+}
+
+.glassw-header {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    aspect-ratio: 1.5;
+    border-radius: 10px 10px 0 0;
+    background: var(--glassw-bgpic) var(--glassw-pos)/var(--glassw-size) no-repeat;
+    mask-image: linear-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 95%);
+    -webkit-mask-image: linear-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 95%);
+}
+
+.glassw-person {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    background: var(--glassw-pic) var(--glassw-pos)/var(--glassw-size) no-repeat;
+}
+
+.glassw-animal {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 50%;
+    background: var(--glassw-pic) var(--glassw-pos)/var(--glassw-size) no-repeat;
+}
+
+.glassw-animal.right { right: 0; }
+.glassw-animal.left { left: 0; }
+
+.glassw-title {
+    position: relative;
+    z-index: 1;
+    font-family: var(--glassw-fonten);
+    font-size: var(--glassw-fontsize);
+    line-height: 1;
+    margin-top: calc((var(--glassw-fontsize) + 1rem) * (-1));
+    text-align: center;
+    filter: drop-shadow(1px 1px var(--glassw-color)) drop-shadow(1px 1px var(--glassw-color)) drop-shadow(0 0 5px #000);
+}
+
+.glassw-title div:nth-child(2) { font-size: calc(var(--glassw-fontsize) - 1rem); }
+
+.glassw-content {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+}
+
+.glassw-content::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 2rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    aspect-ratio: 1;
+    max-width: 100%;
+    height: calc(200% - 4rem);
+    background: radial-gradient(circle at center, var(--glassw-light), transparent 50%);
+}
+
+.glassw-content p, .glassw-ps {
+    position: relative;
+    z-index: 1;
+}
+
+.glassw-ps {
+    width: fit-content;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(165deg, rgba(0, 0, 0, 0.1), transparent 20% 60%, rgba(255, 255, 255, 0.1)), var(--glassw-bg);
+    box-shadow: 1px 1px 3px rgba(255,255,255,0.15) inset, -2px -2px 3px rgba(0,0,0,0.5) inset, 3px 3px 6px rgba(0,0,0,0.2), 6px 6px 6px rgba(0,0,0,0.15), 9px 9px 6px rgba(0,0,0,0.1), 12px 12px 6px rgba(0,0,0,0.05);
+}

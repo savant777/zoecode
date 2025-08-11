@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@font-face {
+    font-family: 'DSN SiRin';
+    src: url('https://dl.dropbox.com/scl/fi/q1qbwledjzydhdb2dx0en/DSN-SiRin.ttf?rlkey=v90sov407je2ihz1su58t2oab&st=zqhgvwbu');
+}
+
+:root {
+    --brain-pink: #f43f5e;
+    --brain-red: #dc2626;
+    --brain-orange: #f97316;
+    --brain-yellow: #f59e0b;
+    --brain-green: #15803d;
+    --brain-blue: #1e3a8a;
+
+    --brain-bg: #fbf6ee;
+
+    --brain-pic: gray;
+    --brain-pos: center;
+    --brain-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode .ocleft a[href="https://discord.com/users/625292873914515456/"] {
+    height: auto;
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.brainpatternpink, 
+.brainpatternred, 
+.brainpatternorange, 
+.brainpatternyellow, 
+.brainpatterngreen, 
+.brainpatternblue {
+    width: 48rem;
+    max-width: 100%;
+    margin: auto;
+    background: repeating-conic-gradient(var(--brain-primary) 0deg 90deg, var(--brain-bg) 90deg 180deg) top left/3rem 3rem;
+    padding-block: 4.5rem;
+    color: black;
+    font-family: 'Sarabun';
+    font-size: 1rem;
+}
+
+.brainpatternpink { --brain-primary: var(--brain-pink);}
+.brainpatternred { --brain-primary: var(--brain-red);}
+.brainpatternorange { --brain-primary: var(--brain-orange);}
+.brainpatternyellow { --brain-primary: var(--brain-yellow);}
+.brainpatterngreen { --brain-primary: var(--brain-green);}
+.brainpatternblue { --brain-primary: var(--brain-blue);}
+
+.braincontainer {
+    background: var(--brain-bg);
+    border: 2px solid var(--brain-primary);
+    padding: 3rem;
+}
+
+.braintitle-en, 
+.braintitle-th, 
+.braintopic, 
+.brainsubtopic, 
+ol.brainlist-font > li::marker, 
+.brainhead-topic,
+.brainsending-company {
+    font-family: 'DSN SiRin', 'Pattaya', sans-serif;
+    line-height: 1;
+}
+
+.braintitle-en, .brainsending-company {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;  
+}
+
+.braintitle-th {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.brainintro {
+    margin-block: 2rem;
+    padding-block: 2rem;
+    text-align: justify;
+    border: 1px solid var(--brain-primary);
+    border-inline: 0;
+}
+
+.brainintro p { margin-block-start: 0; }
+.brainintro p:last-child { margin-block-end: 0; }
+
+.braintopic { font-size: 3rem; }
+
+.braintopic + p {
+    margin-block: 2rem;
+}
+
+.brainlist-font { padding-inline-start: 1.5rem;}
+ol.brainlist-font > li::marker, .brainsubtopic { font-size: 2.5rem; }
+.brainhowto, .brainans { margin-block: 1rem; }
+.brainhowto ul { margin-block: 0; }
+
+ol.brainlist-font > hr {
+    background: transparent;
+    border: 1px dashed var(--brain-primary);
+    margin-inline-start: -1.5rem;
+}
+
+.brainex-flex {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.brainex-flex div {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.brainex-flex div img { width: 100%; }
+
+img.brainex {
+    display: block;
+    margin: auto;
+    max-width: 350px;
+}
+
+.brainsublist { list-style-type: upper-alpha; }
+
+.braincontainer hr {
+    background: var(--brain-primary);
+    margin-block: 2rem;
+}
+
+.braincontainer ol { margin-block: 0; }
+.braintopic + ol { margin-block-start: 1rem; }
+.braincontainer ol li a { font-weight: bold; }
+
+.brainpatternpink.notop, 
+.brainpatternred.notop, 
+.brainpatternorange.notop, 
+.brainpatternyellow.notop, 
+.brainpatterngreen.notop, 
+.brainpatternblue.notop {
+    padding-block-start: 0;
+}
+
+.brainhead {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.brainhead-info {
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.brainhead-topic { font-size: 2rem; }
+.brainhead-topic::before { content: "ชื่อและเผ่าพันธุ์"; }
+
+.brainhead-name {
+    flex: 1;
+    background: repeating-linear-gradient(transparent -1% 1.5rem, var(--brain-primary) 1.5rem calc(1.5rem + 1px));
+    line-height: 1.7rem;
+    padding-inline: 1rem;
+}
+
+
+.brainstamp {
+    --r: 5px;
+    --b: 2px;
+
+    height: 150px;
+    aspect-ratio: 4/5;
+    padding: calc(2 * var(--r));
+    background: 
+        linear-gradient(var(--brain-bg) 0 0) no-repeat 50%/calc(100% - 3*var(--r)) calc(100% - 3*var(--r)),
+        linear-gradient(to right, #0000 0% 50%, var(--brain-primary) 50% 100%, #0000 100%) repeat-x calc(-0.7*var(--r)) calc(-0.05*var(--b))/calc(3*var(--r)) var(--b),
+        linear-gradient(to right, #0000 0% 50%, var(--brain-primary) 50% 100%, #0000 100%) repeat-x calc(-0.7*var(--r)) calc(100% - calc(-0.05*var(--b)))/calc(3*var(--r)) var(--b),
+        linear-gradient(#0000 0% 50%, var(--brain-primary) 50% 100%, #0000 100%) repeat-y calc(-0.05*var(--b)) calc(-0.7*var(--r))/var(--b) calc(3*var(--r)),
+        linear-gradient(#0000 0% 50%, var(--brain-primary) 50% 100%, #0000 100%) repeat-y calc(100% - calc(-0.05*var(--b))) calc(-0.7*var(--r))/var(--b) calc(3*var(--r)),
+        radial-gradient(var(--r), #0000 calc(98% - var(--b)), var(--brain-primary) calc(100% - var(--b)) 98%, var(--brain-bg)) round calc(-1.5*var(--r)) calc(-1.5*var(--r))/calc(3*var(--r)) calc(3*var(--r));
+}
+
+.brainstamp-pic {
+    width: 100%;
+    height: 100%;
+    border: var(--b) solid var(--brain-primary);
+    background: var(--brain-pic) var(--brain-pos)/var(--brain-size) no-repeat;
+}
+
+.brainsending {
+    max-width: fit-content;
+    margin: auto;
+    margin-block-start: 2rem;
+}
+
+.brainsending .brainsubtopic::before { content: "กรุณาส่ง"; }
+.brainsending-pad { padding-inline: 1.5rem; }
+.brainsending-pad::after { content: "ห้อง S03 ชั้น Superior อพาร์ตเมนต์คุณนายฮิลล์ หมู่บ้านเอลิเชียน";}
+.brainsending-company::before { content: "บริษัท ชีวิตนี้มีเวลาว่างไม่ จำกัด"; }
+
+.braintitle-th:has(> span.brainclr) { font-size: 4rem; }
+
+.brainhead-topic,
+.brainsending-company, 
+.brainclr { color: var(--brain-primary); }
+
+.braincode {
+    display: inline-block;
+    color: #e5e5e5;
+    background: #202020;
+    margin-block: 2px;
+    padding-inline: 0.5rem;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: monospace;
+    font-style: italic;
+}

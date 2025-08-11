@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --neu-fontth: 'Noto Sans Thai';
+    --neu-fonten: 'Quicksand';
+    --neu-maincolor: white;
+    --neu-ps: 'หมายเหตุ';    
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.neumobox {
+    margin: auto;
+    width: 800px;
+    max-width: 90%;
+    border-radius: 20px;
+    background: #131313;
+    box-shadow: 5px 5px 10px #090909, -5px -5px 10px #191919;
+    padding: 2rem;
+    font-size: clamp(14px, 1vw, 17px);
+    color: #ccc;
+    font-family: var(--neu-fontth);
+}
+
+.neumoinput, .neumopsbox {
+    background: #131313;
+    color: #808080;
+    font-weight: 600;
+    font-family: var(--neu-fonten), var(--neu-fontth);
+}
+
+.neumoinput {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 350px;
+    box-shadow: 3px 3px 6px #090909 inset, -3px -3px 6px #191919 inset;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    line-height: 1;
+}
+
+.neumoicon {
+    width: fit-content;
+    aspect-ratio: 1/1;
+    background: #131313;
+    box-shadow: 3px 3px 6px #090909, -3px -3px 6px #191919;
+    color: var(--neu-maincolor);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.neumoplace { flex: 1; text-align: center; }
+
+.neumoname {
+    margin-top: 2rem;
+    font: 600 3rem/1 var(--neu-fonten);
+    color: var(--neu-maincolor);
+    text-align: center;
+}
+
+.neumotext { margin: 2rem 0; }
+
+.neumopsbox {
+    display: flex;
+    gap: 1rem;
+    box-shadow: 3px 3px 6px #090909, -3px -3px 6px #191919;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.neumopstp { width: fit-content; }
+
+.neumopstp::before {
+    content: var(--neu-ps);
+    color: var(--neu-maincolor);
+}
+
+.neumops { flex: 1; }

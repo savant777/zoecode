@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --mastermind-bg: url(https://i.imgur.com/RmUTAzk.png);
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.mastermind-bg {
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9) 35%), var(--mastermind-bg) center/cover no-repeat;
+    border-radius: 0.5rem;
+    padding: 5rem;
+    padding-block-start: 10vw;
+    font-family: 'Bai Jamjuree';
+    position: relative;
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.mastermind-tw {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    background: #000;
+    color: #e82a1f;
+    font-size: 14px;
+    font-weight: bold;
+    padding-inline: 1rem;
+}
+
+.mastermind-board-area {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 100%;
+    margin: auto;
+    margin-block-start: 4rem;
+    color: #1c181a;
+}
+
+.mastermind-casefile {
+    width: 7.25%;
+    aspect-ratio: 100/1548;
+    background: url(https://i.imgur.com/RVRexTG.png) center bottom/contain no-repeat;
+    margin-block: 8.76% 5.9%;
+}
+
+.mastermind-board {
+    position: relative;
+    width: 92.75%;
+    background: url(https://i.imgur.com/SaQKyrh.png) center/cover no-repeat;
+    border-radius: 2vw;
+    padding: 4vw 1.5vw 2.5vw;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.25), 1px 1px 3px inset rgba(255,255,255,0.5), -1px -1px 3px inset rgba(0,0,0,0.7);
+}
+
+.mastermind-clip {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    width: 50.5%;
+    aspect-ratio: 866/500;
+    background: url(https://i.imgur.com/echHoN0.png) center/contain no-repeat;
+}
+
+.mastermind-pen {
+    position: absolute;
+    bottom: 1.8vw;
+    right: 0.5vw;
+    width: 65%;
+    aspect-ratio: 20/3;
+    background: url(https://i.imgur.com/vPridx8.png) center/contain no-repeat;
+}
+
+.mastermind-paper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    border-radius: 1vw;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    padding: 6vw 4vw;
+    font-size: 1vw;
+}
+
+.mastermind-logo {
+    display: block;
+    margin-inline: auto;
+    width: 85%;
+}
+
+div:has(> .mastermind-fact) {
+   display: flex;
+   align-items: center;
+   gap: 0.5vw;
+}
+
+.mastermind-fact, .mastermind-con {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.mastermind-fact { font-size: 2vw; }
+.mastermind-fact::before { content: 'The Facts'; }
+
+.mastermind-con {
+    color: #ac0101;
+    border: 0.2vw solid #ac0101;
+    font-size: 1.1vw;
+    line-height: 1;
+    padding: 0.2vw 0.4vw;
+    vertical-align: text-bottom;
+}
+
+.mastermind-con::before {
+    content: 'Confidential';
+}
+
+.mastermind-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.mastermind-firstrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mastermind-firstrow .mastermind-data {
+    flex: 1 0 250px;
+    border-bottom: 0;
+}
+
+.mastermind-data {
+    border: 1px solid #0000004d;
+    border-bottom: 0;
+    padding: 0.2vw 1vw;
+}
+
+.mastermind-firstrow .mastermind-data:first-child {
+    border-right: 0;
+}
+
+@media screen and (max-width: 1400px) {
+    .mastermind-firstrow .mastermind-data:first-child { border-right: 1px solid #0000004d; }
+}
+
+@media screen and (min-width: 1600px) {
+    .mastermind-firstrow .mastermind-data:first-child { border-right: 1px solid #0000004d; }
+}
+
+.mastermind-table > .mastermind-data:last-child {
+    border-bottom: 1px solid #0000004d;
+    padding: 1.2vw 1vw;
+}
+
+.mastermind-table > .mastermind-data:last-child p {
+    font-weight: bold;
+    margin-block: 0 0.5vw;
+}
+
+.mastermind-detail { padding-block-start: 5rem; }

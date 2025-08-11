@@ -1,0 +1,180 @@
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Junge&family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=Parisienne&display=swap');
+
+:root {
+    --vlqlt-bg: #202020;
+    --vlqlt-fontth: 'Noto Sans Thai Looped';
+    --vlqlt-maincolor: #a28ca2;
+    --vlqlt-pos: center;
+    --vlqlt-size: cover;
+    --vlqlt-wax: url(https://i.imgur.com/kJBDQTH.png);
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.vlqletter-paper *, .vlqletter-headflex *, .vlqletter-content * {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+.vlqletter-paper {
+    position: relative;
+    width: 800px;
+    max-width: 90%;
+    margin: 1rem auto 0;
+    background: var(--vlqlt-bg);
+    border-radius: 3px;
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.vlqletter-header {
+    position: relative;
+    padding: 2rem;
+}
+
+.vlqletter-wax {
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
+    transform: rotate(15deg);
+    width: 180px;
+    aspect-ratio: 1;
+    background: var(--vlqlt-wax) center/contain no-repeat;
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.5));
+}
+
+.vlqletter-headflex {
+    max-width: 300px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: right;
+    -webkit-user-select: all;
+    user-select: all;
+}
+
+.vlqletter-headflex div:nth-child(1) {
+    font-family: var(--vlqlt-fonten);
+    --vlqlt-fonten: 'Junge';
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.vlqletter-headflex div:nth-child(2) { 
+    font-family: var(--vlqlt-fonten);
+    --vlqlt-fonten: 'Junge';
+}
+
+.vlqletter-headflex div > .mdi-bat {
+    font-size: 1.5rem;
+    vertical-align: sub;
+    margin-right: 0.5rem;
+    line-height: 1;
+}
+
+.vlqletter-headflex div:nth-child(3) {
+    font-family: var(--vlqlt-fontth);
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.vlqletter-pic {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 60px);
+    aspect-ratio: 21/9;
+    background: var(--vlqlt-pic) var(--vlqlt-pos)/var(--vlqlt-size) no-repeat;
+    border: 6px solid var(--vlqlt-maincolor);
+    margin-block: 1rem;
+    filter: saturate(0);
+    transition: .5s linear;
+}
+
+.vlqletter-pic:hover { filter: saturate(1); }
+
+.vlqletter-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    font-family: var(--vlqlt-fontth);
+    font-weight: 300;
+    -webkit-user-select: auto;
+    user-select: auto;
+}
+
+.vlqletter-content hr {
+    margin-block: 2rem 1.5rem;
+    background: #333;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.vlqletter-ps { 
+    text-align: right;
+    -webkit-user-select: auto;
+    user-select: auto;
+}
+.vlqletter-ps ps { font-weight: 600;color: var(--vlqlt-maincolor); }
+
+.vlqletter-closing {
+    font: 1.8rem/1 var(--vlqlt-fonten);
+    --vlqlt-fonten: 'Parisienne';
+    text-align: center;
+    pointer-events: none;
+}
+
+.vlqletter-sign {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    max-width: 500px;
+    aspect-ratio: 1101/239;
+    background: var(--vlqlt-pic) center/contain no-repeat;
+    filter: drop-shadow(0 0 var(--vlqlt-maincolor)) drop-shadow(0 0 var(--vlqlt-maincolor));
+}
+
+.vlqletter-burnt {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 996/141;
+    background: url(https://i.imgur.com/w2jBvT5.png) center/106% no-repeat;
+    filter: drop-shadow(0 -1rem var(--vlqlt-bg)) drop-shadow(0 -1rem var(--vlqlt-bg)) drop-shadow(0 -1rem var(--vlqlt-bg));
+}
+
+.vlqletter-gif {
+    margin-top: -5rem;
+    width: 100%;
+    aspect-ratio: 21/9;
+    background: var(--vlqlt-pic) var(--vlqlt-pos)/var(--vlqlt-size) no-repeat;
+    border-radius: 3px;
+    mask: linear-gradient(transparent 1%, black 35%);
+    -webkit-mask: linear-gradient(transparent 1%, black 35%);
+}

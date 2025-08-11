@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rye&display=swap');
+
+:root {
+    --west-pic: black;
+    --west-pos: center;
+    --west-size: cover;
+
+    --west-primary: #a1a1a1;
+}
+
+#WestWorld { position: relative; }
+#WestWorld * { box-sizing: border-box; }
+
+#WestWorld a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#WestWorld a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#WestWorld::after {
+    display: block;
+    content: '★';
+    font-family: sans-serif;
+    font-size: small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    margin-top: 0.25rem;
+}
+  
+#WestWorld:hover::after { 
+    content: "made by zzzcode";
+    font-family: 'Rye', serif;
+    font-size: x-small;
+}
+
+#WestWorld {
+    .west-box {
+        width: 800px;
+        max-width: 98%;
+        margin-inline: auto;
+        color: #131313;
+        font-size: 18px;
+        font-family: 'Bai Jamjuree', sans-serif;
+
+        .west-bg {
+            position: relative;
+            width: 100%;
+            background: url(https://iili.io/3afviv9.png) center/cover no-repeat;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+
+                width: 100%;
+                aspect-ratio: 799/372;
+                background: url(https://iili.io/3afvr42.png) center/contain no-repeat;
+                
+                opacity: 0.85;
+            }
+
+            .west-bd {
+                position: relative;
+                width: 100%;
+                padding: 8rem 6rem;
+
+                border-image: url(https://iili.io/3aq3Psa.png) 8.625% 3.25%/69px 26px round;
+                border-radius: 12rem;
+                box-shadow: 0 0 50px 50px rgba(0,0,0,0.75) inset;
+
+                tpl + br, tpr + br, btl + br, btr + br { display: none; }
+
+                tpl, tpr, btl, btr {
+                    position: absolute;
+                    width: 140px;
+                    height: 140px;
+                    background: var(--west-corner) center/contain no-repeat;
+                }
+
+                tpl {
+                    top: 0;
+                    left: 0;
+                    --west-corner: url(https://iili.io/3afvbCx.png);
+                }
+
+                tpr {
+                    top: 0;
+                    right: 0;
+                    --west-corner: url(https://iili.io/3af893B.png);
+                }
+
+                btl {
+                    bottom: 0;
+                    left: 0;
+                    --west-corner: url(https://iili.io/3afvspe.png);
+                }
+
+                btr {
+                    bottom: 0;
+                    right: 0;
+                    --west-corner: url(https://iili.io/3afvQTu.png);
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 250px;
+                    height: 50px;
+                    bottom: 0.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: url(https://iili.io/3afvgEl.png) center/contain no-repeat;
+                    filter: drop-shadow(0 6px 6px rgba(0,0,0,0.5));
+                }
+
+                .west-img {
+                    width: 100%;
+                    aspect-ratio: 16/9;
+                    background: var(--west-pic) var(--west-pos)/var(--west-size) no-repeat;
+                    border-image: url(https://iili.io/3afv62S.png) 3.25%/10px stretch;
+                }
+                
+                .west-place {
+                    color: #505050;
+                    font-family: 'Rye', 'Bai Jamjuree',serif;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-block: 2.5rem 1.25rem;
+                    font-size: clamp(2rem, 2.5vw, 2.5rem);
+                    line-height: 1;
+                }
+
+                hr.west-star {
+                    width: 92px;
+                    height: 23px;
+                    margin-block: 2rem;
+                    background: var(--west-primary);
+                    -webkit-mask: url(https://iili.io/3aq6L2j.png) center/contain no-repeat;
+                            mask: url(https://iili.io/3aq6L2j.png) center/contain no-repeat;
+                }
+
+                .west-content, .west-ps { text-shadow: 0 0 10px #e5dbc8; }
+            }
+        }
+    }
+
+    #west-role.west-box {
+        .west-bg {
+            margin-block-start: 6.5rem;
+
+            .west-bd {
+                padding: 12rem 6rem 10rem;
+
+                .west-pic {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -100px);
+                    
+                    width: 265px;
+                    height: 259px;
+                    background: url(https://iili.io/3afvZhb.png) center/contain no-repeat;
+                    
+                    filter: drop-shadow(0 6px 6px rgba(0,0,0,0.5));
+
+                    &::before {
+                        content: "";
+
+                        position: absolute;
+                        top: 51%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        width: 231px;
+                        height: 223px;
+                        background: var(--west-pic) var(--west-pos)/var(--west-size) no-repeat;
+                        -webkit-mask: url(https://iili.io/3aqa48N.png) center/contain no-repeat;
+                                mask: url(https://iili.io/3aqa48N.png) center/contain no-repeat;
+                    }
+                }
+
+                .west-title {
+                    color: #505050;
+                    font-family: 'Rye', serif;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    .west-name {
+                        font-size: clamp(2rem, 2.5vw, 2.5rem);
+                        line-height: 1;
+                    }
+
+                    .west-sub-name {
+                        font-size: clamp(1.25rem, 2vw, 1.5rem);
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+
+    #west-reg.west-box {
+        font-size: 16px;
+
+        .west-bg {
+            .west-bd {
+                &::before {
+                    bottom: unset;
+                    top: 2.25rem;
+                }
+
+                .west-flex {
+                    display: flex;
+                    gap: 2rem;
+                    flex-wrap: wrap;
+                    margin-block-end: 2rem;
+                    
+                    .west-pic {
+                        position: relative;
+                        flex: 1;
+                        min-width: 265px;
+                        height: 259px;
+                        background: url(https://iili.io/3afvZhb.png) center / contain no-repeat;
+
+                        filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.5));
+
+                        &::before {
+                            content: "";
+
+                            position: absolute;
+                            top: 51%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
+                            width: 231px;
+                            height: 223px;
+                            background: var(--west-pic) var(--west-pos)/var(--west-size) no-repeat;
+                            -webkit-mask: url(https://iili.io/3aqa48N.png) center/contain no-repeat;
+                                    mask: url(https://iili.io/3aqa48N.png) center/contain no-repeat;
+                        }
+                    }
+
+                    .west-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        flex: 1;
+                        color: #505050;
+                        min-width: 311px;
+
+                        .west-display-name {
+                            font-family: 'Rye', serif;
+                        }
+
+                        .west-char-name {
+                            font-family: 'Rye', serif;
+                            text-transform: uppercase;
+                            color: var(--west-primary);
+                            font-size: clamp(2rem, 2.5vw, 2.5rem);
+                            line-height: 1;
+                        }
+
+                        .west-gender-age {
+                            display: flex;
+                            gap: 1rem;
+                            margin-block-end: 1rem;
+                        }
+
+                        hr.west-star {
+                            margin: unset;
+                        }
+                    }
+
+                    @media screen and (max-width: 1191px) {
+                        .west-info {
+                            align-items: center;
+                        }
+                    }
+                }
+                
+                .west-foot {
+                    display: flex;
+                    gap: 1rem 2rem;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    margin-block: 1rem 2rem;
+
+                    font-weight: 500;
+                    line-height: 1.5;
+
+                    .west-char-info {
+                        flex: 1;
+                        min-width: 200px;
+                        
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+
+                        div { min-width: 150px; }
+                    }
+
+                    .west-sign-info {
+                        flex: 1;
+                        min-width: 300px;
+                        text-align: center;
+                        filter: drop-shadow(0 0 10px #e5dbc8);
+                        text-shadow: none;
+
+                        .west-sign {
+                            width: 100%;
+                            aspect-ratio: 4;
+                            background: var(--west-primary);
+                            -webkit-mask: var(--west-sign) center/contain no-repeat;
+                                    mask: var(--west-sign) center/contain no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

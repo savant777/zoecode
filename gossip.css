@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Sarabun&display=swap');
+
+#zzzcode {
+    position: relative;
+}
+
+#zzzcode div {
+    box-sizing: border-box;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode .gsbox a[href="https://discord.com/users/625292873914515456/"] {
+    height: auto;
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child {
+    position: relative;
+}
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after {
+    content: "zzzcode";
+}
+
+#zzzcode summary {
+    cursor: pointer;
+}
+
+#zzzcode summary::marker {
+    content: '';
+}
+
+#zzzcode summary::-webkit-details-marker {
+    display: none;
+}
+
+.gsbox {
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    background: #eaeaea;
+    color: black;
+    padding: 2rem;
+    font-family: 'Libre Baskerville', 'Sarabun';
+    font-size: clamp(13px, 1vw, 16px);
+}
+
+.gshead {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    font-size: small;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+}
+
+.gslogo {
+    width: 100%;
+    height: 200px;
+    background: url(https://i.imgur.com/bKuZk4v.png) center/contain content-box no-repeat;
+    border-top: 4px double black;
+    border-bottom: 4px double black;
+    padding: 1rem 0;
+}
+
+.gsowner {
+    border-bottom: 2px solid black;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    line-height: 1.2;
+}
+
+.gshr, .gshrhid {
+    height: 1px;
+    margin: 1rem 0;
+}
+
+.gshr {
+    background: black;
+}
+
+.gshrhid {
+    background: white;
+}
+
+.gscontent {
+    padding: 1rem 0;
+}
+
+.gstopic {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.gsbox span, .gstimehead {
+    font-weight: bold;
+    color: #ff006e;
+}
+
+.gslim {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff006e;
+    text-align: center;
+}
+
+.gstimeflex {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gsform {
+    background: #202020;
+    border-radius: 6px;
+    color: white;
+    padding: 1em;
+    font-size: 15px;
+}
+
+.gsex {
+    font-size: 15px;
+    margin-left: 1rem;
+    border-left: 2px solid white;
+    padding-left: 1rem;
+}
+
+.gsicon {
+    width: 100%;
+    height: calc(1.5rem + 50px);
+    background: url(https://i.imgur.com/EsEi6rv.png) center/contain content-box no-repeat;
+    border-top: 4px double black;
+    padding-top: 1.5rem;
+}
+
+.gscard {
+	position: relative;
+	width: 350px;
+	aspect-ratio: 7/4;
+	cursor: pointer;
+	margin: auto;
+}
+
+.gscard-front, .gscard-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+	backface-visibility: hidden;
+	border-radius: 3mm;
+}
+
+.gscard-front {
+	background: url(https://i.imgur.com/2Q9tI7T.png) center/contain no-repeat;
+}
+
+.gscard-back {
+	transform: rotateY(180deg);
+	background: url(https://i.imgur.com/9v8tC3Z.png) center/contain no-repeat;
+}
+
+.gscard:hover .gscard-front {
+	transform: rotateY(180deg);
+}
+
+.gscard:hover .gscard-back {
+	transform: rotateY(0);
+}

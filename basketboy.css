@@ -1,0 +1,196 @@
+@import url('https://fonts.cdnfonts.com/css/rogan');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --bkb-pic: black;
+    --bkb-pos: center;
+    --bkb-size: cover;
+
+    --bkb-bg: #fff;
+    --bkb-txt: #000;
+}
+
+#BasketBoy { position: relative; }
+#BasketBoy * { box-sizing: border-box; }
+
+#BasketBoy a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#BasketBoy a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#BasketBoy::after {
+    display: block;
+    content: '🧺';
+    font-family: 'Rogan', sans-serif;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#BasketBoy:hover::after { content: "made by zzzcode"; }
+
+#BasketBoy {
+    .bkb-set {
+        width: 1000px;
+        max-width: 100%;
+        margin-inline: auto;
+        background: var(--bkb-bg);
+        color: var(--bkb-txt);
+        padding: 4rem;
+        font-size: clamp(13px, 1vw, 16px);
+        font-family: 'Bai Jamjuree', sans-serif;
+
+        .bkb-head {
+            display: flex;
+            font-family: 'Rogan', sans-serif;
+
+            .bkb-logo {
+                width: 100px;
+                aspect-ratio: 1;
+                background: url(https://iili.io/3RQKqFV.png) center/65% no-repeat, var(--bkb-txt);
+                border: 1px solid var(--bkb-txt);
+            }
+
+            .bkb-title {
+                flex: 1;
+                border-block: 1px solid var(--bkb-txt);
+                font-size: clamp(2rem, 3vw, 3rem);
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .bkb-date {
+                width: 100px;
+                aspect-ratio: 1;
+                border: 1px solid var(--bkb-txt);
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                text-align: center;
+                line-height: 1;
+
+                div:first-child { font-size: clamp(1.25rem, 1.5vw, 1.5rem); }
+                div:last-child { font-size: clamp(1.5rem, 2vw, 2rem); }
+            }
+        }
+
+        .bkb-pic {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: var(--bkb-pic) var(--bkb-pos)/var(--bkb-size) no-repeat;
+            border: 1px solid var(--bkb-txt);
+            margin-block: 2rem;
+        }
+
+        h1 {
+            border-block: 1px solid var(--bkb-txt);
+            margin-block: 2rem;
+            
+            font-family: 'Rogan', 'Bai Jamjuree', sans-serif;
+            padding-inline: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        h1 + br { display: none; }
+
+        .bkb-content { 
+            padding-inline: 0.5rem;
+
+            span.mycode_size[style="font-size: large;"] {
+                font-size: clamp(15px, 1vw, 18px) !important;
+            }
+
+            span.mycode_size[style="font-size: x-large;"] {
+                font-size: clamp(21px, 1.25vw, 24px) !important;
+            }
+        }
+
+        .bkb-list {
+            margin-block: 1rem;
+            padding-inline-start: 1rem;
+        }
+
+        .bkb-table {
+            max-width: 100%;
+            overflow: auto;
+            padding-block-end: 3px;
+
+            table#time {
+                width: 450px;
+                margin: auto;
+                color: var(--bkb-txt);
+                border-collapse: collapse;
+                
+                font-size: inherit;
+                line-height: 1.25;
+
+                thead > tr > th, tbody > tr > th, tbody > tr > td {
+                    border: 1px solid var(--bkb-txt);
+                    text-align: center;
+                    padding: 0.5rem;
+                }
+
+                thead > tr > th#topic {
+                    width: calc(100% / 3);
+                    background: var(--bkb-txt);
+                    color: var(--bkb-bg);
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                }
+            }
+
+            table#schedule {
+                width: 800px;
+                margin: auto;
+                color: var(--bkb-txt);
+                border-collapse: collapse;
+
+                font-family: 'Rogan', 'Bai Jamjuree', sans-serif;
+                font-size: inherit;
+                line-height: 1.25;
+
+                thead > tr > th, tbody > tr > th {
+                    border: 1px solid var(--bkb-txt);
+                    text-align: center;
+                    font-weight: normal;
+                    padding: 0.5rem;
+
+                    sm { font-size: small; }
+                }
+
+                thead > tr > th#grade {
+                    text-transform: uppercase;
+                    background: var(--bkb-txt);
+                    color: var(--bkb-bg);
+                    font-size: 1.25rem;
+                }
+
+                thead > tr > th#day { width: 12.5%; }
+                thead > tr > th#period { width: 17.5%; }
+
+                tbody > tr > td {
+                    border: 1px solid var(--bkb-txt);
+                    text-align: center;
+                    padding: 0.5rem;
+                    height: 7rem;
+                }
+            }
+        }
+
+        .bkb-table::-webkit-scrollbar { height: 6px; }
+        .bkb-table::-webkit-scrollbar-thumb { background: var(--bkb-txt); }
+    }
+}
+

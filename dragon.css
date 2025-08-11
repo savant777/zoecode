@@ -1,0 +1,48 @@
+@import url('https://fonts.cdnfonts.com/css/grow-west');
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+                
+#dragon { position: relative; }
+#dragon div { box-sizing: border-box; }
+img.dgcorner ~ br { display: none; }
+
+.mesbox, .กล่องสนทนา {
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    border: 18px solid;
+    border-image: url(https://i.imgur.com/32LiAh0.png) 16 stretch !important;
+}
+
+.dgcorner {
+	position: absolute;
+    width: 90px;
+    margin: -18px;
+    z-index: 10;
+}
+
+.dgcorner.lt {
+    left: 0;
+    top: 0;
+}
+
+.dgcorner.rt {
+	top: 0;
+	right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.dgcorner.rb {
+	right: 0;
+	bottom: 0;
+    -webkit-transform: scale(-1);
+    transform: scale(-1);
+}
+
+.dgcorner.lb {
+	left: 0;
+	bottom: 0;
+	-webkit-transform: scaleY(-1);
+  	transform: scaleY(-1);
+}

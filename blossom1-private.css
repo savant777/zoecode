@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Dosis:wght@200..800&display=swap');
+
+:root {
+    --bls-bg: #594e36;
+    --bls-txtcolor: #fbf5f3;
+    --bls-bdcolor: #fbf5f3;
+    --bls-subtxtcolor: #b29459;
+    --bls-logo: transparent;
+    --bls-fontth: 'Bai Jamjuree';
+    --bls-fonten: 'Dosis';
+    --bls-animation: bls-slideshow3;
+    --bls-room: transparent;
+    --bls-show: none;
+    --bls-ownerpic: transparent;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+#zzzcode:hover::after { content: "zzzcode"; }
+#zzzcode summary { cursor: pointer; }
+#zzzcode summary::marker { content: ''; }
+#zzzcode summary::-webkit-details-marker { display: none; }
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+
+.blspcontainer {
+    display: flex;
+    width: 1000px;
+    max-width: 90%;
+    background: var(--bls-bg);
+    color: var(--bls-txtcolor);
+    margin: auto;
+    font-family: var(--bls-fonten), var(--bls-fontth);
+    font-size: 16px;
+}
+
+.blsphide, 
+.blsplabels label+br, 
+.blspcontainer input+br,
+.blspheader-res,
+#blsroom-content,
+#blsowner-content,
+#blsplan-content { display: none; }
+
+.blsplabels {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bls-bdcolor);
+    text-align: center;
+}
+
+.blsplabels label {
+    cursor: pointer;
+    flex: 1 0 150px;
+    border-top: 1px solid var(--bls-bdcolor);
+    padding: 2rem 1rem;
+    line-height: 1;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+}
+
+.blsplabels label:last-child { border-top: 0; }
+
+.blspflex { 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blspleft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 675px;
+    min-width: 500px;
+    border: 1px solid var(--bls-bdcolor);
+    border-right: 0;
+    border-left: 0;
+}
+
+.blsppic{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 675px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bls-room) center/cover no-repeat;
+}
+
+.blsppic-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: var(--bls-animation) 24s ease 2s infinite running;
+}
+
+.blspimg {
+    height: 100%;
+    aspect-ratio: 500/675;
+}
+
+/*.blsppic-wrap .blspimg:first-child { left: calc(-1px*var(--bls-w)/4); }*/
+
+.blspimg img { 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes bls-slideshow2 {
+    0% { left: 0; }
+    50% { left: -500px; }
+    100% { left: -100px; }
+}
+
+@keyframes bls-slideshow3 {
+    0% {left: 0;}
+    33% {left: -500px;}
+    66% {left: -1000px;}
+    100% {left: -1500px;}
+}
+
+@keyframes bls-slideshow4 {
+    0% { left: 0; }
+    25% { left: -500px; }
+    50% { left: -100px; }
+    75% { left: -1500px; }
+    100% { left: -2000px; }
+}
+
+.blsptag {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+    max-width: 75%;
+    width: fit-content;
+    height: 2rem;
+    border-radius: 1rem;
+    background: var(--bls-txtcolor);
+    color: var(--bls-bg);
+    padding: 0.25rem;
+    padding-right: 0.75rem;
+}
+
+.blsplogo {
+    display: var(--bls-show);
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background: var(--bls-logo);
+}
+
+.blsphouse {
+    line-height: 1;
+    font-weight: 500;
+}
+
+.blsphouse::before {
+    content: 'BLOSSOM NO.1';
+}
+
+.blspright {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bls-bdcolor);
+    background: var(--bls-bg);
+}
+
+.blspheader {
+    display: flex;
+}
+
+.blspheader, .blspheader-res {
+    flex-direction: column;
+    padding: 2rem;
+    line-height: 1;
+    border-bottom: 1px solid var(--bls-bdcolor);
+    gap: 1rem;
+    background: var(--bls-bg);
+}
+
+.blsproomname { font-size: 5rem; }
+
+.blsproomflex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blspfloor::before { 
+    content: "Floor : ";
+    color: var(--bls-subtxtcolor);
+    font-weight: 500;
+}
+
+.blspowner::before { 
+    content: "Owner : ";
+    color: var(--bls-subtxtcolor);
+    font-weight: 500;
+}
+
+.blspdesc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.blspwarning {
+    color: #ff5f54;
+    text-align: center;
+    font-weight: bold;
+}
+
+#blsowner-content {
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.blspownpic {
+    width: 100px;
+    height: 100px;
+    background: var(--bls-ownerpic);
+    border-radius: 100%;
+}
+
+.blspowntxt {
+    flex: 1;
+    padding-left: 1rem;
+    border-left: 1px solid var(--bls-bdcolor);
+}
+
+.blspownname {
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--bls-subtxtcolor);
+}
+
+@media screen and (max-width: 1150px) {
+    .blspleft {
+        border-right: 1px solid var(--bls-bdcolor);
+        border-left: 1px solid var(--bls-bdcolor);
+        border-bottom: 0;
+    }
+    .blspheader { display: none; }
+    .blspheader-res { display: flex; }
+    .blsplabels { border-right: 0; }
+    #blsowner-content { flex-direction: row !important; }
+    .blspright { min-width: 500px; }
+}
+
+#blsroom:checked ~ .blspflex .blspright .blspdesc #blsroom-content,
+#blsplan:checked ~ .blspflex .blspright .blspdesc #blsplan-content { display: block; }
+
+#blsowner:checked ~ .blspflex .blspright .blspdesc #blsowner-content { display: flex; }
+
+#blsroom:checked ~ .blsplabels #blsroom-tab,
+#blsowner:checked ~ .blsplabels #blsowner-tab,
+#blsplan:checked ~ .blsplabels #blsplan-tab { 
+    background: var(--bls-bdcolor);
+    font-weight: 600;
+    color: var(--bls-bg);
+}
+
+#blsroom-tab:hover, #blsowner-tab:hover, #blsplan-tab:hover {
+    background: var(--bls-subtxtcolor);
+    color: var(--bls-txtcolor);
+}

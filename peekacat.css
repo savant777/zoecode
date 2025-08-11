@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+:root {
+    --peekacat-pic: url(https://i.imgur.com/DvZnGiS.png);
+    --peekacat-pos: center;
+    --peekacat-size: cover;
+
+    --peekacat-primary: #f26522;
+    --peekacat-txt: #eaeaea;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.peek-a-box {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    background: linear-gradient(rgba(0,0,0,0.8) 0 0), url(https://i.imgur.com/k3B0Ebi.png) center/auto repeat;
+    color: var(--peekacat-txt);
+    font-size: clamp(14px, 1vw, 18px);
+    font-family: 'Bai Jamjuree';
+    border-radius: 1rem;
+    padding: 2em;
+}
+
+.peek-a-tag {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    width: 120px;
+    height: calc(120px + 2rem);
+    background: rgb(242 101 34 / 25%);
+    border-radius: 0 0 75px 75px;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgb(242 101 34 / 25%);
+    border-block-start: 0;
+    padding-block-end: 2rem;
+}
+
+.peek-a-logo {
+    width: 100%;
+    aspect-ratio: 300/180;
+    background: url(https://i.imgur.com/XQbhrq0.png) center/cover no-repeat;
+}
+
+.peek-a-flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: calc(100% - (120px + 1rem));
+}
+
+.peek-a-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding: 5px;
+    background: var(--peekacat-pic) var(--peekacat-pos)/var(--peekacat-size) no-repeat content-box, #000;
+    border: 1px solid var(--peekacat-primary);
+}
+
+.peek-a-name {
+    flex: 1;
+    font-family: 'Inter', 'Noto Sans Thai';
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--peekacat-primary);
+}
+
+.peek-a-place {
+    font-size: 1rem;
+    padding-block-start: 0.5rem;
+    color: var(--peekacat-txt);
+}
+
+.peek-a-content { padding-block-start: 2rem; }
+
+.peek-a-box hr {
+    margin-block: 1rem;
+    border: 1px dashed var(--peekacat-primary);
+    background: none;
+}

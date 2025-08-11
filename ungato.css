@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.MG5, .MG5 * {
+    box-sizing: border-box;
+    scrollbar-color: #0006 #0003;
+    scrollbar-width: thin;
+}
+
+.MG5 {
+    --gato-font: 'Bai Jamjuree';
+    --gato-uno: #ffdcbc;
+    --gato-dos: #ffbe83;
+}
+
+.MG5 {
+    width: 400px;
+    margin: 1rem auto;
+    position: relative;
+    padding-top: 50px;
+    font-size: 17px;
+    font-family: var(--gato-font);
+    line-height: 1.5;
+}
+
+.MG5 cuerpo {
+    display: block;
+    background: var(--gato-uno);
+    min-height: 300px;
+    border-radius: 150px 150px 0 0;
+    position: relative;
+    padding: 200px 30px 30px 30px;
+    border: 5px solid var(--gato-dos);
+    overflow: hidden;
+}
+
+.MG5 oreja {
+    border: 30px solid var(--gato-uno);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px 0;
+    background: var(--gato-dos);
+    transform: rotate(35deg) skewX(26deg);
+    top: 25px;
+    left: 23px;
+    box-shadow: 0 0 0 5px var(--gato-dos);
+}
+
+.MG5 oreja ~ oreja {
+    left: inherit;
+    right: 23px;
+    transform: rotate(-274deg) skewX(26deg);
+}
+
+.MG5 ojos {
+    position: absolute;
+    height: 70px;
+    left: 70px;
+    right: 70px;
+    top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.MG5 ojos > b {
+    width: 70px;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffd756;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid var(--gato-dos);
+}
+
+.MG5 ojos > b::before {
+    content: "";
+    display: block;
+    background: #333;
+    height: 100%;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: mira 10s linear infinite alternate;
+}
+
+.MG5 nariz {
+    position: absolute;
+    background: var(--gato-dos);
+    width: 30px;
+    height: 20px;
+    border-radius: 25px 25px 100px 100px;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.MG5 nariz b{
+    width: 65px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 30%;
+    text-align: center;
+}
+
+.MG5 nariz b::before,
+.MG5 nariz b::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-radius: 50%;
+    transform: rotate(130deg);
+    color: var(--gato-dos);
+}
+
+@keyframes mira {
+    15% { transform: translate(0px, 0px); }
+    20% { transform: translate(10px, -5px); }
+    25% { transform: translate(10px, -5px); }
+    40% { transform: translate(10px, -5px); }
+    45% { transform: translate(0px, 5px); }
+    60% { transform: translate(0px, 5px); }
+    75% { transform: translate(-5px, 0px); }
+    90% { transform: translate(-5px, 0px); }
+    95% { transform: translate(0px, 0px); }
+}
+
+.MG5 ojos i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.MG5 ojos i::before,
+.MG5 ojos i::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: var(--gato-dos);
+    left: 0;
+    animation: parpados 5s infinite;
+}
+
+.MG5 ojos i::before { top: 0; }
+.MG5 ojos i::after { bottom: -20%; }
+
+@keyframes parpados {
+    0% { height: 0%; }
+    5% { height: 60%; }
+    10% { height: 0%; }
+}
+
+.MG5 manchas, 
+.MG5 manchas:before,
+.MG5 manchas:after {
+    position: absolute;
+    width: 30px;
+    height: 80px;
+    background: var(--gato-dos);
+    border-radius: 0 0 15px 15px;
+    top: 0; left: calc(50% - 15px);
+}
+
+.MG5 manchas::before,
+.MG5 manchas::after {
+    content: "";
+    margin: 0 45px;
+    height: 60px;
+}
+
+.MG5 manchas::after { margin: 0 -45px; }
+.MG5 manchas:nth-of-type(2) {
+    transform: rotate(90deg);
+    left: calc(100% - 30px);
+    top: 130px;
+}
+
+.MG5 manchas:nth-of-type(3) {
+    transform: rotate(-90deg);
+    left: 0px;
+    top: 130px;
+}
+
+.MG5 texto {
+    display: block;
+    background: #FFF;
+    margin: 0 20px;
+    min-height: 300px;
+    border-radius: 150px 150px 50px 50px;
+    padding: 70px 40px 40px;
+    color: #555;
+}
+
+.MG5 patas {
+    position: absolute;
+    top: 240px;
+    left: 50%;
+}
+
+.MG5 patas:before { left: 110px; }
+.MG5 patas:after { right: 110px; }
+
+.MG5 patas::before,
+.MG5 patas::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 130px;
+    background: var(--gato-uno);
+    border-radius: 0 0 50px 50px;
+    border: 5px solid var(--gato-dos);
+    border-top: 5px solid transparent;
+}
+
+.MG5 traseras {
+    height: 120px;
+    display: flex;
+    margin-top: -5px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.MG5 traseras::after,
+.MG5 traseras::before {
+    content: "";
+    width: 60px;
+    height: 100%;
+    background: var(--gato-uno);
+    border: 5px solid var(--gato-dos);
+    border-radius: 0 0 50px 50px;
+    border-top: none;
+}
+
+.MG5 aux {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 30px solid var(--gato-uno);
+    border-right: none;
+    border-bottom: none;
+    border-radius: 100px 0 0;
+    left: 35px;
+    bottom: 50px;
+    box-shadow: inset 3px 3px 0 2px var(--gato-dos);
+}
+
+.MG5 aux ~ aux {
+    transform: rotateY(180deg);
+    left: inherit;
+    right: 35px;
+}
+
+.miMG5 {
+    display: block;
+    font: 10px arial;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: .5s;
+}
+
+.miMG5:hover {letter-spacing: 10px;}

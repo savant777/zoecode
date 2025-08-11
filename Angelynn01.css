@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Michroma&family=Noto+Sans+Thai&display=swap');
+
+.angebox {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: url(https://i.pinimg.com/564x/4f/60/2c/4f602c1f99808af7c8ff6f136d65bf45.jpg) center/cover no-repeat;
+    font-family: 'Michroma', 'Noto Sans Thai', sans-serif;
+}
+
+.angeglass {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    border-left: 1px solid rgba(255,255,255,0.25);
+}
+
+.angepic{
+    height: 250px;
+    background: #131313;
+    border-radius: 17.5px;
+}
+
+.angename {
+    color: #ffb6d9;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    margin: 25px 0;
+}
+
+.angedot {
+    border-top: 5px dotted #131313;
+}
+
+.angebtm{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    padding-bottom: 15px;
+    color: #ffb6d9;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}

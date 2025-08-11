@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+@font-face {
+    font-family: 'Gloucester MT';
+    src: url('https://dl.dropbox.com/scl/fi/psfhydrkeu9gjpy93408i/gloucester-mt-extra-condensed.ttf?rlkey=1tf5hls4s9efiyh9lchmd61wj&st=2rm8hldf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --oneshot-overlay: #00000000;
+    --oneshot-primary: #faee04;
+    --oneshot-secondary: #ef85ff;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#oneshot {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    padding: 2rem;
+    font-size: clamp(14px, 1vw, 17px);
+
+    &::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(https://iili.io/3kqw9oJ.png) center / cover no-repeat, var(--oneshot-overlay);
+        background-blend-mode: overlay;
+    }
+
+    .oneshot-head {
+        position: relative;
+        margin-inline: auto;
+        width: max-content;
+        max-width: calc(100% - 120px);
+        margin-block: 2rem;
+
+        h1 + br { display: none; }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            font-family: 'Gloucester MT', serif;
+            text-transform: uppercase;
+            line-height: 1;
+            font-size: 6rem;
+            font-weight: normal;
+            color: var(--oneshot-primary);
+            -webkit-text-stroke: 2px black;
+            margin-inline: -1rem;
+
+            &::first-letter {
+                font-style: italic;
+                font-size: 7rem;
+                margin-inline-end: 0.5rem;
+            }
+        }
+
+        .star-end {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(60%, -50%);
+            
+            width: 150px;
+            aspect-ratio: 300/270;
+            background: url(https://iili.io/3knTcj1.png) center/contain no-repeat;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                
+                background: var(--oneshot-primary);
+                -webkit-mask: url(https://iili.io/3knT692.png) center/contain no-repeat;
+                        mask: url(https://iili.io/3knT692.png) center/contain no-repeat;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+
+                background: var(--oneshot-secondary);
+                -webkit-mask: url(https://iili.io/3knuJwP.png) center/contain no-repeat;
+                        mask: url(https://iili.io/3knuJwP.png) center/contain no-repeat;
+            }
+        }
+
+        .star-start {
+            position: absolute;
+            z-index: 2;
+            bottom: 0;
+            left: 0;
+            transform: translate(-80%, 45%) scaleX(-1) rotate(15deg);
+            
+            width: 100px;
+            aspect-ratio: 300/270;
+            background: url(https://iili.io/3knTcj1.png) center/contain no-repeat;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                
+                background: var(--oneshot-secondary);
+                -webkit-mask: url(https://iili.io/3knT692.png) center/contain no-repeat;
+                        mask: url(https://iili.io/3knT692.png) center/contain no-repeat;
+            }
+        }
+    }
+
+    .oneshot-paper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        
+        color: #000;
+        background: url(https://iili.io/3kohcI1.png) center repeat, #eee;
+        background-blend-mode: multiply;
+        
+        padding: 2rem;
+
+        .oneshot-place, .oneshot-ps {
+            width: max-content;
+            border: 1px solid black;
+            padding: 0 0.5rem;
+            
+            plc, ps {
+                display: inline-block;
+                font-family: 'Instrument Serif', serif !important;
+                font-size: 1.25rem;
+                line-height: 1;
+                text-shadow: 0 0 black;
+            }
+        }
+
+        .oneshot-place { background: var(--oneshot-primary); }
+        .oneshot-ps { 
+            margin-inline-start: auto;
+            background: var(--oneshot-secondary); }
+    }
+}

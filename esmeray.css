@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Pridi:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --esmeray-pos: center;
+    --esmeray-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.esmeray-box {
+    width: 100%;
+    font-family: 'Pridi', serif;
+    cursor: url(https://i.imgur.com/oY8O0AX.png), auto;
+    font-size: clamp(14px, 1vw, 18px);
+    text-align: justify;
+    line-height: 1.7;
+    color: #6f6164;
+}
+
+.esmeray-top {
+    width: 100%;
+    height: 680px;
+    background: url(https://i.imgur.com/hIfGzQF.png) 50% 15%/cover no-repeat, 
+    url(https://i.pinimg.com/originals/f0/02/ac/f002ac4d47f30f9d56b8710e32be9f5b.gif) center/40% repeat;
+    background-blend-mode: screen;
+}
+
+.esmeray-logo {
+    width: 70px;
+    height: 70px;
+    background: url(https://i.imgur.com/pI6LrYP.png) center/contain no-repeat;
+    filter: drop-shadow(0 0 5px #555);
+    margin: auto;
+    margin-top: -200px;
+}
+
+.esmeray-ripped {
+    width: 100%;
+    height: 200px;
+    margin-top: 5px;
+    background: url(https://i.imgur.com/a3nMqhH.png) top/cover no-repeat;
+}
+
+.esmeray-paper {
+    width: 100%;
+    height: fit-content;
+    margin-top: -175px;
+    background: url(https://i.imgur.com/siAd2Aq.png) top/cover no-repeat;
+    position: relative;
+}
+
+.esmeray-title-glow {
+    width: 450px;
+    height: 100px;
+    margin: auto;
+    margin-top: -25px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background: #fff;
+    filter: blur(27px);
+}
+
+.esmeray-title {
+    width: 550px;
+    margin: auto;
+    margin-top: -107px;
+    font-family: 'Cinzel', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    position: relative;
+    z-index: 10;
+}
+
+.esmeray-butterfly {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+}
+
+.esmeray-title-name { font-size: 50px; margin-top: -108px; }
+.esmeray-subtitle-name { font-size: 30px; margin-top: -20px; }
+
+.esmeray-content {
+    width: 800px;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.esmeray-content p { margin-block: 0; text-indent: 50px; }
+
+.esmeray-member-flex {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.esmeray-member-name { transition: all 1s ease; opacity: 0; }
+
+.esmeray-member-side {
+    flex: 1;
+    aspect-ratio: 3/4;
+    background: var(--esmeray-pic) var(--esmeray-pos)/var(--esmeray-size) no-repeat;
+    transition: all 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    padding-top: 12%;
+    text-shadow: 0 0 3px #450a0a, 0 0 10px #450a0a;
+    font: bold italic 1vw 'Cinzel';
+}
+
+.esmeray-member-side:hover {
+    filter: brightness(1.1) drop-shadow(0 0 15px #fff) drop-shadow(0 0 27px rgba(252,165,165,0.8));
+}
+
+.esmeray-member-center {
+    flex: 1.5;
+    aspect-ratio: 1/1;
+    background: var(--esmeray-pic) var(--esmeray-pos)/var(--esmeray-size) no-repeat;
+    transition: all 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    padding-top: 15%;
+    text-shadow: 0 0 3px #450a0a, 0 0 10px #450a0a;
+    font: bold italic 1.25vw 'Cinzel';
+}
+
+.esmeray-member-center:hover {
+    filter: brightness(1.1) drop-shadow(0 0 15px #fff) drop-shadow(0 0 25px rgba(253,164,175,0.8));
+}
+
+.esmeray-member-side:hover .esmeray-member-name,
+.esmeray-member-center:hover .esmeray-member-name { opacity: 1; }
+
+.esmeray-bottom {
+    width: 100%;
+    aspect-ratio: 1200/480;
+    position: absolute;
+    bottom: 0;
+    background: url(https://i.imgur.com/f5BFe3t.png) center/cover no-repeat;
+}

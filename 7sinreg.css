@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Cinzel:wght@400..900&display=swap');
+
+:root {
+    --sinreg-bg: url(https://i.imgur.com/8GA9Lur.jpg);
+    --sinreg-gradient: url(https://64.media.tumblr.com/f7924f0b27f5dab963aaf69453438e2e/417bedc7425e243a-1d/s400x600/504981bf816d0757b3419b5624dcc9b2d94491be.gifv);
+    --sinreg-pic: gray;
+    --sinreg-pos: center;
+    --sinreg-size: cover;
+    --sinreg-fontth: 'Bai Jamjuree';
+    --sinreg-fonten: 'Cinzel';
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#zzzcode summary { cursor: pointer; }
+
+#zzzcode summary::marker { content: ''; }
+
+#zzzcode summary::-webkit-details-marker { display: none; }
+
+.sinreg-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    max-width: 100%;
+    font-family: var(--sinreg-fontth);
+    color: #fafafa;
+    font-size: 16px;
+}
+
+.sinreg-header {
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(rgba(0,0,0,0.5) 50%, #000), var(--sinreg-bg) top center/cover no-repeat;
+}
+
+.sinreg-topblur {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    padding: 2rem 0;
+}
+
+.sinreg-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-family: var(--sinreg-fonten);
+}
+
+.sinreg-rpth, .sinreg-dpname { flex: 1; padding-top: 0.5rem; }
+.sinreg-rpth::before { content: 'Rolplayth'; }
+.sinreg-dpname a { color: #fafafa; text-decoration: none; }
+
+.sinreg-logo {
+    flex: 1;
+    height: 3rem;
+    aspect-ratio: 1000/600;
+    background: url(https://i.imgur.com/l6LqCgM.png) center/contain no-repeat;
+}
+
+.sinreg-topic {
+    text-align: center;
+    font: 6vw/1 var(--sinreg-fonten);
+    margin-top: 155px;
+    text-transform: uppercase;
+    background: var(--sinreg-gradient) center/cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sinreg-subtopic { text-align: center; font-size: 1.5rem; }
+
+.sinreg-body {
+    width: 100%;
+    background: #000;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-block: -5px;
+}
+
+.sinreg-flex {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sinreg-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 200px;
+    min-height: 200px;
+}
+
+.sinreg-pic {
+    width: 100%;
+    height: 100%;
+    background: var(--sinreg-pic) var(--sinreg-pos)/var(--sinreg-size) no-repeat;
+    border-radius: 6px;
+}
+
+.sinreg-data { flex: 1; font-size: 1rem; }
+.sinreg-data p { text-indent: 50px; }
+
+#willow summary { padding-inline-start: 1.5rem;font-weight: bold; }
+#willow summary:hover { color: darkgray; }
+#willow details[open] summary { color: #d7c6be; }
+
+.sinreg-footer {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(#000, rgba(0,0,0,0.5)), var(--sinreg-bg) bottom center/cover no-repeat;
+}
+
+.sinreg-bottomblur {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--sinreg-fonten);
+}

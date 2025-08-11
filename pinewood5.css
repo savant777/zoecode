@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/balbes');
+
+:root {
+    --pw5-bg: #f3eee8;
+    --pw5-txt: #000;
+    --pw5-font: 'Bai Jamjuree', sans-serif;
+
+    --pw5-pic: gray;
+    --pw5-pos: center;
+    --pw5-size: cover;
+}
+
+#PineWood5 { position: relative; }
+#PineWood5 * { box-sizing: border-box; }
+#PineWood5 a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#PineWood5 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#PineWood5::after {
+    display: block;
+    content: "Pine Woods No.5";
+    font-family: 'Georgia', serif;
+    font-size: x-small;
+    font-style: italic;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#PineWood5:hover::after { content: "made by zzzcode"; }
+
+#PineWood5 {
+    section > br:first-of-type, section + br, h1 + br, h2 + br { display: none; }
+}
+
+#PineWood5 {
+    .pw5-set {
+        width: 1000px;
+        max-width: 100%;
+        margin-inline: auto;
+
+        background: var(--pw5-bg);
+        color: var(--pw5-txt);
+        font-family: var(--pw5-font);
+        font-size: clamp(13px, 1vw, 16px);
+        
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    section#pw5-head {
+        padding: 4rem 4rem 2rem;
+
+        .pw5-member {
+            display: flex;
+            gap: max(1rem, 1vw);
+            justify-content: space-between;
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1;
+            text-transform: uppercase;
+            text-align: center;
+            height: 1rem;
+            overflow: hidden;
+
+            p { margin-block: 0; flex: 1; }
+
+            div { flex: 2; }
+        }
+    }
+
+    section#pw5-main {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .pw5-roomname {
+            content: attr(name);
+            position: relative;
+            font: clamp(4rem, 6vw, 6rem)/1 'Balbes', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            margin-block: -5% 0;
+            text-wrap: nowrap;
+        }
+
+        .pw5-roomname::after {
+            content: attr(name);
+            position: absolute;
+            top: 45%;
+            left: 5px;
+
+            text-wrap: nowrap;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--pw5-txt);
+        }
+
+        .pw5-roompic {
+            position: absolute;
+            top: 0;
+            aspect-ratio: 3/4;
+            height: 85%;
+            border-radius: 500px 500px 0 0;
+            border: 1px solid var(--pw5-txt);
+
+            .star1, .star2 {
+                position: absolute;
+                aspect-ratio: 1;
+                background: url(https://iili.io/3JOfGNn.png) center/contain no-repeat;
+                z-index: 2;
+            }
+
+            .star1 {
+                width: 25%;
+                left: 0;
+                bottom: 10%;
+                translate: -50% 0;
+            }
+
+            .star2 {
+                width: 20%;
+                right: 7.5%;
+                top: 10%;
+                translate: 50% 0;
+            }
+        }
+
+        .pw5-roompic::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            
+            width: calc(100% - min(4rem, 4vw));
+            height: calc(100% - min(4rem, 4vw));
+            border-radius: 500px 500px 0 0;
+            border: 1px solid var(--pw5-txt);
+            background: var(--pw5-pic) var(--pw5-pos)/var(--pw5-size) no-repeat;
+        }
+
+        .pw5-roomname-sub {
+            position: absolute;
+            bottom: 0;
+            
+            font: clamp(1rem, 1.5vw, 2rem)/1 'Balbes', sans-serif;
+            text-align: center;
+            border-radius: 3rem;
+            border: 1px solid #000;
+            padding: 0.5rem 1.25rem 0.25rem;
+        }
+    }
+
+    section#pw5-info {
+        width: 100%;
+        aspect-ratio: 16/9;
+        padding: 2rem 4rem 4rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .pw5-info {
+            flex: 1;
+            min-width: 300px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 4rem;
+
+            h1 {
+                margin-block: 0;
+                font: normal clamp(2rem, 3vw, 3.5rem)/1 'Balbes', sans-serif;
+            }
+
+            h2 {
+                margin-block: 0;
+                font: normal 1.5rem/1 'Cormorant Garamond', serif;
+            }
+        }
+
+        .pw5-roomgallery {
+            flex: 1;
+            min-width: 300px;
+            
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+
+            .pw5-roompic {
+                min-height: 200px;
+                background: var(--pw5-pic) var(--pw5-pos)/var(--pw5-size) no-repeat;
+                border: 1px solid var(--pw5-txt);
+                border-radius: clamp(2rem, 3vw, 3rem);
+            }
+        }
+    }
+}

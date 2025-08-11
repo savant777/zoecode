@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --fact-dark: #101010;
+    --fact-light: #e5e5e5;
+    --fact-maincolor: #ff8c00;
+    --fact-subcolor: #666;
+    --fact-fontth: 'Bai Jamjuree';
+    --fact-fonten: 'Oswald';
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+#zzzcode:hover::after { content: "zzzcode"; }
+#zzzcode summary { cursor: pointer; }
+#zzzcode summary::marker { content: ''; }
+#zzzcode summary::-webkit-details-marker { display: none; }
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+
+.factbox {
+    margin: auto;
+    width: 800px;
+    max-width: 90%;
+    background: var(--fact-bg);
+    color: var(--fact-txtcolor);
+    border: 1px solid var(--fact-maincolor);
+    padding: 2rem;
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.facthead {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.facttitle {
+    display: flex;
+    justify-content: space-between;
+    font: 5rem/1 var(--fact-fonten);
+    color: var(--fact-maincolor);
+    gap: 0.5rem;
+}
+
+.facttitle p { margin: 0; }
+
+.factsubtitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-transform: uppercase;
+    font-family: var(--fact-fonten), sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.factname { flex: 1; }
+
+.factname span { vertical-align: 0.15rem; }
+
+.factchap {
+    flex: 1 min-content;
+    text-align: right;
+    font-family: 'Noto Sans Thai';
+}
+
+.factbox hr {
+    background: var(--fact-maincolor);
+    margin: 2rem 0;
+}
+
+.factcontent { font-family: var(--fact-fontth); }
+.facthide { display: none; }
+
+.factgrid {
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem 1rem;
+}
+
+.factgrid input ~ br, .facttab ~ br { display: none; }
+
+.facttab {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--fact-subcolor);
+    color: var(--fact-subcolor);
+    text-align: center;
+    font-family: var(--fact-fonten), var(--fact-fontth);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facttab:hover {
+    border: 1px solid var(--fact-maincolor);
+    color: var(--fact-maincolor);
+}
+
+.factquest {
+    font-size: clamp(20px, 1.2vw, 24px);
+    font-weight: bold;
+    color: var(--fact-maincolor);
+    margin-bottom: 1rem;
+}
+
+.factans { 
+    display: none;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: span 5;
+    border-top: 1px solid var(--fact-maincolor);
+    padding-top: 2rem;
+}
+
+input[type=radio]:checked + .factans + label.facttab {
+    background: var(--fact-maincolor);
+    color: var(--fact-bg);
+    border: 0;
+    font-weight: 500;
+}
+
+input[type=radio]:checked + .factans { display: block; }
+
+summary.factsum {
+    padding: 0.5rem 1rem;
+    font-family: var(--fact-fonten), var(--fact-fontth);
+    border: 1px solid var(--fact-maincolor);
+    color: var(--fact-maincolor);
+}
+
+summary.factsum:hover {
+    background: var(--fact-maincolor);
+    color: var(--fact-bg);
+    border: 1px solid var(--fact-bg);
+}
+
+details[open] summary.factsum {
+    background: var(--fact-maincolor);
+    color: var(--fact-bg);
+    border: 0;
+    font-weight: bold;
+}

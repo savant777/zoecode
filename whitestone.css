@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+@font-face {
+    font-family: '2548_D5';
+    src: url('https://dl.dropbox.com/scl/fi/acokilepfvr6tu035umcr/2548_D5N.ttf?rlkey=sr3ta91biw1j93d5nocg6eblo&st=3i8wiot9') format('truetype');
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/rffblq3i0ao1nek94h695/DB-Adman-X-Li.ttf?rlkey=8oomt8hlbqa2b3tev37omn6d4&st=s1q7e6z1') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/9w3wjmb4bkzk1c7jihlx7/DB-Adman-X-Li-It-v3.2.ttf?rlkey=kiv1xweug34fa768g20sskofe&st=jem7q8nq') format('truetype');
+    font-style: italic;
+}
+
+:root {
+    --whitestone-bgcolor: #ddd5c8;
+    --whitestone-txt: #000;
+    --whitestone-box: #d7cfc1;
+    --whitestone-border: #f8eede;
+    
+    --whitestone-bg: gray;
+
+    --whitestone-frame: gray;
+    --whitestone-pos: center;
+    --whitestone-size: cover;
+}
+
+#WhiteStone { position: relative; }
+#WhiteStone * { box-sizing: border-box; }
+
+#WhiteStone a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#WhiteStone a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#WhiteStone::after {
+    content: "White Stone House";
+
+    width: 100%;
+    height: 13px;
+    margin-block-start: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    line-height: 1;
+    color: gray !important;
+    
+    font-variant: small-caps;
+}
+  
+#WhiteStone:hover::after { content: "made by zzzcode";font-variant: normal; }
+
+#WhiteStone {
+    .whitestone-box {
+        position: relative;
+        width: 1200px;
+        max-width: 100%;
+        margin: auto;
+        padding-block-end: min(5vw, 4rem);
+        background: var(--whitestone-bgcolor);
+        border: 1px solid var(--whitestone-border);
+        
+        font-family: 'DB Adman X', 'Noto Sans Thai', sans-serif;
+        font-size: clamp(17px, 1.5vw, 24px);
+        line-height: 1.25;
+        color: var(--whitestone-txt);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            aspect-ratio: 1200/747;
+            background: var(--whitestone-bg) var(--whitestone-pos)/var(--whitestone-size) no-repeat;
+            -webkit-mask: url(https://iili.io/FuEv4ef.png) center/cover no-repeat;
+                    mask: url(https://iili.io/FuEv4ef.png) center/cover no-repeat;
+        }
+
+        .whitestone-frame1, .whitestone-frame2 {
+            position: relative;
+            width: 100%;
+            background: var(--whitestone-frame) center/contain no-repeat;
+        }
+
+        .whitestone-frame1 { aspect-ratio: 1200/605; }
+        .whitestone-frame2 { aspect-ratio: 1200/410; }
+
+        h1.whitestone-h1 + br { display: none; }
+        
+        h1.whitestone-h1 {
+            position: relative;
+            text-align: center;
+            font-family: '2548_D5', serif;
+            font-size: 6rem;
+            font-weight: normal;
+            font-variant: small-caps;
+            line-height: 1;
+            margin-block: 0;
+        }
+
+        @media screen and (max-width: 1350px) {
+            h1.whitestone-h1 { font-size: 5vw; }
+        }
+
+        .whitestone-textbox {
+            position: relative;
+            width: 900px;
+            max-width: 75%;
+            margin: min(2vw, 1.5rem) auto;
+            border-radius: 1rem;
+            border: 1px solid var(--whitestone-border);
+            background: var(--whitestone-box);
+            padding: min(2.5vw, 2rem) min(3vw, 2rem);
+            text-align: justify;
+        }
+    }
+}

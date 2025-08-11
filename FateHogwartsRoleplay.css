@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+    --fhw-pic: gray;
+    --fhw-pos: center;
+    --fhw-size: cover;
+}
+
+#FateOfHogwarts { position: relative; }
+#FateOfHogwarts * { box-sizing: border-box; }
+
+[theme="gryffindor"] {
+    --fhw-r-bg: url(https://i.imgur.com/gALmhuA.png);
+    --fhw-cursor: url(https://i.imgur.com/1W6BUgv.png);
+    logo { aspect-ratio: 328/360; }
+    --fhw-logo: url(https://i.imgur.com/5UVuRaV.png);
+}
+
+[theme="ravenclaw"] {
+    --fhw-r-bg: url(https://i.imgur.com/RtGLZVZ.png);
+    --fhw-cursor: url(https://i.imgur.com/rAC5a5l.png);
+    logo { aspect-ratio: 439/480; }
+    --fhw-logo: url(https://i.imgur.com/GRGmu9y.png);
+}
+
+[theme="hufflepuff"] {
+    --fhw-r-bg: url(https://i.imgur.com/pLLqyUF.png);
+    --fhw-cursor: url(https://i.imgur.com/4W2amCs.png);
+    logo { aspect-ratio: 433/479; }
+    --fhw-logo: url(https://i.imgur.com/BgWDryN.png);
+}
+
+[theme="slytherin"] {
+    --fhw-r-bg: url(https://i.imgur.com/dUBNa9k.png);
+    --fhw-cursor: url(https://i.imgur.com/tEkI1Wx.png);
+    logo { aspect-ratio: 425/479; }
+    --fhw-logo: url(https://i.imgur.com/ywpGOQQ.png);
+}
+
+[theme="durmstrang"] {
+    --fhw-r-bg: url(https://i.imgur.com/QMxwFDy.png);
+    --fhw-cursor: url(https://i.imgur.com/49T8FOo.png);
+    logo { aspect-ratio: 1200/1393; }
+    --fhw-logo: url(https://i.imgur.com/BBPTjiS.png);
+}
+
+[theme="beauxbatons"] {
+    --fhw-r-bg: url(https://i.imgur.com/SkoTu0Y.png);
+    --fhw-cursor: url(https://i.imgur.com/FwcFipP.png);
+    logo { aspect-ratio: 328/360; }
+    --fhw-logo: url(https://i.imgur.com/vxVLu3g.png);
+}
+
+.fhw-role-container {
+    width: 880px;
+    max-width: 100%;
+    margin: auto;
+    padding: 2.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), var(--fhw-r-bg) center/cover no-repeat;
+    cursor: var(--fhw-cursor), auto;
+    box-shadow: inset 0 0 2.5rem #000;
+    font-family: 'Bai Jamjuree';
+    font-size: clamp(14px, 1vw, 17px);
+
+    .fhw-border {
+        border: 50px solid black;
+        border-image: url(https://i.imgur.com/1z4Zm2i.png) 90 stretch;
+        padding-block: 50px 30px;
+        background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.1)) center/cover no-repeat border-box;
+    }
+
+    .fhw-pic {
+        width: 200px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        margin: auto;
+        background: var(--fhw-pic) var(--fhw-pos)/var(--fhw-size) no-repeat;
+        border: 1px solid white;
+        margin-bottom: 0.5rem;
+    }
+
+    .fhw-name {
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+        column-gap: 1.25rem;
+        
+        font-family: 'Playfair Display SC', serif;
+        font-size: clamp(3rem, 3.25vw, 45pt);
+        text-align: center;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .fhw-name::before, .fhw-name::after {
+        content: "";
+        flex: 1;
+        max-width: 70px;
+        height: 2px;
+        background: #fff;
+        translate: 0 4px;
+    }
+
+    .fhw-lname {
+        font-family: 'Playfair Display SC', serif;
+        font-size: clamp(2.25rem, 2.5vw, 35pt);
+        text-align: center;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .fhw-content {
+        width: 100%;
+        max-width: 550px;
+        margin-inline: auto;
+        margin-block: 3.75rem;
+        text-align: justify;
+    }
+
+    .fhw-ps {
+        text-align: center;
+        font-size: 10pt;
+
+        logo {
+            display: block;
+            width: clamp(28px, 2.7vw, 50px);
+            margin: 0 auto 10px;
+            background: var(--fhw-logo) center/contain no-repeat;
+        }
+
+        logo + br { display: none; }
+    }
+}

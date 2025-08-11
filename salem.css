@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@400;500;700&display=swap');
+
+summary {
+    cursor: pointer;
+}
+
+summary::marker {
+    content: '';
+}
+
+.salembook, .salemtable, .salemday, .salemnight {
+    box-sizing: border-box;
+    width: 1000px;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 13px;
+    font-family: 'Maitree';
+    color: PaleGoldenRod;
+    font-size: 17px;
+}
+
+.salembook {
+    padding: 2.5vw 2vw;
+    background: url(https://naldzgraphics.net/wp-content/uploads/2014/09/8-brown-leather-texture.jpg) center/30% repeat;
+    box-shadow: 0 0 5px 3px #130908 inset;
+}
+
+.salemtable {
+    padding: 5vw 2.5vw;
+    background: linear-gradient(rgba(0,0,0,0.5) 0 0), url(https://thedesignest.net/wp-content/uploads/2021/12/Black-Wooden-Texture.jpg) center/50% repeat;
+    box-shadow: 0 0 15px black;
+    text-align: center;
+}
+
+.salemday {
+    padding: 5vw 2.5vw;
+    background: linear-gradient(rgba(253, 241, 201,0.4) 0 0), url(https://st2.depositphotos.com/1000434/9082/i/950/depositphotos_90822732-stock-photo-seamless-texture-of-the-old.jpg) center/50% repeat;
+    box-shadow: 0 0 15px black;
+    color: #483C32;
+    font-weight: 500;
+}
+
+.salemform {
+	max-width: 90%;
+	margin: auto;
+	border: 12px solid transparent;
+	border-image: url(https://i.imgur.com/5AZtRLc.png) 10% fill / 50px / 1rem stretch;
+	padding: 3vw;
+	color: #483C32;
+	font-weight: 500;
+	border-radius: 0;
+}
+
+.salemnight {
+    padding: 5vw 2.5vw;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1) 75%), url(https://t4.ftcdn.net/jpg/02/03/85/27/360_F_203852767_ju82PhKDBKM7v05SU2SVcZK5xGZIi4LH.jpg) center/50% repeat;
+    box-shadow: 0 0 15px black;
+    color: #eaeaea;
+    font-size: 17px;
+}
+
+.salembook-bd {
+    box-sizing: border-box;
+    padding: 5vw 2.5vw;
+    box-shadow: 0px -5px 2px rgb(80 66 63 / 40%), 0px 5px 2px rgb(80 66 63 / 40%), 0 0 5px 3px #130908 inset;
+    border-radius: 6px;
+}
+
+.salemlogo, .salemlogob, .salemlogow {
+    width: 500px;
+    max-width: 80%;
+    aspect-ratio: 5/3;
+    margin: auto;
+}
+
+.salemlogo {
+    background: url(https://i.imgur.com/zdI4Fd4.png) center/contain no-repeat;
+}
+
+.salemlogob {
+    height: 150px;
+    background: url(https://i.imgur.com/vi3bz4Q.png) center/contain no-repeat;
+}
+
+.salemlogow {
+    height: 150px;
+    background: url(https://i.imgur.com/YlMieFD.png) center/contain no-repeat;
+}
+
+.salemcrossline, .salemcrosslineb, .salemcrosslinew {
+    width: 100%;
+    height: 4vw;
+    margin: 4vw auto;
+}
+
+.salemcrossline {
+    background: url(https://i.imgur.com/uDiigMP.png) center/contain no-repeat;
+}
+
+.salemcrosslineb {
+    background: url(https://i.imgur.com/UHzz4GB.png) center/contain no-repeat;
+}
+
+.salemcrosslinew {
+    background: url(https://i.imgur.com/S5kUTFj.png) center/contain no-repeat;
+}
+
+.salemtopic {
+    font-size: 4vw;
+    text-align: center;
+    line-height: 1;
+    color: #dfb741;
+}
+
+.salemmoon {
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;
+    background: url(https://i.imgur.com/wjmdeEb.png) center/contain no-repeat;
+    position: absolute;
+}
+
+.salemmoontopic {
+    display: inline;
+    font-size: 3vw;
+    color: #dfb741;
+    position: relative;
+    left: 2.2vw;
+    top: -0.4vw;
+}
+
+.salemhr {
+    background: #a69d4e;
+    margin-bottom: 2vw;
+}
+
+#salemscroll::-webkit-scrollbar-track {
+    background-color: rgba(19,9,8,0);
+}
+
+#salemscroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0,0,0,0);
+}
+
+#salemscroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0);
+}
+
+#salemscroll.salemdata:hover::-webkit-scrollbar-thumb, #salemscroll:hover::-webkit-scrollbar-thumb {
+    background-color: #dfb741;
+}
+
+#salemscroll.salemdata:hover::-webkit-scrollbar-track, #salemscroll:hover::-webkit-scrollbar-track {
+	background-color: rgba(19,9,8,0.75);
+}
+
+#salemscroll.salemdata:hover::-webkit-scrollbar {
+	width: 6px;
+}
+
+#salemscroll:hover::-webkit-scrollbar {
+	height: 6px;
+}
+
+.salemdeck {
+    display: flex;
+    gap: 1.5vw;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.salemcardset {
+	flex: 1;
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.salemdataset {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-width: 200px;
+	width: 100%;
+}
+
+.salemdatahead {
+	font-size: 2vw;
+	line-height: 1.2;
+	color: #dfb741;
+}
+
+.salemdatacode {
+	font-size: 19px;
+	line-height: 1.2;
+	font-weight: bold;
+}
+
+.salemdatacode > span {
+	color: #dfb741;
+}
+
+.salemdata {
+	border-top: 1px solid #dfb741;
+	padding: 10px 0;
+	margin-top: 10px;
+	flex-grow: 1;
+	max-height: 110px;
+	overflow-y: auto;
+}
+
+.salemcard, .ชื่อการ์ด {
+    min-width: 125px;
+    max-width: 125px;
+    aspect-ratio: 141/230;
+    background: url(https://i.imgur.com/HbgGF2T.png) center/contain no-repeat;
+    border-radius: 6px;
+    margin: auto;
+ }
+ 
+
+/*----- TRYAL CARD -----*/
+
+.notwitch {
+    background-image: url(https://i.imgur.com/aILz8wn.png);
+}
+
+.witch {
+    background-image: url(https://i.imgur.com/ijFlD0M.png);
+}
+
+.constable {
+    background-image: url(https://i.imgur.com/9hiSEQe.png);
+}
+
+/*----- RED CARD -----*/
+
+.x1 {
+    background-image: url(https://i.imgur.com/ekXbGSU.png);
+}
+
+.x3 {
+    background-image: url(https://i.imgur.com/qGKDVFX.png);
+}
+
+.x7 {
+    background-image: url(https://i.imgur.com/86muRgO.png);
+}
+
+/*----- GREEN CARD -----*/
+
+.goat {
+    background-image: url(https://i.imgur.com/3Bdy9c8.png);
+}
+
+.curse {
+    background-image: url(https://i.imgur.com/A7iIHwE.png);
+}
+
+.alibi {
+    background-image: url(https://i.imgur.com/H55fASB.png);
+}
+
+.rob {
+    background-image: url(https://i.imgur.com/ZOiTx13.png);
+}
+
+.stock {
+    background-image: url(https://i.imgur.com/AprXd57.png);
+}
+
+.fire {
+    background-image: url(https://i.imgur.com/9i0SAg6.png);
+}
+
+/*----- BLUE CARD -----*/
+
+.cat {
+    background-image: url(https://i.imgur.com/1D7pdcJ.png);
+}
+
+.asylum {
+    background-image: url(https://i.imgur.com/OeYEe05.png);
+}
+
+.piety {
+    background-image: url(https://i.imgur.com/0YlFvOb.png);
+}
+
+.match {
+    background-image: url(https://i.imgur.com/B884Aml.png);
+}
+
+/*----- BLACK CARD -----*/
+
+.night {
+    background-image: url(https://i.imgur.com/yQC9O91.png);
+}
+
+.conspi {
+    background-image: url(https://i.imgur.com/MyeBqeg.png);
+}

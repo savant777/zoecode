@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: '2548_D6N';
+    src: url('https://dl.dropbox.com/scl/fi/dy4u6frbporbpj4q17ipc/2548_D6N.ttf?rlkey=wn766y4y68gnd0nbeujmh6tfj&st=1rwt1ss0') format('truetype');
+}
+
+:root {
+    --toast-bg: transparent;
+    --toast-txt: #fff;
+    --toast-primary: red;
+
+    --toast-pic: gray;
+    --toast-pos: center;
+    --toast-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#toast.toast-box {
+    width: calc(600px + 8rem);
+    max-width: 100%;
+    margin: auto;
+    padding: 1px 4rem 4rem;
+
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: clamp(13px, 1vw, 16px);
+
+    background: var(--toast-bg);
+    color: var(--toast-txt);
+
+    .toast-area {
+        position: relative;
+        max-width: 450px;
+        min-height: 425px;
+        margin: 20px auto 3rem;
+
+        .toast-back {
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+
+            width: 300px;
+            aspect-ratio: 1;
+            background: var(--toast-bread) center/contain no-repeat;
+
+            rotate: -15deg;
+            filter: drop-shadow(-5px 5px 5px rgba(0,0,0,0.8));
+        }
+
+        .toast-back[bread="ham"] { --toast-bread: url(https://iili.io/FOcO3be.png); }
+        .toast-back[bread="strw-jam"] { --toast-bread: url(https://iili.io/FOcNpf4.png); }
+        .toast-back[bread="oran-jam"] { --toast-bread: url(https://iili.io/FOcNy0l.png); }
+        .toast-back[bread="bacon"], .toast-back[bread="egg"] { --toast-bread: url(https://iili.io/FOcO9g2.png); }
+
+        .toast-back[bread="ham"] + .toast-pic + .toast-front,
+        .toast-back[bread="strw-jam"] + .toast-pic + .toast-front,
+        .toast-back[bread="oran-jam"] + .toast-pic + .toast-front { --toast-bread: url(https://iili.io/FOcOd57.png); }
+
+        .toast-back[bread="bacon"]::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: -30px;
+
+            width: 90%;
+            height: 90%;
+            background: url(https://iili.io/FOcOKzu.png) center/contain no-repeat;
+
+            filter: drop-shadow(-5px 5px 5px rgba(0,0,0,0.6));
+        }
+
+        .toast-back[bread="egg"]::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -40px;
+
+            width: 100%;
+            height: 100%;
+            background: url(https://iili.io/FOcNbsf.png) center/contain no-repeat;
+
+            filter: drop-shadow(-5px 5px 5px rgba(0,0,0,0.6));
+        }
+        
+        .toast-back[bread="bacon"] + .toast-pic + .toast-front,
+        .toast-back[bread="egg"] + .toast-pic + .toast-front { --toast-bread: url(https://iili.io/FOcO9g2.png); }
+
+        .toast-pic {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 280px;
+            aspect-ratio: 0.9;
+            border-radius: 6px;
+            background: var(--toast-pic) var(--toast-pos)/var(--toast-size) no-repeat;
+            
+            rotate: -2deg;
+            filter: drop-shadow(-5px 5px 5px rgba(0,0,0,0.6));
+        }
+
+        .toast-front {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            width: 300px;
+            aspect-ratio: 1;
+            background: var(--toast-bread) center/contain no-repeat;
+            
+            rotate: 8deg;
+            filter: drop-shadow(-5px 5px 5px rgba(0,0,0,0.6));
+        }
+
+        .toast-text {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            
+            min-width: 200px;
+            color: var(--toast-primary);
+            font-family: '2548_D6N', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 0.75;
+            
+            rotate: -7deg;
+            filter: drop-shadow(0 0 2px #faf3d7) drop-shadow(0 0 5px #faf3d7);
+        }
+    }
+
+    hr { 
+        margin-block: 1.75rem 1.5rem;
+        background: var(--toast-txt);
+    }
+}
+
+.toast-box[bg-pic="y"] {
+    background: linear-gradient(rgba(255,255,255,0.75) 0 0), var(--toast-bg) var(--toast-pos)/var(--toast-size) no-repeat !important;
+}
+
+#zoe-set-toast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    #toast.toast-box {
+        width: 300px;
+        padding: 1px 0 0;
+
+        .toast-area {
+            max-width: 225px;
+            min-height: 212.5px;
+            margin: 10px auto 1.5rem;
+
+            .toast-back {
+                position: absolute;
+                left: 0;
+                bottom: 25px;
+                width: 150px;
+                filter: drop-shadow(-2.5px 2.5px 2.5px rgba(0,0,0,0.8));
+            }
+
+            .toast-back[bread="bacon"]::before {
+                top: 10px;
+                left: -15px;
+
+                filter: drop-shadow(-2.5px 2.5px 2.5px rgba(0,0,0,0.6));
+            }
+
+            .toast-back[bread="egg"]::before {
+                top: 5px;
+                left: -20px;
+
+                filter: drop-shadow(-2.5px 2.5px 2.5px rgba(0,0,0,0.6));
+            }
+
+            .toast-pic {
+                width: 140px;
+                border-radius: 3px;
+                
+                filter: drop-shadow(-2.5px 2.5px 2.5px rgba(0,0,0,0.6));
+            }
+
+            .toast-front {
+                width: 150px;
+                filter: drop-shadow(-2.5px 2.5px 2.5px rgba(0,0,0,0.6));
+            }
+
+            .toast-text {
+                right: 10px;
+                bottom: 10px;
+                
+                min-width: 100px;
+                font-size: 1.75rem;
+                filter: drop-shadow(0 0 1px #faf3d7) drop-shadow(0 0 2.5px #faf3d7);
+            }
+        }
+    }
+}

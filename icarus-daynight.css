@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --icr-blue-100: #dbeafe;
+    --icr-blue-950: #1e1b4b;
+    --icr-blue-800: #1e40af;
+    --icr-blue-300: #93c5fd;
+
+    --icr-pic: gray;
+    --icr-pos: center;
+    --icr-size: cover;
+}
+
+#DayNight { position: relative; }
+#DayNight * { box-sizing: border-box; }
+#DayNight a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#DayNight a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#DayNight::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#DayNight:hover::after { content: "zzzcode"; }
+
+#DayNight {
+    .daynight-set {
+        position: relative;
+
+        width: 600px;
+        max-width: 100%;
+        margin-inline: auto;
+        
+        font-size: clamp(13px, 1vw, 16px);
+        font-family: 'Bai Jamjuree', sans-serif;
+
+        --icr-bg: var(--icr-blue-950);
+        --icr-txt: var(--icr-blue-100);
+        --icr-txt-sub: var(--icr-blue-300);
+        --icr-hl: var(--icr-blue-800);
+
+        .daynight-switch {
+            font-size: 17px;
+            position: absolute;
+            z-index: 10;
+            top: 2rem;
+            right: 2rem;
+
+            display: inline-block;
+            width: 3.5em;
+            height: 2em;
+
+            input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .daynight-slider {
+                position: absolute;
+                cursor: pointer;
+                inset: 0;
+                background-color: #111119;
+                transition: .5s;
+                border-radius: 30px;
+            }
+
+            .daynight-slider::before {
+                position: absolute;
+                content: "";
+                height: 1.4em;
+                width: 1.4em;
+                border-radius: 50%;
+                left: 10%;
+                bottom: 15%;
+                box-shadow: inset 8px -4px 0px 0px #fff000;
+                background: #111119;
+                transition: .5s;
+            }
+
+            input:checked + .daynight-slider { background-color: #93c5fd; }
+            input:checked + .daynight-slider::before { 
+                transform: translateX(100%);
+                box-shadow: inset 15px -4px 0px 15px #fff000;
+            }
+        }
+
+        .daynight-switch:has(input:checked) ~ .daynight-box {
+            --icr-bg: var(--icr-blue-100) !important;
+            --icr-txt: var(--icr-blue-950) !important;
+            --icr-txt-sub: var(--icr-blue-800) !important;
+            --icr-hl: var(--icr-blue-300) !important;
+            transition: .5s linear;
+        }
+
+        .daynight-box {
+            width: 100%;
+            background: var(--icr-bg);
+            color: var(--icr-txt);
+            padding: 2rem;
+
+            transition: .5s linear;
+
+            .daynight-head {
+                display: flex;
+                column-gap: 2rem;
+
+                .daynight-pic {
+                    width: 150px;
+                    aspect-ratio: 3/4;
+                    background: var(--icr-pic) var(--icr-pos)/var(--icr-size) no-repeat;
+                    border-radius: 0.5rem;
+                }
+
+                .daynight-info {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+                    font-family: 'Trebuchet MS', 'Bai Jamjuree', sans-serif;
+                    line-height: 1.2;
+                    font-size: 1.25rem;
+
+                    b {
+                        display: block;
+                        font-size: 2rem;text-transform: uppercase;
+                    }
+
+                    p { 
+                        color: var(--icr-txt-sub);
+                        transition: .5s linear;
+                    }
+
+                    .daynight-cat {
+                        display: inline-block;
+                        height: 1.25rem;
+                        aspect-ratio: 1;
+                        background: var(--icr-txt);
+                        -webkit-mask: url(https://iili.io/3CYTBJp.png) center/contain no-repeat;
+                                mask: url(https://iili.io/3CYTBJp.png) center/contain no-repeat;
+                        vertical-align: bottom;
+                        transition: .5s linear;
+                    }
+                }
+            }
+
+            hr {
+                background: transparent;
+                border-top: 2px dashed var(--icr-txt);
+                transition: .5s linear;
+                margin-block: 2rem;
+            }
+
+            .daynight-hl {
+                display: flex;
+                width: max-content;
+                padding: 0.15rem 1rem;
+                font-family: 'Trebuchet MS', 'Bai Jamjuree', sans-serif;
+                line-height: 1.2;
+                background: var(--icr-hl);
+                transition: .5s linear;
+            }
+
+            .daynight-hl.place { margin-block-end: 1rem; }
+            .daynight-hl.ps {
+                display: inline-block;
+                margin-inline-end: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Josefin+Sans:ital,wght@1,700&display=swap');
+
+:root {
+    --w: 2vw;
+    --shop: url(https://storage.prompt-hunt.workers.dev/cli4rzvb1000bl50fjz7p0mrw_1);
+    --item: url(https://i.imgur.com/GHkZmhg.png);
+    --red: #b22222;
+    --bg: url(https://cdn.discordapp.com/attachments/974491586442453084/1158642265821040700/1696312224296.gif);
+    /*https://images.pexels.com/photos/557782/pexels-photo-557782.jpeg*/
+    --d: 700ms;
+    --e: ease-out;
+    --emp: url(https://i.imgur.com/Ey4gBc8.png);
+}
+
+#zzzcode * {
+    box-sizing: border-box;
+}
+
+.ilbackground {
+    box-sizing: border-box;
+    width: 800px;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 6px;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,1)),var(--bg) top center/80% no-repeat;
+    padding: var(--w) 0;
+    font-family: 'Bai Jamjuree';
+}
+
+#zzzcode {
+    position: relative;
+}
+
+#zzzcode a[href="https://roleplayth.com/showthread.php?tid=1858"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://roleplayth.com/showthread.php?tid=1858"] ~ .ilbackground {
+    position: relative;
+}
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#zzzcode:hover::after {
+    content: "zzzcode";
+}
+
+.ilside {
+    padding: 0 var(--w);
+}
+
+.illogo {
+    height: 15vw;
+    background: url(https://i.imgur.com/0fU5Dtz.png) center/contain no-repeat;
+}
+
+.ilcaption, .ilname, .ilps, .iltopic {
+    text-align: center;
+    margin: var(--w) 0;
+}
+
+.ilname, .ilempname {
+    font-size: var(--w);
+    font-weight: bold;
+    font-family: 'Josefin Sans', 'Bai Jamjuree';
+}
+
+.ilps {
+    color: var(--red);
+    font-weight: bold;
+}
+
+.iltopic {
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Josefin Sans', 'Bai Jamjuree';
+}
+
+.ilshopflex {
+    display: flex;
+    gap: var(--w);
+    height: 20vw;
+    width: 100%;
+    align-items: center;
+}
+
+.ilshopphoto {
+    flex: 3;
+    height: 100%;
+    background: var(--shop) center/cover no-repeat;
+}
+
+.ilshopphoto-side {
+    flex: 1;
+    height: 80%;
+    background: linear-gradient(rgba(178, 34, 34,0.5) 0 0),var(--shop) center/cover no-repeat;
+    background-blend-mode: multiply;
+}
+
+.ilpost {
+    text-align: justify;
+    margin-top: var(--w);
+    text-indent: calc(var(--w)*2);
+}
+
+.ilhr {
+    background: linear-gradient(to right, transparent, var(--red), var(--red), transparent);
+    margin: var(--w) 0;
+}
+
+.ilform {
+    width: 80%;
+    margin: var(--w) auto;
+}
+
+.ilformtopic {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+summary {
+    cursor: pointer;
+}
+
+summary::marker {
+    content: '';
+}
+
+.ilitemflex, .ilupdateflex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+}
+
+.ilitemflex {
+    width: 100%;
+}
+
+.ilitembox, .ilupdatepic {
+    flex: 1;
+    min-width: 200px;
+}
+
+.ilitembox {
+    box-sizing: border-box;
+    background: #131313;
+    border-radius: 6px;
+    padding: 1vw;
+    max-height: fit-content;
+}
+
+.ilitembox:hover {
+    background: radial-gradient(circle farthest-side at bottom, var(--red), #131313 75%);
+}
+
+.ilitemcol {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.ilitempic {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: var(--item) center/contain no-repeat, #202020;
+    border-radius: 3px;
+    max-height: 200px;
+}
+
+.ilitemname {
+    font-size: var(--w);
+    font-weight: bold;
+    line-height: 1;
+    font-family: 'Josefin Sans', 'Bai Jamjuree';
+}
+
+.ilitemcost {
+    position: relative;
+    border-top: 1px solid var(--red);
+    padding-top: 0.5vw;
+    color: gray !important;
+}
+
+.ilarrow {
+    position: absolute;
+    top: 0.5vw;
+    right: 0;
+}
+
+.ilarrow::before {
+    content: "▼";
+}
+
+.ilupdateflex {
+    justify-content: center;
+}
+
+.ilupdatepic {
+    max-width: 20vw;
+    aspect-ratio: 1/1;
+    background: var(--item) center/contain no-repeat;
+}
+
+.ilupdatecost {
+    text-align: center;
+    font-size: large;
+    color: gray;
+}
+
+.ilempflex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+    padding: 1vw;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Josefin Sans', 'Bai Jamjuree';
+    justify-content: center;
+}
+
+div.ilempcard a {
+    color: white !important;
+}
+
+.ilempcard {  
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 1vw;
+    flex-grow: 1;
+    min-width: 200px;
+    max-width: 30%;
+    aspect-ratio: 3/4;
+    border-radius: 6px;
+    text-align: center;
+    color: white !important;
+    background-color: #131313;
+}
+
+.ilempcard:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--emp);
+}
+
+.ilempcard:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.ilempdata {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1vw;
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+    text-shadow: 1px 1px 1px black, 1px 1px 4px black;
+    transform: translateY(40%);
+}
+
+.ilempname {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #b22222
+}
+
+.ilemprole {
+    font-family: 'Bai Jamjuree';
+    font-size: small;
+    line-height: 1;
+}
+
+.ilempcard:hover::after {
+    transform: translateY(0);
+    background-image: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 0%, 0) 0%,
+        hsla(0, 0%, 0%, 0.790) 100%
+    );
+}
+
+.ilempdata > *:not(.ilempname) {
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+}
+
+.ilempcard:hover, .ilempcard:focus-within {
+    justify-content: center;
+}
+
+.ilempcard:hover::after, .ilempcard:focus-within::after {
+    transform: translateY(-40%);
+}
+
+.ilempcard:hover .ilempdata, .ilempcard:focus-within .ilempdata {
+    transform: translateY(-10%);
+}
+
+.ilempcard:hover .ilempdata > *:not(.ilempname), .ilempcard:focus-within .ilempdata > *:not(.ilempname) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+}

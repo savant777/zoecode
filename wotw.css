@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css');
+
+:root {
+    --wotw-maincolor: gray;
+    --wotw-pic: gray;
+    --wotw-pos: center;
+    --wotw-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.wotw-box {
+    display: flex;
+    width: 800px;
+    max-width: 95%;
+    margin: 0 auto 1rem;
+    gap: 1rem;
+    font-size: clamp(14px, 1vw, 17px);
+    font-family: 'Bai Jamjuree';
+}
+
+.wotw-pic {
+    width: 200px;
+    height: 500px;
+    mask-image: linear-gradient(black 50%, transparent);
+    -webkit-mask-image: linear-gradient(black 50%, transparent);
+    background: var(--wotw-pic) var(--wotw-pos)/var(--wotw-size) no-repeat;
+}
+
+.wotw-right, .wotw-top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.wotw-right { justify-content: space-between; }
+
+.wotw-logo {
+    aspect-ratio: 1000/144;
+    width: 200px;
+    background: url(https://i.imgur.com/XR6for0.png) center/contain no-repeat;
+}
+
+.wotw-name {
+    font: bold 4rem/1 'Josefin Sans';
+    text-transform: uppercase;
+    margin-bottom: -1rem;
+}
+
+.wotw-name c { color: var(--wotw-maincolor); }
+
+.wotw-status {
+    border-bottom: 2px solid var(--wotw-maincolor);
+    padding-bottom: 1rem;
+}
+
+.wotw-status .mdi {
+    position: relative;
+    top: 3px;
+    font-size: 22px;
+    line-height: 1;
+    margin-right: 0.5rem;
+}
+
+.wotw-place { font-weight: bold; }
+
+.wotw-ps::before {
+    content: "หมายเหตุ : ";
+    color: var(--wotw-maincolor);
+    font-weight: bold;
+}

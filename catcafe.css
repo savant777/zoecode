@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root {
+    --catcafe-width: 800px;
+    --catcafe-txtcolor: #130f40;
+    --catcafe-maincolor: #0c2461;
+    --catcafe-fontth: 'Itim';
+    --catcafe-bg: url(https://i.imgur.com/BKb3nrZ.jpeg);
+    --catcafe-overlay: linear-gradient(rgba(255,255,255,0.2) 0 0);
+    --catcafe-pos: center;
+    --catcafe-size: cover;
+    --catcafe-hr: url(https://i.imgur.com/ki8DCyj.png);
+    --catcafe-icon: url(https://i.imgur.com/DQusbwp.png);
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.catcafe-box {
+    width: var(--catcafe-width);
+    max-width: 100%;
+    margin: auto;
+    padding: 2em;
+    border-radius: 1rem;
+    font-size: clamp(14px, 1vw, 18px);
+    font-family: var(--catcafe-fontth);
+    font-weight: 500;
+    color: var(--catcafe-txtcolor);
+    background: var(--catcafe-overlay), var(--catcafe-bg) var(--catcafe-pos)/var(--catcafe-size) no-repeat;
+
+    img {
+        user-select: none;
+        pointer-events: none;
+    }
+}
+
+.catcafe-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catcafe-rpth, .catcafe-cafe {
+    background: var(--catcafe-maincolor);
+    height: 50px;
+}
+
+.catcafe-rpth {
+    mask: url(https://i.imgur.com/KDZeBvO.png) center/contain no-repeat;
+    -webkit-mask: url(https://i.imgur.com/KDZeBvO.png) center/contain no-repeat;
+    aspect-ratio: 338/601;
+}
+
+.catcafe-cafe {
+    mask: url(https://iili.io/2QX1lAF.png) center/contain no-repeat;
+    -webkit-mask: url(https://iili.io/2QX1lAF.png) center/contain no-repeat;
+    aspect-ratio: 623/406;
+}
+
+.catcafe-logo {
+    width: 300px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.catcafe-box p { text-indent: 50px; }
+
+.catcafe-hr {
+    width: 80%;
+    height: 1.5rem;
+    margin: auto;
+    margin-block: 2rem;
+    background: var(--catcafe-hr) center/contain no-repeat;
+}
+
+.catcafe-topic {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--catcafe-maincolor);
+}
+
+.catcafe-topic::before {
+    display: inline-block;
+    position: relative;
+    top: 0.25rem;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    background: var(--catcafe-icon) center/contain no-repeat;
+}

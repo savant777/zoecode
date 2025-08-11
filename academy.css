@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --acdm-pos: center;
+    --acdm-size: cover;
+    --acdm-red: #ed1c24;
+    --acdm-gold: #be9b53;
+    --acdm-blue: #181c28;
+    --acdm-pic: gray;
+
+    --acdm-x1: 180px;
+    --acdm-x2: calc(100% - 180px);
+    --acdm-y1: 184px;
+    --acdm-y2: calc(100% - 184px);
+
+    --acdm-tlout: -5%;
+    --acdm-brout: 105%;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#zzzcode summary { cursor: pointer; }
+#zzzcode summary::marker { content: ''; }
+#zzzcode summary::-webkit-details-marker { display: none; }
+
+/* ==== Thread ==== */
+
+.academy-box {
+    position: relative;
+    width: 1000px;
+    max-width: 90%;
+    margin: 0.5rem auto;
+    background: var(--acdm-blue);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: clamp(14px, 1vw, 17px);
+    color: #fff;
+}
+
+.academy-box::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: -2px;
+    border: 10px solid transparent;
+    border-image-source: url(https://i.imgur.com/a14ESxk.png);
+    border-image-slice: 47;
+    border-image-width: 2.8;
+    border-image-outset: 1.3;
+    border-image-repeat: repeat round;
+    clip-path: polygon(
+        var(--acdm-x1) var(--acdm-tlout),
+        var(--acdm-x2) var(--acdm-tlout),
+        var(--acdm-x2) var(--acdm-y1),
+        var(--acdm-brout) var(--acdm-y1),
+        var(--acdm-brout) var(--acdm-y2),
+        var(--acdm-x2) var(--acdm-y2),
+        var(--acdm-x2) var(--acdm-brout),
+        var(--acdm-x1) var(--acdm-brout),
+        var(--acdm-x1) var(--acdm-y2),
+        var(--acdm-tlout) var(--acdm-y2),
+        var(--acdm-tlout) var(--acdm-y1),
+        var(--acdm-x1) var(--acdm-y1)
+    );
+    pointer-events: none;
+    user-select: all;
+}
+
+.academy-box bdtl, .academy-box bdtr, .academy-box bdbl, .academy-box bdbr {
+    z-index: 1;
+    width: 200px;
+    aspect-ratio: 1;
+    background: var(--acdm-bd) var(--acdm-pos)/contain no-repeat;
+    position: absolute;
+}
+
+.academy-box bdtl {
+    --acdm-bd: url(https://i.imgur.com/cqRCnta.png);
+    --acdm-pos: top left;
+    top: -1rem;
+    left: -1rem;
+}
+
+.academy-box bdtr {
+    --acdm-bd: url(https://i.imgur.com/xCPv8CL.png);
+    --acdm-pos: top right;
+    top: -1rem;
+    right: -1rem;
+}
+
+.academy-box bdbl {
+    --acdm-bd: url(https://i.imgur.com/lJUxG1v.png);
+    --acdm-pos: bottom left;
+    bottom: -1rem;
+    left: -1rem;
+}
+
+.academy-box bdbr {
+    --acdm-bd: url(https://i.imgur.com/IW8eEge.png);
+    --acdm-pos: bottom right;
+    bottom: -1rem;
+    right: -1rem;
+}
+
+.academy-box bdbr + br { display: none; }
+
+.academy-bg, .academy-pic {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--acdm-pic) var(--acdm-pos)/var(--acdm-size) no-repeat;
+}
+
+.academy-bg, .academy-pic {
+    mask-image: linear-gradient(#000, transparent);
+    -webkit-mask-image: linear-gradient(#000, transparent);
+}
+
+.academy-logo {
+    width: 100%;
+    height: 250px;
+    margin-top: -15vw;
+    background: var(--acdm-pic) var(--acdm-pos)/contain no-repeat;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+    isolation: isolate;
+}
+
+.academy-ps {
+    margin-block: 1rem 2rem;
+    font-size: clamp(11px, 1vw, 17px);
+    color: var(--acdm-red);
+    font-style: italic;
+    text-align: center;
+}
+
+.academy-box acdmline {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    background: url(https://i.imgur.com/lTwZKVh.png) center/contain no-repeat;
+    margin-block: 1rem;
+}
+
+.academy-content {
+    display: block;
+    padding: 2rem 5rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.academy-img {
+    width: 100%;
+    aspect-ratio: 1226/654;
+    border-image: url(https://i.imgur.com/gA1DcR0.png) fill 0;
+    background: var(--acdm-pic) var(--acdm-pos)/var(--acdm-size) no-repeat content-box;
+    padding: 5% 2.5%;
+    margin-block: 2rem;
+}
+
+/* ==== Roleplay ==== */
+
+.academy-pic {
+    mask-image: linear-gradient(#000 50%, transparent);
+    -webkit-mask-image: linear-gradient(#000 50%, transparent);
+}
+
+.academy-slogo {
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    width: 100%;
+    height: 3rem;
+    background: url(https://i.imgur.com/aFLX6eG.png) center/contain no-repeat;
+}
+
+.academy-title-flex {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.academy-name {
+    font-weight: 500;
+    color: var(--acdm-gold);
+    font-size: 2rem;
+    text-align: center;
+    filter: drop-shadow(0 0 15px #000);
+}
+
+.academy-title-flex acdmline {
+    filter: drop-shadow(0 0 var(--acdm-gold)) drop-shadow(0 0 15px #000);
+}
+
+.academy-roleplay {
+    padding: 2rem 5rem 5rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.academy-roleplay acdmline {    
+    transform: rotate(180deg);
+    margin-block: 3rem;
+    filter: drop-shadow(0 0 var(--acdm-gold));
+}
+
+.academy-roleplay .academy-ps { 
+    margin-block: 0;
+    text-align: left;
+}
+
+acdmline + br,
+br:has(+ acdmline + br) { display: none; }
+
+/* ==== Horse ==== */
+
+.academy-content input[type="radio"],
+.academy-grid label + br,
+br:has(+ input), 
+br:has(+ .academy-horse) { display: none; }
+
+.academy-grid label {
+    cursor: pointer;
+    margin: auto;
+}
+
+.academy-grid {
+    display: grid;
+    gap: 2rem;
+    margin-block: 2rem 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+@media screen and (max-width: 1150px) {
+    .academy-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .academy-horseimg {
+        width: 150px !important;
+    }
+}
+
+.academy-horse {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+    transition: 0.5s;
+    opacity: 0;
+    height: 0px;
+}
+
+.academy-horseimg {
+    position: relative;
+    display: flex;    
+    justify-content: center;
+    align-items: flex-end;
+    width: 180px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background: var(--acdm-pic) var(--acdm-pos)/var(--acdm-size) no-repeat;
+    padding: 1rem;
+    color: var(--acdm-gold);
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #000, 0 0 15px #000;
+}
+
+.academy-horseimg::before {
+    content: '';
+    position: absolute;
+    inset: -26px;
+    z-index: 1;
+    background: url(https://i.imgur.com/AuGwZ6F.png) center/contain no-repeat;
+}
+
+.academy-horseinfo {
+    flex: 1;
+    text-align: left;
+}
+
+.academy-horseinfo bc { 
+    font-weight: 500;
+    color: var(--acdm-gold);
+}
+
+.academy-horseinfo hr { background-color: var(--acdm-gold); }
+
+#h1:checked ~ .academy-horse[for="h1"],
+#h2:checked ~ .academy-horse[for="h2"],
+#h3:checked ~ .academy-horse[for="h3"],
+#h4:checked ~ .academy-horse[for="h4"],
+#h5:checked ~ .academy-horse[for="h5"],
+#h6:checked ~ .academy-horse[for="h6"],
+#h7:checked ~ .academy-horse[for="h7"],
+#h8:checked ~ .academy-horse[for="h8"],
+#h9:checked ~ .academy-horse[for="h9"],
+#h10:checked ~ .academy-horse[for="h10"],
+#h11:checked ~ .academy-horse[for="h11"],
+#h12:checked ~ .academy-horse[for="h12"],
+#h13:checked ~ .academy-horse[for="h13"],
+#h14:checked ~ .academy-horse[for="h14"],
+#h15:checked ~ .academy-horse[for="h15"],
+#h16:checked ~ .academy-horse[for="h16"],
+#h17:checked ~ .academy-horse[for="h17"],
+#h18:checked ~ .academy-horse[for="h18"] {
+    height: auto;
+    opacity: 1;
+}
+
+#none:checked ~ *.academy-horse { transition-delay: -0.5s; }

@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Gloria+Hallelujah&display=swap');
+
+:root {
+    --ppnote-bg: #f2f2f2;
+    --ppnote-line-x: steelblue;
+    --ppnote-line-y: rgba(255, 0, 0, 0.3);
+    --ppnote-txt: #000;
+    --ppnote-primary: #000;
+
+    --ppnote-png: gray;
+    --ppnote-pic: gray;
+    --ppnote-pos: center;
+    --ppnote-size: cover;
+}
+
+#PaperNoted { position: relative; }
+#PaperNoted * { box-sizing: border-box; }
+#PaperNoted a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#PaperNoted a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#PaperNoted::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#PaperNoted:hover::after { content: "zzzcode"; }
+
+#PaperNoted {
+    .ppnote-paper {
+        position: relative;
+
+        width: 800px;
+        max-width: 100%;
+        margin-inline: auto;
+        
+        background-color: var(--ppnote-bg);
+        color: var(--ppnote-txt);
+        
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: clamp(13px, 1vw, 16px);
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+
+            height: 100%;
+            width: 2px;
+            background: var(--ppnote-line-y);
+
+            margin-left: 4rem;
+        }
+
+        .ppnote-line {
+            position: relative;
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: calc(1.8rem + 2px);
+            
+            margin-block: 3rem 2rem;
+            padding-inline: 5rem 2rem;
+            padding-block: 2.3rem;
+            
+            background-image: repeating-linear-gradient(transparent 0 1.8rem,var(--ppnote-line-x) calc(1.8rem + 2px));
+            line-height: calc(1.8rem + 2px);
+
+            .ppnote-content { flex: 1; }
+            .ppnote-content::before {
+                content: "";
+                float: right;
+                width: clamp(240px, 20vw, 310px);
+                height: clamp(215px, 20vw, 300px);
+            }
+
+            .ppnote-ps {
+                display: flex;
+                column-gap: 1rem;
+            }
+        }
+
+        .ppnote-polaroid {
+            position: absolute;
+            top: 1rem;
+            right: 0.5rem;
+
+            display: flex;
+            flex-direction: column;
+
+            width: clamp(200px, 20vw, 250px);
+            aspect-ratio: 4/5;
+            padding: 1rem;
+
+            background: #fff;
+            box-shadow: 2px 2px 8px 1px #0003;
+
+            transform: rotate(10deg);
+            transform-origin: top left;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -70%);
+
+                width: 40%;
+                aspect-ratio: 200/73;
+                background: url(https://iili.io/3CLigDX.png) center/contain no-repeat;
+                
+                filter: hue-rotate(var(--ppnote-hue));
+            }
+
+            .ppnote-png1 {
+                position: absolute;
+                top: -15.36%;
+                right: 0;
+
+                width: 25.6%;
+                aspect-ratio: 1;
+                background: var(--ppnote-png) var(--ppnote-pos)/var(--ppnote-size) no-repeat;
+            }
+
+            .ppnote-png2 {
+                position: absolute;
+                bottom: -15.36%;
+                left: 0;
+
+                width: 38.4%;
+                aspect-ratio: 1;
+                background: var(--ppnote-png) var(--ppnote-pos)/var(--ppnote-size) no-repeat;
+            }
+
+            .ppnote-png3 {
+                position: absolute;
+                bottom: 15.36%;
+                left: -12.8%;
+
+                width: 25.6%;
+                aspect-ratio: 1;
+                background: var(--ppnote-png) var(--ppnote-pos)/var(--ppnote-size) no-repeat;
+            }
+
+            .ppnote-pic {
+                width: 100%;
+                aspect-ratio: 1;
+                background: var(--ppnote-pic) var(--ppnote-pos)/var(--ppnote-size) no-repeat;
+            }
+
+            .ppnote-name {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                font: clamp(1rem, 1.1vw, 1.25rem)/1 'Gloria Hallelujah', cursive;
+                text-align: center;
+                color: var(--ppnote-primary);
+            }
+        }
+    }
+}

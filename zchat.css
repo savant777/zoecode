@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+:root {
+    --zchat-bg: #181818;
+    --zchat-txtcolor: #fff;
+    --zchat-head: #202020;
+    --zchat-fontth: 'Noto Sans Thai';
+    --zchat-fonten: 'Inter';
+    --zchat-maincolor: #ff8c00;
+    --zchat-bubble: #303030;
+    --zchat-pic: url(https://i.imgur.com/Ey4gBc8.png);
+    --zchat-pos: center;
+    --zchat-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.zchatbox {
+    width: 800px;
+    max-width: 90%;
+    margin: auto;
+    background: var(--zchat-bg);
+    color: var(--zchat-txtcolor);
+    border-radius: 1rem;
+    font-size: clamp(14px, 1vw, 18px);
+    font-family: 'Inter', 'Noto Sans Thai';
+}
+
+.zchathead {
+    background: var(--zchat-head);
+    color: var(--zchat-maincolor);
+    border-radius: 1rem 1rem 0 0;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.zchatcontent { padding: 1rem; }
+
+.zchatflex, .zchatflexr {
+    display: flex;
+    gap: 1rem;
+    margin-block-end: 1rem;
+}
+
+.zchatflexr {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.zchatpic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: var(--zchat-pic) var(--zchat-pos)/var(--zchat-size) no-repeat;
+}
+
+.zchattxt {
+    flex: 1;
+    position: relative;
+    margin-bottom: -1.5rem;
+    font-family: var(--zchat-fontth);
+}
+
+.zchatname { 
+    color: var(--zchat-maincolor);
+    font-weight: bold;
+}
+
+.zchatbbtail {
+    position: relative;
+    top: 5px;
+    left: -5px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--zchat-bubble);
+    clip-path: polygon(0% 0%, 100% 15%, 100% 100%);
+}
+
+.zchatbbtailr {
+    position: relative;
+    top: 5px;
+    right: -5px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--zchat-bubble);
+    clip-path: polygon(0% 15%, 100% 0%, 0% 100%);
+    margin-left: auto;
+}
+
+.zchatbbarea {
+    position: relative;
+    top: -1.5rem;
+    left: 6px;
+    width: calc(100% - (62px + 1rem));
+}
+
+.zchatbbarear {
+    width: fit-content;
+    max-width: calc(100% - (62px + 1rem));
+    position: relative;
+    top: -1.5rem;
+    right: 6px;
+    margin-left: auto;
+}
+
+.zchatbbarear .zchatbubble {
+    margin-left: auto;
+    text-align: left;
+}
+
+.zchatbubble {
+    width: fit-content;
+    border-radius: 1rem;
+    background: var(--zchat-bubble);
+    padding: 0.2rem 1rem;
+    margin-block-end: 0.3rem;
+}
+
+.zchatflex:last-child, .zchatflexr:last-child, .zchatbubble:last-child { margin-block-end: 0; }
+
+.zchatcenter {
+    width: fit-content;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.8);
+}

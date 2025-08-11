@@ -1,0 +1,256 @@
+@import url('https://fonts.cdnfonts.com/css/signature-present-2');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Noto+Serif+Thai:wght@100..900&display=swap');
+
+
+@font-face {
+    font-family: 'KhongYangKhitthueng';
+    src: url('https://dl.dropbox.com/scl/fi/23tcvrg7gskwllw90o52k/TorsilpKhongYangKhitthueng.ttf?rlkey=uet7f4uj7kvd1u4qz19ov5iet&st=68drw18b') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --bvy-txt: #262522;
+    --bvy-paper: #e5decf;
+
+    --bvy-bg: transparent;
+
+    --bvy-pic: indianred;
+    --bvy-pos: center;
+    --bvy-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.bvyg-set {
+    position: relative;
+
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: clamp(5rem, 8.25vw, 10rem) clamp(2.5rem, 4.25vw, 5rem);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clamp(3.5rem, 5vw, 6rem);
+
+    font-size: clamp(14px, 1vw, 17px);
+    color: var(--bvy-txt);
+
+    .bvyg-postcard {
+        position: relative;
+        width: 800px;
+        max-width: 100%;
+        aspect-ratio: 6/4.25;
+        background-image: url(https://iili.io/2gMIdAu.png);
+        background-color: var(--bvy-paper);
+        background-blend-mode: multiply;
+    }
+
+    #back.bvyg-postcard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: clamp(1.5rem, 2.2vw, 2.5rem);
+        padding: clamp(1rem, 1.7vw, 2rem) clamp(1.5rem, 2.2vw, 2.5rem) clamp(3rem, 3.7vw, 4rem);
+
+        hr {
+            flex: 1;
+            width: 1px;
+            background: var(--bvy-txt);
+        }
+    }
+
+    #back.bvyg-postcard::before {
+        content: "";
+        position: absolute;
+        right: clamp(1.5rem, 2.2vw, 2.5rem);
+        width: clamp(4.5rem, 7vw, 7rem);
+        aspect-ratio: 300/358;
+        background: var(--bvy-txt);
+        mask: url(https://iili.io/2ghwRqb.png) center/contain no-repeat;
+        mix-blend-mode: multiply;
+        filter: opacity(0.9);
+    }
+
+    .bvyg-name {
+        font-family: 'Cormorant', serif;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: clamp(1rem, 1.75vw, 2rem);
+        letter-spacing: 0.2vw;
+        line-height: 1;
+    }
+
+    .bvyg-detail-line {
+        flex: 2;
+        width: 100%;
+        background: repeating-linear-gradient(transparent -0.1rem clamp(2.5rem, 4vw, 3.6rem), var(--bvy-txt) clamp(2.5rem, 4vw, 3.6rem) calc(clamp(2.5rem, 4vw, 3.6rem) + 1px));
+        display: flex;
+        justify-content: center;
+        max-height: 240px;
+
+        @media screen and (max-width: 1150px) {
+            max-height: 160px;
+        }
+
+        .bvyg-detail {
+            max-width: 95%;
+            font-family: 'Signature Present', 'KhongYangKhitthueng', sans-serif;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-size-adjust: 0.35;
+            line-height: 0.75;
+            rotate: -3deg;
+        }
+    }
+
+    #front.bvyg-postcard {
+        font-family: 'Instrument Serif', serif;
+        padding: 0.5rem;
+
+        .bvyg-title {
+            --f: 5; 
+            --bvy-txt: #e5decf;
+            position: absolute;
+            top: clamp(1rem, 1.35vw, 1.5rem);
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - clamp(2rem, 2.7vw, 3rem));
+            
+            display: flex;
+            align-items: center;
+            column-gap: 1vw;
+            
+            color: var(--bvy-txt);
+            font-size: clamp(calc(calc(var(--f) * 1rem) - 2rem), 4.5vw, calc(var(--f) * 1rem));
+            line-height: 1;
+            text-transform: uppercase;
+
+            a { color: inherit; }
+
+            hr {
+                flex: 1;
+                height: 2px;
+                background: var(--bvy-txt);
+            }
+        }
+    }
+
+    #front.bvyg-postcard::before {
+        content: "";
+        position: absolute;
+        inset: 0.5rem;
+        background: var(--bvy-pic) var(--bvy-pos)/var(--bvy-size) no-repeat;
+        mix-blend-mode: multiply;
+        filter: opacity(0.9);
+    }
+
+    #bvyhead.bvyg-postcard {
+        padding: 0.5rem;
+        aspect-ratio: unset;
+        min-height: max-content;
+
+        .bvyg-title {
+            --bvy-txt: #e5decf;
+            position: relative;
+            z-index: 2;
+
+            width: calc(100% - clamp(2rem, 2.7vw, 3rem));
+            margin-block: clamp(2rem, 2.7vw, 3rem);
+            margin-inline: auto;
+
+            display: flex;
+            align-items: center;
+            column-gap: 1vw;
+            color: var(--bvy-paper);
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(4.5rem, 6.5vw, 7rem);
+            line-height: 1;
+            text-transform: uppercase;
+            
+            i {
+                font-family: 'Great Vibes';
+            }
+
+            hr {
+                flex: 1;
+                height: 2px;
+                background: var(--bvy-txt);
+            }
+        }
+    }
+
+    #bvyhead.bvyg-postcard::before {
+        content: "";
+        position: absolute;
+        inset: 0.5rem;
+        background: var(--bvy-pic) var(--bvy-pos)/var(--bvy-size) no-repeat;
+        mix-blend-mode: multiply;
+        filter: opacity(0.9);
+    }
+
+    #bvybody.bvyg-postcard {
+        padding: 2rem 2rem 3rem;
+        aspect-ratio: unset;
+        min-height: max-content;
+        font-family: 'Noto Serif Thai';
+
+        p { text-indent: 4rem; }
+
+        .mycode_align p { text-indent: 0; }
+        
+        h1 + br, section + br, h2 + br { display: none; }
+
+        section:first-of-type h1, h1 + br + p { margin-block-start: 0; }
+
+        h1 {
+            font-family: 'Instrument Serif';
+            font-size: clamp(2.5rem, 4vw, 3rem);
+            text-transform: uppercase;
+            margin-block-end: 0;
+        }
+        
+        ol, ul { margin-block-start: 0; }
+
+        .codeblock {
+            background: var(--bvy-txt);
+            color: var(--bvy-paper);
+        }
+
+        a { color: #7D5A53;}
+    }
+}
+
+.bvyg-set::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bvy-bg) var(--bvy-pos)/var(--bvy-size) no-repeat;
+    filter: grayscale(1);
+}
+
+.bvyg-set:has(#bvyhead) { row-gap: clamp(1.5rem, 3vw, 4rem); }

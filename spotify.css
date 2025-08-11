@@ -1,0 +1,388 @@
+/*@import url(https://db.onlinewebfonts.com/c/1ccdd11fd9d1d81756c40d7acb17d0aa?family=CircularSpotifyTxT-Light);
+@import url(https://db.onlinewebfonts.com/c/21a1184148d11d67c19f5076b909d63b?family=CircularSpotifyTxT-Book);
+@import url(https://db.onlinewebfonts.com/c/1bc2daddba36ba331fc4fa67828eabdc?family=CircularSpotifyTxT-Med);
+@import url(https://db.onlinewebfonts.com/c/112ec584bfc481ccde03444e67f8fc3f?family=CircularSpotifyTxT-Bold);
+@import url(https://db.onlinewebfonts.com/c/01173b246d9d9ea808ea75a26b3b61bb?family=CircularSpotifyTxT-Black);*/
+
+@font-face{font-family:Circular;src:url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-book.woff2') format('woff2'),url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-book.woff') format('woff');font-weight:400;font-style:normal}
+
+@font-face{font-family:Circular;src:url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-medium.woff2') format('woff2'),url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-medium.woff') format('woff');font-weight:500;font-style:normal}
+
+@font-face{font-family:Circular;src:url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-bold.woff2') format('woff2'),url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-bold.woff') format('woff');font-weight:700;font-style:normal}
+
+:root {
+    --spcover: black;
+    --spposition: center;
+    --spsongpic: black;
+    --fontth: 'Noto Sans Thai';
+    --spact: "Music Wrapped 2023";
+}
+
+#zzzcode {
+    position: relative;
+}
+
+#zzzcode div {
+    box-sizing: border-box;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child {
+    position: relative;
+}
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after {
+    content: "zzzcode";
+}
+
+.sptfblur details br:first-child {
+    display: none;
+}
+
+.sptfbox details[open] summary .sptftitle {
+    color: #1abc54;
+}
+
+.sptfbox summary {
+    cursor: pointer;
+}
+
+.sptfbox summary::marker {
+    content: '';
+}
+
+.sptfbox summary::-webkit-details-marker {
+    display: none;
+}
+
+#zzzcode .sptfbox a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sptfbox {
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    background: #191919;
+    color: #b3b3b3;
+    text-transform: none;
+    line-height: normal;
+    vertical-align: baseline;
+    font-family: 'Circular', var(--fontth);
+    font-weight: 400;
+}
+
+.sptfcover {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    min-height: calc(20rem + 5%);
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(transparent,rgba(0,0,0,0.5)), var(--spcover) var(--spposition)/cover no-repeat;
+}
+
+.sptfcoverflex {
+    width: 100%;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: calc(16px + 10%) 16px;
+    padding-bottom: calc(16px + 5%);
+    color: white;
+}
+
+.sptfcovertxtsmall {
+    font-size: 0.8125rem;
+    color: hsla(0,0%,100%,.7);
+}
+
+.sptfcovertxtsmall.pl::before {
+    content: var(--spact);
+}
+
+.sptfcovername {
+    margin: calc(0.08em + 8px) 0px 0.12em;
+    font-size: 2rem;
+    font-family: 'Circular';
+    font-weight: 700;
+}
+
+.sptfcoverinfo {
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
+    font-size: 0.8125rem;
+    gap: 4px;
+}
+
+.sptflogorpset {
+    display: grid;
+    grid-gap: 4px;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.sptflogorp {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: url(https://i.imgur.com/gmTGFoA.png) center/cover no-repeat;
+}
+
+.sptflogorpname::before {
+    font-family: 'Circular';
+    font-weight: 700;
+    content: "RoleplayTH";
+}
+
+.sptfinfo::before {
+    margin-right: 2px;
+    content: "• ";
+    font-size: calc(0.8125rem/2);
+    vertical-align: middle;
+}
+
+.sptfblur {
+    margin-top: -5%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    border-radius: 0 0 8px 8px;
+}
+
+.sptfbuttonflex {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.sptfplay {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background: url(https://i.imgur.com/z6x558U.png) center/cover no-repeat;
+}
+
+.sptffav, .sptfmore {
+    width: 24px;
+    height: 24px;
+}
+
+.sptffav {
+    background: url(https://i.imgur.com/fxrSSwo.png) center/cover no-repeat;
+}
+
+.sptfmore {
+    background: url(https://i.imgur.com/HWSybOW.png) center/cover no-repeat;
+}
+
+.sptflistflex {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+}
+
+.sptflist::before {
+    font-size: 13px;
+    color: hsla(0,0%,100%,.7);
+    content: "List";
+}
+
+.sptflisticon {
+    width: 16px;
+    height: 16px;
+    background: url(https://i.imgur.com/Ji819Q8.png) center/cover no-repeat;
+}
+
+.sptfth {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    color: #a7a7a7;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+
+.sptfthno, .sptfno {
+    min-width: 16px;
+}
+
+.sptfthno::before {
+    content: "#";
+}
+
+.sptfthtitle, .sptftitleflex {
+    flex: 4;
+}
+
+.sptfthtitle::before {
+    content: "Title";
+}
+
+.sptfthtime, .sptftime {
+    flex: 1;
+    text-align: center;
+}
+
+.sptfthtime::before {
+    content: "Time";
+}
+
+.sptfsongflex {
+    display: flex;
+    gap: 16px;
+    padding: 8px 16px;
+    align-items: center;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.sptfsongflex:hover {
+    background-color: #202020;
+}
+
+.sptfsongpic {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: var(--spsongpic) center/cover no-repeat;
+}
+
+.sptfsongpicplay {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: url(https://i.imgur.com/0HZ680p.png) center/cover no-repeat;
+    opacity: 0;
+}
+
+.sptfsongpicplay:hover {
+    opacity: 1;
+}
+
+.sptftitleflex {
+    display: flex;
+    flex-direction: column;
+}
+
+.sptftitle {
+    color: white;
+}
+
+.sptfquestion, .sptfartist {
+    font-size: 13px;
+}
+
+.sptftxt {
+    margin-left: 48px;
+    margin-right: 16px;
+}
+
+.sptftop5 {
+    font-size: 1.5rem;
+    font-family: 'Circular';
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.sptftop5flex {
+    display: flex;
+    gap: 16px;
+    overflow: auto;
+    padding-bottom: 8px;
+}
+
+.sptftop5flex::-webkit-scrollbar {
+	height: 4px;
+}
+
+.sptftop5flex::-webkit-scrollbar-track {
+	background-color: rgba(0,0,0,0);
+}
+
+.sptftop5flex::-webkit-scrollbar-thumb {
+	border-radius: 100px;
+    background-color: #202020;
+}
+
+.sptftop5flex:hover::-webkit-scrollbar-thumb {
+    background-color: #252525;
+}
+
+.sptftop5box {
+    flex: 1;
+    background: #202020;
+    border-radius: 8px;
+}
+
+.sptftop5box:hover {
+    background: #252525;
+}
+
+.sptftop5pad {
+    padding: 16px;
+}
+
+.sptftop5pic {
+    width: 100%;
+    height: 10rem;
+    border-radius: 6px;
+    background: var(--spsongpic) center/cover no-repeat;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,.5);
+}
+
+.sptftop5picplay {
+    width: 100%;
+    height: 10rem;
+    border-radius: 6px;
+    background: url(https://i.imgur.com/eRqNUse.png) center/cover no-repeat;
+    opacity: 0;
+}
+
+.sptftop5picplay:hover {
+    opacity: 1;
+}
+
+.sptfartist {
+    text-overflow: ellipsis;
+    height: 1rem;
+    overflow: hidden;
+    width: 10rem;
+}
+
+.sptfpad {
+    padding-inline-start: 1rem;
+    padding-block-end: 1rem;
+}

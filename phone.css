@@ -1,0 +1,186 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+:root {
+  --phone-bg: gray;
+  --phone-pos: center;
+  --phone-sz: cover;
+  --phone-time: '00:00';
+  --fwhite: #f2f2f2;
+  --icase: #ff8c00;
+}
+
+body {
+  background: #131313;
+  color: white;
+  font-family: 'Inter', Helvetica, 'Noto Sans Thai', san-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  padding: 1em;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.phonecontainer {
+  margin: 25px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.icase, .iphone {
+  width: 235px;
+  height: 480px;
+  background-image: url(https://i.imgur.com/ryUzl80.png);
+  background-repeat: no-repeat;
+  background-size: 235px 480px;
+}
+
+.icase {
+  filter: drop-shadow(5px 0px var(--icase))
+    drop-shadow(0px 5px var(--icase))
+    drop-shadow(0px -5px var(--icase))
+    drop-shadow(-5px 0px var(--icase));
+}
+
+.iphone {
+  z-index: 200;
+  position: relative;
+  margin: auto;
+  margin-top: -459px;
+}
+  
+.iscreen {
+  position: relative;
+  top: 10px;
+  text-align: center;
+  font-family: 'SF Pro Display', Helvetica Neue, Arial, sans-serif;
+  letter-spacing: 0.5px;
+  margin: auto;
+  width: 211px;
+  height: 459px;
+  background: var(--phone-bg) var(--phone-pos)/var(--phone-sz) no-repeat;
+}
+
+.ibar, .itime, .itime2, .iday, .istatus, .ibutton, .iswipe { position: absolute; }
+
+.itime, .itime2, .iday, .iswipe {
+  color: var(--fwhite);
+  width: 100%;
+	font-weight: 100;
+}
+
+.ibar {
+  left: 50%;
+	transform: translateX(-50%);
+	bottom: 1%;
+	width: 37%;
+	height: 3px;
+	background: var(--fwhite);
+	border-radius: 3px;
+}
+
+.itime {
+  top: 34px;
+  font-size: 2.65em;
+}
+
+.itime::before, .itime2::before { content: var(--phone-time); }
+
+.itime2 {
+  top: 5px;
+  left: -75px;
+	font-size: 0.45em;
+}
+
+.iday {
+	top: 96px;
+	font-size: 0.6em;
+}
+
+.istatus {
+  display: flex;
+  top: 9px;
+  right: 13px;
+  grid-gap: 2px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--fwhite) 70%, transparent 70%) 1;
+}
+
+.iicon { height: 7px; }
+
+.wifi {
+  width: 10px;
+  background: url(https://i.imgur.com/8j5bMfC.png) center/contain no-repeat;
+}
+
+.signal {
+  width: 10px;
+  background: url(https://i.imgur.com/tbmJWwG.png) center/contain no-repeat;
+}
+
+.battery {
+  width: 15px;
+  background: url(https://i.imgur.com/dXrfjAd.png) center/contain no-repeat;
+}
+
+.ibutton {
+  box-sizing: border-box;
+  bottom: 28px;
+  background: rgba(125,125,125,0.25);
+  backdrop-filter: blur(5px);
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  padding: 4px 5px 5px 4px;
+}
+
+.ibutton.left { left: 27px; }
+.ibutton.right { right: 27px; padding: 4px 4.5px 5px 5px; }
+
+.flashlight {
+  width: 100%;
+  height: 100%;
+  background: url(https://i.imgur.com/HpXFniR.png) center/contain no-repeat;
+}
+
+.camera {
+  width: 100%;
+  height: 100%;
+  background: url(https://i.imgur.com/BXXz5Em.png) center/contain no-repeat;
+}
+
+.iswipe {
+  bottom: 20px;
+  text-shadow: 0 0 5px #191919;
+  font-size: 0.42em;
+}
+
+.iswipe::before { content: 'Swipe up to open'; }

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --wotwreg-color: gray;
+    --wotwreg-pic: gray;
+    --wotwreg-pos: center;
+    --wotwreg-size: cover;
+    --wotwreg-txtsize: 6;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.wotwreg-box {
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+    font-size: clamp(14px, 1vw, 17px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #eaeaea;
+}
+
+.wotwreg-logo {
+    width: 100%;
+    aspect-ratio: 1278/251;
+    background: url(https://i.imgur.com/s2Yw6JA.png) center/contain no-repeat;
+}
+
+.wotwreg-pic {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: var(--wotwreg-pic) var(--wotwreg-pos)/var(--wotwreg-size) no-repeat;
+}
+
+.wotwreg-topic {
+    font-family: 'Antonio';
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.wotwreg-dpname::after { content: " as"; }
+
+.wotwreg-name {
+    font-weight: bold;
+    font-size: calc(var(--wotwreg-txtsize)* 1rem);
+    color: var(--wotwreg-color);
+    margin-left: calc(var(--wotwreg-txtsize)*(-1px));
+    margin-bottom: calc(var(--wotwreg-txtsize)* 0.1rem);
+}
+
+.wotwreg-faceclaim { font-size: 2rem; }
+.wotwreg-faceclaim::before { content: "Face Claim : "; }
+
+.wotwreg-content {
+    font-family: 'Bai Jamjuree';
+    padding-block: 1rem;
+}
+
+.wotwreg-content bc {
+    font-weight: bold;
+    color: var(--wotwreg-color);
+}

@@ -1,0 +1,11 @@
+#zcode summary {
+    cursor: pointer;
+}
+
+#zcode summary::marker {
+    content: "";
+}
+
+#zcode summary::-webkit-details-marker {
+    display: none;
+}

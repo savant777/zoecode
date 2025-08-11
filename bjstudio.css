@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/brugenfield');
+
+:root {
+    --bjstd-bg: #fff;
+    --bjstd-txt: #000;
+    --bjstd-font: 'Bai Jamjuree', sans-serif;
+
+    --bjstd-pic: gray;
+    --bjstd-pos: center;
+    --bjstd-size: cover;
+}
+
+#BJStudio { position: relative; }
+#BJStudio * { box-sizing: border-box; }
+#BJStudio a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#BJStudio a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#BJStudio::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#BJStudio:hover::after { content: "zzzcode"; }
+
+#BJStudio {
+    .bjstdo-box {
+        width: 800px;
+        max-width: 100%;
+        margin-inline: auto;
+        background: var(--bjstd-bg);
+        color: var(--bjstd-txt);
+        font-size: clamp(13px, 1vw, 16px);
+
+        .bjstdo-top, .bjstdo-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 2rem;
+        }
+
+        .bjstdo-top {
+            width: 100%;
+            padding: 1rem 1.5rem;
+
+            &::before, &::after {
+                content: "";
+                display: block;
+                width: 2rem;
+                aspect-ratio: 210/101;
+                background: var(--bjstd-txt);
+                -webkit-mask: url(https://iili.io/3FZrCgt.png) center/contain no-repeat;
+                        mask: url(https://iili.io/3FZrCgt.png) center/contain no-repeat;
+            }
+
+            &::after { transform: scaleX(-1); }
+        }
+
+        .bjstdo-title {
+            min-width: 50%;
+            font: 1.25rem/1 'Brugenfield', sans-serif;
+            font-variant: no-common-ligatures;
+            text-transform: uppercase;
+
+            &::before, &::after {
+                content: "";
+                display: block;
+                width: 1.25rem;
+                aspect-ratio: 128/25;
+                background: var(--bjstd-txt);
+                -webkit-mask: url(https://iili.io/3FZrx7n.png) center/contain no-repeat;
+                        mask: url(https://iili.io/3FZrx7n.png) center/contain no-repeat;
+            }
+
+            &::after { transform: scaleX(-1); }
+        }
+
+        .bjstdo-pic {
+            width: 100%;
+            aspect-ratio: 19/15;
+            background: var(--bjstd-pic) var(--bjstd-pos)/var(--bjstd-size) no-repeat;
+        }
+
+        .bjstdo-content {
+            padding: 3rem clamp(3rem, 4vw, 4rem);
+            font-family: var(--bjstd-font);
+        }
+    }
+}

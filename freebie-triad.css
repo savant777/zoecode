@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+:root {
+    --triad-fonten: system-ui, sans-serif;
+    --triad-fontth: 'Sarabun';
+
+    --triad-maincolor: #bc8da2;
+    --triad-bold: #6c757d;
+    --triad-bgcontent: #f7f7f7;
+    --triad-txtcolor: #212529;
+
+    --triad-tooltip: #000;
+
+    --triad-img-bg: #fff;
+    --triad-img-border: #dee2e6;
+}
+
+#FREEBIE-TRIAD { position: relative; }
+#FREEBIE-TRIAD * { box-sizing: border-box; }
+
+#FREEBIE-TRIAD a[href="https://toyhou.se/Pinky"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#FREEBIE-TRIAD a[href="https://toyhou.se/Pinky"] ~ div:first-child { position: relative; }
+  
+#FREEBIE-TRIAD::after {
+    display: block;
+    content: "♥ PINKY";
+    font-family: var(--triad-fonten);
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#FREEBIE-TRIAD:hover::after { content: "edit by zzzcode"; }
+
+#FREEBIE-TRIAD h1 + br,
+#FREEBIE-TRIAD img + br,
+#FREEBIE-TRIAD label + br {
+    display: none;
+}
+
+#FREEBIE-TRIAD input[type="radio"],
+#FREEBIE-TRIAD input[type="radio"] + br {
+    display: none;
+}
+
+.txtwhite { --triad-txtcolor: #fff; }
+
+.triad-container {
+    width: 750px;
+    max-width: 90%;
+    margin: auto;
+    color: var(--triad-txtcolor);
+}
+
+.triad-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.triad-left, .triad-right {
+    flex: 1 0 300px;
+    padding: 1.5rem;
+    font-family: var(--triad-fonten);
+    margin-inline: 0.75rem;
+    margin-block-end: 1.5rem;
+}
+
+.triad-left {
+    background: var(--triad-maincolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--triad-txtcolor);
+}
+
+.triad-right {
+    background: var(--triad-bgcontent);
+    border: 4px solid var(--triad-maincolor);
+    line-height: 1;
+}
+
+.triad-name {
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-block: 0;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.triad-left .triad-img {
+    display: block;
+    margin-inline: auto;
+    margin-block: 0.5rem;
+    border: 10px double var(--triad-txtcolor);
+    max-height: 270px;
+}
+
+.triad-left p {
+    font-size: 0.875em; 
+    letter-spacing: 1px;
+    margin-block: 0;
+}
+
+.triad-right .triad-info,
+.triad-content-flex .triad-info {
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 1.5rem;
+}
+
+.triad-right .triad-info:last-child {
+    margin-block-end: 0;
+}
+
+.triad-info div:first-child,
+.triad-info-like div:first-child,
+.triad-info-dislike div:first-child,
+.triad-subtopic {
+    text-transform: uppercase;
+    color: var(--triad-bold);
+    letter-spacing: 1px;
+}
+
+.triad-tab-container {
+    width: auto;
+    background: var(--triad-maincolor);
+    padding: 4px;
+    margin-inline: 0.75rem;
+}
+
+.triad-label-group {
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    color: var(--triad-txtcolor);
+    font-size: 1.5rem;
+}
+
+.triad-label-group label {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triad-label-group label::before,
+.triad-label-group label::after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all 0.2s ease;
+    font-family: var(--triad-fonten);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    filter: drop-shadow(0 0 0.25rem rgba(0,0,0,0.5));
+}
+
+.triad-label-group label::before {
+    content: attr(title);
+    width: fit-content;
+    max-width: 200px;
+    background-color: var(--triad-tooltip);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    bottom: calc(100% + 5px);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.triad-label-group label::after {
+    content: "";
+    border-top: 5px solid var(--triad-tooltip);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    bottom: 100%;
+}
+
+.triad-label-group label:hover::before,
+.triad-label-group label:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-0.5rem);
+}
+
+input#ONE:checked ~ .triad-tab-container .triad-content#ONE,
+input#TWO:checked ~ .triad-tab-container .triad-content#TWO,
+input#THREE:checked ~ .triad-tab-container .triad-content#THREE,
+input#FOUR:checked ~ .triad-tab-container .triad-content#FOUR,
+input#FIVE:checked ~ .triad-tab-container .triad-content#FIVE { display: block; }
+
+.triad-content {
+    background: var(--triad-bgcontent);
+    height: 370px;
+    overflow: auto;
+    font-family: var(--triad-fonten), var(--triad-fontth);
+    padding-block: 1rem 0.5rem;
+    padding-inline: 1.5rem;
+    display: none;
+}
+
+.triad-content::-webkit-scrollbar {
+    width: 0;
+}
+
+.triad-content img {
+    float: right;
+    max-height: 350px;
+    margin-left: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.triad-content p { margin-block: 0; }
+
+.triad-content-flex {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+}
+
+.triad-content-flex .triad-info,
+.triad-content-flex .triad-info-like,
+.triad-content-flex .triad-info-dislike {
+    flex: 1 0 250px;
+}
+
+.triad-content-flex .triad-info div:last-child {
+    display: flex;
+    align-items: baseline;
+}
+
+.triad-content-flex .triad-info div:last-child i { margin-right: 0.5rem; }
+.triad-content-flex .triad-info div:last-child i:last-of-type { margin-right: 0; }
+
+.faded { opacity: 0.5; }
+
+.triad-content ul,
+.triad-content-flex .triad-info-like ul,
+.triad-content-flex .triad-info-dislike ul {
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+}
+
+.triad-content#FOUR ul {
+    padding-inline-start: 1.5rem;
+}
+
+.triad-subtopic { 
+    font-size: 1.5em;
+    margin-block-start: 1rem !important;
+}
+
+.triad-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.triad-friend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.triad-friend img {
+    display: block;
+    margin: auto;
+    max-height: 150px;
+    margin-block-end: 0.5rem;
+    background-color: var(--triad-img-bg);
+    border: 1px solid var(--triad-img-border);
+    padding: .25rem;
+    float: none;
+    border-radius: 0;
+}
+
+.triad-friend p:first-of-type a {
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.triad-friend-heart, .triad-friend-content {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.triad-friend-heart {
+    display: flex;
+    justify-content: center;
+}

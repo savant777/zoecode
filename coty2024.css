@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/thesignature');
+
+@font-face {
+    font-family: 'SOV KlabBaan';
+    src: url('https://dl.dropbox.com/scl/fi/m65o2k6bq5ta4etzm7azc/SOV_KlabBaan.ttf?rlkey=kwceh5kx64od8yre4cluz1cqi&st=2h5yu4fe') format('truetype');
+}
+
+:root {
+    --coty-pic: black;
+    --coty-pos: center;
+    --coty-size: cover;
+
+    --coty-bg: #f6eee3;
+    --coty-txt: #000;
+    --coty-primary: #c83939;
+
+    --coty-fontsize: 4;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+h1.coty2024-title {
+    margin-block: 0 1rem;
+    font-family: 'Noto Sans Thai Looped';
+    text-align: center;
+}
+
+h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
+
+.coty2024-paper {
+    position: relative;
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    background-color: var(--coty-bg);
+    background-image: url(https://iili.io/2wsO2sI.png);
+    background-blend-mode: multiply;
+    overflow: hidden;
+
+    padding: 6rem 4rem;
+    @media screen and (max-width: 1150px) { padding: 4rem 3rem; }
+
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    font-size: clamp(14px, 1vw, 17px);
+    color: var(--coty-txt);
+
+    .coty2024-date {
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-inline-start: 1.5rem;
+    }
+
+    hr { 
+        margin-block: 2rem;
+        background: var(--coty-txt);
+    }
+
+    .coty2024-content {
+        position: relative;
+
+        p {
+            text-indent: 3rem;
+            margin-block-start: 0;
+        }
+
+        h3 { 
+            margin-block: 0 1rem;
+            text-align: center;
+        }
+        h3 + br { display: none; }
+
+        span.mycode_b { font-weight: 600 !important; }
+
+        trophy#\31, trophy#\32, trophy#\33, trophy#\34 { position: absolute; }
+        trophy#\31 + br, trophy#\32 + br, trophy#\33 + br, trophy#\34 + br { display: none; }
+        
+        trophy#\31 {
+            width: 75px;
+            aspect-ratio: 300/508;
+            transform: rotate(8.45deg);
+            top: -8rem;
+            right: -2rem;
+            background: url(https://iili.io/2wZpezG.png) center/contain no-repeat;
+
+            @media screen and (max-width: 1150px) {
+                width: 70px;
+                top: -7rem;
+            }
+        }
+
+        trophy#\32 {
+            width: 50px;
+            aspect-ratio: 300/561;
+            transform: rotate(-13.96deg);
+            top: -5rem;
+            left: -2rem;
+            background: url(https://iili.io/2wZp4d7.png) center/contain no-repeat;
+        }
+
+        trophy#\33 {
+            width: 40px;
+            aspect-ratio: 300/707;
+            transform: rotate(-13.85deg);
+            bottom: -3.5rem;
+            right: 0;
+            background: url(https://iili.io/2wZpU12.png) center / contain no-repeat;
+        }
+
+        trophy#\34 {
+            width: 90px;
+            aspect-ratio: 300/507;
+            transform: rotate(15.6deg);
+            top: -4rem;
+            left: -1rem;
+            background: url(https://iili.io/2wZpggS.png) center / contain no-repeat;
+        }
+    }
+
+    .coty2024-content:has(trophy#\34) {
+        @media screen and (max-width: 1150px) { padding-inline: 5rem; }
+    }
+    
+    .coty2024-stamp {
+        position: absolute;
+        bottom: 4rem;
+        right: 2rem;
+        width: 250px;
+        aspect-ratio: 300/152;
+        background: url(https://iili.io/2wZnXp4.png) center/contain no-repeat;
+    }
+}
+
+.coty2024-paper::before, .coty2024-paper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: radial-gradient(#131313 10px, transparent 11px) 40px 50% / 40px 40px;
+}
+
+.coty2024-paper::before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coty2024-paper::after {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.coty2024-play {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    .coty2024-aka {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 0.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-weight: 600;
+
+        i {
+            height: 1.5rem;
+            @media screen and (max-width: 1150px) { height: 1.25rem; }
+            aspect-ratio: 500/77;
+            display: flex;
+            gap: 4.4%;
+            margin-block-start: 0.8rem;
+        }
+
+        i::before {
+            content: "";
+            width: 59.6%;
+            background: var(--coty-txt);
+            mask: url(https://iili.io/2wby3iJ.png) center/contain no-repeat;
+        }
+
+        i::after {
+            content: "";
+            width: 36%;
+            background: var(--coty-primary);
+            mask: url(https://iili.io/2wbydog.png) center/contain no-repeat;
+        }
+    }
+
+    .coty2024-content {
+        display: flex;
+        column-gap: 2rem;
+
+        .coty2024-pic {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            @media screen and (max-width: 1150px) { 
+                width: 150px;
+                height: 150px;
+            }
+            border: 1px solid var(--coty-txt);
+            padding: 0.5rem;
+        }
+
+        .coty2024-pic::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--coty-txt);
+            background: var(--coty-pic) var(--coty-pos)/var(--coty-size) no-repeat;
+        }
+
+        .coty2024-pic::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(15%, 50%);
+
+            width: 75%;
+            aspect-ratio: 300/152;
+            background: url(https://iili.io/2wZnXp4.png) center/contain no-repeat;
+            filter: sepia(1) contrast(0.5);
+        }
+
+        .coty2024-right {
+            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .coty2024-name {
+                position: relative;
+                top: 0;
+
+                font-family: 'Thesignature', 'SOV KlabBaan', sans-serif;
+                font-size: calc(var(--coty-fontsize) * 1rem);
+                font-size-adjust: 0.5;
+                line-height: 1;
+                color: var(--coty-primary);
+            }
+
+            .coty2024-charinfo {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                border-block: 1px solid var(--coty-txt);
+                margin-block: -1rem 1rem;
+
+                .coty2024-from::before, .coty2024-owner::before {                    
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+
+                .coty2024-from::before { content: "From : "; }
+                .coty2024-owner::before { content: "Owner : "; }
+            }
+        }
+    }
+}

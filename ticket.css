@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Barcode+39&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --ticket-bg: #e5e5e5;
+    --ticket-txt: #131313;
+    --ticket-border: transparent;
+
+    --ticket-fonten: 'Montserrat';
+    --ticket-fontth: 'Noto Sans Thai';
+    --ticket-fweight: 600;
+
+    --ticket-pic: transparent;
+    --ticket-pos: center;
+    --ticket-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.ticket-set {
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    margin: auto;
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.ticket-ticket {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    
+    otl, otls, otr, otrs, obl, obls, obr, obrs{
+        position: absolute;
+        z-index: 10;
+        aspect-ratio: 1;
+        width: 1rem;
+        border-radius: 50%;
+        background: #131313;
+        border: 1px solid var(--ticket-border);
+    }
+
+    otl, otr {
+        mask:
+        linear-gradient(to right, 
+            black 0 calc(50% - 0.05rem),
+            transparent calc(50% - 0.05rem) calc(50% + 0.05rem), 
+            black calc(50% + 0.05rem) 100%), 
+        radial-gradient(black 0 calc(100% - 4px), transparent calc(100% - 4px) 100%);
+    }
+
+    obl, obr {
+        mask:
+        linear-gradient(to right, 
+            black 0 calc(50% - 0.05rem), 
+            transparent calc(50% - 0.05rem) calc(50% + 0.05rem), 
+            black calc(50% + 0.05rem) 100%) 50% -10%/100% 50% no-repeat, 
+            linear-gradient(black 0 100%, transparent) 50% 110%/100% 50% no-repeat, 
+            radial-gradient(black 0 calc(100% - 4px), transparent calc(100% - 4px) 100%);
+    }
+
+    otl {
+        top: 0;
+        left: calc(150px - 0.05rem);
+        transform: translate(-50%, -55%);
+    }
+
+    otls {
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    otr {
+        top: 0;
+        right: calc(100px - 0.05rem);
+        transform: translate(50%, -55%);
+    }
+
+    otrs {
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+
+    obl {
+        bottom: 0;
+        left: calc(150px - 0.05rem);
+        transform: translate(-50%, 55%);
+    }
+
+    obls {
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+        mask:
+        linear-gradient( black 0 calc(50% - 0.05rem), 
+            transparent calc(50% - 0.05rem) calc(50% + 0.05rem), 
+            black calc(50% + 0.05rem) 100%),
+            radial-gradient(black 0 calc(100% - 4px), transparent calc(100% - 4px) 100%);
+    }
+
+    obr {
+        bottom: 0;
+        right: calc(100px - 0.05rem);
+        transform: translate(50%, 55%);
+    }
+
+    obrs {
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+        mask:
+        linear-gradient( black 0 calc(50% - 0.05rem), 
+            transparent calc(50% - 0.05rem) calc(50% + 0.05rem), 
+            black calc(50% + 0.05rem) 100%),
+            radial-gradient(black 0 calc(100% - 4px), transparent calc(100% - 4px) 100%);
+    }
+}
+
+.ticket-ticket:has(+ .ticket-extra) {
+    padding-block-end: calc(0.5rem + 1px);
+    margin-block-end: calc(-0.5rem - 1px);
+
+    .ticket-section1,
+    .ticket-section2,
+    .ticket-section3 {
+        border-bottom: 0;
+    }
+
+    obl {
+        bottom: calc(0.5rem + 1px);
+        left: calc(150px - 0.05rem);
+        transform: translate(-50%, 55%);
+    }
+
+    obls {
+        bottom: calc(0.5rem + 1px);
+        left: 0;
+        transform: translate(-50%, 55%);
+    }
+
+    obr {
+        bottom: calc(0.5rem + 1px);
+        right: calc(100px - 0.05rem);
+        transform: translate(50%, 55%);
+    }
+
+    obrs {
+        bottom: calc(0.5rem + 1px);
+        right: 0;
+        transform: translate(50%, 55%);
+    }
+}
+
+.ticket-section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    background: var(--ticket-bg);
+    padding: 0.5rem;
+    padding-inline: 0.8rem;
+    border-right: 0.1rem dashed #131313 !important;
+    border-radius: 0.5rem;
+    border: 1px solid var(--ticket-border);
+}
+
+.ticket-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--ticket-pic) var(--ticket-pos)/var(--ticket-size) no-repeat;
+}
+
+.ticket-img::before {
+    content: "";
+    position: absolute;
+    inset: 0.15rem;
+    border: 0.2rem solid var(--ticket-bg);
+}
+
+.ticket-section2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background: var(--ticket-bg);
+    padding: 1rem;
+    padding-inline: 1.3rem;
+    color: var(--ticket-txt);
+    border-radius: 0.5rem;
+    border: 1px solid var(--ticket-border);
+    border-inline: 0 !important;
+}
+
+.ticket-name {
+    flex: 1;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: min(4vw, 3.5rem);
+    font-family: var(--ticket-fonten), sans-serif;
+    font-weight: var(--ticket-fweight);
+}
+
+.ticket-desc {
+    border-top: 1px solid var(--ticket-txt);
+    font-size: min(1.25vw, 1rem);
+    font-family: var(--ticket-fonten), var(--ticket-fontth), sans-serif;
+}
+
+.ticket-section3 {
+    position: relative;
+    width: 100px;
+    background: var(--ticket-bg);
+    padding: 0.8rem;
+    border-left: 0.1rem dashed #131313 !important;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid var(--ticket-border);
+}
+
+.ticket-barcode {
+    position: absolute;
+    width: calc(100% - 1.6rem);
+    height: calc(100% - 1.6rem);
+    color: var(--ticket-txt);
+    text-align: center;
+    font-size: max(4vw, 4rem);
+    line-height: 1;
+    font-family:'Libre Barcode 39';
+    text-wrap: nowrap;
+    writing-mode: vertical-rl;
+    overflow: hidden;
+}
+
+.ticket-extra {
+    position: relative;
+    font-family: var(--ticket-fontth);
+    overflow: hidden;
+
+    otl + br, otr + br { display: none; }
+
+    otl, otr {
+        position: absolute;
+        z-index: 10;
+        aspect-ratio: 1;
+        width: 1rem;
+        border-radius: 50%;
+        background: #131313;
+        border: 1px solid var(--ticket-border);
+        display: none;
+    }
+
+    otl {
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -55%);
+    }
+
+    otr {
+        top: 0;
+        right: 0;
+        transform: translate(50%, -55%);
+    }
+}
+
+.ticket-content {
+    background: var(--ticket-bg);
+    color: var(--ticket-txt);
+    padding: 1rem 0.8rem;
+    border-block: 0.1rem dashed #131313 !important;
+    border: 1px solid var(--ticket-border);
+    border-radius: 0.5rem;
+}
+
+.ticket-psarea {
+    position: relative;
+    overflow: hidden;
+    padding-block-start: calc(0.5rem + 1px);
+    margin-block-start: calc(-0.5rem - 1px);
+
+    otl + br, otr + br, obl + br, obr + br { display: none; }
+
+    otl, otr, obl, obr{
+        position: absolute;
+        z-index: 10;
+        aspect-ratio: 1;
+        width: 1rem;
+        border-radius: 50%;
+        background: #131313;
+        border: 1px solid var(--ticket-border);
+        display: block !important;
+    }
+
+    otl {
+        top: calc(0.5rem + 1px);
+        left: 0;
+        transform: translate(-50%, -55%);
+        mask:
+        linear-gradient( black 0 calc(50% - 0.05rem), 
+            transparent calc(50% - 0.05rem) calc(50% + 0.05rem), 
+            black calc(50% + 0.05rem) 100%),
+            radial-gradient(black 0 calc(100% - 4px), transparent calc(100% - 4px) 100%);
+    }
+
+    otr {
+        top: calc(0.5rem + 1px);
+        right: 0;
+        transform: translate(50%, -55%);
+        mask:
+        linear-gradient( black 0 calc(50% - 0.05rem), 
+            transparent calc(50% - 0.05rem) calc(50% + 0.05rem), 
+            black calc(50% + 0.05rem) 100%),
+            radial-gradient(black 0 calc(100% - 4px), transparent calc(100% - 4px) 100%);
+    }
+
+    obl {
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+    }
+
+    obr {
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+    }
+}
+
+.ticket-ps {
+    position: relative;
+    background: var(--ticket-bg);
+    color: var(--ticket-txt);
+    padding: 1rem 0.8rem;
+    border-block-start: 0 !important;
+    border: 1px solid var(--ticket-border);
+    border-radius: 0.5rem;
+}
+
+.ticket-set:not(:has(.ticket-ticket)) {
+    .ticket-extra {
+        otl, otr {
+            display: block;
+        }
+    }
+
+    .ticket-content {
+        border-block-start: 1px solid var(--ticket-border) !important;
+    }
+}
+
+.ticket-contentarea {
+    position: relative;
+    overflow: hidden;
+    padding-block-start: calc(0.5rem + 1px);
+    margin-block-start: calc(-0.5rem - 1px);
+
+    otl + br, otr + br { display: none; }
+
+    otl, otr {
+        position: absolute;
+        z-index: 10;
+        aspect-ratio: 1;
+        width: 1rem;
+        border-radius: 50%;
+        background: #131313;
+        border: 1px solid var(--ticket-border);
+        display: block !important;
+    }
+
+    otl {
+        top: calc(0.5rem + 1px);
+        left: 0;
+        transform: translate(-50%, -55%);
+        mask:
+        linear-gradient( black 0 calc(50% - 0.05rem), 
+            transparent calc(50% - 0.05rem) calc(50% + 0.05rem), 
+            black calc(50% + 0.05rem) 100%),
+            radial-gradient(black 0 calc(100% - 4px), transparent calc(100% - 4px) 100%);
+    }
+
+    otr {
+        top: calc(0.5rem + 1px);
+        right: 0;
+        transform: translate(50%, -55%);
+        mask:
+        linear-gradient( black 0 calc(50% - 0.05rem), 
+            transparent calc(50% - 0.05rem) calc(50% + 0.05rem), 
+            black calc(50% + 0.05rem) 100%),
+            radial-gradient(black 0 calc(100% - 4px), transparent calc(100% - 4px) 100%);
+    }
+    
+    .ticket-content {
+        position: relative;
+        background: var(--ticket-bg);
+        color: var(--ticket-txt);
+        padding: 2rem 1.5rem;
+        border-block-start: 0 !important;
+        border: 1px solid var(--ticket-border);
+        border-radius: 0.5rem;
+
+        h1 {
+            margin-block: 0 0.5rem;
+            font: bold 2.5rem/1 'Montserrat';
+        }
+
+        h1 + br { display: none; }
+
+        ol {
+            margin-block: 1rem 0.5rem;
+            padding-inline-start: 1.5rem;
+        }
+
+        ol:last-child {
+            margin-block: 1rem 0;
+            padding-inline-start: 1.5rem;
+        }
+
+        ul { margin-block: 0 1rem; }
+
+        .codeblock { margin-block: 1rem; }
+    }
+}
+
+.ticket-contentarea:first-child {
+    otl, otr { display: none !important; }
+
+    .ticket-content { border-block-start: 0.1rem dashed #131313 !important; }
+}
+
+.ticket-quote {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 80%;
+    margin-block: 1rem 0;
+    margin-inline: auto;
+    border: 1px solid var(--ticket-txt);
+    padding: 2rem;
+    text-align: center;
+}

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Maitree:wght@200;300;400;500;600;700&family=Trade+Winds&display=swap');
+
+:root {
+    --derusso-txt: #432004;
+
+    --derusso-pic: gray;
+    --derusso-pos: center;
+    --derusso-size: cover;
+}
+
+#derusso2025 { position: relative; }
+#derusso2025 * { box-sizing: border-box; }
+
+#derusso2025 a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#derusso2025 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#derusso2025::after {
+    content: "☠︎︎";
+
+    width: 100%;
+    height: 13px;
+    margin-block-start: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Libre Baskerville', serif;
+    font-size: small;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    color: gray !important;
+}
+  
+#derusso2025:hover::after {
+    content: "The Derusso";
+    font-size: x-small;
+}
+
+#derusso2025 {
+    #derusso-role.derusso-box {
+        width: 800px;
+        max-width: 100%;
+        margin: auto;
+        background: url(https://iili.io/3L0RdUG.jpg) center/cover no-repeat;
+        padding: 5rem 4rem;
+        color: var(--derusso-txt);
+        font-family: 'Maitree', serif;
+        font-weight: 500;
+        font-size: clamp(14px, 1vw, 17px);
+
+        .derusso-set {
+            display: flex;
+            flex-direction: column;
+            row-gap: clamp(2rem, 3vw, 3rem);
+            mix-blend-mode: multiply;
+
+            hr { background: #432004; }
+
+            h1 + br, h2 + br, h3 + br { display: none; }
+
+            h1, h2, h3 {
+                font-family: 'Libre Baskerville', serif;
+                line-height: 1;
+                text-transform: uppercase;
+                text-align: center;
+                transform: scaleY(1.5);
+            }
+
+            h1 {
+                font-size: clamp(5.5rem, 7vw, 7.8rem);
+                margin-block: clamp(0.8rem, 1vw, 1.1rem) 0;
+                margin-inline-end: -0.5rem;
+            }
+
+            h2 {
+                font-size: clamp(2rem, 3vw, 3rem);
+                margin-block: 0;
+            }
+
+            h3 {
+                font-size: 1rem;
+                display: flex;
+                column-gap: max(1rem, 1vw);
+                align-items: center;
+                margin-block-end: 0;
+
+                hr { flex: 1; }
+            }
+
+            .derusso-pic {
+                width: 100%;
+                aspect-ratio: 3/2;
+                border: 3px solid var(--derusso-txt);
+                background: var(--derusso-pic) var(--derusso-pos)/var(--derusso-size) no-repeat;
+            }
+
+            .derusso-name {
+                display: flex;
+                flex-direction: column;
+                row-gap: max(1rem, 1vw);
+            }
+
+            .derusso-content {
+                margin-block-start: -0.5rem;
+
+                hr { margin-block: 2rem; }
+            }
+        }
+    }
+
+    #derusso-thread.derusso-box {
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        background: url(https://iili.io/3L0xniG.png) center/cover no-repeat;
+        padding: clamp(6.5rem, 7.5vw, 8rem) clamp(2.5rem, 3.5vw, 4rem) clamp(3.5rem, 4.5vw, 5rem);
+        color: var(--derusso-txt);
+        font-family: 'Maitree', serif;
+        font-weight: 500;
+
+        .derusso-paper {
+            position: relative;
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            border-image: url(https://iili.io/3tGqdMJ.png) 6% 9% fill / clamp(3rem, 3.5vw, 4rem) 3.5rem round;
+            filter: drop-shadow(0px 0px 1rem #00000080) drop-shadow(0px 0px 1rem var(--derusso-txt));
+            padding: clamp(6rem, 9vw, 9rem) clamp(4rem, 6vw, 6rem) clamp(4rem, 6vw, 6rem);
+
+            .derusso-scroll {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -25%);
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                font-family: 'Trade Winds', system-ui;
+                line-height: 1;
+                
+                border-image: url(https://iili.io/3tGfywF.png) 25% 13% fill / 2.5rem 2.2rem / 2rem round;
+                filter: drop-shadow(0px 0px #00000080) drop-shadow(0px 0.5rem 0.5rem var(--derusso-txt));
+                padding: 0 clamp(1.5rem, 2vw, 2rem) 2%;
+
+                h1 + br, h2 + br { display: none; }
+
+                h1 {
+                    font-size: clamp(2rem, 3vw, 3rem);
+                    margin-block: 0;
+                }
+
+                h2 {
+                    font-size: clamp(1rem, 1.5vw, 1.5rem);
+                    margin-block: 0;
+                }
+            }
+
+            .derusso-content {
+                hr {
+                    margin-block: 2rem;
+                    background: var(--derusso-txt);
+                }
+            }
+        }
+    }
+}

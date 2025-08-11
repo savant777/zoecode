@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+:root {
+    --white: #eaeaea;
+    --brown: #221712;
+    --black: black;
+    --beige: #ece6d3;
+    --border: var(--brown);
+    --color: #771011;
+    --position: center;
+    --pic: url(https://i.imgur.com/RZopSYy.png);
+    --fontname: 'DM Serif Display';
+}
+
+#zzzcode {
+    position: relative;
+}
+
+#zzzcode div {
+    box-sizing: border-box;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode .cotybox a[href="https://discord.com/users/625292873914515456/"] {
+    height: auto;
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child {
+    position: relative;
+}
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#zzzcode:hover::after {
+    content: "zzzcode";
+}
+
+#zzzcode summary {
+    cursor: pointer;
+}
+
+#zzzcode summary::marker {
+    content: '';
+}
+
+#zzzcode summary::-webkit-details-marker {
+    display: none;
+}
+
+.cotyset {
+    width: 1000px;
+    max-width: 90%;
+    margin: auto;
+    background: var(--white);
+    color: var(--black);
+}
+
+.cotyhead, .cotybox, .cotyfoot {
+    width: 100%;
+    padding: 2.5vw 5vw;
+    border: 1px solid var(--border);
+}
+
+.cotybox, .cotyfoot {
+    border-top: none;
+}
+
+.cotyhead, .cotyfoot, .cotytopic {
+    text-align: center;
+}
+
+.cotyflex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 5vw 0 0 5vw;
+}
+
+.cotyreward {
+    min-width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 0.4vw solid var(--color);
+}
+
+.cotypic {
+    width: 100%;
+    height: 100%;
+    padding: 0.3vw;
+    border-radius: 50%;
+    border: 0.2vw dashed var(--beige);
+    background: var(--pic) var(--position)/cover content-box, linear-gradient(var(--color) 0 0) border-box;
+}
+
+.cotyflex-col {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    line-height: 1;
+    text-align: center;
+    padding: 1.5vw 2.5vw;
+}
+
+.cotyrename, .cotytopic {
+    font-size: 2vw !important;
+    font-weight: bold;
+    color: var(--color);
+}
+
+.cotyreflex {
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 1;
+}
+
+.cotyto, .cotyfrom {
+    font-size: 0.9rem !important;
+}
+
+.cotyto::before {
+    content: 'มอบให้แก่ : ';
+    font-weight: bold;
+}
+
+.cotyfrom::before {
+    content: 'จาก : ';
+    font-weight: bold;
+}
+
+.cotydetail {
+    width: 100%;
+    padding: 0 2.5vw;
+    margin-top: 2.5vw;
+}
+
+.cotyfoot {
+    font-family: var(--fontname);
+}

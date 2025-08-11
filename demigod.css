@@ -1,0 +1,156 @@
+@import url('https://fonts.cdnfonts.com/css/norse');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Gideon+Roman&display=swap');
+
+:root {
+	--dmgfont-th: 'Bai Jamjuree';
+	--dmgbd-color: silver;
+	--dmgtxtbg-color: rgba(29,29,29,1);
+	--dmgtxtbg-color-grad: rgba(29,29,29,0);
+	--dmgtxt-color: silver;
+	--dmgname-color: gainsboro;
+	--dmgpic: black;
+	--dmgposition: center;
+	--dmgicon: url(https://i.imgur.com/ZC67j9X.png);
+	--dmgmarker: '• ';
+}
+
+#demigod { position: relative; }
+#demigod div { box-sizing: border-box; }
+
+#demigod a[href="https://is.gd/rossr"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#demigod a[href="https://is.gd/rossr"] ~ div:first-child { position: relative; }
+  
+#demigod::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#demigod:hover::after { content: "edited by zzzcode"; }
+
+.dmgodbox {
+	display: flex;
+	margin: auto;
+	width: 800px;
+	max-width: 100%;
+	background: black;
+	color: #eaeaea;
+	border-radius: 6px;
+	font-family: var(--dmgfont-th);
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.dmgodleft, .dmgodrbox {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.dmgodleft {
+	margin: 20px;
+}
+
+.dmgodplace, .dmgodrbox {
+	border: 3px double var(--dmgbd-color);
+	padding: 15px;
+	background: var(--dmgtxtbg-color);
+}
+
+.dmgodplace {
+	color: var(--dmgtxt-color);
+	font-weight: bold;
+}
+
+.dmgodtxt {
+	flex: 1;
+	border-bottom: 1px solid var(--dmgbd-color);
+	padding-bottom: 1rem;
+}
+
+.dmgodps {
+	color: #b22222;
+	font-weight: bold;
+}
+
+.dmgodright {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	min-height: 500px;
+	border-radius: 0 6px 6px 0;
+	background: var(--dmgtxtbg-color);
+	align-items: center;
+	font-size: 0.75rem;
+	padding-bottom: 20px;
+	color: #b9b9b9;
+}
+
+.dmgodpic {
+	width: 100%;
+	height: 320px;
+	border-radius: 0 6px 0 0;
+	background: linear-gradient(to bottom, var(--dmgtxtbg-color-grad) 50%,var(--dmgtxtbg-color) 100%), var(--dmgpic) var(--dmgposition)/cover no-repeat;
+}
+
+.dmgodname {
+	width: fit-content;
+	max-width: calc(100% - 40px);
+	margin-top: -5px;
+	border: 2px solid var(--dmgbd-color);
+	padding: 5px;
+	color: var(--dmgname-color);
+	text-transform: uppercase;
+	text-align: center;
+	font: bold 1.25rem/1 'Norse', sans-serif;
+}
+
+.dmgodcabin {
+	margin-top: 1rem;
+	font: bold 0.75rem/1 'Gideon Roman', serif;
+	text-transform: uppercase;
+}
+
+.dmgodcab-icon {
+	margin-top: 0.5rem;
+	height: 2rem;
+	aspect-ratio: 1/1;
+	border-radius: 100%;
+	background: var(--dmgicon) center/cover no-repeat;
+}
+
+.dmgodskill {
+	margin-top: 1rem;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.dmgodskill span { color: var(--dmgtxt-color); }
+.dmgodskill summary { cursor: pointer; }
+.dmgodskill summary::marker { content: ''; }
+.dmgodskill summary::-webkit-details-marker { display: none; }
+
+.dmgodskill details summary::before {
+	content: var(--dmgmarker);
+	color: var(--dmgtxt-color);
+}
+
+.dmgodskill ol, .dmgodskill ul {
+	margin: 0;
+	margin-bottom: 0.5rem;
+	padding-inline-start: 2rem;
+}
+
+.dmgodskill li::marker { color: var(--dmgtxt-color); }

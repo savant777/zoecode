@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --lake-bg: black;
+    --lake-pos: center;
+    --lake-sz: cover;
+    --lake-h: 450px;
+    --lake-top: darkgray;
+    --lake-maincolor: #cb9ac1;
+    --lake-pic: transparent;
+    --lake-blur1: hsl(265 20% 75% / 1);
+    --lake-blur2: hsl(265 20% 75% / 1);
+    --lake-blur3: hsl(245 20% 75% / 1);
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.lakebox {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,1) 350px, rgba(0,0,0,0.9)), 
+    var(--lake-bg) var(--lake-pos)/var(--lake-sz) repeat;
+    font-size: clamp(14px, 1vw, 18px);
+    color: #ccc;
+    overflow: hidden;
+}
+
+.laketop {
+    height: var(--lake-h);
+    background: var(--lake-top) var(--lake-pos)/var(--lake-sz) no-repeat;
+    mask-image: linear-gradient(black 50%, transparent);
+    -webkit-mask-image: linear-gradient(black 50%, transparent);
+}
+
+.lakeplace, .lakedesc{
+    padding-inline: 2rem;
+    text-align: center;
+    color: var(--lake-maincolor);
+}
+
+.lakeplace { margin-top: -3rem; font-size: 3rem; }
+
+.lakedesc { margin-top: -1rem; font-size: 1rem; }
+
+.lakecontent { padding: 2rem 4rem; }
+.lakecontent p { text-indent: 50px; }
+
+.lakehr {
+    mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
+    -webkit-mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
+    background: var(--lake-maincolor);
+    height: 30px;
+}
+
+.lakeflex {
+    display: flex;
+    max-width: 600px;
+    margin: auto;
+    padding: 4rem 2rem;
+}
+
+.lakeleft {
+    flex: 1;
+    min-height: 300px;
+    position: relative;
+}
+
+.lakefeather {
+    position: absolute;
+    bottom: 15px;
+    left: -10px;
+    height: 235px;
+    aspect-ratio: 445 / 947;
+    background: url(https://i.imgur.com/LfYFkpC.png) center/contain no-repeat;
+}
+
+.lakepicbg, .lakepic {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+}
+
+.lakepicbg {
+    aspect-ratio: 3/4;
+    background: var(--lake-maincolor);
+    border-radius: 100px 100px 0 0;
+}
+
+.lakepic {
+    height: 100%;
+    background: var(--lake-pic) var(--lake-pos)/var(--lake-sz) no-repeat;
+}
+
+.lakeright {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--lake-maincolor);
+    letter-spacing: 2px;
+}
+
+.lakenpc { margin-bottom: 1rem; }
+.lakenpc::before { content: 'NPC ประจำสถานที่';}
+
+.lakename, .lakesurname {
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+.lakename { font: 3rem/1 'Cinzel'; }
+
+.lakesurname {
+    margin-left: 4px;
+    font: 0.75rem/1 'Quicksand';
+    letter-spacing: 4px;
+}
+
+.lakerole { margin-top: 1rem; }
+
+.lakeblur1, .lakeblur2, .lakeblur3 {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 100%;
+    filter: blur(100px);
+    mix-blend-mode: hard-light;
+}
+
+.lakeblur1 {
+    top: -3rem;
+    right: -18rem;
+    background: var(--lake-blur1);
+}
+
+.lakeblur2 {
+    bottom: -10rem;
+    left: -20rem;
+    background: var(--lake-blur2);
+}
+
+.lakeblur3 {
+    bottom: -20rem;
+    left: -8rem;
+    background: var(--lake-blur3);
+}

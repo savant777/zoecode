@@ -1,0 +1,54 @@
+:root {
+	--crdfront: #000;
+	--crdpos: center;
+	--crdsize: cover;
+	--crdback: #000;
+}
+
+.castecard {
+	position: relative;
+	width: 225px;
+	height: 350px;
+	cursor: pointer;
+	margin: auto;
+	margin-top: 65px;
+	border-radius: 3mm;
+	transform: rotate(7deg);
+}
+
+.castecard-front, .castecard-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+	backface-visibility: hidden;
+	border-radius: 3mm;
+	border: 1px solid #757575;
+}
+
+.castecard-front {
+	background: var(--crdfront) var(--crdpos)/var(--crdsize) no-repeat;
+}
+
+.castecard-back {
+	transform: rotateY(180deg);
+	background: var(--crdback) center/cover no-repeat;
+}
+
+.castecard:hover .castecard-front {
+	transform: rotateY(180deg);
+}
+
+.castecard:hover .castecard-back {
+	transform: rotateY(0);
+}
+.castecard-behind {
+	z-index: -1;
+	width: 225px;
+	height: 350px;
+	border-radius: 3mm;
+	border: 1px solid #757575;
+	margin: auto;
+	margin-top: -350px;
+	background: url(https://i.imgur.com/3wPBxAr.png) center/contain no-repeat;
+}

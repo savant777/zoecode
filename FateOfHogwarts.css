@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --fhw-border: #382600;
+    --fhw-main-100: rgba(121, 83, 0, 0.3);
+    --fhw-main-0: rgba(121, 83, 0, 0);
+    --fhw-primary: #daa520;
+    --fhw-secondary: #efd48f;
+
+    --fhw-pic: gray;
+    --fhw-pos: center;
+    --fhw-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.fhw-reg-container {
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    border: 3px solid var(--fhw-border);
+    border-radius: 1.25rem;
+    background: linear-gradient(to top, var(--fhw-main-100), var(--fhw-main-0));
+    padding: 3rem;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: clamp(14px, 1vw, 17px);
+
+    img.hwlogo {
+        display: block;
+        width: 100px;
+        margin: auto;
+    }
+
+    img.hwlogo + br, h1 + br, h2 + br { display: none; }
+
+    h1, h2 {
+        font-family: 'Georgia', serif;
+        font-weight: bold;
+        color: var(--fhw-primary);
+        margin-block: 0;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: x-large;
+    }
+
+    hr {
+        background: var(--fhw-primary);
+        margin-block: 1.25rem;
+    }
+
+    section#charInfo {
+        display: flex;
+        column-gap: clamp(1rem, 2vw, 2rem);
+
+        .fhw-pic {
+            flex: 1;
+            min-width: 100px;
+            max-width: 200px;
+
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .pic {
+                width: 100%;
+                aspect-ratio: 4/5;
+                border-radius: 6px;
+                background: var(--fhw-pic) var(--fhw-pos)/var(--fhw-size) no-repeat;
+            }
+
+            a {
+                color: var(--fhw-secondary);
+                text-decoration: underline;
+            }
+
+            a + br { display: none; }
+        }
+
+        .fhw-data { flex: 2; }
+    }
+
+    c { color: var(--fhw-secondary); }
+
+    .fhw-wand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 400px;
+        min-height: 100px;
+        margin: auto;
+        margin-bottom: 1.25rem;        
+        border-radius: 200px;
+        padding: 1.25rem;
+
+        background: var(--fhw-wand-bg) var(--fhw-pos)/var(--fhw-size) no-repeat;
+        --fhw-size: contain;
+    }
+}

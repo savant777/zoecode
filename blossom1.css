@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Dosis:wght@200..800&display=swap');
+
+:root {
+    --bls-bg: #594e36;
+    --bls-txtcolor: #fbf5f3;
+    --bls-bdcolor: #fbf5f3;
+    --bls-subtxtcolor: #b29459;
+    --bls-logo: transparent;
+    --bls-fontth: 'Bai Jamjuree';
+    --bls-fonten: 'Dosis';
+    --bls-animation: bls-slideshow3;
+    --bls-room: transparent;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+#zzzcode:hover::after { content: "zzzcode"; }
+#zzzcode summary { cursor: pointer; }
+#zzzcode summary::marker { content: ''; }
+#zzzcode summary::-webkit-details-marker { display: none; }
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+
+.blscontainer {
+    width: 1000px;
+    max-width: 90%;
+    background: var(--bls-bg);
+    color: var(--bls-txtcolor);
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    font-family: var(--bls-fonten), var(--bls-fontth);
+    font-size: 16px;
+}
+
+.blsleft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 675px;
+    min-width: 500px;
+    border: 1px solid var(--bls-bdcolor);
+    border-right: 0;
+}
+
+.blsheader-res { display: none; }
+
+.blspic {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 675px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bls-room) center/cover no-repeat;
+}
+
+.blspic-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: var(--bls-animation) 24s ease 2s infinite running;
+}
+
+.blsimg {
+    height: 100%;
+    aspect-ratio: 500/675;
+}
+
+/*.blspic-wrap .blsimg:first-child { left: -300px; }*/
+
+.blsimg img { 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes bls-slideshow2 {
+    0% { left: 0; }
+    50% { left: -500px; }
+    100% { left: -100px; }
+}
+
+@keyframes bls-slideshow3 {
+    0% {left: 0;}
+    33% {left: -500px;}
+    66% {left: -1000px;}
+    100% {left: -1500px;}
+}
+
+@keyframes bls-slideshow4 {
+    0% { left: 0; }
+    25% { left: -500px; }
+    50% { left: -100px; }
+    75% { left: -1500px; }
+    100% { left: -2000px; }
+}
+
+.blsright {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bls-bdcolor);
+}
+
+.blsheader {
+    display: flex;
+}
+
+.blsheader, .blsheader-res {
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    line-height: 1;
+    border-bottom: 1px solid var(--bls-bdcolor);
+}
+
+.blsfloor { font-size: 12rem;}
+.blshouse::before { 
+    content: "BLOSSOM NO.1";
+    color: var(--bls-subtxtcolor);
+}
+.blshouse {
+    letter-spacing: 0.5rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 12rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.blsdesc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.blsroomflex {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    line-height: 1;
+}
+
+.blsroom {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blsroomname { font-size: 2.5rem; }
+.blsroom details { width: 100%; }
+.blsroom summary {
+    font-size: 0.75rem;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--bls-subtxtcolor);
+    color: var(--bls-subtxtcolor);
+    text-transform: uppercase;
+}
+
+.blsroom summary:hover { background: rgba(255,255,255,0.15);}
+
+.blsplan {
+    width: 80%;
+    margin: 1rem auto 0;
+}
+
+.blslogo {
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+    background: var(--bls-logo) center/contain no-repeat;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+    .blscontainer { max-width: 500px; }
+
+    .blsleft {
+        border-right: 1px solid var(--bls-bdcolor);
+        border-bottom: 0;
+    }
+    .blsheader { display: none; }
+    .blsheader-res { display: flex; }
+}

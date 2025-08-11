@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/4xh2sdics5qulvabvqkc1/DB-Adman-X.ttf?rlkey=8jogctrz23kt0dhb42eajmebn&st=0ie8lpml') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/p3vl2g3hl4v5yly5s9xqm/DB-Adman-X-It.ttf?rlkey=yvibwkcwz8c0zfvchz9i593zt&st=4wtujspi') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/rffblq3i0ao1nek94h695/DB-Adman-X-Li.ttf?rlkey=8oomt8hlbqa2b3tev37omn6d4&st=s1q7e6z1') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/9w3wjmb4bkzk1c7jihlx7/DB-Adman-X-Li-It-v3.2.ttf?rlkey=kiv1xweug34fa768g20sskofe&st=jem7q8nq') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/iyedc4bfvxivfsmdouwzh/DB-Adman-X-UlLi-v3.2.ttf?rlkey=l8tbpc2ybxd9ditrrzqfrocyi&st=9hs6nlco') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/d7ltusjfm5c3j2bo9hwx8/DB-Adman-X-UlLi-It-v3.2.ttf?rlkey=xpqgjy6lvx5mo80dctflxhn4o&st=3x01b5ek') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('https://dl.dropbox.com/scl/fi/fl5bxi6zxtf8byooio4f7/DB-Adman-X-Bd.ttf?rlkey=isaetsrc6w1qt1qa48paxav60&st=m2rkvuw3') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DB Adman X';
+    src: url('hhttps://dl.dropbox.com/scl/fi/ohyfvdnamhqxw1li4i025/DB-Adman-X-Bd-It.ttf?rlkey=znezn5flm3oqa173ubirkiprj&st=dakqhix6') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+:root {
+    --plastic-txt: #fff;
+    --plastic-clr-top: #ffd400;
+    --plastic-clr-bottom: #ff7b00;
+    --plastic-barcode: #ffd400;
+
+    --plastic-pic: gray;
+    --plastic-pos: center;
+    --plastic-size: cover;
+}
+
+#plasticbag { position: relative; }
+#plasticbag * { box-sizing: border-box; }
+
+#plasticbag a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#plasticbag a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#plasticbag::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#plasticbag:hover::after { content: "zzzcode"; }
+
+#plasticbag {
+    .plastic-set {
+        position: relative;
+        width: 824px;
+        aspect-ratio: 824/1295;
+        max-width: 100%;
+        margin: auto;
+
+        .plastic-content-area {
+            position: absolute;
+            top: 11.76%;
+            left: 9.21%;
+            
+            width: 85.41%;
+            height: 71.64%;
+            
+            font-family: 'DB Adman X', 'Noto Sans Thai', sans-serif;
+            font-size: clamp(17px, 1.5vw, 24px);
+            line-height: 1.2;
+            font-weight: 300;
+            color: var(--plastic-txt);
+
+            .plastic-head {
+                display: flex;
+                font-size: clamp(14.69pt, 1.5vw, 20pt);
+                justify-content: space-between;
+                border-block-end: 0.5pt solid var(--plastic-txt);
+                margin-inline-end: 5.38%;
+                margin-block-end: 1.4%;
+            }
+
+            .plastic-pic-area {
+                display: flex;
+                height: 45.195%;
+                margin-inline-end: 5.38%;
+
+                .plastic-pic {
+                    flex: 1;
+                    background: var(--plastic-pic) var(--plastic-pos)/var(--plastic-size) no-repeat;
+                }
+
+                .plastic-tab {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    
+                    width: 7.398%;
+                    background: linear-gradient(to bottom, var(--plastic-clr-top), var(--plastic-clr-bottom));
+                    padding-block-end: 2.89%;
+
+                    &::before {
+                        content: "";
+                        width: 64.96%;
+                        aspect-ratio: 1;
+                        background: url(https://iili.io/3hLhSa4.png) center/contain no-repeat;
+                    }
+                }
+            }
+
+            .plastic-name {
+                margin-inline-end: 5.38%;
+                margin-block-start: 3.196%;
+
+                font-size: clamp(30.84pt, 3vw, 42pt);
+                line-height: clamp(16.16pt, 1.6vw, 22pt);
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .plastic-title {
+                display: flex;
+                align-items: center;
+                column-gap: 0.25%;
+                
+                margin-inline-end: 5.38%;
+                margin-block-start: 0.67%;
+                
+                font-size: clamp(14.69pt, 1.5vw, 20pt);
+                font-style: italic;
+                font-weight: 400;
+
+                hr {
+                    flex: 1;
+                    height: 0.5pt;
+                    background: var(--plastic-txt);
+                }
+            }
+
+            .plastic-content {
+                margin-inline-end: 5.38%;
+                margin-block-start: 4.61%;
+                
+                max-height: 27%;
+                overflow: auto;
+
+                span.mycode_b { font-weight: 400 !important; }
+            }
+
+            .plastic-content::-webkit-scrollbar { width: 0; }
+
+            .plastic-ps {
+                position: relative;
+                z-index: 1;
+
+                margin-block-start: 3.774%;
+                height: 5.45%;
+                background: url(https://iili.io/3hm4S2f.png) left center/contain no-repeat;
+                padding-inline: 2% 40%;
+
+                display: flex;
+                column-gap: 1%;
+                align-items: center;
+
+                color: var(--plastic-txt);
+                font-weight: 400;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: var(--plastic-barcode);
+                    -webkit-mask: url(https://iili.io/3hm4k1s.png) left center/contain no-repeat;
+                            mask: url(https://iili.io/3hm4k1s.png) left center/contain no-repeat;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: url(https://iili.io/3hm4vrG.png) left center/contain no-repeat;
+                }
+            }
+
+            .plastic-film {
+                width: 85%;
+                aspect-ratio: 609/185;
+                transform: rotate(-2.797deg);
+                transform-origin: top left;
+                
+                margin-inline-start: 3.68%;
+                margin-block-start: -0.67%;
+                
+                display: flex;
+                column-gap: 1.45%;
+                padding: 3.2% 1.9%;
+
+                position: relative;
+
+                .plastic-img {
+                    display: block;
+                    width: 100%;
+                    aspect-ratio: 1;
+                    background: var(--plastic-pic) var(--plastic-pos)/var(--plastic-size) no-repeat;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: url(https://iili.io/3hDxbjV.png) center/contain no-repeat;
+                }
+            }
+        }
+
+        &::before {
+            content: "";
+            user-select: none;
+            pointer-events: none;
+            
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: url(https://iili.io/3hsrSr7.png) center/contain no-repeat;
+            mix-blend-mode: lighten;
+            opacity: 40%;
+        }
+    }
+}

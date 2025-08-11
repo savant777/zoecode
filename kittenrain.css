@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+:root {
+    --kittenrain-pic: url(https://i.imgur.com/MsIPB22.png);
+    --kittenrain-pos: center;
+    --kittenrain-size: cover;
+
+    --blue-aupalette: #130f40;
+    --blue-frpalette: #4a69bd;
+
+    --blue-200: #d3e2f2;
+    --blue-400: #9cb6dd;
+
+    --pink-100: #fbe8eb;
+    --pink-400: #e58799;
+    --pink-950: #4c0519;
+
+    --yellow-100: #fef3c7;
+    --yellow-400: #fabe25;
+    --yellow-950: #451a03;
+
+    --gray-100: #f2f2f2;
+    --gray-400: #888;
+    --gray-600: #333;
+    --gray-900: #202020;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+.ktrain-box {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    background: var(--blue-200);
+    color: var(--blue-aupalette);
+    font-size: clamp(14px, 1vw, 18px);
+    font-family: 'Bai Jamjuree';
+    border-radius: 1rem;
+    padding: 2em;
+}
+
+.ktrain-box.p {
+    background: var(--pink-100);
+    color: var(--pink-950);
+}
+
+.ktrain-box.y {
+    background: var(--yellow-100);
+    color: var(--yellow-950);
+}
+
+.ktrain-box.b {
+    background: var(--gray-900);
+    color: var(--gray-100);
+}
+
+.ktrain-tag {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    width: 120px;
+    height: calc(120px + 2rem);
+    background: var(--blue-400);
+    border-radius: 0 0 75px 75px;
+    padding: 1rem;
+    padding-block-end: 2rem;
+}
+
+.ktrain-tag.p { background: var(--pink-400); }
+
+.ktrain-tag.y { background: var(--yellow-400); }
+
+.ktrain-tag.b { background: var(--gray-600); }
+
+.ktrain-logo {
+    width: 100%;
+    aspect-ratio: 500/365;
+    background: url(https://i.imgur.com/NPUUkPF.png) center/cover no-repeat;
+}
+
+.ktrain-logo.b {
+    background: url(https://i.imgur.com/4FUjfvB.png) center/cover no-repeat;
+}
+
+.ktrain-flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: calc(100% - (120px + 1rem));
+}
+
+.ktrain-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding: 5px;
+    background: var(--kittenrain-pic) var(--kittenrain-pos)/var(--kittenrain-size) no-repeat content-box, var(--blue-frpalette);
+}
+
+.ktrain-pic.p { background-color:  var(--pink-400); }
+
+.ktrain-pic.y { background-color:  var(--yellow-400); }
+
+.ktrain-pic.b { background-color:  var(--gray-600); }
+
+.ktrain-name {
+    flex: 1;
+    font-family: 'Inter', 'Noto Sans Thai';
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.ktrain-place {
+    font-size: 1rem;
+    padding-block-start: 0.5rem;
+}
+
+.ktrain-content { padding-block-start: 2rem; }
+
+.ktrain-box hr {
+    margin-block: 1rem;
+    border: 1px dashed var(--blue-aupalette);
+    background: none;
+}
+
+.ktrain-box.p hr { border-color: var(--pink-950); }
+
+.ktrain-box.y hr { border-color: var(--yellow-950); }
+
+.ktrain-box.b hr { border-color: var(--gray-600); }

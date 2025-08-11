@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@500;600;700&display=swap');
+
+:root {
+    --tc-red: #b22222;
+    --tc-blue: #0047ab;
+    --tc-paper: #f2edde;
+    --tc-stamp: url(https://i.imgur.com/cyC6z4h.png);
+    --tc-pic: var(var(--tc-paper));
+    --tc-position: center;
+    --tc-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode div { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#zzzcode summary { cursor: pointer; }
+#zzzcode summary::marker { content: ''; }
+#zzzcode summary::-webkit-details-marker { display: none; }
+
+.tc-paper {
+    margin: auto;
+    width: 800px;
+    max-width: 90%;
+    background: repeating-linear-gradient(-45deg, var(--tc-red) 0 1rem, var(--tc-paper) 1rem 2rem, var(--tc-blue) 2rem 3rem, var(--tc-paper) 3rem 4rem);
+    color: black;
+    padding: 1rem;
+    font-family: 'Maitree', sans-serif;
+    font-size: clamp(12px, 1vw, 15px);
+
+    input, input + br { display: none; }
+}
+
+.tc-head {
+    display: flex;
+    gap: 1rem;
+    height: 125px;
+}
+
+.tc-stamp {
+    aspect-ratio: 2/1;
+    background: var(--tc-stamp) center/contain content-box no-repeat, var(--tc-paper) border-box;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tc-stamppic {
+    width: calc(170.5 * 100% / 218);
+    height: calc(77.5 * 100% / 93);
+    background: var(--tc-pic) var(--tc-position)/var(--tc-size) no-repeat;
+}
+
+.tc-from {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--tc-paper);
+    padding: 1rem;
+    font: bold 17px 'Courier New';
+}
+
+.tc-from::before {
+    content: "FROM :";
+    color: var(--tc-red);
+}
+
+.tc-name {
+    flex: 1;
+    background: repeating-linear-gradient(transparent 0 1rem, var(--tc-red) 1rem 1.1rem, transparent 1.1rem 1.2rem);
+    padding-left: 1rem;
+    line-height: 1.2rem;
+}
+
+.tc-content {
+    display: block;
+    background: var(--tc-paper);
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+.tc-to {
+    font: bold 17px 'Courier New';
+}
+
+.tc-to::before {
+    content: "TO : ";
+    color: var(--tc-red);
+}
+
+.tc-content bc {
+    font-weight: bold;
+    color: var(--tc-red);
+}
+
+bc + br { display: none; }
+
+.tc-topic {
+    text-align: center;
+    color: var(--tc-red);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.tc-block {
+    width: calc(100% - 2rem);
+    max-width: 600px;
+    color: var(--tc-blue);
+    border: 1px solid #000;
+    padding: 1rem;
+    margin-block-end: 1em;
+    margin-inline: auto;
+
+    .tc-topic {
+        color: inherit !important;
+        font-size: large;
+    }
+}
+
+.tc-stamp-set {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    label {
+        width: 200px;
+        aspect-ratio: 1;
+        background: var(--tc-stamp) center/contain no-repeat;
+        cursor: pointer;
+    }
+
+    label + br { display: none; }
+
+    .tc-capsule-bd {
+        display: none;
+        z-index: 10;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        width: 500px;
+        max-width: calc(100% - 2rem);
+        margin: auto;
+        background: repeating-linear-gradient(-45deg, var(--tc-red) 0 1rem, var(--tc-paper) 1rem 2rem, var(--tc-blue) 2rem 3rem, var(--tc-paper) 3rem 4rem);
+        padding: 1rem;
+        box-shadow: 0 0 1rem #00000080;
+
+        .tc-capsule {
+            background: var(--tc-paper);
+            padding: 2rem;
+        }
+    }
+
+    .tc-capsule-bd[set="last"] {
+        bottom: 0;
+        top: unset;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* ========= 2024 ========= */
+input#tc-24-alvis:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-alvis"],
+input#tc-24-andaman:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-andaman"],
+input#tc-24-artemis:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-artemis"],
+input#tc-24-ashlynn:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-ashlynn"],
+input#tc-24-charlotte:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-charlotte"],
+input#tc-24-delphinus:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-delphinus"],
+input#tc-24-desdemona:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-desdemona"],
+input#tc-24-elio:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-elio"],
+input#tc-24-hornwort:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-hornwort"],
+input#tc-24-jonathan:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-jonathan"],
+input#tc-24-kamin:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-kamin"],
+input#tc-24-lucine:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-lucine"],
+input#tc-24-miner:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-miner"],
+input#tc-24-olivia:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-olivia"],
+input#tc-24-rowena:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-rowena"],
+input#tc-24-silvia:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-silvia"],
+input#tc-24-valeska:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-valeska"],
+input#tc-24-zoe:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-zoe"] { display: block; }

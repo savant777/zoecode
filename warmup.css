@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+#zzzcode {
+    position: relative;
+}
+
+#zzzcode div {
+    box-sizing: border-box;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child {
+    position: relative;
+}
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after {
+    content: "zzzcode";
+}
+
+.wumb-box {
+    margin: auto;
+    width: 800px;
+    max-width: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(rgba(255,255,255,0.3) 0 0), url(https://i.imgur.com/XEeU1ny.png) center/cover no-repeat;
+    padding: 2em;
+    color: #7f1c3d;
+    font-weight: 500;
+    font-size: clamp(14px, 1vw, 17px);
+}
+
+.wumb-head {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.wumb-logo, .wumb-item {
+    margin: auto;
+    max-width: 80%;
+}
+
+.wumb-logo {
+    width: 500px;
+}
+
+.wumb-item {
+    width: 400px;
+}
+
+.wumb-divider {
+    margin: 2em 0;
+    width: 100%;
+    height: 20px;
+    background: url(https://i.imgur.com/VPFzWr0.png) center/contain no-repeat;
+    mix-blend-mode: multiply;
+}
+
+.wumb-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.wumb-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff1d48;
+}
+
+.wumb-title::before {
+    display: inline-block;
+    position: relative;
+    top: 0.25rem;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    background: url(https://i.imgur.com/FYlhvES.png) center/contain no-repeat;
+}
+
+center > .wumb-title::before {
+    display: none;
+}
+
+.wumb-form {
+    margin: auto;
+    width: 80%;
+    background: linear-gradient(rgba(253,227,211,0.75), rgba(242,169,190,0.75));
+    padding: 1em;
+    border-radius: 1em;
+}
