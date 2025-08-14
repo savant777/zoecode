@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Michroma&family=Noto+Sans+Thai:wght@100..900&display=swap');
 
-:root {
-
-}
-
 #zzzcode { position: relative; }
 #zzzcode * { box-sizing: border-box; }
 
@@ -42,19 +38,20 @@
     .freeze-tape {
         position: absolute;
         z-index: 5;
-        top: calc(8rem + 28px);
         left: 50%;
-        transform: translateX(-50%) rotate(-5deg);
-        width: 105%;
-        height: 36px;
+        min-height: 36px;
         background: repeating-linear-gradient(-45deg, yellow 0 10px, black 11px 20px, yellow 21px);
+        filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.5));
+        padding: 6px 0;
+    }
+
+    .freeze-tape[tape="1"], .freeze-tape[tape="2"]{
+        width: 105%;
         user-select: none;
         pointer-events: none;
-
+        
         &::before {
-            content: "wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎";
-            position: absolute;
-            inset: 6px 0;
+            content: "wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎";
             background: yellow;
             overflow: hidden;
             color: black;
@@ -66,25 +63,19 @@
             font-family: 'Michroma', sans-serif;
             font-weight: bold;
             letter-spacing: 3px;
-            font-size: clamp(11px,0.8vw,14px);
+            font-size: clamp(11px, 0.8vw, 14px);
             text-wrap: nowrap;
+            padding: 6px 0;
         }
     }
 
-    .freeze-tape[tape=1] {
-        position: absolute;
-        z-index: 5;
-        top: calc(8rem + 28px);
-        left: 50%;
+    .freeze-tape[tape="1"] {
+        top: calc(8rem + min(1.75vw, 1.75rem));
         transform: translateX(-50%) rotate(-5deg);
-        filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.5));
     }
 
-    .freeze-tape[tape=2] {
-        position: absolute;
-        z-index: 5;
-        top: calc(9rem + 28px);
-        left: 50%;
+    .freeze-tape[tape="2"] {
+        top: calc(9rem + min(1.75vw, 1.75rem));
         transform: translateX(-50%) rotate(2deg);
         filter: drop-shadow(2px 0 8px rgba(0,0,0,1));
     }
@@ -92,7 +83,7 @@
     .freeze-area {
         position: relative;
         margin: auto;
-        padding: 4rem 2rem 7rem;
+        padding: 4rem 2rem;
 
         &::before {
             content: "";
@@ -118,39 +109,30 @@
         h1.freeze-name + br { display: none; }
 
         .freeze-content {
-            margin-block-start: calc(36px + 6rem);
+            margin-block: 8.25rem 2rem;
         }
-    }
 
-    .freeze-tapes {
-            position: absolute;
-            z-index: 5;
-            bottom: 3.5rem;
-            left: 50%;
+        .freeze-tape {
+            position: relative;
+            bottom: 0;
+            width: calc(100% + 8rem + 12px);
             transform: translateX(-50%);
-            width: calc(100% + 12px);
-            min-height: 36px;
-            background: repeating-linear-gradient(-45deg, yellow 0 10px, black 11px 20px, yellow 21px);
-            filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.5));
-            padding: 6px;
 
             .freeze-ps {
                 background: yellow;
                 color: black;
-                text-transform: uppercase;
-                line-height: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-family:'Michroma', 'Noto Sans Thai', sans-serif;
+                font-size: clamp(11px, 0.8vw, 14px);
                 font-weight: bold;
+                text-align: center;
+                line-height: 1;
                 letter-spacing: 3px;
-                font-size: clamp(11px,0.8vw,14px);
                 padding: 6px 5rem;
 
                 &::before {
                     content: "⚠︎ ";
+                    font-family: 'Michroma', sans-serif;
                 }
             }
         }
+    }
 }
