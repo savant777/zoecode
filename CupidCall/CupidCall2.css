@@ -38,6 +38,8 @@
         font-family: 'Mitr', sans-serif;
         font-weight: 200;
         font-size: 8px;
+        text-align: left;
+        color: #fff;
 
         .cupid-name {
             text-transform: uppercase;
