@@ -120,8 +120,9 @@
         .freeze-content {
             margin-block-start: calc(36px + 6rem);
         }
+    }
 
-        .freeze-tapes {
+    .freeze-tapes {
             position: absolute;
             z-index: 5;
             bottom: 3.5rem;
@@ -152,5 +153,4 @@
                 }
             }
         }
-    }
 }
