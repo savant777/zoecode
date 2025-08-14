@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Michroma&family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+:root {
+
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#freeze.freeze-box {
+    position: relative;
+    width: 600px;
+    max-width: calc(100% - 1rem);
+    margin: auto;
+    padding: 1rem 2rem;
+    overflow: hidden;
+    font-size: clamp(14px, 1vw, 17px);
+
+    .freeze-tape {
+        position: absolute;
+        z-index: 5;
+        top: calc(8rem + 28px);
+        left: 50%;
+        transform: translateX(-50%) rotate(-5deg);
+        width: 105%;
+        height: 36px;
+        background: repeating-linear-gradient(-45deg, yellow 0 10px, black 11px 20px, yellow 21px);
+        user-select: none;
+        pointer-events: none;
+
+        &::before {
+            content: "wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎";
+            position: absolute;
+            inset: 6px 0;
+            background: yellow;
+            overflow: hidden;
+            color: black;
+            text-transform: uppercase;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Michroma', sans-serif;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: clamp(11px,0.8vw,14px);
+            text-wrap: nowrap;
+        }
+    }
+
+    .freeze-tape[tape=1] {
+        position: absolute;
+        z-index: 5;
+        top: calc(8rem + 28px);
+        left: 50%;
+        transform: translateX(-50%) rotate(-5deg);
+        filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.5));
+    }
+
+    .freeze-tape[tape=2] {
+        position: absolute;
+        z-index: 5;
+        top: calc(9rem + 28px);
+        left: 50%;
+        transform: translateX(-50%) rotate(2deg);
+        filter: drop-shadow(2px 0 8px rgba(0,0,0,1));
+    }
+
+    .freeze-area {
+        position: relative;
+        margin: auto;
+        padding: 4rem 2rem 7rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            filter: blur(6px);
+            user-select: none;
+            pointer-events: none;
+            border-radius: 1rem;
+        }
+
+        h1.freeze-name {
+            margin-block: 0;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 1;
+            font-family: 'Lexend Giga', sans-serif;
+            font-weight: normal;
+            letter-spacing: 3px;
+        }
+
+        h1.freeze-name + br { display: none; }
+
+        .freeze-content {
+            margin-block-start: calc(36px + 6rem);
+        }
+
+        .freeze-tapes {
+            position: absolute;
+            z-index: 5;
+            bottom: 3.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% + 12px);
+            min-height: 36px;
+            background: repeating-linear-gradient(-45deg, yellow 0 10px, black 11px 20px, yellow 21px);
+            filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.5));
+            padding: 6px;
+
+            .freeze-ps {
+                background: yellow;
+                color: black;
+                text-transform: uppercase;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family:'Michroma', 'Noto Sans Thai', sans-serif;
+                font-weight: bold;
+                letter-spacing: 3px;
+                font-size: clamp(11px,0.8vw,14px);
+                padding: 6px 5rem;
+
+                &::before {
+                    content: "⚠︎ ";
+                }
+            }
+        }
+    }
+}
