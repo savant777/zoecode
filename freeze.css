@@ -109,7 +109,7 @@
         h1.freeze-name + br { display: none; }
 
         .freeze-content {
-            margin-block: 8.25rem 2rem;
+            margin-block: 8.25rem 2.5rem;
         }
 
         .freeze-tape {
