@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css');
+
+#CupidCall2 { position: relative; }
+#CupidCall2 * { box-sizing: border-box; }
+#CupidCall2 > div:first-of-type { position: relative; }
+
+#CupidCall2::after {
+    display: block;
+    content: "♡";
+    font-family: 'Georgia', serif;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#CupidCall2:hover::after {
+    content: "CupidCall";
+    font-style: italic;
+}
+
+#CupidCall2 {
+    #cupidbanner.cupid-set {
+        width: 500px;
+        max-width: 100%;
+        margin: auto;
+        padding: 0 1rem;
+        font-family: 'Mitr', sans-serif;
+        font-weight: 200;
+        font-size: clamp(5px, 0.5vw, 8px);
+
+        .cupid-name {
+            text-transform: uppercase;
+            font-style: italic;
+            padding-inline-start: 8px;
+            letter-spacing: 1.2px;
+
+            b { font-weight: 400 !important; }
+        }
+
+        .cupid-flex {
+            display: flex;
+            column-gap: 0.5rem;
+
+            .cupid-icon {
+                position: absolute;
+                width: 22px;
+                aspect-ratio: 1;
+                color: #000;
+                background: #fff;
+                border: 2.5px solid #000;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 10px;
+                text-shadow: 0 0 #000;
+            }
+
+            .cupid-l {
+                position: relative;
+                width: 71.45%;
+                aspect-ratio: 334/107;
+                border-radius: 7.5px;
+                border: 2.5px solid #000;
+                background: var(--cupid-bg) var(--cupid-pos)/var(--cupid-size) no-repeat;
+                padding: 1.2rem 2rem;
+
+                display: flex;
+                column-gap: 2rem;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(255,255,255,0.05);
+                    backdrop-filter: blur(1.5px);
+                    border-radius: 5px;
+                    user-select: none;
+                    pointer-events: none;
+                }
+
+                .cupid-icon.al {
+                    top: 50%;
+                    left: 0;
+                    translate: -50% -50%;
+                }
+
+                .cupid-icon.x{
+                    bottom: 0;
+                    right: 20px;
+                    translate: 0 50%;
+                    text-shadow: 0 0 #000, 0 0 #000;
+                }
+
+                .cupid-icon.ht{
+                    bottom: 0;
+                    right: 44px;
+                    translate: 0 50%;
+                    text-shadow: none;
+                }
+
+                .cupid-cover {
+                    position: relative;
+                    height: 100%;
+                    aspect-ratio: 1;
+                    background: var(--cupid-cover) var(--cupid-pos)/var(--cupid-size) no-repeat;
+                    border-radius: 5px;
+                }
+
+                .cupid-song {
+                    position: relative;
+                    flex: 1;
+                    background: url(https://iili.io/FDoBv49.png) 50% 75%/contain no-repeat;
+                    text-transform: uppercase;
+                    padding: 2px;
+                    line-height: 1.25;
+
+                    b {
+                        font-size: clamp(9px, 0.7vw, 12px);
+                        font-weight: 400 !important;
+                    }
+                }
+            }
+
+            .cupid-r {
+                position: relative;
+                flex: 1;
+                border-radius: 7.5px;
+                border: 2.5px solid #000;
+                background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
+
+                .cupid-icon.ar {
+                    top: 50%;
+                    right: 0;
+                    translate: 50% -50%;
+                }
+
+                .cupid-g {
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    color: #000;
+                    font-size: clamp(7px, 0.7vw, 10px);
+                }
+            }
+        }
+
+        .cupid-quote {
+            font-style: italic;
+            font-size: 0.31vw;
+            padding-inline-start: 8px;
+            letter-spacing: 0.9px;
+        }
+    }
+}
