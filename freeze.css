@@ -51,7 +51,7 @@
         pointer-events: none;
         
         &::before {
-            content: "wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎";
+            content: "wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎ wanted ⚠︎";
             background: yellow;
             overflow: hidden;
             color: black;
@@ -63,9 +63,9 @@
             font-family: 'Michroma', sans-serif;
             font-weight: bold;
             letter-spacing: 3px;
-            font-size: clamp(11px, 0.8vw, 14px);
+            font-size: 8px;
             text-wrap: nowrap;
-            padding: 6px 0;
+            padding: 8px 0;
         }
     }
 
