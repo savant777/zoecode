@@ -71,12 +71,12 @@
     }
 
     .freeze-tape[tape="1"] {
-        top: calc(8rem + min(1.9vw, 1.75rem));
+        top: calc(8rem + min(2vw, 1.75rem));
         transform: translateX(-50%) rotate(-5deg);
     }
 
     .freeze-tape[tape="2"] {
-        top: calc(9rem + min(1.9vw, 1.75rem));
+        top: calc(9rem + min(2vw, 1.75rem));
         transform: translateX(-50%) rotate(2deg);
         filter: drop-shadow(2px 0 8px rgba(0,0,0,1));
     }
