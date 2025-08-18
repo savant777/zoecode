@@ -140,6 +140,9 @@
             aspect-ratio: 16/9;
             border: 6px solid #eee;
             background: var(--freeze-pic) var(--freeze-pos)/var(--freeze-size) no-repeat;
+            --freeze-pic: gray;
+            --freeze-pos: center;
+            --freeze-size: cover;
 
             &::before, &::after {
                 content: '';
