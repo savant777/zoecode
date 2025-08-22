@@ -200,6 +200,20 @@
                     background: var(--olv-txt);
                 }
             }
+
+            .olive-code {
+                margin-block-start: 2rem;
+
+                .codeblock { 
+                    background: var(--olv-txt);
+                    color: var(--olv-bg);
+                    user-select: all;
+                }
+
+                .codeblock *::selection {
+                    background: var(--olv-primary);
+                }
+            }
         }
     }
 
