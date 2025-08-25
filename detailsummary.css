@@ -1,7 +1,6 @@
 #zcode {
     details > summary {
         list-style: none;
-        cursor: pointer;
     }
 
     details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
