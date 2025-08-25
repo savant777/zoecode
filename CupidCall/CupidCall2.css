@@ -12,16 +12,33 @@
 
 #CupidCall2 { position: relative; }
 #CupidCall2 * { box-sizing: border-box; }
-#CupidCall2 > div:first-of-type { position: relative; }
 
+#CupidCall2 a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#CupidCall2 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
 #CupidCall2::after {
-    display: block;
     content: "♡";
-    font-family: 'Georgia', serif;
-    font-size: x-small;
-    color: gray !important;
+
     width: 100%;
-    text-align: center;
+    height: 13px;
+    margin-block-start: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    line-height: 1;
+    color: gray !important;
 }
   
 #CupidCall2:hover::after {
@@ -32,7 +49,6 @@
 #CupidCall2 {
     #cupidbanner.cupid-set {
         width: 500px;
-        max-width: 100%;
         margin: auto;
         padding: 0 1rem;
         font-family: 'Mitr', sans-serif;
@@ -71,8 +87,8 @@
 
             .cupid-l {
                 position: relative;
-                width: 71.45%;
-                aspect-ratio: 334/107;
+                width: 357.25px;
+                height: 114.45px;
                 border-radius: 7.5px;
                 border: 2.5px solid #000;
                 background: var(--cupid-bg) var(--cupid-pos)/var(--cupid-size) no-repeat;
