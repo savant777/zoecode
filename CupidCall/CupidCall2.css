@@ -44,6 +44,7 @@
 #CupidCall2:hover::after {
     content: "CupidCall";
     font-style: italic;
+    font-size: 10px;
 }
 
 #CupidCall2 {
@@ -182,3 +183,5 @@
         }
     }
 }
+
+#CupidCall2:has(#cupidbanner) { margin-block: 1rem 0.5rem; }
