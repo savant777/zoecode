@@ -95,13 +95,12 @@
 
                 .wkmz-deco1, .wkmz-deco2 {
                     position: absolute;
-                    right: -2.5vw;
                     transform: translateX(50%) rotate(-2.5deg);
                     
                     width: 35%;
                     aspect-ratio: 1;
                     background: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
-                    
+
                     -webkit-filter: drop-shadow(0 0.25vw #fff)
                                     drop-shadow(0 -0.25vw #fff)
                                     drop-shadow(0.25vw 0 #fff)
@@ -114,8 +113,15 @@
                                     drop-shadow(2px 2px 0.25vw #000);
                 }
 
-                .wkmz-deco1 { bottom: 65%; }
-                .wkmz-deco2 { bottom: 30%; }
+                .wkmz-deco1 { 
+                    right: -2vw;
+                    bottom: 62.5%;
+                }
+                
+                .wkmz-deco2 {
+                    right: -3vw;
+                    bottom: 30%;
+                }
             }
 
             .wkmz-info-card {
