@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Thai+Looped:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Mochiy+Pop+One&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Thai+Looped:wght@100..900&family=Playpen+Sans+Thai:wght@100..800&display=swap');
 
 :root {
     --wkmz-primary: #e9576b;
+    --wkmz-secondary: #bb4646;
     --wkmz-txt: #fff;
 
     --wkmz-pic: gray;
@@ -278,6 +279,131 @@
                 margin-bottom: 0;
                 padding-bottom: 0;
                 border-bottom: 0;
+            }
+        }
+    }
+
+    #wkmz-post.wkmz-box {
+        width: 1000px;
+        max-width: calc(100% - 2rem);
+        margin: auto;
+        font-family: 'Noto Sans Thai Looped', 'Noto Sans JP', sans-serif;
+        font-size: clamp(13px, 1vw, 17px);
+        padding-top: min(2vw, 2rem);
+        margin-block-end: 0.5rem;
+
+        .wkmz-head {
+            position: relative;
+            width: 100%;
+            padding-top: min(2vw, 2rem);
+
+            .wkmz-title-jp {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: rotate(-10deg);
+                transform-origin: right;
+                width: fit-content;
+                color: var(--wkmz-txt);
+                line-height: 1;
+                font-size: max(2.5vw, 28px);
+                font-family: 'Mochiy Pop One', sans-serif;
+                z-index: 2;
+
+                &::before {
+                    content: attr(title);
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    -webkit-text-stroke: 0.5vw var(--wkmz-primary);
+                    -webkit-filter: drop-shadow(1px 1px var(--wkmz-secondary)) 
+                                    drop-shadow(1px 1px var(--wkmz-secondary)) 
+                                    drop-shadow(1px 1px var(--wkmz-secondary))
+                                    drop-shadow(1px 1px var(--wkmz-secondary))
+                                    drop-shadow(1px 1px var(--wkmz-secondary));
+                            filter: drop-shadow(1px 1px var(--wkmz-secondary)) 
+                                    drop-shadow(1px 1px var(--wkmz-secondary)) 
+                                    drop-shadow(1px 1px var(--wkmz-secondary))
+                                    drop-shadow(1px 1px var(--wkmz-secondary))
+                                    drop-shadow(1px 1px var(--wkmz-secondary));
+                }
+            }
+
+            .wkmz-title-th {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-180%);
+                transform-origin: right;
+                width: fit-content;
+                color: var(--wkmz-txt);
+                line-height: 1;
+                font-size: max(1.25vw, 14px);
+                font-family: 'Playpen Sans Thai', sans-serif;
+                font-weight: 800;
+                z-index: 2;
+
+                &::before {
+                    content: attr(title);
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    -webkit-text-stroke: 0.15vw var(--wkmz-primary);
+                    -webkit-filter: drop-shadow(1px 1px var(--wkmz-secondary)) 
+                                    drop-shadow(1px 1px var(--wkmz-secondary)) 
+                                    drop-shadow(1px 1px var(--wkmz-secondary));
+                            filter: drop-shadow(1px 1px var(--wkmz-secondary)) 
+                                    drop-shadow(1px 1px var(--wkmz-secondary)) 
+                                    drop-shadow(1px 1px var(--wkmz-secondary));
+                }
+            }
+
+            .wkmz-pic {
+                position: relative;
+                width: 83.33%;
+                aspect-ratio: 16/9;
+                border: 8px solid #fff;
+                background: var(--wkmz-pic) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
+                margin: auto;
+            }
+
+            .wkmz-place-card {
+                position: absolute;
+                bottom: 3.5%;
+                right: 1.33%;
+                background: #fff;
+                color: #000;
+                padding: max(5px, 0.25vw);
+                border-radius: 10px;
+                border: 1px solid #333;
+
+                .wkmz-place {
+                    border-radius: 4px;
+                    border: 2px solid var(--wkmz-primary);
+                    padding: max(3px, 0.25vw) max(8px, 0.75vw);
+                    font-family: 'Kosugi Maru', sans-serif;
+                    text-align: end;
+                }
+            }
+        }
+
+        .wkmz-body {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+            margin-block-start: 3rem;
+
+            .wkmz-content {
+                background: #eee;
+                color: #000;
+                padding: 3rem;
+            }
+
+            .wkmz-ps {
+                background: var(--wkmz-primary);
+                color: var(--wkmz-txt);
+                padding: 0.5rem;
+                text-align: center;
             }
         }
     }
