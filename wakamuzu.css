@@ -97,21 +97,21 @@
                     position: absolute;
                     right: -2.5vw;
                     transform: translateX(50%) rotate(-2.5deg);
-                    z-index: 1;
                     
                     width: 35%;
                     aspect-ratio: 1;
                     background: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
-                    transform-style: preserve-3d;
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        inset: -0.5vw;
-                        background: #fff;
-                        mask: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
-                        transform: translateZ(-1px);
-                    }
+                    
+                    -webkit-filter: drop-shadow(0 0.25vw #fff)
+                                    drop-shadow(0 -0.25vw #fff)
+                                    drop-shadow(0.25vw 0 #fff)
+                                    drop-shadow(-0.25vw 0 #fff)
+                                    drop-shadow(2px 2px 0.25vw #000);
+                            filter: drop-shadow(0 0.25vw #fff)
+                                    drop-shadow(0 -0.25vw #fff)
+                                    drop-shadow(0.25vw 0 #fff)
+                                    drop-shadow(-0.25vw 0 #fff)
+                                    drop-shadow(2px 2px 0.25vw #000);
                 }
 
                 .wkmz-deco1 { bottom: 65%; }
