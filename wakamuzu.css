@@ -102,7 +102,6 @@
                     width: 35%;
                     aspect-ratio: 1;
                     background: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
-                    filter: drop-shadow(2px 4px 6px #000);
                     transform-style: preserve-3d;
 
                     &::before {
