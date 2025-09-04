@@ -259,7 +259,9 @@
                         }
                     }
 
-                    .wkmz-info { 
+                    .wkmz-info {
+                        display: block !important;
+                        margin-bottom: 0 !important;
                         padding: 0.5vw 5% !important;
                         border: 0 !important;
                     }
@@ -267,6 +269,8 @@
             }
 
             .wkmz-info {
+                display: flex;
+                flex-direction: column;
                 margin-bottom: 1.25vw;
                 padding-bottom: 1.25vw;
                 border-bottom: 1px solid var(--wkmz-primary);
