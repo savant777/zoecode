@@ -259,7 +259,10 @@
                         }
                     }
 
-                    .wkmz-info { padding: 0.5vw 5%; }
+                    .wkmz-info { 
+                        padding: 0.5vw 5% !important;
+                        border: 0 !important;
+                    }
                 }
             }
 
