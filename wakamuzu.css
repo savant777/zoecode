@@ -73,6 +73,7 @@
 
                 &::after {
                     content: "";
+                    position: absolute;
                     inset: -1px;
                     background: #333;
                     mask: url(https://iili.io/KC75AOl.png) center/contain no-repeat;
@@ -96,6 +97,7 @@
                     position: absolute;
                     right: -2.5vw;
                     transform: translateX(50%) rotate(-2.5deg);
+                    z-index: 1;
                     
                     width: 35%;
                     aspect-ratio: 1;
@@ -105,6 +107,7 @@
 
                     &::before {
                         content: "";
+                        position: absolute;
                         inset: -0.5vw;
                         background: #fff;
                         mask: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
@@ -148,7 +151,7 @@
                             content: attr(data);
                             flex: 1;
                         }
-                        
+
                         div:last-child {
                             flex: 2;
                             border-bottom: 1px solid var(--wkmz-primary);
