@@ -144,7 +144,11 @@
                         display: flex;
                         column-gap: 0.25vw;
 
-                        div:first-child { flex: 1; }
+                        &::before { 
+                            content: attr(data);
+                            flex: 1;
+                        }
+                        
                         div:last-child {
                             flex: 2;
                             border-bottom: 1px solid var(--wkmz-primary);
