@@ -276,7 +276,11 @@
                 border-bottom: 1px solid var(--wkmz-primary);
             }
 
-            .wkmz-info:last-child { border-bottom: 0; }
+            .wkmz-info:last-child { 
+                margin-bottom: 0 !important;
+                padding: 0.5vw 5% !important;
+                border: 0 !important;
+            }
         }
     }
 }
