@@ -131,7 +131,7 @@
                 bottom: 3.5%;
                 right: 1.33%;
                 
-                min-width: 41.67%;
+                min-width: clamp(180px, 41.67%, 250px);
                 background: #fff;
                 color: #000;
                 padding: 1%;
