@@ -326,10 +326,14 @@
             position: relative;
             z-index: 5;
             width: 100%;
-            aspect-ratio: 1000/413;
+            aspect-ratio: 1000/143;
             background: url(https://iili.io/KR7njcB.png) top center/cover no-repeat;
             -webkit-filter: drop-shadow(0 0.3vw 0.3vw #000);
                     filter: drop-shadow(0 0.3vw 0.3vw #000);
+
+            display: flex;
+            align-items: center;
+            padding-block-start: 3.7%;
 
             &::before {
                 content: "";
