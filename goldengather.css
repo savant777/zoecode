@@ -365,11 +365,7 @@
                 text-transform: uppercase;
                 letter-spacing: 1px;
 
-                div:first-child, div:last-child { 
-                    flex: 1;
-                    -webkit-filter: hue-rotate(calc(var(--gdgt-hue) * -1));
-                            filter: hue-rotate(calc(var(--gdgt-hue) * -1));
-                }
+                div:first-child, div:last-child { flex: 1; }
                 div:last-child { text-align: end; }
 
                 .gdgt-pin {
@@ -412,9 +408,6 @@
             }
 
             .gdgt-content {
-                -webkit-filter: hue-rotate(calc(var(--gdgt-hue) * -1));
-                        filter: hue-rotate(calc(var(--gdgt-hue) * -1));
-
                 display: flex;
                 flex-direction: column;
                 padding: 0 3rem 3rem;
