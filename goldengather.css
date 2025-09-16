@@ -571,6 +571,10 @@
     }
 }
 
+#GoldenGather:has(#gdgt-postcard) {
+    padding-block: 10rem;
+}
+
 @-webkit-keyframes cardFlip {
     0% { transform: rotateZ(0deg) rotateY(180deg); }
     50% { transform: rotateZ(10deg) rotateY(90deg); }
