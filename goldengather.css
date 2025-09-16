@@ -547,7 +547,10 @@
                             
                             width: 91%;
                             aspect-ratio: 82/57;
-                            background: url(https://iili.io/KREBR3b.png) center/contain no-repeat;
+                            background: var(--gdgt-primary);
+                            -webkit-mask: url(https://iili.io/KREBR3b.png) center/contain no-repeat;
+                                    mask: url(https://iili.io/KREBR3b.png) center/contain no-repeat;
+                            mix-blend-mode: multiply;
                         }
                     }
 
