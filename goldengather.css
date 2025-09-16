@@ -5,6 +5,8 @@
     --gdgt-primary: #5f2802;
     --gdgt-secondary: #782a07;
 
+    --gdgt-hue: 0deg;
+
     --gdgt-pic: gray;
     --gdgt-pos: center;
     --gdgt-size: cover;
@@ -328,8 +330,8 @@
             width: 100%;
             aspect-ratio: 1000/143;
             background: url(https://iili.io/KR7njcB.png) top center/cover no-repeat;
-            -webkit-filter: drop-shadow(0 0.3vw 0.3vw #000);
-                    filter: drop-shadow(0 0.3vw 0.3vw #000);
+            -webkit-filter: drop-shadow(0 0.3vw 0.3vw #000) hue-rotate(var(--gdgt-hue));
+                    filter: drop-shadow(0 0.3vw 0.3vw #000) hue-rotate(var(--gdgt-hue));
 
             display: flex;
             align-items: center;
@@ -389,8 +391,8 @@
             z-index: 5;
             width: 100%;
             background: url(https://iili.io/KR7njcB.png) 50% clamp(-380px, -20vw, -340px)/100% repeat;
-            -webkit-filter: drop-shadow(0 -0.3vw 0.3vw #000000aa);
-                    filter: drop-shadow(0 -0.3vw 0.3vw #000000aa);
+            -webkit-filter: drop-shadow(0 -0.3vw 0.3vw #000000aa) hue-rotate(var(--gdgt-hue));
+                    filter: drop-shadow(0 -0.3vw 0.3vw #000000aa) hue-rotate(var(--gdgt-hue));
             
             &::before {
                 content: "";
