@@ -303,3 +303,10 @@
         }
     }
 }
+
+input#obj1:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj1"],
+input#obj2:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj2"],
+input#obj3:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj3"],
+input#obj4:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj4"],
+input#obj5:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj5"],
+input#obj6:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj6"] {display: block;}
