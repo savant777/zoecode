@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/varuna');
+
+:root {
+    --gdgt-primary: #5f2802;
+    --gdgt-secondary: #782a07;
+
+    --gdgt-pic: gray;
+    --gdgt-pos: center;
+    --gdgt-size: cover;
+}
+
+#GoldenGather { position: relative; }
+#GoldenGather * { box-sizing: border-box; }
+
+#GoldenGather a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#GoldenGather a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#GoldenGather::after {
+    content: "🍂";
+
+    width: 100%;
+    height: 13px;
+    margin-block-start: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    line-height: 1;
+    color: gray !important;
+    font-style: italic;
+}
+  
+#GoldenGather:hover::after {
+    content: "made by zzzcode";
+    font-style: normal;
+}
+
+#GoldenGather {
+    input[type="radio"] { display: none; }
+
+    #gdgt-thread.gdgt-box {
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+        -webkit-filter: saturate(0.8);
+                filter: saturate(0.8);
+        
+        color: #000;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: clamp(13px, 1vw, 18px);
+
+        .gdgt-head {
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            aspect-ratio: 1000/514;
+            background: url(https://iili.io/KR7njcB.png) 50% 25%/cover no-repeat;
+            -webkit-filter: drop-shadow(0 0.5vw 0.75vw #000);
+                    filter: drop-shadow(0 0.5vw 0.75vw #000);
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 1px;
+                transform: translateY(100%);
+                
+                width: 100%;
+                aspect-ratio: 1000/57;
+                background: url(https://iili.io/KR7njcB.png) 50% 25%/cover no-repeat;
+                -webkit-mask: url(https://iili.io/KRCGDBf.png) top center/cover;
+                        mask: url(https://iili.io/KRCGDBf.png) top center/cover;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+
+                width: 100%;
+                aspect-ratio: 1000/571;
+                background: url(https://iili.io/KRCGb14.png) center/contain no-repeat;
+                mix-blend-mode: multiply;
+            }
+
+            .gdgt-logo {
+                position: absolute;
+                top: 62.5%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+                width: 45%;
+                aspect-ratio: 470/303;
+                background: url(https://iili.io/KRnfcfR.png) center/contain no-repeat;
+            }
+
+            .gdgt-sunflower {
+                position: absolute;
+                bottom: 0;
+                left: 11%;
+                transform: translateY(80%);
+                
+                width: 13.68%;
+                aspect-ratio: 143/144;
+                background: url(https://iili.io/KR7nVMx.png) center/contain no-repeat;
+                -webkit-filter: saturate(1.2);
+                        filter: saturate(1.2);
+            }
+        }
+
+        .gdgt-gif {
+            position: relative;
+            width: 102%;
+            aspect-ratio: 1000/300;
+            background: var(--gdgt-pic) var(--gdgt-pos)/var(--gdgt-size) no-repeat;
+            margin: 12px -1%;
+        }
+
+        label.gdgt-body {
+            display: block;
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            background: url(https://iili.io/KR7nw8P.png) top center/105% repeat;
+            -webkit-filter: drop-shadow(0 0.5vw 0.75vw #000);
+                    filter: drop-shadow(0 0.5vw 0.75vw #000);
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 1px;
+                transform: translateY(-100%);
+                
+                width: 100%;
+                aspect-ratio: 1000/57;
+                background: url(https://iili.io/KR7nw8P.png) top center/105% repeat;
+                -webkit-mask: url(https://iili.io/KRCGimX.png) top center/101%;
+                        mask: url(https://iili.io/KRCGimX.png) top center/101%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 99;
+                bottom: 0;
+
+                width: 100%;
+                aspect-ratio: 1000/826;
+                background: url(https://iili.io/KRCGmrl.png) bottom center/contain no-repeat;
+                mix-blend-mode: multiply;
+                user-select: none;
+                pointer-events: none;
+            }
+
+            .gdgt-overlay {
+                position: absolute;
+                bottom: 0;
+
+                width: 100%;
+                aspect-ratio: 1000/826;
+                background: url(https://iili.io/KR7asHb.png) bottom center/contain no-repeat;
+                user-select: none;
+                pointer-events: none;
+            }
+
+            .gdgt-redpaprica {
+                position: absolute;
+                top: 0;
+                right: 6.69%;
+                transform: translateY(-70%);
+                
+                width: 11.58%;
+                aspect-ratio: 121/133;
+                background: url(https://iili.io/KR7na87.png) center/contain no-repeat;
+                -webkit-filter: saturate(1.2);
+                        filter: saturate(1.2);
+            }
+
+            .gdgt-content {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                padding: 1rem clamp(5rem, 8vw, 8rem);
+
+                h1 + br, h2 + br, h3 + br { display: none; }
+
+                h1, h2, h3 {
+                    font-family: 'VARUNA', 'Bai Jamjuree', sans-serif;
+                    color: var(--gdgt-secondary);
+                    font-weight: normal;
+                    margin-block: 0;
+                }
+
+                h1 { font-size: clamp(1.5rem, 2vw, 2rem); }
+                h2 { font-size: clamp(1rem, 1.1vw, 1.5rem); }
+                h3 { font-size: inherit; }
+
+                hr {
+                    width: 100%;
+                    margin-block: 2rem;
+                    background: #5f2802;
+                }
+
+                a { color: #c54704; }
+
+                .mycode_size[style="font-size: small;"] { font-size: clamp(10px, 0.7vw, 13px) !important; }
+
+                .gdgt-label-group {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 0.8rem;
+                    margin-block-end: 2rem;
+
+                    label + br { display: none; }
+
+                    label {
+                        > br:first-of-type { display: none; }
+
+                        cursor: pointer;
+
+                        .gdgt-label-pic {
+                            position: relative;
+                            aspect-ratio: 4/5;
+                            background: var(--gdgt-pic) var(--gdgt-pos)/var(--gdgt-size) no-repeat;
+                            margin-block-end: calc(0.9rem + 3px);
+                            border: 3px solid var(--gdgt-primary);
+                            border-radius: clamp(20px, 2vw, 30px);
+
+                            &::before {
+                                content: '✦';
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translate(-50%, 50%);
+                                
+                                width: 1.8rem;
+                                aspect-ratio: 1;
+                                border-radius: 50%;
+                                border: 3px solid var(--gdgt-primary);
+                                background: fff;
+                                color: var(--gdgt-primary);
+                                line-height: 1;
+                                
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+
+                        .gdgt-label-alt {
+                            border: 3px solid var(--gdgt-primary);
+                            border-radius: 5rem;
+                            padding-inline: 0.5rem;
+                            padding-block: 0.5rem;
+                            text-align: center;
+                            line-height: 1;
+                        }
+                    }
+                }
+                
+                .gdgt-data {
+                    margin-block-end: 2rem;
+                    display: none;
+
+                    .gdgt-item {
+                        width: 100px;
+                        height: 100px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #202020;
+                        border-radius: 6px;
+                        margin: 1rem auto;
+                        padding: 10px;
+                    }
+
+                    details > summary { cursor: pointer; }
+                }
+            }
+
+            .gdgt-foot {
+                position: relative;
+                width: 100%;
+                height: clamp(280px, 27vw, 500px);
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-block-end: clamp(150px, 15vw, 200px);
+            }
+        }
+    }
+}
