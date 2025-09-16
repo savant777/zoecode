@@ -134,8 +134,8 @@
             z-index: 5;
             width: 100%;
             background: url(https://iili.io/KR7nw8P.png) top center/105% repeat;
-            -webkit-filter: drop-shadow(0 0.5vw 0.75vw #000);
-                    filter: drop-shadow(0 0.5vw 0.75vw #000);
+            -webkit-filter: drop-shadow(0 -0.5vw 0.75vw #000000aa);
+                    filter: drop-shadow(0 -0.5vw 0.75vw #000000aa);
             
             &::before {
                 content: "";
@@ -209,7 +209,7 @@
                 hr {
                     width: 100%;
                     margin-block: 2rem;
-                    background: #5f2802;
+                    background: var(--gdgt-primary);
                 }
 
                 a { color: #c54704; }
@@ -308,6 +308,146 @@
                     font-weight: normal;
                     margin-block: 0;
                     font-size: inherit;
+                }
+            }
+        }
+    }
+
+    #gdgt-role.gdgt-box {
+        width: 600px;
+        max-width: calc(100% - 4rem);
+        margin: auto;
+        overflow: hidden;
+        color: #000;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: clamp(13px, 1vw, 16px);
+
+        .gdgt-head {
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            aspect-ratio: 1000/413;
+            background: url(https://iili.io/KR7njcB.png) top center/cover no-repeat;
+            -webkit-filter: drop-shadow(0 0.3vw 0.3vw #000);
+                    filter: drop-shadow(0 0.3vw 0.3vw #000);
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 1px;
+                transform: translateY(100%);
+                
+                width: 100%;
+                aspect-ratio: 1000/57;
+                background: url(https://iili.io/KR7njcB.png) top center/cover no-repeat;
+                -webkit-mask: url(https://iili.io/KRCGDBf.png) top center/101%;
+                        mask: url(https://iili.io/KRCGDBf.png) top center/101%;
+            }
+
+            .gdgt-flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 1vw;
+                
+                width: 100%;
+                padding-inline: 3rem;
+
+                font-family: 'VARUNA', 'Bai Jamjuree', sans-serif;
+                font-size: clamp(10px, 0.9vw, 13px);
+                color: var(--gdgt-primary);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                div:first-child, div:last-child { flex: 1; }
+                div:last-child { text-align: end; }
+
+                .gdgt-pin {
+                    flex-shrink: 0;
+                    width: 24.5%;
+                    aspect-ratio: 206/65;
+                    background: url(https://iili.io/KRc8dAb.png) center/contain no-repeat;
+                    mix-blend-mode: multiply;
+                }
+            }
+        }
+
+        .gdgt-gif {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1000/333;
+            background: var(--gdgt-pic) var(--gdgt-pos)/var(--gdgt-size) no-repeat;
+            margin-block: 8px;
+        }
+
+        .gdgt-body {
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            background: url(https://iili.io/KR7njcB.png) 50% clamp(-380px, -20vw, -340px)/100% repeat;
+            -webkit-filter: drop-shadow(0 -0.3vw 0.3vw #000000aa);
+                    filter: drop-shadow(0 -0.3vw 0.3vw #000000aa);
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 1px;
+                transform: translateY(-100%);
+                
+                width: 100%;
+                aspect-ratio: 1000/57;
+                background: url(https://iili.io/KR7njcB.png) 50% clamp(-380px, -20vw, -340px)/100% repeat;
+                -webkit-mask: url(https://iili.io/KRCGimX.png) top center/101%;
+                        mask: url(https://iili.io/KRCGimX.png) top center/101%;
+            }
+
+            .gdgt-content {
+                display: flex;
+                flex-direction: column;
+                padding: 0 3rem 3rem;
+
+                h1 + br { display: none; }
+
+                h1 {
+                    font-family: 'VARUNA', 'Bai Jamjuree', sans-serif;
+                    font-size: 2rem;
+                    color: var(--gdgt-primary);
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-block: 0;
+                }
+
+                .gdgt-music {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    p {
+                        font-family: 'VARUNA', 'Bai Jamjuree', sans-serif;
+                        font-size: clamp(10px, 0.9vw, 13px);
+                        color: var(--gdgt-primary);
+                        letter-spacing: 1px;
+                        text-align: center;
+                        font-style: italic;
+                        margin-block: 0;
+                    }
+
+                    &::after {
+                        width: 50%;
+                        aspect-ratio: 431/22;
+                        background: var(--gdgt-primary);
+                        -webkit-mask: url(https://iili.io/KRlDSC7.png) center/contain no-repeat;
+                                mask: url(https://iili.io/KRlDSC7.png) center/contain no-repeat;
+                    }
+                }
+
+                .gdgt-role { margin-block-start: 2rem; }
+
+                hr {
+                    width: 100%;
+                    margin-block: 2rem;
+                    background: var(--gdgt-primary);
                 }
             }
         }
