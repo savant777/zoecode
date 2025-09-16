@@ -194,9 +194,9 @@
                 flex-direction: column;
                 padding: 1rem clamp(5rem, 8vw, 8rem);
 
-                h1 + br, h2 + br, h3 + br { display: none; }
+                h1 + br, h2 + br { display: none; }
 
-                h1, h2, h3 {
+                h1, h2 {
                     font-family: 'VARUNA', 'Bai Jamjuree', sans-serif;
                     color: var(--gdgt-secondary);
                     font-weight: normal;
@@ -205,7 +205,6 @@
 
                 h1 { font-size: clamp(1.5rem, 2vw, 2rem); }
                 h2 { font-size: clamp(1rem, 1.1vw, 1.5rem); }
-                h3 { font-size: inherit; }
 
                 hr {
                     width: 100%;
@@ -249,7 +248,7 @@
                                 aspect-ratio: 1;
                                 border-radius: 50%;
                                 border: 3px solid var(--gdgt-primary);
-                                background: fff;
+                                background: #fff;
                                 color: var(--gdgt-primary);
                                 line-height: 1;
                                 
@@ -299,6 +298,16 @@
                 justify-content: center;
                 align-items: center;
                 padding-block-end: clamp(150px, 15vw, 200px);
+
+                h3 + br { display: none; }
+
+                h3 {
+                    font-family: 'VARUNA', 'Bai Jamjuree', sans-serif;
+                    color: var(--gdgt-secondary);
+                    font-weight: normal;
+                    margin-block: 0;
+                    font-size: inherit;
+                }
             }
         }
     }
