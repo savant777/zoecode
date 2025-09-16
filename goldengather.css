@@ -314,9 +314,9 @@
     }
 }
 
-input#obj1[name="gdgt-data"]:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj1"],
-input#obj2[name="gdgt-data"]:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj2"],
-input#obj3[name="gdgt-data"]:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj3"],
-input#obj4[name="gdgt-data"]:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj4"],
-input#obj5[name="gdgt-data"]:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj5"],
-input#obj6[name="gdgt-data"]:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj6"] {display: block;}
+input#gdgt-obj1:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj1"],
+input#gdgt-obj2:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj2"],
+input#gdgt-obj3:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj3"],
+input#gdgt-obj4:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj4"],
+input#gdgt-obj5:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj5"],
+input#gdgt-obj6:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="obj6"] {display: block;}
