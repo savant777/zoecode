@@ -438,6 +438,7 @@
                     }
 
                     &::after {
+                        content: "";
                         width: 50%;
                         aspect-ratio: 431/22;
                         background: var(--gdgt-primary);
