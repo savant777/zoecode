@@ -12,7 +12,7 @@
     --gdgt-primary: #5f2802;
     --gdgt-secondary: #782a07;
 
-    --gdgt-hue: 0deg;
+    --gdgt-bg: url(https://iili.io/KR7njcB.png);
 
     --gdgt-pic: gray;
     --gdgt-pos: center;
@@ -348,7 +348,7 @@
             z-index: 5;
             width: 100%;
             aspect-ratio: 1000/143;
-            background: url(https://iili.io/KR7njcB.png) top center/cover no-repeat;
+            background: var(--gdgt-bg) var(--gdgt-pos)/var(--gdgt-size) repeat;
             -webkit-filter: drop-shadow(0 0.3vw 0.3vw #000) hue-rotate(var(--gdgt-hue));
                     filter: drop-shadow(0 0.3vw 0.3vw #000) hue-rotate(var(--gdgt-hue));
 
@@ -409,7 +409,7 @@
             position: relative;
             z-index: 5;
             width: 100%;
-            background: url(https://iili.io/KR7njcB.png) 50% clamp(-380px, -20vw, -340px)/100% repeat;
+            background: var(--gdgt-bg) var(--gdgt-pos)/var(--gdgt-size) repeat;
             -webkit-filter: drop-shadow(0 -0.3vw 0.3vw #000000aa) hue-rotate(var(--gdgt-hue));
                     filter: drop-shadow(0 -0.3vw 0.3vw #000000aa) hue-rotate(var(--gdgt-hue));
             
@@ -421,7 +421,7 @@
                 
                 width: 100%;
                 aspect-ratio: 1000/57;
-                background: url(https://iili.io/KR7njcB.png) 50% clamp(-380px, -20vw, -340px)/100% repeat;
+                background: var(--gdgt-bg) var(--gdgt-pos)/var(--gdgt-size) repeat;
                 -webkit-mask: url(https://iili.io/KRCGimX.png) top center/101%;
                         mask: url(https://iili.io/KRCGimX.png) top center/101%;
             }
