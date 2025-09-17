@@ -479,7 +479,6 @@
             perspective: 600px;
     
             display: flex;
-            margin-block-start: 10rem;
             margin-inline: auto;
             color: var(--gdgt-primary);
 
