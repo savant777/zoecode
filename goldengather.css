@@ -138,6 +138,7 @@
         }
 
         label.gdgt-body {
+            cursor: auto;
             display: block;
             position: relative;
             z-index: 5;
@@ -275,6 +276,17 @@
                             text-align: center;
                             line-height: 1;
                             font-family: 'Athiti', sans-serif;
+                        }
+                    }
+
+                    label:hover {
+                        transform: translateY(-5px);
+                        transition: ease .5s;
+                        
+                        .gdgt-label-pic::before {
+                            background: var(--gdgt-primary);
+                            color: #fff;
+                            transition: .5s;
                         }
                     }
                 }
@@ -604,3 +616,20 @@ input#gdgt-obj3:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-conten
 input#gdgt-obj4:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="gdgt-obj4"],
 input#gdgt-obj5:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="gdgt-obj5"],
 input#gdgt-obj6:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-data[for="gdgt-obj6"] {display: block;}
+
+input#gdgt-obj1:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-label-group > label[for="gdgt-obj1"],
+input#gdgt-obj2:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-label-group > label[for="gdgt-obj2"],
+input#gdgt-obj3:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-label-group > label[for="gdgt-obj3"],
+input#gdgt-obj4:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-label-group > label[for="gdgt-obj4"],
+input#gdgt-obj5:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-label-group > label[for="gdgt-obj5"],
+input#gdgt-obj6:checked ~ #gdgt-thread.gdgt-box > label.gdgt-body > .gdgt-content > .gdgt-label-group > label[for="gdgt-obj6"] 
+{
+    transform: translateY(-5px);
+    transition: ease .5s;
+    
+    .gdgt-label-pic::before {
+        background: var(--gdgt-primary);
+        color: #fff;
+        transition: .5s;
+    }
+}
