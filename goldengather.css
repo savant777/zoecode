@@ -238,6 +238,8 @@
                         > br:first-of-type { display: none; }
 
                         cursor: pointer;
+                        transform: translateY(0);
+                        transition: ease .5s;
 
                         .gdgt-label-pic {
                             position: relative;
@@ -265,6 +267,7 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                transition: ease .5s;
                             }
                         }
 
@@ -282,12 +285,10 @@
 
                     label:hover {
                         transform: translateY(-5px);
-                        transition: ease .5s;
                         
                         .gdgt-label-pic::before {
                             background: var(--gdgt-primary);
                             color: #fff;
-                            transition: .5s;
                         }
                     }
                 }
