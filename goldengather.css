@@ -350,8 +350,8 @@
             width: 100%;
             aspect-ratio: 1000/143;
             background: var(--gdgt-bg) var(--gdgt-pos)/var(--gdgt-size) repeat;
-            -webkit-filter: drop-shadow(0 0.3vw 0.3vw #000) hue-rotate(var(--gdgt-hue));
-                    filter: drop-shadow(0 0.3vw 0.3vw #000) hue-rotate(var(--gdgt-hue));
+            -webkit-filter: drop-shadow(0 0.3vw 0.3vw #000);
+                    filter: drop-shadow(0 0.3vw 0.3vw #000);
 
             display: flex;
             align-items: center;
@@ -411,8 +411,8 @@
             z-index: 5;
             width: 100%;
             background: var(--gdgt-bg) var(--gdgt-pos)/var(--gdgt-size) repeat;
-            -webkit-filter: drop-shadow(0 -0.3vw 0.3vw #000000aa) hue-rotate(var(--gdgt-hue));
-                    filter: drop-shadow(0 -0.3vw 0.3vw #000000aa) hue-rotate(var(--gdgt-hue));
+            -webkit-filter: drop-shadow(0 -0.3vw 0.3vw #000000aa);
+                    filter: drop-shadow(0 -0.3vw 0.3vw #000000aa);
             
             &::before {
                 content: "";
