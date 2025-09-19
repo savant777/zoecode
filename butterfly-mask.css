@@ -6,5 +6,5 @@ i.butterfly {
     background-color: var(--icon-color);
     mask: url(https://i.imgur.com/F0kVued.png) center / cover no-repeat;
     margin-inline: 0.1rem;
-    vertical-align: middle;
+    vertical-align: text-bottom;
 }
