@@ -24,6 +24,7 @@
     box-shadow: 0 0 10px 2px hsl(135 24% 24%), 0 0 10px 2px hsl(135 24% 24%) inset;
     background-blend-mode: screen;
     background: url(https://static.wixstatic.com/media/cc2e24_448b4973873e4434bf7985a27f6e45a5~mv2.gif) center/cover no-repeat, var(--pic) center/cover no-repeat;
+    display: flex;
 }
 
 .curse2-text {
