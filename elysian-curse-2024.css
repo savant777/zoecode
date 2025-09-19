@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Mitr&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+.curse24-base {
+    margin: auto;
+    background-attachment: fixed; 
+    background-blend-mode: screen; 
+    background: url(https://cdn.dribbble.com/users/1024321/screenshots/6270923/hnk-op_compressed3.gif) center/cover, url(https://i.imgur.com/HoWN39E.png) center/cover; 
+    max-width: 900px; 
+    box-shadow: 0 0 30px 5px #111111; 
+    border: 1px solid #430000; 
+    border-image: linear-gradient(to top,rgba(35,55,89,1),rgba(19,31,51,1)) 1;
+}
+
+.curse24-setpad {
+    margin:auto; 
+    background: rgba(0,0,0,0.6); 
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.curse24-head {
+    margin: auto;
+    display: block; 
+    max-width: 80%; 
+    margin-top: -20px;
+}
+
+.curse24-setbox {
+    margin: auto; 
+    box-shadow: 0 0 50px 2px #0b1b35; 
+    margin: -30px 50px 20px 50px; 
+    border: 1px solid #430000; 
+    border-image: linear-gradient(to top,rgba(31,50,83,1),rgba(14,28,53,1)) 1;
+}
+
+.curse24-name {
+    margin: auto; 
+    font-family: Unbounded; 
+    font-weight: 200; 
+    padding: 10px 10px 10px 25px; 
+    font-size: 15pt; 
+    background: linear-gradient(323deg, rgba(0,0,0,1) 0%, rgba(19,44,84,0.9976365546218487) 37%, rgba(0,0,0,1) 100%); 
+    border-bottom: 1px solid #0c182d; 
+    color: #d9ebff; 
+    text-shadow: 0px 0px 5px #57c8ec;
+}
+
+.curse24-text {
+    background: rgba(0,0,0,0.5); 
+    padding: 25px; 
+    font-family: 'Bai Jamjuree'; 
+    color: #d9ebff; 
+    text-align: justify;
+}
+
+.curse24-note {
+    margin: auto; 
+    font-family: 'Bai Jamjuree'; 
+    padding: 7px 7px 7px 25px; 
+    background: linear-gradient(to top,rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(https://i.imgur.com/PVYjaV3.gif) center/cover; 
+    border-top: 1px solid #0c182d; 
+    color: #d9ebff; 
+    font-size: 15px;
+}
+
+.curse24-center {
+    margin: auto; 
+    text-align: center;
+}
+
+.curse24-logo {
+    margin :auto; 
+    max-width: 50%;
+}
+
+.curse24-base-aedion {
+    margin: auto;
+    background-attachment: fixed; 
+    background-blend-mode: screen; 
+    background: url(https://cdn.dribbble.com/users/1024321/screenshots/6270923/hnk-op_compressed3.gif) center/cover, url(https://i.imgur.com/EKXJziJ.png) center/cover; 
+    max-width: 900px; 
+    box-shadow: 0 0 30px 5px #111111; 
+    border: 1px solid #430000; 
+    border-image: linear-gradient(to top,rgba(35,55,89,1),rgba(19,31,51,1)) 1;
+}
+
+.curse24-setpad-aedion {
+    margin:auto; 
+    background: rgba(0,0,0,0.3); 
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.curse24-name-aedion {
+    margin: auto; 
+    font-family: Unbounded; 
+    font-weight: 200; 
+    padding: 10px 10px 10px 25px; 
+    font-size: 15pt; 
+    background: linear-gradient(323deg, rgba(0,0,0,0.6) 0%, rgba(19,44,84,0.6) 37%, rgba(0,0,0,0.6) 100%), url(https://i.imgur.com/wGEFtgQ.gif) center/cover; 
+    border-bottom: 1px solid #0c182d; 
+    color: #d9ebff; 
+    text-shadow: 0px 0px 5px #57c8ec;
+}
