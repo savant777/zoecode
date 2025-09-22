@@ -115,10 +115,10 @@
 
                 .wkmz-img {
                     position: absolute;
-                    inset: 20%;
+                    inset: 0;
                     aspect-ratio: 300/290;
                     background: var(--wkmz-pic) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
-                    mask: url(https://iili.io/KC5gikG.png) center/contain no-repeat;
+                    mask: url(https://iili.io/KaXL0wQ.png) center/contain no-repeat;
                 }
             }
 
