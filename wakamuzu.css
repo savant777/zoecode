@@ -113,7 +113,7 @@
                     transform: translateZ(-1px);
                 }
 
-                .wkmz-pic {
+                .wkmz-img {
                     position: absolute;
                     inset: 20%;
                     aspect-ratio: 300/290;
