@@ -83,6 +83,45 @@
                 }
             }
 
+            .wkmz-flower {
+                position: absolute;
+                z-index: 2;
+                top: 7.11%;
+                left: -2.5%;
+                
+                width: 30%;
+                aspect-ratio: 300/290;
+                background: #fff;
+                mask: url(https://iili.io/KC5gikG.png) center/contain no-repeat;
+                transform-style: preserve-3d;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    aspect-ratio: 300/290;
+                    background: var(--wkmz-primary);
+                    mask: url(https://iili.io/KC11dvV.png) center/contain no-repeat;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: -0.8px;
+                    background: #333;
+                    mask: url(https://iili.io/KC75AOl.png) center/contain no-repeat;
+                    transform: translateZ(-1px);
+                }
+
+                .wkmz-pic {
+                    position: absolute;
+                    inset: 20%;
+                    aspect-ratio: 300/290;
+                    background: var(--wkmz-pic) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
+                    mask: url(https://iili.io/KC5gikG.png) center/contain no-repeat;
+                }
+            }
+
             .wkmz-pic {
                 position: absolute;
                 top: 50%;
