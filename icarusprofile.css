@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --icrpf-primary: #8ce1f4;
+    --icrpf-secondary: #e1f3fb;
+
+    --icrpf-bg: gray;
+    --icrpf-bgpos: center;
+    --icrpf-bgsize: cover;
+
+    --icrpf-pic: gray;
+    --icrpf-pos: center;
+    --icrpf-size: cover;
+}
+
+#IcarusProfile { position: relative; }
+#IcarusProfile * { box-sizing: border-box; }
+
+#IcarusProfile a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#IcarusProfile a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#IcarusProfile::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#IcarusProfile:hover::after { content: "zzzcode"; }
+
+#IcarusProfile {
+    .icrpf-box {
+        width: 100%;
+        font-family: 'Bai Jamjuree', serif;
+        font-size: clamp(13px, 1vw, 17px);
+        color: #fff;
+
+        .icrpf-flex {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            .icrpf-pic {
+                flex: 2;
+
+                img {
+                    width: 100%;
+                    user-select: none;
+                    pointer-events: none;
+                    -webkit-mask: linear-gradient(black 65%, transparent 95%);
+                            mask: linear-gradient(black 65%, transparent 95%);
+                }
+            }
+
+            .icrpf-info {
+                flex: 3;
+                position: relative;
+                padding: 5%;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    width: 100%;
+                    aspect-ratio: 1;
+                    background: var(--icrpf-bg) var(--icrpf-bgpos)/var(--icrpf-bgsize) no-repeat;
+                    -webkit-mask: radial-gradient(circle at 60% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top right/50% 50% no-repeat;
+                            mask: radial-gradient(circle at 60% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top right/50% 50% no-repeat;
+                }
+
+                .icrpf-img {
+                    position: absolute;
+                    top: min(1.5vw, 28px);
+                    right: min(1.5vw, 28px);
+
+                    width: 25%;
+                    aspect-ratio: 3/4;
+                    background: var(--icrpf-pic) var(--icrpf-pos)/var(--icrpf-size) no-repeat, #00a5df;
+                    border: 1px solid #333;
+                }
+
+                .icrpf-grid {
+                    position: relative;
+                    max-width: 75%;
+
+                    display: grid;
+                    grid-template-columns: fit-content(40%) fit-content(40%);
+                    gap: clamp(13px, 1vw, 17px) 5%;
+                    line-height: 1.2;
+
+                    div:nth-child(odd) {
+                        t {
+                            display: block;
+                            font-size: clamp(9px,0.8vw,13px);
+                            color: var(--icrpf-secondary);
+                        }
+
+                        b { color: var(--icrpf-primary); }
+                    }
+
+                    div:nth-child(even) {
+                        align-self: end;
+                        text-align: end;
+                    }
+                }
+
+                .icrpf-section {
+                    position: relative;
+                    width: 100%;
+                    margin-block: clamp(39px, 3vw, 51px);
+
+                    .icrpf-topic {
+                        line-height: 1.2;
+                        margin-block-end: clamp(13px, 1vw, 17px);
+
+                        t {
+                            display: block;
+                            font-size: clamp(9px,0.8vw,13px);
+                            color: var(--icrpf-secondary);
+                        }
+
+                        b { color: var(--icrpf-primary); }
+                    }
+
+                    .icrpf-col { column-count: 2; }
+                    ul, ol { margin-block: 0; }
+                }
+            }
+        }
+
+        .icrpf-flex.rev {
+            flex-direction: row-reverse;
+
+            .icrpf-info::before {
+                right: unset;
+                -webkit-mask: radial-gradient(circle at 40% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top left/50% 50% no-repeat;
+                        mask: radial-gradient(circle at 40% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top left/50% 50% no-repeat;
+                
+            }
+        }
+    }
+}
