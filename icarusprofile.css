@@ -104,6 +104,8 @@
                     line-height: 1.2;
 
                     div:nth-child(odd) {
+                        align-self: end;
+                        
                         t {
                             display: block;
                             font-size: clamp(9px,0.8vw,13px);
