@@ -3,6 +3,7 @@
 :root {
     --icrpf-primary: #8ce1f4;
     --icrpf-secondary: #e1f3fb;
+    --icrpf-bgclr: #00a5df;
 
     --icrpf-bg: gray;
     --icrpf-bgpos: center;
@@ -89,7 +90,7 @@
 
                     width: 25%;
                     aspect-ratio: 3/4;
-                    background: var(--icrpf-pic) var(--icrpf-pos)/var(--icrpf-size) no-repeat, #00a5df;
+                    background: var(--icrpf-pic) var(--icrpf-pos)/var(--icrpf-size) no-repeat, var(--icrpf-bgclr);
                     border: 1px solid #333;
                 }
 
