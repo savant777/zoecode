@@ -151,6 +151,7 @@
 
             .icrpf-info::before {
                 right: unset;
+                left: 0;
                 -webkit-mask: radial-gradient(circle at 40% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top left/50% 50% no-repeat;
                         mask: radial-gradient(circle at 40% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top left/50% 50% no-repeat;
                 
