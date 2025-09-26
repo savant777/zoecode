@@ -47,12 +47,12 @@
 
         .whcard-pic {
             position: absolute;
-            left: 34.3%;
+            left: 30%;
             top: 2.1%;
             transform: rotate(15deg);
             transform-origin: top left;
             
-            width: 25%;
+            width: 24%;
             aspect-ratio: 4/5;
             background: #f2f2f2;
             padding: 2% 1%;
@@ -116,17 +116,18 @@
                 align-items: center;
                 
                 font-family: 'Playfair Display', serif;
-                font-size: min(2vw, 34px);
+                font-size: min(1.5vw, 28px);
                 letter-spacing: min(0.1vw, 2px);
                 text-align: center;
                 line-height: 1;
                 
-                margin-block-end: -5%;
+                min-height: 25%;
+                padding-inline: 10%;
 
                 &::before { content: "“"; }
                 &::after {
                     content: "”";
-                    margin-block-start: 8%;
+                    margin-block-start: 5%;
                 }
             }
 
@@ -135,6 +136,7 @@
                 overflow: auto;
                 line-height: 1.5;
                 margin-block-end: 5%;
+                margin-inline: 5% -5%;
             }
 
             .whcard-content::-webkit-scrollbar { width: 0; }
