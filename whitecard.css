@@ -1,0 +1,162 @@
+@import url('https://fonts.cdnfonts.com/css/amalfi-coast');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --whcard-pic: gray;
+    --whcard-pos: center;
+    --whcard-size: cover;
+}
+
+#WhiteCard { position: relative; }
+#WhiteCard * { box-sizing: border-box; }
+
+#WhiteCard a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#WhiteCard a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#WhiteCard::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#WhiteCard:hover::after { content: "zzzcode"; }
+
+#WhiteCard {
+    .whcard-box {
+        position: relative;
+        width: 1000px;
+        aspect-ratio: 1045/1200;
+        max-width: 100%;
+        margin: auto;
+        background: url(https://iili.io/K0YTyvt.png) center/cover no-repeat;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: min(1vw, 17px);
+        color: #000;
+
+        .whcard-pic {
+            position: absolute;
+            left: 34.3%;
+            top: 2.1%;
+            transform: rotate(15deg);
+            transform-origin: top left;
+            
+            width: 24%;
+            aspect-ratio: 3/4;
+            background: #fff;
+            padding: 2% 1%;
+            -webkit-filter: drop-shadow(-0.1vw 0.2vw 0.25vw #00000080);
+                    filter: drop-shadow(-0.1vw 0.2vw 0.25vw #00000080);
+            
+            &::before {
+                content: "";
+                width: 100%;
+                aspect-ratio: 1;
+                background: var(--whcard-pic) var(--whcard-pos)/var(--whcard-size) no-repeat;
+            }
+        }
+
+        .whcard-place {
+            position: absolute;
+            top: 17%;
+            right: 5%;
+
+            width: 8%;
+            height: 13%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: min(0.8vw, 15px);
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -10%;
+                right: 0;
+                transform: translate(50%, 50%) rotate(15deg);
+                
+                width: 70%;
+                aspect-ratio: 1;
+                background: url(https://iili.io/K0GL7ZF.png) center/contain no-repeat;
+                mix-blend-mode: multiply;
+                opacity: 0.9;
+            }
+        }
+
+        .whcard-area {
+            position: absolute;
+            top: 12%;
+            right: 1%;
+
+            width: 62.5%;
+            aspect-ratio: 3/4.1;
+            
+            display: flex;
+            flex-direction: column;
+            row-gap: 5%;
+            padding: 10% 18% 25%;
+
+            .whcard-quote {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                font-family: 'Playfair Display', serif;
+                font-size: min(2vw, 34px);
+                letter-spacing: min(0.1vw, 2px);
+                text-align: center;
+                line-height: 1;
+                
+                margin-block-end: -5%;
+
+                &::before { content: "“"; }
+                &::after {
+                    content: "”";
+                    margin-block-start: 8%;
+                }
+            }
+
+            .whcard-content {
+                flex: 1;
+                overflow: auto;
+                line-height: 1.5;
+                margin-block-end: 5%;
+            }
+
+            .whcard-content::-webkit-scrollbar { width: 0; }
+
+            .whcard-name {
+                font-family: 'Amalfi Coast', sans-serif;
+                font-size: min(1.85vw, 36px);
+                line-height: 1.4;
+                text-align: center;
+                transform: rotate(-12deg);
+                white-space: pre;
+            }
+
+            .whcard-ps {
+                position: absolute;
+                top: 91.5%;
+                left: 50%;
+                transform: translateX(-50%);
+                
+                width: max-content;
+                max-width: 70%;
+                text-align: center;
+            }
+        }
+    }
+}
