@@ -139,10 +139,20 @@
                     right: -3vw;
                     bottom: 30%;
                 }
-
-                .wkmz-deco1[style*="--wkmz-pos"], .wkmz-deco2[style*="--wkmz-pos"],
-                .wkmz-deco1[style*="--wkmz-size"], .wkmz-deco2[style*="--wkmz-size"] {
+                
+                .wkmz-deco1[style*="--wkmz-pos"][style*="--wkmz-size"],
+                .wkmz-deco2[style*="--wkmz-pos"][style*="--wkmz-size"] {
                     background: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
+                }
+
+                .wkmz-deco1[style*="--wkmz-pos"]:not([style*="--wkmz-size"]),
+                .wkmz-deco2[style*="--wkmz-pos"]:not([style*="--wkmz-size"]) {
+                    background: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-dsize) no-repeat;
+                }
+
+                .wkmz-deco1[style*="--wkmz-size"]:not([style*="--wkmz-pos"]),
+                .wkmz-deco2[style*="--wkmz-size"]:not([style*="--wkmz-pos"]) {
+                    background: var(--wkmz-deco) var(--wkmz-dpos)/var(--wkmz-size) no-repeat;
                 }
             }
 
