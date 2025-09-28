@@ -6,9 +6,12 @@
     --wkmz-txt: #fff;
 
     --wkmz-pic: gray;
-    --wkmz-deco: gray;
     --wkmz-pos: center;
     --wkmz-size: cover;
+    
+    --wkmz-deco: gray;
+    --wkmz-dpos: center;
+    --wkmz-dsize: contain;
 }
 
 #Wakamuzu { position: relative; }
@@ -113,7 +116,7 @@
                     
                     width: 35%;
                     aspect-ratio: 1;
-                    background: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
+                    background: var(--wkmz-deco) var(--wkmz-dpos)/var(--wkmz-dsize) no-repeat;
 
                     -webkit-filter: drop-shadow(0 0.25vw #fff)
                                     drop-shadow(0 -0.25vw #fff)
@@ -135,6 +138,11 @@
                 .wkmz-deco2 {
                     right: -3vw;
                     bottom: 30%;
+                }
+
+                .wkmz-deco1[style*="--wkmz-pos"], .wkmz-deco2[style*="--wkmz-pos"],
+                .wkmz-deco1[style*="--wkmz-size"], .wkmz-deco2[style*="--wkmz-size"] {
+                    background: var(--wkmz-deco) var(--wkmz-pos)/var(--wkmz-size) no-repeat;
                 }
             }
 
