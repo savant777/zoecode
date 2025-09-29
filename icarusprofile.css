@@ -170,8 +170,15 @@
                 b { color: var(--icrpf-primary); }
             }
 
-            .icrpf-col { column-count: 2; }
             ul, ol { margin-block: 0; }
+
+            .icrpf-content {
+                display: flex;
+                flex-direction: column;
+
+                p { margin-block-end: 0; }
+                p:first-child { margin-block-start: 0; }
+            }
         }
 
         .icrpf-section:last-child { margin-block-end: 0; }
@@ -209,11 +216,8 @@
         }
 
         .icrpf-pad {
-            display: flex;
-            flex-direction: column;
             padding-inline: 5%;
 
-            .icrpf-section { margin-block-end: 0; }
             .icrpf-section:first-child { margin-block-start: 0; }
         }
     }
