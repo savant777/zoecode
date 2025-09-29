@@ -207,8 +207,13 @@
             }
         }
 
-        .icrpf-pad { padding-inline: 5%; }
+        .icrpf-pad {
+            display: flex;
+            flex-direction: column;
+            padding-inline: 5%;
 
-        .icrpf-pad .icrpf-section:first-child { margin-block-start: 0; }
+            .icrpf-section:not(:first-child) { margin-block-end: 0; }
+            .icrpf-section:first-child { margin-block-start: 0; }
+        }
     }
 }
