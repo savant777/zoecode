@@ -5,7 +5,7 @@
     --icrpf-secondary: #e1f3fb;
     --icrpf-bgclr: #00a5df;
 
-    --icrpf-font: 'Monsieur La Doulaise';
+    --icrpf-font: 'Bai Jamjuree';
 
     --icrpf-bg: gray;
     --icrpf-bgpos: center;
@@ -99,7 +99,7 @@
 
                 .icrpf-grid {
                     position: relative;
-                    max-width: 100%;
+                    max-width: 70%;
 
                     display: grid;
                     grid-template-columns: fit-content(50%) fit-content(50%);
@@ -129,28 +129,6 @@
                         text-align: end;
                     }
                 }
-
-                .icrpf-section {
-                    position: relative;
-                    width: 100%;
-                    margin-block: clamp(39px, 3vw, 51px);
-
-                    .icrpf-topic {
-                        line-height: 1.2;
-                        margin-block-end: clamp(13px, 1vw, 17px);
-
-                        t {
-                            display: block;
-                            font-size: clamp(9px,0.8vw,13px);
-                            color: var(--icrpf-secondary);
-                        }
-
-                        b { color: var(--icrpf-primary); }
-                    }
-
-                    .icrpf-col { column-count: 2; }
-                    ul, ol { margin-block: 0; }
-                }
             }
         }
 
@@ -165,5 +143,29 @@
                 
             }
         }
+
+        .icrpf-section {
+            position: relative;
+            width: 100%;
+            margin-block: clamp(39px, 3vw, 51px);
+
+            .icrpf-topic {
+                line-height: 1.2;
+                margin-block-end: clamp(13px, 1vw, 17px);
+
+                t {
+                    display: block;
+                    font-size: clamp(9px,0.8vw,13px);
+                    color: var(--icrpf-secondary);
+                }
+
+                b { color: var(--icrpf-primary); }
+            }
+
+            .icrpf-col { column-count: 2; }
+            ul, ol { margin-block: 0; }
+        }
+
+        .icrpf-section:last-child { margin-block-end: 0; }
     }
 }
