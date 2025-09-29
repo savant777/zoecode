@@ -153,6 +153,9 @@
         }
 
         .icrpf-section {
+            display: flex;
+            flex-direction: column;
+
             position: relative;
             width: 100%;
             margin-block: clamp(39px, 3vw, 51px);
@@ -180,8 +183,6 @@
                 p:first-child { margin-block-start: 0; }
             }
         }
-
-        .icrpf-section:last-child { margin-block-end: 0; }
 
         .icrpf-rel {
             display: grid;
@@ -219,6 +220,7 @@
             padding-inline: 5%;
 
             .icrpf-section:first-child { margin-block-start: 0; }
+            .icrpf-section:last-child { margin-block-end: 0; }
         }
     }
 }
