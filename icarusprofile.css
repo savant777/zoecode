@@ -83,7 +83,7 @@
                     background: var(--icrpf-bg) var(--icrpf-bgpos)/var(--icrpf-bgsize) no-repeat;
                     -webkit-mask: radial-gradient(circle at 60% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top right/50% 50% no-repeat;
                             mask: radial-gradient(circle at 60% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top right/50% 50% no-repeat;
-                    opacity: 0.5;
+                    opacity: 0.15;
                 }
 
                 .icrpf-img {
@@ -199,5 +199,9 @@
                 }
             }
         }
+
+        .icrpf-pad { padding-inline: 5%; }
+
+        .icrpf-pad .icrpf-section:first-child { margin-block-start: 0; }
     }
 }
