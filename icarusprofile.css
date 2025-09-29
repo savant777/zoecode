@@ -5,6 +5,8 @@
     --icrpf-secondary: #e1f3fb;
     --icrpf-bgclr: #00a5df;
 
+    --icrpf-font: 'Monsieur La Doulaise';
+
     --icrpf-bg: gray;
     --icrpf-bgpos: center;
     --icrpf-bgsize: cover;
@@ -97,12 +99,18 @@
 
                 .icrpf-grid {
                     position: relative;
-                    max-width: 75%;
+                    max-width: 100%;
 
                     display: grid;
-                    grid-template-columns: fit-content(40%) fit-content(40%);
+                    grid-template-columns: fit-content(50%) fit-content(50%);
                     gap: clamp(13px, 1vw, 17px) 5%;
+
                     line-height: 1.2;
+
+                    .icrpf-name {
+                        font-family: var(--icrpf-font), sans-serif;
+                        font-size: clamp(26px, 2vw, 34px);
+                    }
 
                     div:nth-child(odd) {
                         align-self: end;
