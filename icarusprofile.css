@@ -56,6 +56,8 @@
 
             .icrpf-pic {
                 flex: 2;
+                padding-inline-start: 2.5%;
+                padding-block-start: 5%;
 
                 img {
                     width: 100%;
@@ -135,12 +137,17 @@
         .icrpf-flex.rev {
             flex-direction: row-reverse;
 
+            .icrpf-pic {
+                padding-inline-start: 0;
+                padding-inline-end: 2.5%;
+            }
+
             .icrpf-info::before {
                 right: unset;
                 left: 0;
                 -webkit-mask: radial-gradient(circle at 40% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top left/50% 50% no-repeat;
                         mask: radial-gradient(circle at 40% 40%, black 50%, transparent 70%), linear-gradient(black 0 0) top left/50% 50% no-repeat;
-                
+
             }
         }
 
