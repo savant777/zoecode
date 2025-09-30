@@ -81,7 +81,10 @@
             }
 
             tpl, tpr { top: 15px; }
-            btl, btr { bottom: 15px; }
+            btl, btr { 
+                bottom: 15px;
+                transform: scaleY(-1);
+            }
 
             tpl { background-position: top left; }
             tpr { background-position: top right; }
@@ -89,6 +92,7 @@
             btr { background-position: bottom left; }
 
             tpl::before, btl::before {
+                content: "";
                 position: absolute;
                 bottom: 0;
                 left: -3.5%;
@@ -103,6 +107,7 @@
             }
 
             tpr::before, btr::before {
+                content: "";
                 position: absolute;
                 bottom: 0;
                 right: -3.5%;
@@ -117,6 +122,7 @@
             }
 
             &::before, &::after {
+                content: "";
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
