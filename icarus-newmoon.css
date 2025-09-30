@@ -149,6 +149,7 @@
 
             hr {
                 width: 40%;
+                height: unset;
                 aspect-ratio: 395/70;
                 margin-inline: auto;
                 margin-block: 0;
