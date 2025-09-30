@@ -111,8 +111,8 @@
                         mask: url(https://iili.io/KGboWQ9.png) center/contain no-repeat;
             }
 
-            mtl, mtr { top: clamp(258px, 22vw, 315px); }
-            mbl, mbr { bottom: clamp(258px, 22vw, 315px); }
+            mtl, mtr { top: clamp(242px, 22vw, 300px); }
+            mbl, mbr { bottom: clamp(242px, 22vw, 300px); }
 
             mbr + br { display: none; }
 
