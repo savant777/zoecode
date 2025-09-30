@@ -35,7 +35,7 @@
 
 #IcarusNewMoon {
     .newmoon-box {
-        min-height: clamp(540px, 50vw, 705px);
+        min-height: clamp(500px, 52vw, 680px);
         width: 800px;
         max-width: 100%;
         margin: auto;
@@ -111,8 +111,8 @@
                         mask: url(https://iili.io/KGboWQ9.png) center/contain no-repeat;
             }
 
-            mtl, mtr { top: clamp(242px, 22vw, 300px); }
-            mbl, mbr { bottom: clamp(242px, 22vw, 300px); }
+            mtl, mtr { top: clamp(220px, 23vw, 300px); }
+            mbl, mbr { bottom: clamp(220px, 23vw, 300px); }
 
             mbr + br { display: none; }
 
@@ -143,7 +143,7 @@
             .newmoon-info {
                 position: absolute;
                 width: clamp(6px, 0.6vw, 10px);
-                height: clamp(175px, 17vw, 250px);
+                height: clamp(175px, 19vw, 250px);
 
                 font-family: ui-monospace;
                 font-style: italic;
