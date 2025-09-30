@@ -61,7 +61,7 @@
 
             tpl, tpr, btl, btr {
                 position: absolute;
-                width: calc(50% - 15px);
+                width: calc(50% - 32px);
                 aspect-ratio: 1;
                 background-image: var(--icrnm-bg);
                 background-size: 200%;
@@ -69,20 +69,20 @@
             }
 
             tpl, btl {
-                left: 15px;
+                left: 32px;
                 -webkit-mask: url(https://iili.io/KGtHn0F.png) center/contain no-repeat;
                         mask: url(https://iili.io/KGtHn0F.png) center/contain no-repeat;
             }
 
             tpr, btr {
-                right: 15px;
+                right: 32px;
                 -webkit-mask: url(https://iili.io/KGtHoUg.png) center/contain no-repeat;
                         mask: url(https://iili.io/KGtHoUg.png) center/contain no-repeat;
             }
 
-            tpl, tpr { top: 15px; }
+            tpl, tpr { top: 16px; }
             btl, btr { 
-                bottom: 15px;
+                bottom: 16px;
                 transform: scaleY(-1);
             }
 
@@ -100,13 +100,13 @@
             } 
 
             mtl, mbl {
-                left: calc(15px - 1.375%);
+                left: calc(32px - 1.75%);
                 -webkit-mask: url(https://iili.io/KGbohBe.png) center/contain no-repeat;
                         mask: url(https://iili.io/KGbohBe.png) center/contain no-repeat;
             }
             
             mtr, mbr {
-                right: calc(15px - 1.375%);
+                right: calc(32px - 1.75%);
                 -webkit-mask: url(https://iili.io/KGboWQ9.png) center/contain no-repeat;
                         mask: url(https://iili.io/KGboWQ9.png) center/contain no-repeat;
             }
