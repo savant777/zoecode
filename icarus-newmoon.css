@@ -91,7 +91,7 @@
             btl { background-position: bottom left; }
             btr { background-position: bottom left; }
 
-            tpl::before, btl::before {
+            mtl, mbl {
                 content: "";
                 position: absolute;
                 bottom: 0;
@@ -106,7 +106,7 @@
                         mask: url(https://iili.io/KGbohBe.png) center/contain no-repeat;
             }
 
-            tpr::before, btr::before {
+            mtr, mbr {
                 content: "";
                 position: absolute;
                 bottom: 0;
