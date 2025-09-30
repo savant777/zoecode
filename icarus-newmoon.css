@@ -89,7 +89,7 @@
             tpl { background-position: top left; }
             tpr { background-position: top right; }
             btl { background-position: bottom left; }
-            btr { background-position: bottom left; }
+            btr { background-position: bottom right; }
 
             mtl, mbl, mtr, mbr {
                 position: absolute;
@@ -139,6 +139,33 @@
                 -webkit-mask: url(https://iili.io/KM99XOF.png) center/contain no-repeat;
                         mask: url(https://iili.io/KM99XOF.png) center/contain no-repeat;
             }
+
+            .newmoon-info {
+                position: absolute;
+                width: clamp(6px, 0.6vw, 10px);
+                height: clamp(175px, 17vw, 250px);
+
+                font-family: ui-monospace;
+                font-style: italic;
+                font-size: clamp(8px, 0.7vw, 13px);
+                text-align: center;
+                text-transform: uppercase;
+
+                display: flex;
+            }
+
+            .newmoon-info.tl, .newmoon-info.tr {
+                top: 36px;
+                align-items: end;
+            }
+
+            .newmoon-info.bl, .newmoon-info.br {
+                bottom: 36px;
+                align-items: start;
+            }
+
+            .newmoon-info.tl, .newmoon-info.bl { left: 12px; }
+            .newmoon-info.tr, .newmoon-info.br { right: 12px; }
 
             .newmoon-content { flex: 1; }
 
