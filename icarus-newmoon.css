@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Cinzel:wght@400..900&display=swap');
 
 :root {
     --icrnm-bg: gray;
@@ -143,9 +143,9 @@
             .newmoon-info {
                 position: absolute;
                 width: clamp(6px, 0.6vw, 10px);
-                height: clamp(175px, 19vw, 250px);
+                height: clamp(175px, 18vw, 250px);
 
-                font-family: ui-monospace;
+                font-family: 'Cinzel', serif;
                 font-style: italic;
                 font-size: clamp(8px, 0.7vw, 13px);
                 text-align: center;
