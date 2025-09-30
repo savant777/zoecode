@@ -11,7 +11,7 @@
     
     --wkmz-deco: gray;
     --wkmz-dpos: center;
-    --wkmz-dsize: contain;
+    --wkmz-dsize: cover;
 }
 
 #Wakamuzu { position: relative; }
