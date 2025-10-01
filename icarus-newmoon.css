@@ -147,7 +147,7 @@
 
                 font-family: 'Cinzel', serif;
                 font-style: italic;
-                font-size: clamp(8px, 0.7vw, 13px);
+                font-size: clamp(10px, 0.7vw, 13px);
                 font-weight: bold;
                 text-align: center;
                 text-transform: uppercase;
@@ -165,8 +165,8 @@
                 align-items: start;
             }
 
-            .newmoon-info.tl, .newmoon-info.bl { left: 12px; }
-            .newmoon-info.tr, .newmoon-info.br { right: 12px; }
+            .newmoon-info.tl, .newmoon-info.bl { left: 13px; }
+            .newmoon-info.tr, .newmoon-info.br { right: 16px; }
 
             .newmoon-content { flex: 1; }
 
