@@ -66,6 +66,9 @@
                 background-image: var(--icrnm-bg);
                 background-size: 200%;
                 background-repeat: no-repeat;
+
+                user-select: none;
+                pointer-events: none;
             }
 
             tpl, btl {
@@ -97,6 +100,9 @@
                 aspect-ratio: 1;
                 background: var(--icrnm-bg) center/200% no-repeat;
                 border-radius: 50%;
+
+                user-select: none;
+                pointer-events: none;
             } 
 
             mtl, mbl {
@@ -126,6 +132,9 @@
                 aspect-ratio: 1;
                 background: var(--icrnm-bg) center/200% no-repeat;
                 border-radius: 50%;
+
+                user-select: none;
+                pointer-events: none;
             }
 
             &::before {
