@@ -150,14 +150,14 @@
                 &::before {
                     content: "+";
                     position: absolute;
-                    bottom: 3%;
-                    right: 3%;
+                    bottom: 2%;
+                    right: 2%;
 
                     width: max-content;
                     aspect-ratio: 1;
                     border-radius: 50%;
                     background: var(--apt-primary);
-                    padding: 0.25rem;
+                    padding: 0.4rem 0.3rem 0.3rem 0.4rem;
                     
                     display: flex;
                     justify-content: center;
