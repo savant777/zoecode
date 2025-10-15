@@ -5,6 +5,7 @@
 :root {
     --apt-primary: red;
     --apt-accent: #fff;
+    --apt-bg: #fff;
 
     --apt-pic: gray;
     --apt-pos: center;
@@ -213,6 +214,30 @@
                     transform: rotate(45deg);
                 }
             }
+        }
+    }
+
+    #apt-role.apt-box.bgwhite {
+        width: calc(650px + 8rem);
+        max-width: 100%;
+        background: var(--apt-bg);
+        padding: 2rem;
+        padding-inline: 4rem;
+
+        .apt-pic-2::before {
+            transform: translate(calc(50% + clamp(15px, 1vw, 17px)), -50%) rotate(-90deg);
+            font-size: clamp(7px, 0.7vw, 10px);
+        }
+
+        .apt-pic-3 .apt-room {
+            transform: translate(calc(50% + clamp(15px, 1vw, 17px)), -50%) rotate(-90deg);
+            font-size: clamp(7px, 0.7vw, 10px);
+            color: var(--apt-bg);
+        }
+
+        .apt-psset { 
+            color: var(--apt-bg);
+            margin-block-end: 1rem;
         }
     }
 }
