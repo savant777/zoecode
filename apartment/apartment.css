@@ -235,6 +235,8 @@
             color: var(--apt-bg);
         }
 
+        .apt-pfpic::before { color: var(--apt-bg); }
+
         .apt-psset { 
             color: var(--apt-bg);
             margin-block-end: 1rem;
