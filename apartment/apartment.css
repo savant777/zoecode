@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/rounded-elegance');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+:root {
+    --apt-primary: red;
+    --apt-accent: #fff;
+
+    --apt-pic: gray;
+    --apt-pos: center;
+    --apt-size: cover;
+}
+
+#Apartment { position: relative; }
+#Apartment * { box-sizing: border-box; }
+
+#Apartment a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#Apartment a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#Apartment::after {
+    display: block;
+    content: "✩";
+    font-family: serif;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#Apartment:hover::after { content: "© Early Birds Co."; }
+
+#Apartment {
+    #apt-role.apt-box {
+        width: 650px;
+        max-width: calc(100% - 4rem);
+        margin: auto;
+        font-family: 'Bai Jamjuree', sans-serif;
+        color: var(--apt-accent);
+
+        .apt-head {
+            display: flex;
+            gap: 1rem;
+            padding-inline: 1rem;
+            font-family: 'Mitr', sans-serif;
+            font-weight: 200;
+
+            div:last-child { margin-left: auto; }
+        }
+
+        .apt-pic-grid {
+            width: 100%;
+            aspect-ratio: 16/9;
+            margin-block: 0.5rem;
+            display: grid;
+            gap: 0.75rem;
+            grid-template: 'a b' 2fr 'a c' 3fr / 3fr 2fr;
+
+            .apt-pic-1, .apt-pic-2, .apt-pic-3{
+                border-radius: 1rem;
+                border: 3px solid var(--apt-accent);
+                background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
+            }
+
+            .apt-pic-1 { grid-area: a;}
+            .apt-pic-2 { 
+                position: relative;
+                grid-area: b;
+
+                &::before {
+                    content: "Riverside Heights";
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(calc(50% + 17px), -50%) rotate(-90deg);
+
+                    width: calc(80% - 1rem);
+                    padding: 0.5rem 0.5rem 0.6rem 0.4rem;
+                    border-radius: 0 0 1rem 1rem;
+
+                    font-family:'Rounded Elegance', sans-serif;
+                    font-size: clamp(9px, 0.7vw, 12px);
+                    line-height: 1;
+                    letter-spacing: 1px;
+                    text-align: center;
+                }
+            }
+            .apt-pic-3 {
+                position: relative;
+                grid-area: c;
+
+                .apt-room {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(calc(50% + 17px), -50%) rotate(-90deg);
+
+                    width: calc(80% - 1rem);
+                    background: var(--apt-primary);
+                    padding: 0.5rem 0.5rem 0.6rem 0.4rem;
+                    border-radius: 0 0 1rem 1rem;
+                    
+                    font-family:'Rounded Elegance', sans-serif;
+                    font-size: clamp(9px, 0.7vw, 12px);
+                    line-height: 1;
+                    letter-spacing: 1px;
+                    text-align: center;
+
+                    i.fa-key { margin-inline-end: 0.25rem; }
+                }
+            }
+        }
+
+        .apt-info {
+            display: flex;
+            gap: 1rem;
+            padding-inline: 2rem 1rem;
+            margin-block-start: -3rem;
+
+            .apt-pfpic {
+                position: relative;
+                flex-shrink: 0;
+                width: 125px;
+                height: 125px;
+                background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
+                border: 3px solid var(--apt-accent);
+                border-radius: 50%;
+
+                &::before {
+                    content: "+";
+                    position: absolute;
+                    bottom: 5%;
+                    right: 5%;
+
+                    width: max-content;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background: var(--apt-primary);
+                    padding: 0.25rem;
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    font-family: sans-serif;
+                    font-size: 28px;
+                    line-height: 0;
+                }
+            }
+
+            .apt-nameset {
+                position: relative;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                
+                padding-block: 1rem;
+                margin-block-start: 2rem;
+
+                font-family: 'Mitr', sans-serif;
+                font-weight: 200;
+                line-height: 1;
+
+                .apt-name {
+                    font-weight: normal;
+                    font-size: 28px;
+                    text-transform: uppercase;
+                }
+
+                .apt-gear {
+                    position: absolute;
+                    top: 2rem;
+                    right: 0;
+                }
+            }
+        }
+
+        .apt-content {
+            display: flex;
+            margin-block: 2rem;
+        }
+
+        .apt-psset {
+            display: flex;
+            gap: 1rem;
+            background: var(--apt-primary);
+            border-radius: 1.5rem;
+            padding: 0.25rem 1.5rem;
+
+            .apt-ps { flex: 1; }
+            .apt-send {
+                padding-block-start: 0.4rem;
+
+                i.fa-paper-plane {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
