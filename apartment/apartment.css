@@ -28,7 +28,7 @@
 #Apartment::after {
     display: block;
     content: "✩";
-    font-family: serif;
+    font-family: 'Rounded Elegance', sans-serif;
     font-size: x-small;
     color: gray !important;
     width: 100%;
@@ -44,6 +44,7 @@
         margin: auto;
         font-family: 'Bai Jamjuree', sans-serif;
         color: var(--apt-accent);
+        margin-block-end: 0.5rem;
 
         .apt-head {
             display: flex;
@@ -52,7 +53,15 @@
             font-family: 'Mitr', sans-serif;
             font-weight: 200;
 
-            div:last-child { margin-left: auto; }
+            i { color: var(--apt-primary); }
+
+            div:last-child {
+                margin-left: auto;
+                user-select: none;
+                pointer-events: none;
+
+                i:not(:last-child) { color: var(--apt-accent) !important; }
+            }
         }
 
         .apt-pic-grid {
@@ -186,6 +195,7 @@
         .apt-content {
             display: flex;
             margin-block: 2rem;
+            padding-inline: 1rem;
         }
 
         .apt-psset {
@@ -193,7 +203,7 @@
             gap: 1rem;
             background: var(--apt-primary);
             border-radius: 1.5rem;
-            padding: 0.25rem 1.5rem;
+            padding: 0.25rem 1rem;
 
             .apt-ps { flex: 1; }
             .apt-send {
