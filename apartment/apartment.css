@@ -654,30 +654,30 @@
                 
                 background: var(--apt-pfpic) var(--apt-pfpos)/var(--apt-pfsize) no-repeat;
             }
+        }
 
-            &::before {
-                content: attr("pic-amount");
-                position: absolute;
-                bottom: 1rem;
-                left: 50%;
-                transform: translateX(-50%);
-                
-                width: max-content;
-                padding: 0 0.3rem 0.5rem;
-                border-radius: 1rem;
-                background: var(--apt-accent);
-                opacity: 0;
+        .klk-pic::before {
+            content: attr("pic-amount");
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            width: max-content;
+            padding: 0 0.3rem 0.5rem;
+            border-radius: 1rem;
+            background: var(--apt-accent);
+            opacity: 0;
 
-                font-size: 48px;
-                line-height: 0.2;
-                letter-spacing: 0px;
-                color: var(--apt-bg);
-                
-                display: flex;
-                align-items: center;
+            font-size: 48px;
+            line-height: 0.2;
+            letter-spacing: 0px;
+            color: var(--apt-bg);
+            
+            display: flex;
+            align-items: center;
 
-                transition: .2s;
-            }
+            transition: .2s;
         }
 
         .klk-pic:hover::before { opacity: 0.5; }
