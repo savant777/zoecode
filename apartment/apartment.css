@@ -651,6 +651,7 @@
                 aspect-ratio: 1;
                 border: clamp(2px, 0.2vw, 3px) solid var(--apt-bg);
                 border-radius: 50%;
+                background: var(--apt-pfpic) var(--apt-pfpos)/var(--apt-pfsize) no-repeat;
             }
 
             .klk-pfpic[style*="--apt-pos"][style*="--apt-size"] {
@@ -731,12 +732,14 @@
                 display: flex;
                 gap: 1rem;
                 color: #888;
+                user-select: none;
             }
 
             .klk-comment { 
                 color: #888;
                 margin-block-start: -1rem;
                 cursor: pointer;
+                user-select: none;
             }
         }
     }
