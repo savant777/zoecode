@@ -485,7 +485,7 @@
         }
     }
 
-    #klick-thraed.klk-box {
+    #klick-thread.klk-box {
         width: 500px;
         max-width: 100%;
         margin: auto;
@@ -568,13 +568,13 @@
                 top: 1rem;
                 right: 1rem;
                 cursor: pointer;
+            }
 
-                k {
-                    font-family: 'Nahista', sans-serif;
-                    font-size-adjust: 0.75;
-                    font-style: italic;
-                    margin-inline-end: 0.25rem;
-                }
+            k {
+                font-family: 'Nahista', sans-serif;
+                font-size-adjust: 0.75;
+                font-style: italic;
+                margin-inline-end: 0.25rem;
             }
         }
     }
