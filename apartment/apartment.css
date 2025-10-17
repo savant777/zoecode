@@ -379,6 +379,16 @@
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
+
+            cursor: pointer;
+            user-select: none;
+
+            transition: .2s;
+
+            &:hover {
+                background: var(--apt-bg);
+                color: var(--apt-accent);
+            }
         }
     }
 }
