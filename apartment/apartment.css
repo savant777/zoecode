@@ -155,11 +155,10 @@
                     bottom: 2%;
                     right: 2%;
 
-                    width: max-content;
-                    aspect-ratio: 1;
+                    width: 28px;
+                    height: 28px;
                     border-radius: 50%;
                     background: var(--apt-primary);
-                    padding: 0.3rem;
                     
                     display: flex;
                     justify-content: center;
@@ -167,7 +166,7 @@
                     
                     font-family: sans-serif;
                     font-size: 28px;
-                    line-height: 0;
+                    line-height: 1;
                     color: var(--apt-bg);
                 }
             }
