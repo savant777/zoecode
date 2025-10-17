@@ -78,7 +78,7 @@
 
             .apt-pic-1, .apt-pic-2, .apt-pic-3{
                 border-radius: 1rem;
-                border: 3px solid var(--apt-accent);
+                border: clamp(2px, 0.2vw, 3px) solid var(--apt-accent);
                 background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
             }
 
@@ -146,7 +146,7 @@
                 width: 125px;
                 height: 125px;
                 background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
-                border: 3px solid var(--apt-accent);
+                border: clamp(2px, 0.2vw, 3px) solid var(--apt-accent);
                 border-radius: 50%;
 
                 &::before {
