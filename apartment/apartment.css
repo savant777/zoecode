@@ -354,7 +354,7 @@
                     display: flex;
                     flex-direction: column;
 
-                    p { margin-block-start: 0; }
+                    p { margin-block: 0 0.5rem; }
                     p:last-child { margin-block-end: 0; }
 
                     ul {
@@ -374,6 +374,7 @@
             background: var(--apt-accent);
             color: var(--apt-bg);
             border-radius: 1.5rem;
+            border: 2px solid var(--apt-accent);
             
             font-family: 'Rounded Elegance', sans-serif;
             font-weight: 600;
