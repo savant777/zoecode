@@ -474,13 +474,13 @@
 
                 p { margin-block: 0; }
             }
+        }
 
-            .apt-pic {
-                width: 100%;
-                aspect-ratio: 3;
-                background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
-                margin-block-end: 1rem;
-            }
+        .apt-pic {
+            width: 100%;
+            aspect-ratio: 3;
+            background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
+            margin-block-end: 1rem;
         }
     }
 }
