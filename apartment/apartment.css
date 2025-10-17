@@ -608,6 +608,7 @@
                 justify-content: space-between;
 
                 .klk-btn {
+                    position: relative;
                     cursor: pointer;
                     width: 36px;
                     height: 36px;
@@ -619,17 +620,25 @@
                     align-items: center;
                 }
 
-                label.klk-btn input[type="checkbox"] { display: none; }
+                label.klk-btn {
+                    input[type="checkbox"] { display: none; }
 
-                i.fa-solid { 
-                    opacity: 0;
-                    transition: .2s;
+                    i.fa-solid, i.fa-regular { 
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: .2s;
+                    }
+
+                    i.fa-solid { 
+                        opacity: 0;
+                        color: rgb(255, 48, 64);
+                    }
+
+                    input:checked + i.fa-regular { opacity: 0; }
+                    input:checked + i.fa-regular + i.fa-solid { opacity: 1; }
                 }
-
-                i.fa-regular { transition: .2s; }
-
-                input:checked + i.fa-regular { opacity: 0; }
-                input:checked + i.fa-regular + i.fa-solid { opacity: 1; }
             }
 
             .klk-pfpic {
