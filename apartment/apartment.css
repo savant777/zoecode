@@ -651,13 +651,23 @@
                 aspect-ratio: 1;
                 border: clamp(2px, 0.2vw, 3px) solid var(--apt-bg);
                 border-radius: 50%;
-                
-                background: var(--apt-pfpic) var(--apt-pfpos)/var(--apt-pfsize) no-repeat;
+            }
+
+            .klk-pfpic[style*="--apt-pos"][style*="--apt-size"] {
+                background: var(--apt-pfpic) var(--apt-pos)/var(--apt-size) no-repeat;
+            }
+
+            .klk-pfpic[style*="--apt-pos"]:not([style*="--apt-size"]) {
+                background: var(--apt-pfpic) var(--apt-pos)/var(--apt-pfsize) no-repeat;
+            }
+
+            .klk-pfpic[style*="--apt-size"]:not([style*="--apt-pos"]) {
+                background: var(--apt-pfpic) var(--apt-pfpos)/var(--apt-size) no-repeat;
             }
         }
 
         .klk-pic::before {
-            content: attr("pic-amount");
+            content: attr(pic-amount);
             position: absolute;
             bottom: 1rem;
             left: 50%;
@@ -706,10 +716,16 @@
                     div:last-child { color: #888; }
                 }
 
-                .klk-more { color: #888; }
+                .klk-more { 
+                    color: #888;
+                    cursor: pointer;
+                }
             }
 
-            .klk-post h { color: #2b78ff; }
+            .klk-post h { 
+                color: #2b78ff;
+                cursor: pointer;
+            }
 
             .klk-stat {
                 display: flex;
@@ -720,6 +736,7 @@
             .klk-comment { 
                 color: #888;
                 margin-block-start: -1rem;
+                cursor: pointer;
             }
         }
     }
