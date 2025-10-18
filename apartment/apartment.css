@@ -592,14 +592,36 @@
         font-family: 'Bai Jamjuree', sans-serif;
         color: var(--apt-accent);
 
-        .klk-pic {
+        .klk-pic-set {
             position: relative;
             width: 100%;
             aspect-ratio: 4/5;
-            background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
-            padding: 1rem;
+            overflow: hidden;
+
+            .klk-pic-gallery {
+                height: 100%;
+                width: auto;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                
+                display: flex;
+
+                &::-webkit-scrollbar { height: 0; }
+
+                .klk-pic {
+                    width: 500px;
+                    aspect-ratio: 4/5;
+                    background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
+                    scroll-snap-align: start;
+                }
+            }
 
             .klk-btngroup {
+                position: absolute;
+                width: calc(100% - 2rem);
+                left: 1rem;
+                top: 1rem;
+
                 display: flex;
                 justify-content: space-between;
 
@@ -673,7 +695,6 @@
             width: max-content;
             padding: 0 0.3rem 0.5rem;
             border-radius: 1rem;
-            background: var(--apt-accent);
             opacity: 0;
 
             font-size: 48px;
@@ -687,7 +708,7 @@
             transition: .2s;
         }
 
-        .klk-pic:hover::before { opacity: 0.5; }
+        .klk-pic:hover::before { opacity: 0.6; }
 
         .klk-content {
             display: flex;
@@ -731,11 +752,23 @@
                 user-select: none;
             }
 
-            .klk-comment { 
-                color: #888;
+            .klk-comment {
                 margin-block-start: -1rem;
-                cursor: pointer;
-                user-select: none;
+
+                details > summary {
+                    list-style: none;
+                    cursor: pointer;
+                    color: #888;
+                }
+
+                details > summary::marker,
+                details > summary::-webkit-details-marker {
+                    display: none;
+                }
+
+                i.fa-angle-down { transition: .2s; }
+                details > summary i.fa-angle-down { rotate: 0deg; }
+                details[open] > summary i.fa-angle-down { rotate: 180deg; }
             }
         }
     }
