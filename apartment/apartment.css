@@ -592,7 +592,6 @@
             position: relative;
             width: 100%;
             aspect-ratio: 4/5;
-            overflow: hidden;
 
             .klk-pic-gallery {
                 height: 100%;
@@ -753,6 +752,8 @@
                 i.fa-angle-down { transition: .2s; }
                 details > summary i.fa-angle-down { rotate: 0deg; }
                 details[open] > summary i.fa-angle-down { rotate: 180deg; }
+
+                details > summary > br:first-of-type { display: none; }
             }
         }
     }
