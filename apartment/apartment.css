@@ -742,6 +742,7 @@
                     list-style: none;
                     cursor: pointer;
                     color: #888;
+                    user-select: none;
                 }
 
                 details > summary::marker,
