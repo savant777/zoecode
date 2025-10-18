@@ -752,8 +752,6 @@
                 i.fa-angle-down { transition: .2s; }
                 details > summary i.fa-angle-down { rotate: 0deg; }
                 details[open] > summary i.fa-angle-down { rotate: 180deg; }
-
-                details > summary > br:first-of-type { display: none; }
             }
         }
     }
