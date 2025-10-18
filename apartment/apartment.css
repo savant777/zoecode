@@ -685,7 +685,7 @@
             }
         }
 
-        .klk-pic::before {
+        .klk-pic-set::before {
             content: attr(pic-amount);
             position: absolute;
             bottom: 1rem;
@@ -708,7 +708,7 @@
             transition: .2s;
         }
 
-        .klk-pic:hover::before { opacity: 0.6; }
+        .klk-pic-set:hover::before { opacity: 0.6; }
 
         .klk-content {
             display: flex;
