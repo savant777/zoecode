@@ -90,7 +90,7 @@
                 grid-area: b;
 
                 &::before {
-                    content: "Riverside Heights";
+                    content: attr(data);
                     position: absolute;
                     top: 50%;
                     right: 0;
