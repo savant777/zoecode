@@ -493,24 +493,30 @@
                 .apt-item-prop {
                     position: relative;
                     width: 200px;
+                    aspect-ratio: 500/496;
                     margin: auto;
                     background: #202020;
                     border-radius: 6px;
                     overflow: hidden;
+                    user-select: none;
+                    pointer-events: none;
 
-                    img:first-child {
+                    &::before {
+                        content: "";
                         position: relative;
                         z-index: 1;
-                        user-select: none;
+                        width: 100%;
+                        background: url(https://iili.io/KSsHzoN.gif) center/contain no-repeat;
                     }
 
-                    img:last-child {
+                    &::after {
+                        content: "";
                         position: absolute;
                         left: 0;
                         bottom: -100px;
+                        background: url(https://iili.io/KSsHzoN.gif) center/contain no-repeat;
                         filter: blur(50px) saturate(3);
                         opacity: 0.35;
-                        user-select: none;
                     }
                 }
 
