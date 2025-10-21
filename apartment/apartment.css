@@ -485,7 +485,7 @@
             margin-block-end: 1rem;
         }
 
-        input[type="radio"] { display: none; }
+        input[type="radio"], input[type="radio"] + br { display: none; }
 
         .apt-npc-flex {
             display: flex;
