@@ -534,7 +534,7 @@
 
                     .apt-th:not(:first-child) { border-inline-start: 0; }
 
-                    .apt-td {
+                    .apt-tdf {
                         border: 1px solid var(--apt-accent);
                         border-block-start: 0;
                         padding: 0.25rem 0.5rem;
@@ -542,10 +542,15 @@
                         align-items: center;
                     }
 
-                    .apt-td:not(:first-child) {
+                    .apt-td {
+                        border: 1px solid var(--apt-accent);
+                        border-block-start: 0;
                         border-inline-start: 0;
-                        text-align: center;
+                        padding: 0.25rem 0.5rem;
+                        display: flex;
+                        align-items: center;
                         justify-content: center;
+                        text-align: center;
                     }
                 }
             }
