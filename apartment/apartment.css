@@ -611,7 +611,7 @@
             i { text-transform: uppercase; }
         }
 
-        .apt-l, .apt-r {
+        .apt-player, .apt-pic {
             position: relative;
             border-radius: 1rem;
             border: clamp(2px, 0.2vw, 3px) solid var(--apt-accent);
