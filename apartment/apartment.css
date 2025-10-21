@@ -910,4 +910,4 @@
 [data-group] input[data-npc="npc22"]:checked ~ .apt-npc-flex > .apt-npc-r > .apt-npc-grid[npc="npc22"],
 [data-group] input[data-npc="npc23"]:checked ~ .apt-npc-flex > .apt-npc-r > .apt-npc-grid[npc="npc23"],
 [data-group] input[data-npc="npc24"]:checked ~ .apt-npc-flex > .apt-npc-r > .apt-npc-grid[npc="npc24"],
-[data-group] input[data-npc="npc25"]:checked ~ .apt-npc-flex > .apt-npc-r > .apt-npc-grid[npc="npc25"] { display: grid; }
+[data-group] input[data-npc="npc25"]:checked ~ .apt-npc-flex > .apt-npc-r > .apt-npc-grid[npc="npc25"] { display: grid !important; }
