@@ -523,6 +523,8 @@
                         background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
                         filter: grayscale(1);
                         transition: .2s ease;
+
+                        &:hover { filter: grayscale(0); }
                     }
                     
                     label + br { display: none; }
@@ -858,31 +860,31 @@
     }
 }
 
-[data-group] input[data-npc="npc1"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc1-"],
-[data-group] input[data-npc="npc2"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc2-"],
-[data-group] input[data-npc="npc3"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc3-"],
-[data-group] input[data-npc="npc4"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc4-"],
-[data-group] input[data-npc="npc5"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc5-"],
-[data-group] input[data-npc="npc6"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc6-"],
-[data-group] input[data-npc="npc7"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc7-"],
-[data-group] input[data-npc="npc8"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc8-"],
-[data-group] input[data-npc="npc9"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc9-"],
-[data-group] input[data-npc="npc10"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc10-"],
-[data-group] input[data-npc="npc11"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc11-"],
-[data-group] input[data-npc="npc12"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc12-"],
-[data-group] input[data-npc="npc13"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc13-"],
-[data-group] input[data-npc="npc14"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc14-"],
-[data-group] input[data-npc="npc15"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc15-"],
-[data-group] input[data-npc="npc16"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc16-"],
-[data-group] input[data-npc="npc17"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc17-"],
-[data-group] input[data-npc="npc18"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc18-"],
-[data-group] input[data-npc="npc19"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc19-"],
-[data-group] input[data-npc="npc20"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc20-"],
-[data-group] input[data-npc="npc21"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc21-"],
-[data-group] input[data-npc="npc22"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc22-"],
-[data-group] input[data-npc="npc23"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc23-"],
-[data-group] input[data-npc="npc24"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc24-"],
-[data-group] input[data-npc="npc25"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list > .apt-npc[for^="npc25-"] { filter: grayscale(0); }
+[data-group] input[data-npc="npc1"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc1-"],
+[data-group] input[data-npc="npc2"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc2-"],
+[data-group] input[data-npc="npc3"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc3-"],
+[data-group] input[data-npc="npc4"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc4-"],
+[data-group] input[data-npc="npc5"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc5-"],
+[data-group] input[data-npc="npc6"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc6-"],
+[data-group] input[data-npc="npc7"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc7-"],
+[data-group] input[data-npc="npc8"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc8-"],
+[data-group] input[data-npc="npc9"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc9-"],
+[data-group] input[data-npc="npc10"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc10-"],
+[data-group] input[data-npc="npc11"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc11-"],
+[data-group] input[data-npc="npc12"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc12-"],
+[data-group] input[data-npc="npc13"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc13-"],
+[data-group] input[data-npc="npc14"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc14-"],
+[data-group] input[data-npc="npc15"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc15-"],
+[data-group] input[data-npc="npc16"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc16-"],
+[data-group] input[data-npc="npc17"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc17-"],
+[data-group] input[data-npc="npc18"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc18-"],
+[data-group] input[data-npc="npc19"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc19-"],
+[data-group] input[data-npc="npc20"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc20-"],
+[data-group] input[data-npc="npc21"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc21-"],
+[data-group] input[data-npc="npc22"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc22-"],
+[data-group] input[data-npc="npc23"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc23-"],
+[data-group] input[data-npc="npc24"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc24-"],
+[data-group] input[data-npc="npc25"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc25-"] { filter: grayscale(0) !important; }
 
 [data-group] input[data-npc="npc1"]:checked ~ .apt-npc-flex > .apt-npc-r > .apt-npc-grid[npc="npc1"],
 [data-group] input[data-npc="npc2"]:checked ~ .apt-npc-flex > .apt-npc-r > .apt-npc-grid[npc="npc2"],
