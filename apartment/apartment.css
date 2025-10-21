@@ -480,6 +480,74 @@
 
                 p { margin-block: 0 0.5rem; }
                 p:last-child { margin-block: 0; }
+
+                .apt-item-pf {
+                    width: 100px;
+                    height: 100px;
+                    margin: auto;
+                    background: url(https://iili.io/KSsHnNR.png) center/contain no-repeat content-box, #202020;
+                    border-radius: 6px;
+                    padding: 10px;
+                }
+
+                .apt-item-prop {
+                    position: relative;
+                    width: 200px;
+                    margin: auto;
+                    background: #202020;
+                    border-radius: 6px;
+                    overflow: hidden;
+
+                    img:first-child {
+                        position: relative;
+                        z-index: 1;
+                        user-select: none;
+                    }
+
+                    img:last-child {
+                        position: absolute;
+                        left: 0;
+                        bottom: -100px;
+                        filter: blur(50px) saturate(3);
+                        opacity: 0.35;
+                        user-select: none;
+                    }
+                }
+
+                .apt-reward-grid {
+                    display: grid;
+                    grid-template-columns: 1fr fit-content(15%) fit-content(15%) fit-content(15%) fit-content(15%);
+                    font-size: 15px;
+                    margin-block-end: 0.5rem;
+
+                    .apt-th {
+                        border: 1px solid var(--apt-accent);
+                        padding: 0.25rem 0.5rem;
+                        background: var(--apt-accent);
+                        color: var(--apt-bg);
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                    }
+
+                    .apt-th:not(:first-child) { border-inline-start: 0; }
+
+                    .apt-td {
+                        border: 1px solid var(--apt-accent);
+                        border-block-start: 0;
+                        padding: 0.25rem 0.5rem;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .apt-td:not(:first-child) {
+                        border-inline-start: 0;
+                        text-align: center;
+                        justify-content: center;
+                    }
+                }
             }
         }
 
