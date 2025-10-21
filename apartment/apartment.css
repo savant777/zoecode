@@ -630,8 +630,8 @@
                 transform: scale(1.05);
                 will-change: transform;
                 
-                background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
-                filter: blur(3px);
+                background: linear-gradient(rgba(0,0,0,0.2) 0 0), var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
+                filter: blur(2px);
             }
 
             .apt-cover {
@@ -702,6 +702,24 @@
             font-family: 'Mitr', sans-serif;
             font-size: 10px;
             font-weight: 200;
+
+            div:last-child { 
+                user-select: none;
+                pointer-events: none;
+            }
+        }
+
+        &::after {
+            content: "✩";
+            display: flex;
+            justify-content: end;
+            padding-inline: 0.75rem;
+            padding-block-start: 0.2rem;
+
+            font-family: 'Rounded Elegance', sans-serif;
+            font-size: 9px;
+            color: gray !important;
+            text-align: end;
         }
     }
 
@@ -978,6 +996,24 @@
             }
         }
     }
+}
+
+#Apartment:has(#apt-banner) {
+    width: 500px;
+    margin: auto;
+    
+    a[href="https://discord.com/users/625292873914515456/"] {
+        height: 10px !important;
+        bottom: 0.25rem !important;
+        left: unset !important;
+        right: 4px !important;
+        width: 120px;
+    }
+
+    &::after { content: "" !important; }
+    &:hover::after { content: "" !important; }
+
+    &:hover #apt-banner::after { content: "© Early Birds Co."; }
 }
 
 [data-group] input[data-npc="npc1"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc1-"],
