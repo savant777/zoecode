@@ -575,7 +575,7 @@
                     margin-block-start: 1rem;
                 }
 
-                #npc-item, #gift-item {
+                #npc-item, #gift-item, #achievement {
                     .apt-item-topic {
                         background: #666;
                         color: var(--apt-bg);
@@ -620,6 +620,10 @@
                     }
 
                     .apt-item-flex:last-child { margin-block-end: 1.5rem; }
+                }
+
+                #achievement {
+                    .apt-item-flex:last-child { margin-block-end: 0 !important; }
                 }
             }
         }
