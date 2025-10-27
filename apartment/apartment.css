@@ -484,7 +484,7 @@
                     margin-block: 0 0.5rem;
                 }
                 pp + br { display: none; }
-                p:last-child, p:has(+ol), p:has(+ul) { margin-block: 0; }
+                p:last-child, pp:last-child, p:has(+ol), p:has(+ul) { margin-block: 0; }
 
                 .apt-item-pf {
                     width: 100px;
