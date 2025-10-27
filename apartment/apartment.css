@@ -570,6 +570,11 @@
                     }
                 }
 
+                #giftbox-item {
+                    margin-inline-start: -40px;
+                    margin-block-start: 1rem;
+                }
+
                 #npc-item, #giftbox-item {
                     .apt-item-topic {
                         background: #666;
