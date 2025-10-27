@@ -591,19 +591,19 @@
                         margin-block-end: 1rem;
 
                         .apt-item-pic {
-                            width: clamp(80px, 8vw, 100px);
+                            width: 100px;
                             min-height: 100px;
                             aspect-ratio: 1;
                             border-radius: 1rem;
                             border: clamp(2px, 0.2vw, 3px) solid var(--apt-accent);
-                            padding: min(1vw, 1rem);
+                            padding: 1rem;
                             background: var(--apt-item) center/contain no-repeat content-box, #333;
                         }
 
                         .apt-item-info {
                             flex: 1;
                             display: grid;
-                            grid-template-columns: 190px 1fr;
+                            grid-template-columns: 180px 1fr;
 
                             .apt-item-name {
                                 font-size: 20px;
