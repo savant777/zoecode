@@ -598,8 +598,7 @@
                         .apt-item-info {
                             flex: 1;
                             display: grid;
-                            grid-template-columns: auto 1fr;
-                            column-gap: 1rem;
+                            grid-template-columns: 190px 1fr;
 
                             .apt-item-name {
                                 font-size: 20px;
