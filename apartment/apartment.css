@@ -571,7 +571,7 @@
                 }
 
                 #npc-item {
-                    &.apt-topic {
+                    &.apt-item-topic {
                         background: #666;
                         color: var(--apt-bg);
                         padding: 0 0.5rem;
