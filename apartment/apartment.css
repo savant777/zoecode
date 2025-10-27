@@ -570,15 +570,15 @@
                     }
                 }
 
-                #npc-item {
-                    &.apt-item-topic {
+                #npc-item, #giftbox-item {
+                    .apt-item-topic {
                         background: #666;
                         color: var(--apt-bg);
                         padding: 0 0.5rem;
                         margin-block-end: 1rem;
                     }
 
-                    &.apt-item-flex {
+                    .apt-item-flex {
                         display: flex;
                         gap: 1rem;
                         align-items: flex-start;
