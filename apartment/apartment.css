@@ -479,7 +479,11 @@
                 padding-inline: 1rem;
 
                 p { margin-block: 0 1rem; }
-                p > p { margin-block: 0 0.5rem; }
+                pp {
+                    display: block;
+                    margin-block: 0 0.5rem;
+                }
+                pp + br { display: none; }
                 p:last-child, p:has(+ol), p:has(+ul) { margin-block: 0; }
 
                 .apt-item-pf {
