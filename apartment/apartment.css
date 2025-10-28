@@ -625,6 +625,8 @@
                 #achievement {
                     .apt-item-flex:last-child { margin-block-end: 0 !important; }
                 }
+
+                details > summary { cursor: pointer; }
             }
         }
 
