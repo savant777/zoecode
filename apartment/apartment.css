@@ -339,6 +339,8 @@
                     min-width: max-content;
                 }
                 .apt-a.lg { grid-column: 2/7; }
+
+                .apt-a.sm.fc { column-gap: 0.5ch; }
             }
 
             .apt-flex {
@@ -862,7 +864,7 @@
             display: flex;
             justify-content: end;
             padding-inline: 0.75rem;
-            padding-block-start: 0.2rem;
+            padding-block-start: 0.1rem;
 
             font-family: 'Rounded Elegance', sans-serif;
             font-size: 9px;
