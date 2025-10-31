@@ -996,6 +996,9 @@
                     aspect-ratio: 4/5;
                     background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
                     scroll-snap-align: start;
+                    flex: 0 0 auto;
+                    -webkit-flex: 0 0 auto;
+                    flex-shrink: 0;
                 }
             }
 
