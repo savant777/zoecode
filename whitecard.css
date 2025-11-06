@@ -116,10 +116,10 @@
                 align-items: center;
                 
                 font-family: 'Playfair Display', 'Trirong', serif;
-                font-size: min(1.5vw, 28px);
+                font-size: min(1.2vw, 22px);
                 letter-spacing: min(0.1vw, 2px);
                 text-align: center;
-                line-height: 1;
+                line-height: 1.2;
                 
                 min-height: 25%;
                 padding-inline: 15%;
