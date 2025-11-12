@@ -735,6 +735,65 @@
                         p:last-child { margin-block: 0; }
                     }
                 }
+
+                .apt-bfr-grid {
+                    display: none;
+                    grid-template-columns: minmax(76px, 10%) fit-content(50%) minmax(76px, 10%) fit-content(50%);
+                    gap: min(1vw, 1rem);
+                    align-items: baseline;
+
+                    .apt-name {
+                        grid-column: 1/5;
+                        font-family: 'Mitr', sans-serif;
+                        font-size: clamp(28px, 2vw, 32px);
+                        line-height: 1;
+                        text-transform: uppercase;
+                    }
+
+                    .apt-pic {
+                        grid-column: 1/5;
+                        width: 100%;
+                        aspect-ratio: 4;
+                        background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
+                    }
+
+                    .apt-q {
+                        min-width: max-content;
+                        font-weight: bold;
+                        display: flex;
+                    }
+
+                    .apt-a {
+                        border-radius: 1rem;
+                        border: 1px solid #aaa;
+                        padding: 0 1rem;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .apt-a.fee {
+                        flex-direction: row;
+                        align-items: center;
+                        column-gap: 0.5rem;
+
+                        &::before {
+                            content: "";
+                            width: 17px;
+                            height: 17px;
+                            background: url(https://iili.io/KpP61tI.png) center/contain no-repeat;
+                        }
+                    }
+
+                    .apt-a.lg { grid-column: 2/5; }
+                    .apt-a.about {
+                        grid-column: 1/5;
+                        padding: 0.5rem 1rem;
+                        margin-inline-start: -1rem;
+
+                        p { margin-block: 0 0.5rem; }
+                        p:last-child { margin-block: 0; }
+                    }
+                }
             }
         }
     }
