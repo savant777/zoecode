@@ -773,15 +773,9 @@
 
                     .apt-a.fee {
                         flex-direction: row;
-                        align-items: center;
                         column-gap: 0.5rem;
-
-                        &::before {
-                            content: "";
-                            width: 17px;
-                            height: 17px;
-                            background: url(https://iili.io/KpP61tI.png) center/contain no-repeat;
-                        }
+                        background: url(https://iili.io/KpP61tI.png) 1rem 50%/22px no-repeat;
+                        padding-inline-start: calc(1.5rem + 22px);
                     }
 
                     .apt-a.lg { grid-column: 2/5; }
