@@ -82,6 +82,8 @@
 
         &::before {
             content: "";
+            user-select: text;
+            pointer-events: none;
             position: absolute;
             inset: 0;
             background: #eee;
