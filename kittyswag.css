@@ -1,4 +1,108 @@
-@font-face {
-    font-family: 'PICKYSIDE';
-    src: url('https://savant777.github.io/zoecode/font/PICKYSIDE.otf');
+@import url('https://fonts.cdnfonts.com/css/horst-blackletter');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#KittySwag.ktswg-box {
+    width: 600px;
+    max-width: 80%;
+    margin: auto;
+    background: radial-gradient(circle at 50% 104px, #000, #202020);
+    border: 1px solid #202020;
+    padding: 4rem;
+    
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
+    color: #eee;
+    text-align: justify;
+
+    &::before {
+        content: "";
+        width: 80px;
+        aspect-ratio: 1;
+        margin: auto;
+        background: url(https://iili.io/fJRkOcG.gif) center/contain no-repeat;
+        mix-blend-mode: screen;
+    }
+
+    .ktswg-name {
+        margin-block: 1rem 4rem;
+        font-family: 'Horst Blackletter', sans-serif;
+        font-size: 3rem;
+        line-height: 1.15;
+        text-transform: uppercase;
+        text-align: center;
+        transform: scaleY(1.75);
+        background: linear-gradient(#ccc 0 15%, #fff, #999 50%, #ccc);
+        background-clip: text;
+        color: transparent;
+        -webkit-filter: drop-shadow(0px 0px #fff) drop-shadow(0px 0px #fff) drop-shadow(0px 0px #fff) drop-shadow(0px 0px 8px rgba(255,255,255,0.4));
+                filter: drop-shadow(0px 0px #fff) drop-shadow(0px 0px #fff) drop-shadow(0px 0px #fff) drop-shadow(0px 0px 8px rgba(255,255,255,0.4));
+    }
+    
+    .ktswg-content {
+        margin-block: 2rem;
+        aspect-ratio: 2;
+        background: url(https://iili.io/fJEq6vf.png) center/50% no-repeat;
+        align-content: center;
+    }
+
+    .ktswg-ps-border {
+        position: relative;
+        width: max-content;
+        max-width: 350px;
+        text-align: center;
+        margin: auto;
+        padding: 0.5rem 0.5rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #eee;
+            -webkit-mask: 
+                radial-gradient(1rem 0.75rem at 1rem 1rem,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -1rem -1rem, 
+                linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 1.45rem + 1px) repeat-x, 
+                linear-gradient(#000 2px,#0000 0) 50% -1px/calc(100% - 2rem + 1px) 100% repeat-y;
+            mask: 
+                radial-gradient(1rem 0.75rem at 1rem 1rem,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -1rem -1rem, 
+                linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 1.45rem + 1px) repeat-x, 
+                linear-gradient(#000 2px,#0000 0) 50% -1px/calc(100% - 2rem + 1px) 100% repeat-y;
+        }
+
+        .ktswg-ps {
+            display: flex;
+            column-gap: 1rem;
+            align-items: center;
+
+            &::before, &::after {
+                content: "✦";
+                transform: scale(1.2, 0.8);
+            }
+        }
+    }
 }
