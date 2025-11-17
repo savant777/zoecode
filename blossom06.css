@@ -31,7 +31,7 @@
     display: block;
     content: "06 Blossom";
     font-family: 'Exclusive', serif;
-    font-size: x-small;
+    font-size: 13px;
     color: gray !important;
     width: 100%;
     text-align: center;
@@ -137,6 +137,90 @@
                     -webkit-text-stroke: 4px var(--blsm6-primary);
                 }
             }
+        }
+    }
+
+    #b6-roleplay.b6-box {
+        width: 600px;
+        max-width: 100%;
+        margin: auto;
+        
+        background: var(--blsm6-bg);
+        color: var(--blsm6-txt);
+        
+        font-size: 16px;
+        font-family: 'Bai Jamjuree', sans-serif;
+        
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+
+        .b6-head, .b6-foot {
+            display: flex;
+            column-gap: 1rem;
+            justify-content: space-between;
+            
+            padding: 0.5rem 1.5rem;
+            background: var(--blsm6-primary);
+            color: var(--blsm6-bg);
+        }
+
+        .b6-head { font-family: 'Brawler', serif; }
+
+        .b6-flex-pic {
+            display: flex;
+            column-gap: 1.5rem;
+            padding-inline: 1.5rem;
+            margin-block-end: 1.5rem;
+
+            .b6-pic {
+                flex: 1;
+                aspect-ratio: 4/3;
+                border-radius: 1rem;
+                background: var(--blsm6-pic) var(--blsm6-pos)/var(--blsm6-size) no-repeat;
+            }
+        }
+
+        .b6-flex-1 {
+            display: flex;
+            flex-direction: row-reverse;
+            column-gap: 1rem;
+            align-items: center;
+
+            .b6-title-set {
+                padding-inline: 2rem 4rem;
+                text-align: end;
+
+                .b6-title {
+                    font-family: 'Sloop-ScriptOne', cursive;
+                    font-size: 8.5rem;
+                    line-height: 0.6;
+                    color: var(--blsm6-primary);
+                }
+
+                .b6-sub {
+                    font-family: 'Brawler', serif;
+                    text-transform: uppercase;
+                    padding-inline-end: 1rem;
+                }
+            }
+
+            &::after {
+                content: "";
+                flex: 1;
+                height: 2px;
+                background: var(--blsm6-primary);
+            }
+        }
+
+        .b6-content {
+            padding-inline: 1.5rem;
+        }
+
+        .b6-flex-2 {
+            display: flex;
+            column-gap: 1rem;
+            align-items: center;
         }
     }
 }
