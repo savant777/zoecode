@@ -44,6 +44,7 @@
         width: 1000px;
         max-width: 100%;
         margin: auto;
+        padding-block-end: 3rem;
         
         background: var(--blsm6-bg);
         color: var(--blsm6-txt);
@@ -135,20 +136,6 @@
                     z-index: -1;
                     -webkit-text-stroke: 4px var(--blsm6-primary);
                 }
-            }
-        }
-
-        .b6-flex-pic {
-            display: flex;
-            column-gap: 1.5rem;
-            padding-inline: 1.5rem;
-            margin-block-end: 1.5rem;
-
-            .b6-pic {
-                flex: 1;
-                aspect-ratio: 4/3;
-                border-radius: 1rem;
-                background: var(--blsm6-pic) var(--blsm6-pos)/var(--blsm6-size) no-repeat;
             }
         }
     }
