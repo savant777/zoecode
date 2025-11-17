@@ -5,6 +5,7 @@
 :root {
     --blsm6-primary: #a50036;
     --blsm6-txt: #79716b;
+    --blsm6-bd: #79716b80;
     --blsm6-bg: #eee;
 
     --blsm6-pic: gray;
@@ -60,7 +61,7 @@
             justify-content: space-between;
             
             padding: 1.5rem;
-            border-block-end: 1px solid var(--blsm6-txt)80;
+            border-block-end: 1px solid var(--blsm6-bd);
             font-family: 'Brawler', serif;
         }
 
