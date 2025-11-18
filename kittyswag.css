@@ -1,6 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/horst-blackletter');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+:root {
+    --ktswg-primary: transparent;
+}
+
 #zzzcode { position: relative; }
 #zzzcode * { box-sizing: border-box; }
 
@@ -46,8 +50,9 @@
         width: 80px;
         aspect-ratio: 1;
         margin: auto;
-        background: url(https://iili.io/fJRkOcG.gif) center/contain no-repeat;
+        background: url(https://iili.io/fJRkOcG.gif) center/contain no-repeat, linear-gradient(#000 0 30%, var(--ktswg-primary) 30% 70%, #000 70% 100%);
         mix-blend-mode: screen;
+        background-blend-mode: luminosity;
     }
 
     .ktswg-name {
