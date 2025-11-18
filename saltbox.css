@@ -43,7 +43,7 @@
         color: var(--salt-txt);
 
         font-family: 'Bai Jamjuree', sans-serif;
-        font-size: clamp(13px, 0.8vw, 15px);
+        font-size: clamp(13px, 1vw, 17px);
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
