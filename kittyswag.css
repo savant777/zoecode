@@ -32,7 +32,7 @@
   
 #zzzcode:hover::after { content: "zzzcode"; }
 
-#KittySwag.ktswg-box[style*="--ktswg-l: #"]::before, #KittySwag.ktswg-box[style*="--ktswg-r: #"] { filter: brightness(1.25);}
+#KittySwag.ktswg-box[style*="--ktswg-l: #"]::before, #KittySwag.ktswg-box[style*="--ktswg-r: #"]::before { filter: brightness(1.25);}
 
 #KittySwag.ktswg-box {
     width: 600px;
