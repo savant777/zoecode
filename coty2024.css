@@ -16,6 +16,8 @@
     --coty-primary: #c83939;
 
     --coty-fontsize: 4;
+
+    --coty-year: url(https://iili.io/2wbydog.png);
 }
 
 #zzzcode { position: relative; }
@@ -52,7 +54,7 @@ h1.coty2024-title {
 
 h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
 
-.coty2024-paper {
+#zzzcode .coty2024-paper {
     position: relative;
     width: 1000px;
     max-width: 100%;
@@ -153,29 +155,29 @@ h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
         aspect-ratio: 300/152;
         background: url(https://iili.io/2wZnXp4.png) center/contain no-repeat;
     }
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        background: radial-gradient(#131313 10px, transparent 11px) 40px 50% / 40px 40px;
+    }
+
+    &::before {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::after {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
 }
 
-.coty2024-paper::before, .coty2024-paper::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    background: radial-gradient(#131313 10px, transparent 11px) 40px 50% / 40px 40px;
-}
-
-.coty2024-paper::before {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.coty2024-paper::after {
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-}
-
-.coty2024-play {
+#zzzcode .coty2024-paper .coty2024-play {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -208,7 +210,7 @@ h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
             content: "";
             width: 36%;
             background: var(--coty-primary);
-            mask: url(https://iili.io/2wbydog.png) center/contain no-repeat;
+            mask: var(--coty-year) center/contain no-repeat;
         }
     }
 
@@ -285,3 +287,5 @@ h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
         }
     }
 }
+
+#zzzcode .coty2024-paper[year="2025"] .coty2024-play .coty2024-aka i::after { --coty-year: url(https://iili.io/fqalMWN.png); }
