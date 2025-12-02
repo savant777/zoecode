@@ -55,8 +55,8 @@
         margin: auto;
         background: 
             url(https://iili.io/fJRkOcG.gif) center/contain no-repeat, 
-            linear-gradient(var(--ktswg-l) 0 0) 5px 50%/35px 35px no-repeat, 
-            linear-gradient(var(--ktswg-r) 0 0) calc(100% - 5px) 50%/35px 35px no-repeat;
+            linear-gradient(var(--ktswg-l) 0 0) 2px 50%/38px 38px no-repeat, 
+            linear-gradient(var(--ktswg-r) 0 0) calc(100% - 2px) 50%/38px 38px no-repeat;
         mix-blend-mode: screen;
         background-blend-mode: luminosity;
     }
