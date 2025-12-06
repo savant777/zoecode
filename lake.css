@@ -129,6 +129,7 @@
 
 .lakenpc { margin-bottom: 1rem; }
 .lakenpc::before { content: 'NPC ประจำสถานที่';}
+.lakenpc[txt]::before { content: attr(txt);}
 
 .lakename, .lakesurname {
     color: #ccc;
