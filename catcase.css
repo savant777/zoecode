@@ -82,6 +82,7 @@
                 position: relative;
 
                 .ccc-case {
+                    text-decoration: underline;
                     font-weight: bold;
                     font-size: unset;
                 }
