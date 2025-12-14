@@ -1,0 +1,367 @@
+@import url('https://fonts.cdnfonts.com/css/chalk');
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --muse-primary: #a50036;
+    --muse-txt: #79716b;
+    --muse-bd: #79716b80;
+    --muse-bg: #eee;
+
+    --muse-pic: gray;
+    --muse-pos: center;
+    --muse-size: cover;
+}
+
+#ChristmasMuse { position: relative; }
+#ChristmasMuse * { box-sizing: border-box; }
+
+#ChristmasMuse a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#ChristmasMuse a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#ChristmasMuse::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#ChristmasMuse:hover::after { content: "zzzcode"; }
+
+#ChristmasMuse {
+    #thread.muse-box {
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        background: linear-gradient(#fff0 600px,#fff 700px), url(https://iili.io/f7mrQd7.png) center 350px/contain no-repeat, url(https://iili.io/f7bePdG.png) top left repeat;border-radius: 1rem;
+        padding: 2rem 4rem 4rem;
+
+        .muse-logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 286px;
+            margin-block-end: clamp(300px, 30vw, 400px);
+
+            font-family: 'Chalk', sans-serif;
+            font-size: 3rem;
+            line-height: 1;
+            text-transform: uppercase;
+            text-align: center;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 80px;
+                aspect-ratio: 1;
+                background: url(https://iili.io/f7pu13u.png) center/contain no-repeat;
+                filter: drop-shadow(0 0 2px #f5c73c);
+            }
+
+            h {
+                font-size: 5rem;
+                color: #fcd60e;
+                filter: drop-shadow(0 0 2px #f5c73c);
+            }
+        }
+
+        .muse-content {
+            font-family: 'Mali', sans-serif;
+            font-weight: 500;
+            color: #000;
+            text-align: justify;
+
+            details.muse-details > summary.muse-sum {
+                list-style: none;
+                cursor: pointer;
+            }
+
+            details.muse-details > summary.muse-sum::marker,
+            details.muse-details > summary.muse-sum::-webkit-details-marker {
+                display: none;
+            }
+
+            details.muse-details[open] > summary.muse-sum {
+                padding-block-end: 1rem;
+                border-block-end: 2px dotted #1f506580;
+            }
+
+            details.muse-details {
+                border: 2px dotted #1f5065;
+                border-radius: 1rem;
+                padding: 1rem 1.5rem;
+                margin-block-end: 1rem;
+
+                summary.muse-sum {
+                    display: flex;
+                    gap: 0.5rem;
+                    font-weight: 600;
+                    color: #1f5065;
+
+                    div:first-child {
+                        text-align: end;
+                        min-width: 1.5rem;
+                    }
+                }
+
+                ol {
+                    margin: 1em 0 0 1rem;
+                    list-style: upper-alpha;
+                }
+            }
+
+            details.muse-details:last-child { margin-block-end: 0; }
+
+            .muse-item-flex {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-block: 1rem 1.5rem;
+            }
+
+            .muse-item[muse="bear"] {
+                --muse-item: url(https://iili.io/fAaYqLG.png);
+                --muse-clr: #d5c9f6;
+
+                &::after { content: "Frosti Bear"; }
+            }
+
+            .muse-item[muse="bird"] {
+                --muse-item: url(https://iili.io/fAaYn14.png);
+                --muse-clr: #f7d7a7;
+
+                &::after { content: "Twinkle Finch"; }
+            }
+
+            .muse-item[muse="fox"] {
+                --muse-item: url(https://iili.io/fAaYTk7.png);
+                --muse-clr: #f49059;
+
+                &::after { content: "Blizzard Fox"; }
+            }
+
+            .muse-item[muse="deer"] {
+                --muse-item: url(https://iili.io/fAaYorl.png);
+                --muse-clr: #b4e8df;
+
+                &::after { content: "Holly Horn"; }
+            }
+
+            .muse-item[muse="wolf"] {
+                --muse-item: url(https://iili.io/fAaYRIe.png);
+                --muse-clr: #ff8baa;
+
+                &::after { content: "Frostbite"; }
+            }
+
+            .muse-item[muse="seal"] {
+                --muse-item: url(https://iili.io/fAaY5hu.png);
+                --muse-clr: #a4d6fe;
+
+                &::after { content: "Dewdrop"; }
+            }
+
+            .muse-item[muse="penguin"] {
+                --muse-item: url(https://iili.io/fAaY12V.png);
+                --muse-clr: #60607c;
+
+                &::after { content: "Winter Peep"; }
+            }
+
+            .muse-item[muse="whale"] {
+                --muse-item: url(https://iili.io/fAaYEYB.png);
+                --muse-clr: #998bff;
+
+                &::after { content: "Aurora Swim"; }
+            }
+
+            .muse-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 0.5rem;
+                flex: 1;
+                min-width: 200px;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 80px;
+                    aspect-ratio: 1;
+                    background: var(--muse-item) center/contain no-repeat, url(https://iili.io/f7bePdG.png) top center no-repeat;
+                    border-radius: 0.5rem;
+                }
+
+                &::after {
+                    border: 2px dotted #1f5065;
+                    border-radius: 1rem;
+                    padding: 0.5rem 1rem 0.25rem;
+                    background: linear-gradient(160deg, #fff 50%, var(--muse-clr));
+
+                    font-family: 'Chalk', sans-serif;
+                    font-size: 1.5rem;
+                    font-weight: normal;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+
+            .muse-item.badge {
+                width: max-content;
+                max-width: 100%;
+                margin: 1rem auto;
+
+                &::before {
+                    width: 160px;
+                    --muse-item: url(https://iili.io/fAacnJ2.png);
+                }
+
+                &::after {
+                    content: "Fluffy Cotton Christmas Bell";
+                    --muse-clr: #fcd60e80;
+                }
+            }
+        }
+    }
+
+    #role.muse-box[muse="Frosti Bear"] {
+        --muse-item: url(https://iili.io/fAaYqLG.png);
+        --muse-clr: #d5c9f6;
+        --muse-txt: #8c78c2;
+
+        .muse-show .muse-name::before { content: "Frosti Bear"; }
+        .muse-show::after { content: "พลัง แข็งแกร่ง เป็นผู้นำโดยธรรมชาติ"; }
+    }
+
+    #role.muse-box[muse="Twinkle Finch"] {
+        --muse-item: url(https://iili.io/fAaYn14.png);
+        --muse-clr: #f7d7a7;
+        --muse-txt: #c49c5e;
+
+        .muse-show .muse-name::before { content: "Twinkle Finch"; }
+        .muse-show::after { content: "อ่อนโยน ร่าเริง สื่อสารเก่ง"; }
+    }
+
+    #role.muse-box[muse="Blizzard Fox"] {
+        --muse-item: url(https://iili.io/fAaYTk7.png);
+        --muse-clr: #f49059;
+        --muse-txt: #c2581f;
+
+        .muse-show .muse-name::before { content: "Blizzard Fox"; }
+        .muse-show::after { content: "ฉลาด ว่องไว ปรับตัวเก่งเป็นเลิศ"; }
+    }
+
+    #role.muse-box[muse="Holly Horn"] {
+        --muse-item: url(https://iili.io/fAaYorl.png);
+        --muse-clr: #b4e8df;
+        --muse-txt: #69b5a8;
+
+        .muse-show .muse-name::before { content: "Holly Horn"; }
+        .muse-show::after { content: "อบอุ่น อ่อนโยน รักอิสระ ชอบการเดินทาง"; }
+    }
+
+    #role.muse-box[muse="Frostbite"] {
+        --muse-item: url(https://iili.io/fAaYRIe.png);
+        --muse-clr: #ff8baa;
+        --muse-txt: #cc476b;
+
+        .muse-show .muse-name::before { content: "Frostbite"; }
+        .muse-show::after { content: "ซื่อสัตย์ ทีมเวิร์กแข็งแกร่ง ใจเด็ด"; }
+    }
+
+    #role.muse-box[muse="Dewdrop"] {
+        --muse-item: url(https://iili.io/fAaY5hu.png);
+        --muse-clr: #a4d6fe;
+        --muse-txt: #5b98c9;
+
+        .muse-show .muse-name::before { content: "Dewdrop"; }
+        .muse-show::after { content: "มั่นใจ เด็ดขาด และมีเสน่ห์ทรงพลัง"; }
+    }
+
+    #role.muse-box[muse="Winter Peep"] {
+        --muse-item: url(https://iili.io/fAaY12V.png);
+        --muse-clr: #60607c;
+        --muse-txt: #2a2a4a;
+
+        .muse-show .muse-name::before { content: "Winter Peep"; }
+        .muse-show::after { content: "หนักแน่น อดทน รักครอบครัว"; }
+    }
+
+    #role.muse-box[muse="Aurora Swim"] {
+        --muse-item: url(https://iili.io/fAaYEYB.png);
+        --muse-clr: #998bff;
+        --muse-txt: #5747cc;
+
+        .muse-show .muse-name::before { content: "Aurora Swim"; }
+        .muse-show::after { content: "ลึกลับ อ่อนโยน มีความคิดสร้างสรรค์"; }
+    }
+
+    #role.muse-box {
+        width: 800px;
+        max-width: 100%;
+        margin: auto;
+        background: linear-gradient(#fff0 300px,#fff 400px), url(https://iili.io/f7mrQd7.png) center 100px/contain no-repeat, url(https://iili.io/f7bePdG.png) top left repeat;
+        border-radius: 1rem;
+        padding: 2rem 4rem 4rem;
+        font-family: 'Mali', sans-serif;
+        font-weight: 500;
+        color: #000;
+        text-align: justify;
+
+        .muse-show {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+            &::before {
+                content: "";
+                width: 100%;
+                height: 400px;
+                background: var(--muse-item) center/contain no-repeat;
+                filter: drop-shadow(0 0 0.5rem #fff) drop-shadow(0 0 3rem var(--muse-clr)) drop-shadow(0 0 var(--muse-clr));
+            }
+
+            .muse-intro {
+                font-weight: bold;
+                
+                &::before {
+                    content: "ภูตพิทักษ์ตัวจิ๋วของ ";
+                    font-weight: 500;
+                }
+
+                &::after {
+                    content: " ปรากฏตัว !";
+                    font-weight: 500;
+                }
+            }
+
+            .muse-name {
+                font-family: 'Chalk', sans-serif;
+                font-size: 3rem;
+                font-weight: normal;
+                line-height: 1;
+                text-transform: uppercase;
+                color: var(--muse-txt);
+            }
+        }
+
+        hr {
+            background: transparent;
+            border-block-start: 2px dotted #1f5065;
+            margin-block: 2rem;
+        }
+    }
+}
