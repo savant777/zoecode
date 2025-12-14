@@ -1,0 +1,96 @@
+@-webkit-keyframes cardFlip {
+    0% { transform: rotateZ(0deg) rotateY(180deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(0deg); }
+}
+
+@keyframes cardFlip {
+    0% { transform: rotateZ(0deg) rotateY(180deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(0deg); }
+}
+
+@-webkit-keyframes cardUnFlip {
+    0% { transform: rotateZ(0deg) rotateY(0deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(180deg); }
+}
+
+@keyframes cardUnFlip {
+    0% { transform: rotateZ(0deg) rotateY(0deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(180deg); }
+}
+
+#zzzcode {
+    .ccc-area {
+        width: 300px;
+        min-height: 400px;
+        perspective: 600px;
+        display: flex;
+        margin-inline: auto;
+
+        .ccc-card {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+            -webkit-animation: cardUnFlip 0.275s linear forwards;
+                    animation: cardUnFlip 0.275s linear forwards;
+            
+            .ccc-front, .ccc-back {
+                width: 300px;
+                min-height: 400px;
+                background: #ffebe9;
+                padding: 2rem;
+                -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                
+                border-radius: 1rem;
+                border: 1px solid #d26e2a;
+                display: flex;
+                flex-direction: column;
+
+                .ccc-content {
+                    flex: 1;
+                    margin-block-start: 2rem;
+                    align-content: end;
+                }
+            }
+
+            .ccc-front {
+                position: absolute;
+                z-index: 4;
+                top: 0;
+                left: 0;
+                transform: rotateY(180deg);
+
+                .ccc-case {
+                    text-decoration: underline;
+                    font-size: 0.9rem;
+                }
+                
+                .ccc-title {
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    line-height: 1;
+                }
+            }
+
+            .ccc-back {
+                position: relative;
+
+                .ccc-case {
+                    font-weight: bold;
+                    font-size: unset;
+                }
+            }
+        }
+
+        .ccc-card.ans:hover { 
+            -webkit-animation: cardFlip 0.275s linear .1s forwards;
+                    animation: cardFlip 0.275s linear .1s forwards;
+        }
+    }
+}
