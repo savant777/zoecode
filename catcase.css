@@ -54,10 +54,9 @@
             }
 
             .ccc-front {
-                position: absolute;
+                position: relative;
                 z-index: 4;
                 top: 0;
-                left: 0;
                 transform: rotateY(180deg);
 
                 .ccc-case {
@@ -80,7 +79,8 @@
             }
 
             .ccc-back {
-                position: relative;
+                position: absolute;
+                top: 0;
 
                 .ccc-case {
                     text-decoration: underline;
