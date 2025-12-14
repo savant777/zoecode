@@ -54,8 +54,6 @@
 
                 .ccc-content {
                     flex: 1;
-                    margin-block-start: 2rem;
-                    align-content: end;
                 }
             }
 
@@ -75,6 +73,13 @@
                     font-weight: bold;
                     font-size: 1.5rem;
                     line-height: 1;
+                }
+
+                .ccc-pic {
+                    width: 128px;
+                    aspect-ratio: 1;
+                    background: url(https://iili.io/fYbYDWF.png) center no-repeat;
+                    margin: 1rem auto;
                 }
             }
 
