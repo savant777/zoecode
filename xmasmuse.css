@@ -124,6 +124,9 @@
 
             details.muse-details:last-child { margin-block-end: 0; }
 
+            .codeblock { user-select: all; }
+            .codeblock *::selection { background: #1f5065; }
+
             .muse-item-flex {
                 display: flex;
                 flex-wrap: wrap;
