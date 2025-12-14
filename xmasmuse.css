@@ -240,6 +240,7 @@
     #role.muse-box[muse="Frosti Bear"] {
         --muse-item: url(https://iili.io/fAaYqLG.png);
         --muse-clr: #d5c9f6;
+        --muse-clr2: #d5c9f680;
         --muse-txt: #8c78c2;
 
         .muse-show .muse-name::before { content: "Frosti Bear"; }
@@ -249,6 +250,7 @@
     #role.muse-box[muse="Twinkle Finch"] {
         --muse-item: url(https://iili.io/fAaYn14.png);
         --muse-clr: #f7d7a7;
+        --muse-clr2: #f7d7a780;
         --muse-txt: #c49c5e;
 
         .muse-show .muse-name::before { content: "Twinkle Finch"; }
@@ -258,6 +260,7 @@
     #role.muse-box[muse="Blizzard Fox"] {
         --muse-item: url(https://iili.io/fAaYTk7.png);
         --muse-clr: #f49059;
+        --muse-clr2: #f4905980;
         --muse-txt: #c2581f;
 
         .muse-show .muse-name::before { content: "Blizzard Fox"; }
@@ -267,6 +270,7 @@
     #role.muse-box[muse="Holly Horn"] {
         --muse-item: url(https://iili.io/fAaYorl.png);
         --muse-clr: #b4e8df;
+        --muse-clr2: #b4e8df80;
         --muse-txt: #69b5a8;
 
         .muse-show .muse-name::before { content: "Holly Horn"; }
@@ -276,6 +280,7 @@
     #role.muse-box[muse="Frostbite"] {
         --muse-item: url(https://iili.io/fAaYRIe.png);
         --muse-clr: #ff8baa;
+        --muse-clr2: #ff8baa80;
         --muse-txt: #cc476b;
 
         .muse-show .muse-name::before { content: "Frostbite"; }
@@ -285,6 +290,7 @@
     #role.muse-box[muse="Dewdrop"] {
         --muse-item: url(https://iili.io/fAaY5hu.png);
         --muse-clr: #a4d6fe;
+        --muse-clr2: #a4d6fe80;
         --muse-txt: #5b98c9;
 
         .muse-show .muse-name::before { content: "Dewdrop"; }
@@ -294,6 +300,7 @@
     #role.muse-box[muse="Winter Peep"] {
         --muse-item: url(https://iili.io/fAaY12V.png);
         --muse-clr: #60607c;
+        --muse-clr2: #60607c80;
         --muse-txt: #2a2a4a;
 
         .muse-show .muse-name::before { content: "Winter Peep"; }
@@ -303,6 +310,7 @@
     #role.muse-box[muse="Aurora Swim"] {
         --muse-item: url(https://iili.io/fAaYEYB.png);
         --muse-clr: #998bff;
+        --muse-clr2: #998bff80;
         --muse-txt: #5747cc;
 
         .muse-show .muse-name::before { content: "Aurora Swim"; }
@@ -331,7 +339,7 @@
                 width: 100%;
                 height: 400px;
                 background: var(--muse-item) center/contain no-repeat;
-                filter: drop-shadow(0 0 0.5rem #fff) drop-shadow(0 0 3rem var(--muse-clr)) drop-shadow(0 0 var(--muse-clr));
+                filter: drop-shadow(0 0 0.5rem #fff) drop-shadow(0 0 1rem #fff) drop-shadow(0 0 2rem var(--muse-clr)) drop-shadow(0 0 4rem var(--muse-clr2));
             }
 
             .muse-intro {
