@@ -25,7 +25,7 @@
 #zzzcode {
     .ccc-area {
         width: 300px;
-        min-height: 430px;
+        min-height: 400px;
         perspective: 600px;
         display: flex;
         margin-inline: auto;
