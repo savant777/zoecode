@@ -339,7 +339,7 @@
                 width: 100%;
                 height: 400px;
                 background: var(--muse-item) center/contain no-repeat;
-                filter: drop-shadow(0 0 0.5rem #fff) drop-shadow(0 0 1rem #fff) drop-shadow(0 0 2rem var(--muse-clr)) drop-shadow(0 0 4rem var(--muse-clr2));
+                filter: drop-shadow(0 0 0.5rem #fff) drop-shadow(0 0 2rem #fff) drop-shadow(0 0 var(--muse-clr)) drop-shadow(0 0 2rem var(--muse-clr2));
             }
 
             .muse-intro {
