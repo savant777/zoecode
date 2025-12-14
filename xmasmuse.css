@@ -321,7 +321,7 @@
         width: 800px;
         max-width: 100%;
         margin: auto;
-        background: linear-gradient(#fff0 300px,#fff 400px), url(https://iili.io/f7mrQd7.png) center 100px/contain no-repeat, url(https://iili.io/f7bePdG.png) top left repeat;
+        background: linear-gradient(#fff0 300px,#fff 400px), url(https://iili.io/f7mrQd7.png) center 100px/100% no-repeat, url(https://iili.io/f7bePdG.png) top left repeat;
         border-radius: 1rem;
         padding: 2rem 4rem 4rem;
         font-family: 'Mali', sans-serif;
