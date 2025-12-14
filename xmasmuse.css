@@ -130,7 +130,7 @@
             .muse-item-flex {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 1rem;
+                gap: 1rem 10px;
                 margin-block: 1rem 1.5rem;
             }
 
