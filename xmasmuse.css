@@ -196,7 +196,7 @@
                 align-items: center;
                 row-gap: 0.5rem;
                 flex: 1;
-                min-width: 200px;
+                min-width: 180px;
 
                 &::before {
                     content: "";
@@ -214,7 +214,7 @@
                     background: linear-gradient(160deg, #fff 50%, var(--muse-clr));
 
                     font-family: 'Chalk', sans-serif;
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                     font-weight: normal;
                     line-height: 1;
                     text-transform: uppercase;
