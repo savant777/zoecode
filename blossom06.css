@@ -1,6 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/exclusive');
-@import url('https://db.onlinewebfonts.com/c/7d93988530e8323fc850d8d740951ca0?family=Sloop-ScriptOne');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Brawler:wght@400;700&display=swap');
+
+@font-face {
+    font-family: "Sloop-ScriptOne";
+    src: url('https://savant777.github.io/zoecode/font/Sloop-ScriptOne.otf');
+}
 
 :root {
     --blsm6-primary: #a50036;
