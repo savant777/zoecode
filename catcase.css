@@ -91,6 +91,8 @@
 
                 .ccc-content {
                     margin-block-start: 1rem;
+                    margin-inline-end: calc(-0.25rem - 5px);
+                    padding-inline-end: 0.75rem;
                     overflow: auto;
 
                     &::-webkit-scrollbar { width: 4px; }
