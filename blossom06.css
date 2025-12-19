@@ -87,7 +87,7 @@
 
                 .b6-title {
                     font-family: 'Sloop-ScriptOne', cursive;
-                    font-size: 10rem;
+                    font-size: clamp(6rem, 9vw, 10rem);
                     line-height: 0.6;
                     color: var(--blsm6-primary);
                 }
@@ -102,6 +102,7 @@
             &::after {
                 content: "";
                 flex: 1;
+                min-width: 4rem;
                 height: 2px;
                 background: var(--blsm6-primary);
             }
