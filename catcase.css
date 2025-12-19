@@ -81,6 +81,7 @@
             .ccc-back {
                 position: absolute;
                 top: 0;
+                max-height: 430px;
 
                 .ccc-case {
                     text-decoration: underline;
@@ -90,6 +91,18 @@
 
                 .ccc-content {
                     margin-block-start: 1rem;
+                    overflow: auto;
+
+                    &::-webkit-scrollbar { width: 4px; }
+                    &::-webkit-scrollbar-track { 
+                        background: #d26e2a;
+                        border-inline: 1px solid transparent;
+                        background-clip: padding-box;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: #d26e2a;
+                        border-radius: 10px;
+                    }
                 }
             }
         }
