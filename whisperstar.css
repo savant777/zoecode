@@ -96,7 +96,7 @@
                 content: "";
                 position: absolute;
                 inset: -12.5px;
-                background: radial-gradient(circle, var(--whisp-paper) 70%, transparent 72%) top left / 30px 30px round border-box;
+                background: radial-gradient(circle, var(--whisp-paper) 70%, transparent 72%) top left / 30px 30px space border-box;
                 transform: translateZ(-1px);
                 pointer-events: none;
             }
