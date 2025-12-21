@@ -85,11 +85,21 @@
 
         .whis-paper {
             position: relative;
-            background: radial-gradient(circle, var(--whisp-paper) 70%, transparent 72%) top left / 30px 30px round border-box, var(--whisp-paper) padding-box;
+            background: var(--whisp-paper) padding-box;
             padding: 2rem;
             border: 12.5px solid transparent;
-            color: #000;
+            color: var(--whisp-txt);
             font-family: 'Itim', sans-serif;
+            transform-style: preserve-3d;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                inset: -12.5px;
+                background: radial-gradient(circle, var(--whisp-paper) 70%, transparent 72%) top left / 30px 30px round border-box;
+                transform: translateZ(-1px);
+                pointer-events: none;
+            }
 
             .whis-louisa {
                 display: flex;
