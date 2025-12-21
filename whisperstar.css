@@ -148,6 +148,7 @@
                 --whisp-paper: #e3e1ce;
 
                 label.whis-switch {
+                    label + br, details + br, summary + br { display: none; }
                     * { pointer-events: none; }
 
                     position: relative;
