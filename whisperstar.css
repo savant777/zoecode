@@ -147,8 +147,9 @@
                 margin: auto;
                 --whisp-paper: #e3e1ce;
 
+                label + br, details + br, summary + br { display: none; }
+
                 label.whis-switch {
-                    label + br, details + br, summary + br { display: none; }
                     * { pointer-events: none; }
 
                     position: relative;
