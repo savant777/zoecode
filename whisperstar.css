@@ -1,0 +1,288 @@
+@import url('https://fonts.cdnfonts.com/css/gingerbread-2');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root {
+    --whisp-primary: #af1a20;
+    --whisp-secondary: #0a4d2c;
+    --whisp-paper: #fff;
+    --whisp-txt: #000;
+    --whisp-bg: #e796ad;
+
+    --whisp-pic: gray;
+    --whisp-pos: center;
+    --whisp-size: cover;
+}
+
+@-webkit-keyframes cardFlip {
+    0% { transform: rotateZ(0deg) rotateY(180deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(0deg); }
+}
+
+@keyframes cardFlip {
+    0% { transform: rotateZ(0deg) rotateY(180deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(0deg); }
+}
+
+@-webkit-keyframes cardUnFlip {
+    0% { transform: rotateZ(0deg) rotateY(0deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(180deg); }
+}
+
+@keyframes cardUnFlip {
+    0% { transform: rotateZ(0deg) rotateY(0deg); }
+    50% { transform: rotateZ(10deg) rotateY(90deg); }
+    100% { transform: rotateZ(0deg) rotateY(180deg); }
+}
+
+#WhisperStar { position: relative; }
+#WhisperStar * { box-sizing: border-box; }
+
+#WhisperStar a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#WhisperStar a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#WhisperStar::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#WhisperStar:hover::after { content: "zzzcode"; }
+
+#WhisperStar {
+    #whis-thread.whis-box {
+        position: relative;
+        width: 570px;
+        max-width: 100%;
+        margin: auto;
+        background: var(--whisp-bg);
+        border-radius: 1rem;
+        padding: 30px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--whisp-primary);
+            -webkit-mask: url(https://iili.io/f0BXp0N.png) top center/100%;
+            mask: url(https://iili.io/f0BXp0N.png) top center/100%;
+            border-radius: 1rem;
+        }
+
+        .whis-paper {
+            position: relative;
+            background: radial-gradient(circle, var(--whisp-paper) 70%, transparent 72%) top left / 30px 30px round border-box, var(--whisp-paper) padding-box;
+            padding: 2rem;
+            border: 12.5px solid transparent;
+            color: #000;
+            font-family: 'Itim', sans-serif;
+
+            .whis-louisa {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .whis-louisa-frame {
+                    position: relative;
+                    width: 250px;
+                    aspect-ratio: 186/247;
+                    background: url(https://iili.io/f0oGegS.png) center/contain no-repeat;
+                    margin: auto;
+                    transform-style: preserve-3d;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 68px 30px 32px;
+                        background: var(--whisp-pic) var(--whisp-pos)/var(--whisp-size) no-repeat;
+                        transform: translateZ(-1px);
+                    }
+                }
+
+                .whis-louisa-name {
+                    font-family: 'Gingerbread', sans-serif;
+                    font-size: 3rem;
+                    text-align: center;
+                    color: var(--whisp-primary);
+                    text-shadow: 0 0 var(--whisp-primary), 0 0 var(--whisp-primary), 0 0 var(--whisp-primary);
+                }
+
+                .whis-louisa-comment {
+                    --whisp-paper: #fffeea;
+                    background: linear-gradient(var(--whisp-paper) 0 0) padding-box, repeating-linear-gradient(45deg, var(--whisp-primary) 0 15px, var(--whisp-paper) 15px 30px) border-box;
+                    border-radius: 1rem;
+                    padding: 1.5rem;
+                    border: 0.5rem solid transparent;
+                }
+            }
+
+            hr {
+                width: 600px;
+                max-width: 100%;
+                height: unset;
+                aspect-ratio: 736/121;
+                margin-block: 2rem 1rem;
+                background: var(--whisp-primary);
+                -webkit-mask: url(https://iili.io/f0zY78g.png) center/contain no-repeat;
+                mask: url(https://iili.io/f0zY78g.png) center/contain no-repeat;
+            }
+
+            .whis-enchanter {
+                width: 420px;
+                perspective: 600px;
+                margin: auto;
+                --whisp-paper: #e3e1ce;
+
+                label.whis-switch {
+                    * { pointer-events: none; }
+
+                    position: relative;
+                    display: block;
+                    height: 210px;
+                    margin-block-end: 1rem;
+                    
+                    transform-style: preserve-3d;
+                    transform: rotateY(180deg);
+
+                    cursor: pointer;
+                    pointer-events: auto;
+
+                    input[type="checkbox"] {
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                    }
+
+                    .whis-card-front, .whis-card-back {
+                        width: 100%;
+                        height: 210px;
+                        background: radial-gradient(circle, var(--whisp-paper) 70%, transparent 72%) top left / 30px 30px round border-box, var(--whisp-paper) padding-box;
+                        padding: 1rem;
+                        border-block: 12.5px solid transparent;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        filter: drop-shadow(0 0 1px var(--whisp-secondary)) drop-shadow(0 0 var(--whisp-secondary)) drop-shadow(0 0 var(--whisp-secondary)) drop-shadow(0 0 var(--whisp-secondary)) drop-shadow(0 0 var(--whisp-secondary));
+                    }
+
+                    .whis-card-front {
+                        position: relative;
+                        z-index: 4;
+                        top: 0;
+                        transform: rotateY(180deg);
+                        
+                        display: flex;
+                        align-items: center;
+                        column-gap: 1rem;
+
+                        .whis-frame {
+                            position: relative;
+                            width: 130px;
+                            aspect-ratio: 202/237;
+                            background: url(https://iili.io/f0oGO12.png) center/contain no-repeat;
+                            transform-style: preserve-3d;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                inset: 20px 18px 18px;
+                                background: var(--whisp-pic) var(--whisp-pos)/var(--whisp-size) no-repeat;
+                                transform: translateZ(-1px);
+                            }
+                        }
+
+                        .whis-name {
+                            flex: 1;
+                            font-family: 'Gingerbread', sans-serif;
+                            font-size: 2.5rem;
+                            line-height: 1;
+                            text-align: center;
+                            color: var(--whisp-primary);
+                            text-shadow: 0 0 var(--whisp-primary), 0 0 var(--whisp-primary);
+                        }
+                    }
+
+                    .whis-card-back {
+                        position: absolute;
+                        top: 0;
+
+                        .whis-content {
+                            height: 154px;
+                            overflow: auto;
+                            padding-inline-end: 1rem;
+                            pointer-events: auto;
+
+                            &::-webkit-scrollbar { width: 5px; }
+
+                            &::-webkit-scrollbar-track { 
+                                background: var(--whisp-secondary);
+                                border-inline: 2px solid transparent;
+                                background-clip: padding-box;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background: var(--whisp-secondary);
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+
+                    &:not(:has(input:checked)) {
+                        -webkit-animation: cardUnFlip 0.275s linear .1s forwards !important;
+                        animation: cardUnFlip 0.275s linear .1s forwards !important;
+                    }
+
+                    &:has(input:checked) {
+                        -webkit-animation: cardFlip 0.275s linear .1s forwards !important;
+                        animation: cardFlip 0.275s linear .1s forwards !important;
+                    }
+                }
+
+                details > summary {
+                    list-style: none;
+                    cursor: pointer;
+                }
+
+                details > summary::marker,
+                details > summary::-webkit-details-marker {
+                    display: none;
+                }
+
+                details {
+                    background: var(--whisp-paper);
+                    border-radius: 1rem;
+                    border: 2px dashed var(--whisp-secondary);
+
+                    summary {
+                        padding: 1rem;
+                        text-align: center;
+                        font-family: 'Gingerbread', sans-serif;
+                        font-size: 2rem;
+                        line-height: 1;
+                        color: var(--whisp-secondary);
+                        text-shadow: 0 0 var(--whisp-secondary);
+                    }
+
+                    .whis-comment {
+                        border-block-start: 2px dashed var(--whisp-secondary);
+                        padding-block: 1rem;
+                        margin-inline: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
