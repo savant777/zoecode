@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --type-txt: #000;
+    --type-bg: #eee;
+    --type-primary: transparent;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#TypeWriter.type-box {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    padding-block-end: clamp(335px, 30vw, 465px);
+
+    .type-paper {
+        position: relative;
+        min-height: 250px;
+        width: 63.55%;
+        margin-inline-start: 23%;
+        padding: clamp(3rem, 3vw, 4rem) 2rem 6rem;
+
+        background: linear-gradient(transparent 0 150px, var(--type-bg) 200px 85%, #000 115%);
+        color: var(--type-txt);
+        
+        font-family: 'Sarabun', sans-serif;
+        font-size: 15px;
+        
+        transform-style: preserve-3d;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            transform: translateZ(-1px);
+            
+            width: 100%;
+            aspect-ratio: 487/310;
+            background: var(--type-bg);
+            -webkit-mask: url(https://iili.io/fGaDFf4.png) top center/100% no-repeat;
+            mask: url(https://iili.io/fGaDFf4.png) top center/100% no-repeat;
+        }
+
+        .type-head {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 0.5rem;
+            
+            border-block-end: 1px solid var(--type-txt);
+            padding-inline: 4px;
+            padding-block-end: 0.5rem;
+            margin-block-end: 1.2rem;
+            
+            font-family: 'Courier Prime', 'Sarabun', sans-serif;
+            font-weight: bold;
+            line-height: 1;
+
+            div:first-child { text-align: start; }
+            div:last-child { text-align: end; }
+        }
+
+        hr {
+            background: var(--type-txt);
+            margin-block: 1.7rem 0.7rem;
+            width: 100%;
+        }
+    }
+
+    .type-writer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        width: 100%;
+        aspect-ratio: 861/611;
+        background: url(https://iili.io/fGC24Ub.png) center/contain no-repeat;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--type-primary);
+            -webkit-mask: url(https://iili.io/fGqjBHX.png) center/contain no-repeat;
+            mask: url(https://iili.io/fGqjBHX.png) center/contain no-repeat;
+            mix-blend-mode: overlay;
+        }
+    }
+}
