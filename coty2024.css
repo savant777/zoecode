@@ -2,8 +2,8 @@
 @import url('https://fonts.cdnfonts.com/css/caneta-script-personal-use');
 
 @font-face {
-    font-family: 'SOV KlabBaan';
-    src: url('https://cdn.jsdelivr.net/gh/savant777/zoecode@main/font/SOV_KlabBaan.ttf') format('truetype');
+    font-family: 'KC Leftovers Plus';
+    src: url('https://savant777.github.io/zoecode/font/KC Leftovers Plus.ttf') format('truetype');
 }
 
 :root {
@@ -263,9 +263,8 @@ h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
                 position: relative;
                 top: 0;
 
-                font-family: 'Caneta Script PERSONAL USE', 'SOV KlabBaan', sans-serif;
-                font-size: calc(var(--coty-fontsize) * 1rem);
-                font-size-adjust: cap-height 0.75;
+                font-family: 'Caneta Script PERSONAL USE', 'KC Leftovers Plus', sans-serif;
+                font-size: clamp(2rem, 3vw, 3rem);
                 line-height: 1;
                 color: var(--coty-primary);
             }
@@ -275,7 +274,7 @@ h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
                 justify-content: space-between;
                 flex-wrap: wrap;
                 border-block: 1px solid var(--coty-txt);
-                margin-block: -1rem 1rem;
+                margin-block: 0 1rem;
 
                 .coty2024-from::before, .coty2024-owner::before {                    
                     text-transform: uppercase;
