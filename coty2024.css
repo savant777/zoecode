@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.cdnfonts.com/css/thesignature');
+@import url('https://fonts.cdnfonts.com/css/sparkling-horizon');
 
 @font-face {
     font-family: 'SOV KlabBaan';
@@ -250,6 +250,7 @@ h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
             aspect-ratio: 300/152;
             background: url(https://iili.io/2wZnXp4.png) center/contain no-repeat;
             filter: sepia(1) contrast(0.5);
+            mix-blend-mode: difference;
         }
 
         .coty2024-right {
@@ -262,7 +263,7 @@ h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
                 position: relative;
                 top: 0;
 
-                font-family: 'Thesignature', 'SOV KlabBaan', sans-serif;
+                font-family: 'Sparkling Horizon', 'SOV KlabBaan', sans-serif;
                 font-size: calc(var(--coty-fontsize) * 1rem);
                 font-size-adjust: 0.5;
                 line-height: 1;
