@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.cdnfonts.com/css/sparkling-horizon');
+@import url('https://fonts.cdnfonts.com/css/caneta-script-personal-use');
 
 @font-face {
     font-family: 'SOV KlabBaan';
@@ -263,9 +263,9 @@ h1.coty2024-title + br, br:has(+ h1.coty2024-title) { display: none; }
                 position: relative;
                 top: 0;
 
-                font-family: 'Sparkling Horizon', 'SOV KlabBaan', sans-serif;
+                font-family: 'Caneta Script PERSONAL USE', 'SOV KlabBaan', sans-serif;
                 font-size: calc(var(--coty-fontsize) * 1rem);
-                font-size-adjust: 0.5;
+                font-size-adjust: cap-height 0.75;
                 line-height: 1;
                 color: var(--coty-primary);
             }
