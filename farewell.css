@@ -3,6 +3,8 @@
 :root {
     --fwpic: black;
     --fwposition: center;
+    --fwsize: cover;
+    
     --bg-color: #eaeaea;
     --block-color: #f28f3d;
     --block-color-hover: #edaa88;
@@ -15,13 +17,8 @@
     --fwfont-th: 'Noto Sans Thai';
 }
 
-#zzzcode {
-    position: relative;
-}
-
-#zzzcode div {
-    box-sizing: border-box;
-}
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
 
 #zzzcode a[href="https://discord.com/users/625292873914515456/"] {
     height: 12px;
@@ -32,9 +29,7 @@
     right: 0;
 }
 
-#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child {
-    position: relative;
-}
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #zzzcode::after {
     display: block;
@@ -46,32 +41,9 @@
     text-align: center;
 }
   
-#zzzcode:hover::after {
-    content: "zzzcode";
-}
+#zzzcode:hover::after { content: "zzzcode"; }
 
-#zzzcode details[open] summary .fwflex {
-    background: var(--block-color);
-    color: var(--block-text-color);
-}
-
-#zzzcode details br {
-    display: none;
-}
-
-#zzzcode summary {
-    cursor: pointer;
-}
-
-#zzzcode summary::marker {
-    content: '';
-}
-
-#zzzcode summary::-webkit-details-marker {
-    display: none;
-}
-
-.fwbox {
+#zzzcode .fwbox {
     width: 800px;
     max-width: 100%;
     margin: auto;
@@ -82,85 +54,94 @@
     font-family: var(--fwfont-en), var(--fwfont-th);
     line-height: 1.2;
     font-size: clamp(14px, 1vw, 17px);
-}
 
-.fwtitle {
-    font-weight: bold;
-    font-size: 2.5rem;
-}
+    .fwtitle {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
 
-.fwname {
-    font-size: 1rem;
-    color: var(--name-text-color);
-}
+    .fwname {
+        font-size: 1rem;
+        color: var(--name-text-color);
+    }
 
-.fwhr {
-    background: var(--hr-color);
-    margin: 2vw 0;
-}
+    hr.fwhr {
+        background: var(--hr-color);
+        margin: 2vw 0;
+    }
 
-.fwstampset {
-    display: flex;
-    gap: 2vw;
-    padding: 0 2vw;
-}
+    .fwstampset {
+        display: flex;
+        column-gap: 2vw;
+        padding: 0 2vw;
 
-.fwstamp {
-    flex: 1;
-    padding: 1vw;
-    background: var(--stamp-color);
-    border-radius: 6px;
-}
+        .fwstamp {
+            flex: 1;
+            padding: 1vw;
+            background: var(--stamp-color);
+            border-radius: 6px;
 
-.fwstampimg {
-    width: 100%;
-    aspect-ratio: 1/1;
-    max-height: 200px;
-    border-radius: 3px;
-    background: var(--fwpic) var(--fwposition)/cover no-repeat;
-}
+            .fwstampimg {
+                width: 100%;
+                aspect-ratio: 1/1;
+                max-height: 200px;
+                border-radius: 3px;
+                background: var(--fwpic) var(--fwposition)/var(--fwsize) no-repeat;
+            }
+        }
+    }
 
-.fwflexset {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 1vw;
-}
+    .fwflexset {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1vw;
 
-.fwmin {
-    flex: 1;
-    min-width: 300px;
-}
+        .fwmin {
+            flex: 1;
+            min-width: 300px;
+        }
 
-.fwflex {
-    display: flex;
-    vertical-align: middle;
-    gap: 1vw;
-    align-items: center;
-    border-radius: 6px;
-    padding: 0.5rem;
-}
+        details > summary {
+            list-style: none;
+            cursor: pointer;
 
-.fwflex:hover {
-    background-color: var(--block-color-hover);
-}
+            .fwflex {
+                display: flex;
+                vertical-align: middle;
+                column-gap: 1vw;
+                align-items: center;
+                border-radius: 6px;
+                padding: 0.5rem;
 
-.fwno, .fwquestion {
-    font-weight: bold;
-}
+                &:hover { background-color: var(--block-color-hover); }
 
-.fwno {
-    min-width: 15px; 
-}
+                .fwno {
+                    font-weight: bold;
+                    min-width: 1rem;
+                }
 
-.fwimg {
-    aspect-ratio: 1/1;
-    height: 2.5rem;
-    border-radius: 3px;
-    background: var(--fwpic) var(--fwposition)/cover no-repeat;
-}
+                .fwimg {
+                    aspect-ratio: 1/1;
+                    height: 2.5rem;
+                    border-radius: 3px;
+                    background: var(--fwpic) var(--fwposition)/var(--fwsize) no-repeat;
+                }
 
-.fwtxt {
-    padding: 1vw 0.5rem;
-    padding-left: calc(15px + 1vw + 0.5rem) !important;
-    line-height: normal;
+                .fwquestion { font-weight: bold; }
+            }
+        }
+
+        details > summary::marker, details > summary::-webkit-details-marker { display: none; }
+
+        details[open] > summary > .fwflex {
+            background: var(--block-color);
+            color: var(--block-text-color);
+        }
+
+        details .fwtxt {
+            padding: 1vw 0.5rem;
+            padding-left: calc(1vw + 1.5rem) !important;
+            line-height: normal;
+        }
+    }
 }
