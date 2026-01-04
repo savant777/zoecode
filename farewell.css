@@ -127,6 +127,8 @@
                     background: var(--fwpic) var(--fwposition)/var(--fwsize) no-repeat;
                 }
 
+                .fwimg:not([style*="http"]) { display: none; }
+
                 .fwquestion { font-weight: bold; }
             }
         }
