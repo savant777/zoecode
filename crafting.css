@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+:root {
+    --craft-txt: #888;
+    --craft-bg: transparent;
+    --craft-width: 500px;
+
+    --craft-pic: transparent;
+    --craft-pos: center;
+    --carft-size: cover;
+
+    --craft-item: transparent;
+    --craft-ipos: center;
+    --carft-isize: contain;
+
+    --bk-40: #00000040;
+    --bk-60: #00000060;
+    --bk-80: #00000080;
+    --wt: #fff;
+    --wt-80: #ffffff80;
+
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#Crafting.craft-box {
+    width: var(--craft-width);
+    max-width: 100%;
+    margin: auto;
+    padding: calc(var(--craft-width)/16);
+    background: var(--craft-bg);
+
+    &::before {
+        content: "Crafting";
+        font-family: 'DotGothic16', sans-serif;
+        font-size: 2rem;
+        line-height: 1;
+        color: var(--craft-txt);
+        margin-block-end: calc(var(--craft-width)*0.5/16);
+    }
+
+    .craft-set {
+        display: flex;
+        flex-direction: row;
+        column-gap: calc(var(--craft-width)/16);
+        align-items: center;
+
+        .craft-grid {
+            order: 1;
+            position: relative;
+            width: calc(var(--craft-width)*6/16);
+            height: calc(var(--craft-width)*6/16);
+            
+            display: grid;
+            grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+            grid-gap: 3px;
+            
+            border-right: 1px solid var(--bk-40);
+            border-bottom: 1px solid var(--bk-40);
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: 
+                    linear-gradient(var(--bk-60) 0 3px, transparent 4px 62.5px, var(--bk-60) 63.5px 66.5px, transparent 67.5px 126px, var(--bk-60) 127px 130px, transparent 131px 100%), linear-gradient(90deg, var(--bk-60) 0 3px, transparent 4px 62.5px, var(--bk-60) 63.5px 66.5px, transparent 67.5px 126px, var(--bk-60) 127px 130px, transparent 131px 100%), linear-gradient(transparent 0 59.5px, var(--wt) 60.5px 63.5px, transparent 64.5px 123px, var(--wt) 124px 127px, transparent 128px calc(100% - 4px), var(--wt) calc(100% - 3px) 101%), linear-gradient(90deg, transparent 0 59.5px, var(--wt) 60.5px 63.5px, transparent 64.5px 123px, var(--wt) 124px 127px, transparent 128px calc(100% - 4px), var(--wt) calc(100% - 3px) 101%);
+            }
+
+            .craft-item {
+                background: var(--craft-item) var(--craft-ipos)/var(--craft-isize) no-repeat content-box, var(--wt-80);
+                padding: 12px;
+            }
+        }
+
+        &::after {
+            content: "";
+            order: 2;
+            width: calc(var(--craft-width)*2/16);
+            aspect-ratio: 150/101;
+            background: var(--craft-txt);
+            -webkit-mask: url(https://iili.io/fOEp08J.png) center/contain no-repeat;
+            mask: url(https://iili.io/fOEp08J.png) center/contain no-repeat;
+        }
+
+        .craft-pic {
+            order: 3;
+            position: relative;
+            width: calc(var(--craft-width)*4/16);
+            height: calc(var(--craft-width)*4/16);
+            background: var(--craft-pic) var(--craft-pos)/var(--craft-size) no-repeat content-box, var(--wt-80);
+            border-right: 1px solid var(--bk-40);
+            border-bottom: 1px solid var(--bk-40);
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: 
+                    linear-gradient(var(--bk-80) 0 3px, transparent 4px 100%), linear-gradient(90deg, #00000080 0 3px, transparent 4px 100%), linear-gradient(to top, #fff 0 3px, transparent 4px 100%), linear-gradient(-90deg, #fff 0 3px, transparent 4px 100%);
+            }
+        }
+    }
+}
