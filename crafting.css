@@ -93,7 +93,7 @@
 
             .craft-item {
                 background: var(--craft-item) var(--craft-ipos)/var(--craft-isize) no-repeat content-box, var(--wt-80);
-                padding: 12px;
+                padding: 12px 9px 9px 12px;
             }
         }
 
