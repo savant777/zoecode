@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Cinzel:wght@400..900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --lake-fade: 5;
+
+    --lake-head: gray;
+    --lake-hpos: center;
+    --lake-hsize: cover;
+
+    --lake-bg: black;    
+    --lake-bgpos: center;
+    --lake-bgsize: cover;
+
+    --lake-bgoverlay: #140d1c;
+
+    --blur1: #BBDEFB;
+    --blur2: #D1C4E9;
+
+    --lake-pic: gray;
+    --lake-pos: center;
+    --lake-size: cover;
+
+    --lake-h: 450px;
+
+    --lake-maincolor: #cb9ac1;
+
+    --lake-blur1: #bdb3cc;
+    --lake-blur2: #bdb3cc;
+    --lake-blur3: #b5b3cc;
+
+    --lake-hue: 0deg;
+}
+
+#Lake { position: relative; }
+#Lake * { box-sizing: border-box; }
+
+#Lake a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#Lake a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#Lake::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#Lake:hover::after { content: "zzzcode"; }
+
+#Lake {
+    #lakerole .lakebox {
+        width: 800px;
+        max-width: 95%;
+        margin: auto;
+        color: #fff;
+
+        .lake-head {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3;
+            mask: linear-gradient(transparent calc(0% - calc(var(--lake-fade) * 2%)) calc(0% + calc(var(--lake-fade) * 1%)), black, transparent calc(100% - calc(var(--lake-fade) * 1%)) calc(100% + calc(var(--lake-fade) * 2%))) center/cover no-repeat;
+            -webkit-mask: linear-gradient(transparent calc(0% - calc(var(--lake-fade) * 2%)) calc(0% + calc(var(--lake-fade) * 1%)), black, transparent calc(100% - calc(var(--lake-fade) * 1%)) calc(100% + calc(var(--lake-fade) * 2%))) center/cover no-repeat;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--lake-head) var(--lake-hpos)/var(--lake-hsize) no-repeat;
+                mask: linear-gradient(90deg, transparent calc(0% - calc(var(--lake-fade) * 2%)) calc(0% + calc(var(--lake-fade) * 1%)), black, transparent calc(100% - calc(var(--lake-fade) * 1%)) calc(100% + calc(var(--lake-fade) * 2%))) center/cover no-repeat;
+                -webkit-mask: linear-gradient(90deg, transparent calc(0% - calc(var(--lake-fade) * 2%)) calc(0% + calc(var(--lake-fade) * 1%)), black, transparent calc(100% - calc(var(--lake-fade) * 1%)) calc(100% + calc(var(--lake-fade) * 2%))) center/cover no-repeat;
+            }
+        }
+
+        .lake-body {
+            position: relative;
+            width: calc(100% - 4px);
+            margin: auto;
+            border-radius: 1.5rem 0 1.5rem 0;
+            border: 2px solid var(--lake-maincolor);
+            padding: 3rem;
+            transform-style: preserve-3d;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 1.4rem 0 1.4rem 0;
+                background: var(--lake-bg) var(--lake-bgpos)/var(--lake-bgsize) border-box;
+                opacity: 0.5;
+                transform: translateZ(-2px);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: translate(30%, 30%);
+                width: 100px;
+                aspect-ratio: 1;
+                background: url(https://iili.io/fYgpFI9.png) center/contain no-repeat;
+            }
+
+            .lake-blur {
+                position: absolute;
+                inset: 0;
+                overflow: hidden;
+                border-radius: 1.4rem 0 1.4rem 0;
+                background: var(--lake-bgoverlay);
+                opacity: 0.9;
+                transform: translateZ(-1px);
+
+                .blur1, .blur2, .blur3, .blur4 {
+                    position: absolute;
+                    display: block;
+                    width: 500px;
+                    aspect-ratio: 1;
+                    mix-blend-mode: hard-light;
+                    opacity: 0.8;
+                }
+
+                .blur1 {
+                    background: radial-gradient(farthest-corner at 70% 50%, var(--blur1), transparent 70% 160%);
+                    top: 0;
+                    right: -100px;
+                    transform: translateY(-50%);
+                }
+
+                .blur2 {
+                    background: radial-gradient(farthest-corner at 30% 50%, var(--blur1), transparent 70% 160%);
+                    bottom: 0;
+                    left: -100px;
+                    transform: translateY(50%);
+                }
+
+                .blur3 {
+                    background: radial-gradient(farthest-corner at 50% 30%, var(--blur2), transparent 70% 160%);
+                    top: -100px;
+                    right: 0;
+                    transform: translateX(50%);
+                }
+
+                .blur4 {
+                    background: radial-gradient(farthest-corner at 50% 70%, var(--blur2), transparent 70% 160%);
+                    bottom: -100px;
+                    left: 0;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .lake-pic {
+                position: absolute;
+                top: -4rem;
+                left: 1.2rem;
+
+                &::before {
+                    content: "";
+                    position: relative;
+                    display: inline-block;
+                    height: 205px;
+                    aspect-ratio: 445 / 947;
+                    background: url(https://i.imgur.com/LfYFkpC.png) center/contain no-repeat;
+                    rotate: -10deg;
+                }
+
+                &::after {
+                    content: "";
+                    position: relative;
+                    display: inline-block;
+                    width: 190px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    border: 3px solid var(--lake-maincolor);
+                    margin-left: -2rem;
+                    background: var(--lake-pic) var(--lake-pos)/var(--lake-size) no-repeat;
+                    vertical-align: super;
+                }
+            }
+
+            .lake-info {
+                position: relative;
+                width: calc(100% - 230px);
+                margin-inline: auto 0;
+                text-align: end;
+
+                .lake-name {
+                    font-family: 'Cinzel', sans-serif;
+                    font-size: 2.5rem;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+
+                .lake-surname {
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 1.1rem;
+                    line-height: 1;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                }
+
+                .lake-desc {
+                    font-size: 1rem;
+                    color: var(--lake-maincolor);
+                    letter-spacing: 2px;
+                }
+            }
+
+            .lake-content {
+                font-family: 'Bai Jamjuree', sans-serif;
+                margin-block-start: 3rem;
+                text-align: justify;
+            }
+
+            hr {
+                height: 30px;
+                background: var(--lake-maincolor);
+                margin-block: 2.5rem 2rem;
+                mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
+                -webkit-mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
+            }
+        }
+    }
+
+    #lakethread .lakebox {
+        width: 100%;
+        position: relative;
+        background: linear-gradient(rgba(0,0,0,1) 350px, rgba(0,0,0,0.9)), var(--lake-bg) var(--lake-bgpos)/var(--lake-bgsize) repeat;
+        font-size: clamp(14px, 1vw, 18px);
+        color: #ccc;
+        overflow: hidden;
+
+        .lake-head {
+            height: var(--lake-h);
+            background: var(--lake-head) var(--lake-hpos)/var(--lake-hsize) no-repeat;
+            mask-image: linear-gradient(black 50%, transparent);
+            -webkit-mask-image: linear-gradient(black 50%, transparent);
+        }
+
+        .lakeplace, .lakedesc{
+            padding-inline: 2rem;
+            text-align: center;
+            color: var(--lake-maincolor);
+        }
+
+        .lakeplace { margin-top: -3rem; font-size: 3rem; }
+        .lakedesc { margin-top: -1rem; font-size: 1rem; }
+
+        .lake-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem 4rem;
+
+            p { text-indent: 50px; }
+
+            .lake-grid {
+                display: grid;
+                grid-template-columns: 10vw 1fr;
+                gap: 1vw;
+                font-family: 'Bai Jamjuree', sans-serif;
+
+                .lake-gname {
+                    grid-column: 1/3;
+                    font-family: 'Cinzel', sans-serif;
+                    font-size: 2vw;
+                    line-height: 1;
+                    color: #ccc;
+                    letter-spacing: 2px;
+                }
+
+                .lake-gpic {
+                    grid-column: 1/2;
+                    height: 10vw;
+                    border: min(0.3vw, 3px) solid var(--lake-maincolor);
+                    border-radius: 1.5vw;
+                    background: var(--lake-pic) var(--lake-pos)/var(--lake-size) no-repeat;
+                }
+
+                .lake-gcontent {
+                    grid-column: 2/3;
+                    height: 10vw;
+                    position: relative;
+                    padding: 1vw 1.5vw;
+                    transform-style: preserve-3d;
+                    font-size: 1vw;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border-radius: 0.5rem;
+                        background: var(--lake-maincolor);
+                        opacity: 0.25;
+                        transform: translateZ(-1px);
+                    }
+
+                    .lake-title {
+                        height: 2vw;
+                        align-content: center;
+                    }
+
+                    .lake-scroll {
+                        max-height: 4vw;
+                        overflow: auto;
+                        scrollbar-width: none;
+                        padding-bottom: 1vw;
+                        mask: linear-gradient(to bottom, black 80%, transparent 100%);
+                        -webkit-mask: linear-gradient(to bottom, black 80%, transparent 100%);
+                    }
+
+                    .lake-foot {
+                        width: 80%;
+                        display: flex;
+                        column-gap: 1vw;
+
+                        .footbox {
+                            position: relative;
+                            flex: 1;
+                            border: 0.1vw solid var(--lake-maincolor);
+                            border-radius: 0.5vw;
+                            align-content: center;
+                            padding: 0 0.5vw;
+                            transform-style: preserve-3d;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                inset: 0;
+                                border-radius: 0.4vw;
+                                background: var(--lake-maincolor);
+                                opacity: 0.25;
+                                transform: translateZ(-1px);
+                            }
+                        }
+
+                        .footbox.reward::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            transform: translateY(-50%);
+                            display: block;
+                            width: 1.75vw;
+                            aspect-ratio: 1;
+                            background: url(https://iili.io/fYgpFI9.png) center/contain no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        hr {
+            height: 30px;
+            background: var(--lake-maincolor);
+            margin-block: 2.5rem 2rem;
+            mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
+            -webkit-mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
+        }
+
+        .lake-flex {
+            display: flex;
+            max-width: 600px;
+            margin: auto;
+            padding: 4rem 2rem;
+
+            .lakeleft {
+                flex: 1;
+                min-height: 300px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 15px;
+                    left: -10px;
+                    height: 235px;
+                    aspect-ratio: 445 / 947;
+                    background: url(https://i.imgur.com/LfYFkpC.png) center/contain no-repeat;
+                    filter: hue-rotate(var(--lake-hue));
+                }
+                
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 200px;
+                    aspect-ratio: 3/4;
+                    background: var(--lake-maincolor);
+                    border-radius: 100px 100px 0 0;
+                }
+
+                .lakepic {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 200px;
+                    height: 100%;
+                    background: var(--lake-pic) var(--lake-pos)/var(--lake-size) no-repeat;
+                }
+            }
+
+            .lakeright {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                color: var(--lake-maincolor);
+                letter-spacing: 2px;
+
+                .lakenpc { margin-bottom: 1rem; }
+                .lakenpc::before { content: 'NPC ประจำสถานที่';}
+                .lakenpc[txt]::before { content: attr(txt);}
+
+                .lakename, .lakesurname {
+                    color: #ccc;
+                    text-transform: uppercase;
+                }
+
+                .lakename { font: 3rem/1 'Cinzel'; }
+
+                .lakesurname {
+                    margin-left: 4px;
+                    font: 0.75rem/1 'Quicksand';
+                    letter-spacing: 4px;
+                }
+
+                .lakerole { margin-top: 1rem; }
+            }
+        }
+
+        .lakeblur1, .lakeblur2, .lakeblur3 {
+            position: absolute;
+            z-index: 1;
+            width: 30rem;
+            height: 30rem;
+            border-radius: 100%;
+            filter: blur(100px);
+            mix-blend-mode: hard-light;
+        }
+
+        .lakeblur1 {
+            top: -3rem;
+            right: -18rem;
+            background: var(--lake-blur1);
+        }
+
+        .lakeblur2 {
+            bottom: -10rem;
+            left: -20rem;
+            background: var(--lake-blur2);
+        }
+
+        .lakeblur3 {
+            bottom: -20rem;
+            left: -8rem;
+            background: var(--lake-blur3);
+        }
+    }
+}

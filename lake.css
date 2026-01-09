@@ -47,128 +47,131 @@
     font-size: clamp(14px, 1vw, 18px);
     color: #ccc;
     overflow: hidden;
-}
+    
+    .laketop {
+        height: var(--lake-h);
+        background: var(--lake-top) var(--lake-pos)/var(--lake-sz) no-repeat;
+        mask-image: linear-gradient(black 50%, transparent);
+        -webkit-mask-image: linear-gradient(black 50%, transparent);
+    }
+    
+    .lakeplace, .lakedesc{
+        padding-inline: 2rem;
+        text-align: center;
+        color: var(--lake-maincolor);
+    }
 
-.laketop {
-    height: var(--lake-h);
-    background: var(--lake-top) var(--lake-pos)/var(--lake-sz) no-repeat;
-    mask-image: linear-gradient(black 50%, transparent);
-    -webkit-mask-image: linear-gradient(black 50%, transparent);
-}
+    .lakeplace { margin-top: -3rem; font-size: 3rem; }
 
-.lakeplace, .lakedesc{
-    padding-inline: 2rem;
-    text-align: center;
-    color: var(--lake-maincolor);
-}
+    .lakedesc { margin-top: -1rem; font-size: 1rem; }
 
-.lakeplace { margin-top: -3rem; font-size: 3rem; }
+    .lakecontent { 
+        padding: 2rem 4rem;
 
-.lakedesc { margin-top: -1rem; font-size: 1rem; }
+        p { text-indent: 50px; }
+    }
+    
+    .lakehr {
+        mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
+        -webkit-mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
+        background: var(--lake-maincolor);
+        height: 30px;
+    }
+    
+    .lakeflex {
+        display: flex;
+        max-width: 600px;
+        margin: auto;
+        padding: 4rem 2rem;
 
-.lakecontent { padding: 2rem 4rem; }
-.lakecontent p { text-indent: 50px; }
+        .lakeleft {
+            flex: 1;
+            min-height: 300px;
+            position: relative;
 
-.lakehr {
-    mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
-    -webkit-mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
-    background: var(--lake-maincolor);
-    height: 30px;
-}
+            .lakefeather {
+                position: absolute;
+                bottom: 15px;
+                left: -10px;
+                height: 235px;
+                aspect-ratio: 445 / 947;
+                background: url(https://i.imgur.com/LfYFkpC.png) center/contain no-repeat;
+            }
+            
+            .lakepicbg, .lakepic {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 200px;
+            }
 
-.lakeflex {
-    display: flex;
-    max-width: 600px;
-    margin: auto;
-    padding: 4rem 2rem;
-}
+            .lakepicbg {
+                aspect-ratio: 3/4;
+                background: var(--lake-maincolor);
+                border-radius: 100px 100px 0 0;
+            }
 
-.lakeleft {
-    flex: 1;
-    min-height: 300px;
-    position: relative;
-}
+            .lakepic {
+                height: 100%;
+                background: var(--lake-pic) var(--lake-pos)/var(--lake-sz) no-repeat;
+            }
+        }
 
-.lakefeather {
-    position: absolute;
-    bottom: 15px;
-    left: -10px;
-    height: 235px;
-    aspect-ratio: 445 / 947;
-    background: url(https://i.imgur.com/LfYFkpC.png) center/contain no-repeat;
-}
+        .lakeright {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            color: var(--lake-maincolor);
+            letter-spacing: 2px;
 
-.lakepicbg, .lakepic {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 200px;
-}
+            .lakenpc { margin-bottom: 1rem; }
+            .lakenpc::before { content: 'NPC ประจำสถานที่';}
+            .lakenpc[txt]::before { content: attr(txt);}
 
-.lakepicbg {
-    aspect-ratio: 3/4;
-    background: var(--lake-maincolor);
-    border-radius: 100px 100px 0 0;
-}
+            .lakename, .lakesurname {
+                color: #ccc;
+                text-transform: uppercase;
+            }
 
-.lakepic {
-    height: 100%;
-    background: var(--lake-pic) var(--lake-pos)/var(--lake-sz) no-repeat;
-}
+            .lakename { font: 3rem/1 'Cinzel'; }
 
-.lakeright {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    color: var(--lake-maincolor);
-    letter-spacing: 2px;
-}
+            .lakesurname {
+                margin-left: 4px;
+                font: 0.75rem/1 'Quicksand';
+                letter-spacing: 4px;
+            }
 
-.lakenpc { margin-bottom: 1rem; }
-.lakenpc::before { content: 'NPC ประจำสถานที่';}
-.lakenpc[txt]::before { content: attr(txt);}
+            .lakerole { margin-top: 1rem; }
+        }
+    }
 
-.lakename, .lakesurname {
-    color: #ccc;
-    text-transform: uppercase;
-}
+    .lakeblur1, .lakeblur2, .lakeblur3 {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 100%;
+        filter: blur(100px);
+        mix-blend-mode: hard-light;
+    }
 
-.lakename { font: 3rem/1 'Cinzel'; }
+    .lakeblur1 {
+        top: -3rem;
+        right: -18rem;
+        background: var(--lake-blur1);
+    }
 
-.lakesurname {
-    margin-left: 4px;
-    font: 0.75rem/1 'Quicksand';
-    letter-spacing: 4px;
-}
+    .lakeblur2 {
+        bottom: -10rem;
+        left: -20rem;
+        background: var(--lake-blur2);
+    }
 
-.lakerole { margin-top: 1rem; }
-
-.lakeblur1, .lakeblur2, .lakeblur3 {
-    position: absolute;
-    width: 30rem;
-    height: 30rem;
-    border-radius: 100%;
-    filter: blur(100px);
-    mix-blend-mode: hard-light;
-}
-
-.lakeblur1 {
-    top: -3rem;
-    right: -18rem;
-    background: var(--lake-blur1);
-}
-
-.lakeblur2 {
-    bottom: -10rem;
-    left: -20rem;
-    background: var(--lake-blur2);
-}
-
-.lakeblur3 {
-    bottom: -20rem;
-    left: -8rem;
-    background: var(--lake-blur3);
+    .lakeblur3 {
+        bottom: -20rem;
+        left: -8rem;
+        background: var(--lake-blur3);
+    }
 }
