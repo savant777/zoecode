@@ -58,7 +58,7 @@
 #Lake:hover::after { content: "zzzcode"; }
 
 #Lake {
-    #lakerole .lakebox {
+    #lakerole.lakebox {
         width: 800px;
         max-width: 95%;
         margin: auto;
@@ -233,7 +233,7 @@
         }
     }
 
-    #lakethread .lakebox {
+    #lakethread.lakebox {
         width: 100%;
         position: relative;
         background: linear-gradient(rgba(0,0,0,1) 350px, rgba(0,0,0,0.9)), var(--lake-bg) var(--lake-bgpos)/var(--lake-bgsize) repeat;
