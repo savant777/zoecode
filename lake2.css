@@ -171,6 +171,7 @@
                     aspect-ratio: 445 / 947;
                     background: url(https://i.imgur.com/LfYFkpC.png) center/contain no-repeat;
                     rotate: -10deg;
+                    filter: hue-rotate(var(--lake-hue));
                 }
 
                 &::after {
