@@ -58,7 +58,7 @@
 #Lake:hover::after { content: "zzzcode"; }
 
 #Lake {
-    #lakerole.lakebox {
+    #lakerole.lake-box {
         width: 800px;
         max-width: 95%;
         margin: auto;
@@ -233,7 +233,7 @@
         }
     }
 
-    #lakethread.lakebox {
+    #lakethread.lake-box {
         width: 100%;
         position: relative;
         background: linear-gradient(rgba(0,0,0,1) 350px, rgba(0,0,0,0.9)), var(--lake-bg) var(--lake-bgpos)/var(--lake-bgsize) repeat;
@@ -248,14 +248,14 @@
             -webkit-mask-image: linear-gradient(black 50%, transparent);
         }
 
-        .lakeplace, .lakedesc{
+        .lake-place, .lake-desc{
             padding-inline: 2rem;
             text-align: center;
             color: var(--lake-maincolor);
         }
 
-        .lakeplace { margin-top: -3rem; font-size: 3rem; }
-        .lakedesc { margin-top: -1rem; font-size: 1rem; }
+        .lake-place { margin-top: -3rem; font-size: 3rem; }
+        .lake-desc { margin-top: -1rem; font-size: 1rem; }
 
         .lake-content {
             position: relative;
@@ -374,7 +374,7 @@
             margin: auto;
             padding: 4rem 2rem;
 
-            .lakeleft {
+            .lake-left {
                 flex: 1;
                 min-height: 300px;
                 position: relative;
@@ -400,7 +400,7 @@
                     border-radius: 100px 100px 0 0;
                 }
 
-                .lakepic {
+                .lake-pic {
                     position: absolute;
                     bottom: 0;
                     right: 0;
@@ -410,7 +410,7 @@
                 }
             }
 
-            .lakeright {
+            .lake-right {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
@@ -420,28 +420,28 @@
                 color: var(--lake-maincolor);
                 letter-spacing: 2px;
 
-                .lakenpc { margin-bottom: 1rem; }
-                .lakenpc::before { content: 'NPC ประจำสถานที่';}
-                .lakenpc[txt]::before { content: attr(txt);}
+                .lake-npc { margin-bottom: 1rem; }
+                .lake-npc::before { content: 'NPC ประจำสถานที่';}
+                .lake-npc[txt]::before { content: attr(txt);}
 
-                .lakename, .lakesurname {
+                .lake-name, .lake-surname {
                     color: #ccc;
                     text-transform: uppercase;
                 }
 
-                .lakename { font: 3rem/1 'Cinzel'; }
+                .lake-name { font: 3rem/1 'Cinzel'; }
 
-                .lakesurname {
+                .lake-surname {
                     margin-left: 4px;
                     font: 0.75rem/1 'Quicksand';
                     letter-spacing: 4px;
                 }
 
-                .lakerole { margin-top: 1rem; }
+                .lake-role { margin-top: 1rem; }
             }
         }
 
-        .lakeblur1, .lakeblur2, .lakeblur3 {
+        .lake-blur1, .lake-blur2, .lake-blur3 {
             position: absolute;
             z-index: 1;
             width: 30rem;
@@ -451,19 +451,19 @@
             mix-blend-mode: hard-light;
         }
 
-        .lakeblur1 {
+        .lake-blur1 {
             top: -3rem;
             right: -18rem;
             background: var(--lake-blur1);
         }
 
-        .lakeblur2 {
+        .lake-blur2 {
             bottom: -10rem;
             left: -20rem;
             background: var(--lake-blur2);
         }
 
-        .lakeblur3 {
+        .lake-blur3 {
             bottom: -20rem;
             left: -8rem;
             background: var(--lake-blur3);
