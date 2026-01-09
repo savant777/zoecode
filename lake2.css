@@ -117,6 +117,7 @@
                 overflow: hidden;
                 border-radius: 1.4rem 0 1.4rem 0;
                 background: var(--lake-bgoverlay);
+                filter: hue-rotate(var(--lake-hue));
                 opacity: 0.9;
                 transform: translateZ(-1px);
 
@@ -134,6 +135,7 @@
                     top: 0;
                     right: -100px;
                     transform: translateY(-50%);
+                    filter: hue-rotate(calc(-1 * var(--lake-hue)));
                 }
 
                 .blur2 {
@@ -141,6 +143,7 @@
                     bottom: 0;
                     left: -100px;
                     transform: translateY(50%);
+                    filter: hue-rotate(calc(-1 * var(--lake-hue)));
                 }
 
                 .blur3 {
@@ -148,6 +151,7 @@
                     top: -100px;
                     right: 0;
                     transform: translateX(50%);
+                    filter: hue-rotate(calc(-1 * var(--lake-hue)));
                 }
 
                 .blur4 {
@@ -155,6 +159,7 @@
                     bottom: -100px;
                     left: 0;
                     transform: translateX(-50%);
+                    filter: hue-rotate(calc(-1 * var(--lake-hue)));
                 }
             }
 
