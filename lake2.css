@@ -224,7 +224,7 @@
                 text-align: justify;
             }
 
-            hr {
+            hr.lake-hr {
                 height: 30px;
                 background: var(--lake-maincolor);
                 margin-block: 2.5rem 2rem;
@@ -324,6 +324,7 @@
                         width: 80%;
                         display: flex;
                         column-gap: 1vw;
+                        font-size: 0.9vw;
 
                         .footbox {
                             position: relative;
@@ -361,7 +362,7 @@
             }
         }
 
-        hr {
+        hr.lake-hr {
             height: 30px;
             background: var(--lake-maincolor);
             mask: url(https://i.imgur.com/kC7sA4c.png) center/258px 30px no-repeat;
