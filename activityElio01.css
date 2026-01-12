@@ -1,0 +1,166 @@
+:root {
+	--aebgpic: antiquewhite;
+	--aetxtcolor: black;
+	--aefont-en: 'Inter';
+	--aefont-th: 'Noto Sans Thai';
+	--aelogopic: url(https://media.discordapp.net/attachments/710198272974782554/1195748264373391410/IMG_4393.png);
+	--aetabcolor: #ccc;
+	--aetabcolor-hover: #b5b5b5;
+	--aetabcolor-selected: white;
+	--aetxtcolor-tab: black;
+}
+
+#zzzcode {
+    position: relative;
+}
+
+#zzzcode div {
+    box-sizing: border-box;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode .aebox a[href="https://discord.com/users/625292873914515456/"] {
+    height: auto;
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child {
+    position: relative;
+}
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#zzzcode:hover::after {
+    content: "zzzcode";
+}
+
+#zzzcode summary {
+    cursor: pointer;
+}
+
+.aebox {
+	width: 800px;
+	max-width: 100%;
+	margin: auto;
+	border-radius: 15px;
+	padding: 2rem 0;
+	background: var(--aebgpic) center/cover no-repeat;
+	color: var(--aetxtcolor);
+	font-family: var(--aefont-en), var(--aefont-th);
+}
+
+.aelogo {
+	width: 100%;
+	height: 250px;
+	background: var(--aelogopic) center/contain no-repeat;
+	margin-bottom: 2rem;
+}
+
+.aetopic {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.aefoot {
+	margin-top: 2rem;
+	text-align: center;
+	line-height: 1.5;
+}
+
+.aetabs{
+	margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aeinput {
+    position: absolute;
+    opacity: 0;
+}
+
+.aelabel {
+    width: auto;
+	flex: 1;
+    padding: 0.5rem 1rem;
+    background: var(--aetabcolor);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.5s ease, color 0.5s ease, z-index 0.5s ease;
+    border-radius: 15px 15px 0 0;
+    margin-right: 0.1rem;
+    transform: perspective(1rem) rotateX(2deg);
+    filter: drop-shadow(4px -4px 2px rgb(0 0 0 /0.25)) drop-shadow(-4px -4px 2px rgb(0 0 0 /0.25));
+}
+
+.aelabel > p {
+    transform: perspective(1rem) rotateX(-2deg);
+    margin: 0;
+	text-align: center;
+}
+
+.aelabel:first-of-type {
+    margin-left: 1rem;
+}
+
+.aelabel:last-of-type {
+    margin-right: 10rem;
+}
+
+.aelabel:active {
+    background: var(--aetabcolor);
+}
+
+.aelabel:hover {
+    background: var(--aetabcolor-hover);
+}
+
+.aeinput:checked + br + .aelabel {
+    background: var(--aetabcolor-selected);
+    color: var(--aetxtcolor-tab);
+}
+
+.aeinput:checked + br + .aelabel + br + .aecontent {
+    display: block;
+	transition: display 0.5s ease;
+}
+
+.aecontent {
+	order: 99;
+    display: none;
+    padding: 2rem;
+    background: var(--aetabcolor-selected);
+    width: 100%;
+    border-radius: 15px;
+    z-index: 100;
+    filter: drop-shadow(0 -4px 2px rgb(0 0 0/0.25)) drop-shadow(0 4px 2px rgb(0 0 0/0.25));
+}
+
+.aelabel[for="tab-1"] { z-index: 100;}
+.aelabel[for="tab-2"] { z-index: 90;}
+.aelabel[for="tab-3"] { z-index: 80;}
+
+#tab-1:checked ~ .aelabel[for="tab-1"] { z-index: 101;}
+
+#tab-2:checked ~ .aelabel[for="tab-2"] { z-index: 101;}
+
+#tab-3:checked ~ .aelabel[for="tab-3"] { z-index: 101;}
