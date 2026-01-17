@@ -100,7 +100,7 @@
             border-radius: 20px;
             padding: 3rem;
 
-            ic.l, ic.r {
+            ic[name="l"], ic[name="r"], ic[name="h"], ic[name="x"] {
                 position: absolute;
                 width: 40px;
                 aspect-ratio: 1;
@@ -242,6 +242,7 @@
                         content: "\ee7f";
                         position: absolute;
                         top: 50%;
+                        transform: translateY(-50%);
                         
                         width: 30px;
                         aspect-ratio: 1;
@@ -257,15 +258,8 @@
                         font-size: 1rem;
                     }
 
-                    &::before {
-                        left: -5rem;
-                        transform: translateY(-50%);
-                    }
-
-                    &::after {
-                        right: -5rem;
-                        transform: translateY(-50%);
-                    }
+                    &::before { left: max(-5vw, -5rem); }
+                    &::after { right: max(-5vw, -5rem); }
                 }
 
                 p {
