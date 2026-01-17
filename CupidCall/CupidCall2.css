@@ -318,4 +318,121 @@
             }
         }
     }
+
+    #cupidprofile.cupid-set {
+        width: 800px;
+        max-width: calc(100% - 3rem);
+        margin: auto;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 16px;
+        color: var(--cupid-txt);
+
+        .cpc-head {
+            width: 100%;
+            height: 70px;
+            background: var(--cupid-txt);
+            color: var(--cupid-bg);
+            border-radius: 50px 20px 0 50px;
+            padding: 0 2.5rem;
+            margin-bottom: 1rem;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &::before {
+                content: "CupidCall.rp.th";
+                font-family: 'Mitr', sans-serif;
+                font-size: 25px;
+            }
+
+            &::after {
+                content: "\e576";
+                font-family: uicons-bold-rounded !important;
+            }
+        }
+
+        .cpc-body {
+            position: relative;
+            width: 100%;
+            background: var(--cupid-bg);
+            border: 5px solid var(--cupid-txt);
+            border-radius: 20px;
+            padding: 3rem;
+
+            ic[name="l"], ic[name="r"], ic[name="h"], ic[name="x"] {
+                position: absolute;
+                width: 40px;
+                aspect-ratio: 1;
+                background: var(--cupid-bg);
+                border-radius: 50%;
+                border: 5px solid var(--cupid-txt);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            ic[name="l"] {
+                top: 50%;
+                left: 0;
+                transform: translate(calc(-50% - 2.5px), -50%);
+
+                &::before {
+                    content: "\eb1a";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+
+            ic[name="r"] {
+                top: 50%;
+                right: 0;
+                transform: translate(calc(50% + 2.5px), -50%);
+
+                &::before {
+                    content: "\ef7c";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+
+            ic[name="h"] {
+                bottom: 0;
+                right: 6rem;
+                transform: translate(0, calc(50% + 2.5px));
+
+                &::before {
+                    content: "\e9a1";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+
+            ic[name="x"] {
+                bottom: 0;
+                right: 2.75rem;
+                transform: translate(0, calc(50% + 2.5px));
+
+                &::before {
+                    content: "\e576";
+                    font-family: uicons-bold-rounded !important;
+                    font-size: 12px;
+                    -webkit-text-stroke: 2px #000;
+                }
+            }
+
+            .cpc-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &::before {
+                    content: "\e9d5";
+                    font-family: uicons-solid-rounded !important;
+                }
+
+                &::after {
+                    content: "\f03d";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+        }
+    }
 }
