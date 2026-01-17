@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
 
 :root {
-    --cupid-bg: gray;
-    --cupid-cover: #000;
+    --cupid-txt: #000;
+    --cupid-bg: #fff;
+    --cupid-primary: #d71920;
     --cupid-pic: gray;
 
     --cupid-pos: center;
@@ -47,141 +49,279 @@
 }
 
 #CupidCall2 {
-    #cupidbanner.cupid-set {
-        width: 500px;
+    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after {
+        font-style: normal;
+        font-weight: normal !important;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    #cupidthread.cupid-set {
+        width: 800px;
+        max-width: calc(100% - 3rem);
         margin: auto;
-        padding: 0 1rem;
-        font-family: 'Mitr', sans-serif;
-        font-weight: 200;
-        font-size: 8px;
-        text-align: left;
-        color: #fff;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 16px;
+        color: var(--cupid-txt);
 
-        .cupid-name {
-            font-size: 9px;
-            text-transform: uppercase;
-            font-style: italic;
-            padding-inline-start: 8px;
-            letter-spacing: 1.2px;
+        .cpc-head {
+            width: 100%;
+            height: 70px;
+            background: var(--cupid-txt);
+            color: var(--cupid-bg);
+            border-radius: 50px 20px 0 50px;
+            padding: 0 2.5rem;
+            margin-bottom: 1rem;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &::before {
+                content: "CupidCall.rp.th";
+                font-family: 'Mitr', sans-serif;
+                font-size: 25px;
+            }
 
-            b { font-weight: 400 !important; }
+            &::after {
+                content: "\e576";
+                font-family: uicons-bold-rounded !important;
+            }
         }
 
-        .cupid-flex {
-            display: flex;
-            column-gap: 0.5rem;
+        .cpc-body {
+            position: relative;
+            width: 100%;
+            background: var(--cupid-bg);
+            border: 5px solid var(--cupid-txt);
+            border-radius: 20px;
+            padding: 3rem;
 
-            .cupid-icon {
+            ic.l, ic.r {
                 position: absolute;
-                width: 22px;
+                width: 40px;
                 aspect-ratio: 1;
-                color: #000;
-                background: #fff;
-                border: 2.5px solid #000;
+                background: var(--cupid-bg);
                 border-radius: 50%;
+                border: 5px solid var(--cupid-txt);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 10px;
-                text-shadow: 0 0 #000;
             }
 
-            .cupid-l {
-                position: relative;
-                width: 357.25px;
-                height: 114.45px;
-                border-radius: 7.5px;
-                border: 2.5px solid #000;
-                background: var(--cupid-bg) var(--cupid-pos)/var(--cupid-size) no-repeat;
-                padding: 1.2rem 2rem;
-
-                display: flex;
-                column-gap: 2rem;
+            ic[name="l"] {
+                top: 50%;
+                left: 0;
+                transform: translate(calc(-50% - 2.5px), -50%);
 
                 &::before {
-                    content: "";
+                    content: "\eb1a";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+
+            ic[name="r"] {
+                top: 50%;
+                right: 0;
+                transform: translate(calc(50% + 2.5px), -50%);
+
+                &::before {
+                    content: "\ef7c";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+
+            ic[name="h"] {
+                bottom: 0;
+                right: 6rem;
+                transform: translate(0, calc(50% + 2.5px));
+
+                &::before {
+                    content: "\e9a1";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+
+            ic[name="x"] {
+                bottom: 0;
+                right: 2.75rem;
+                transform: translate(0, calc(50% + 2.5px));
+
+                &::before {
+                    content: "\e576";
+                    font-family: uicons-bold-rounded !important;
+                    font-size: 12px;
+                    -webkit-text-stroke: 2px #000;
+                }
+            }
+
+            .cpc-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &::before {
+                    content: "\e9d5";
+                    font-family: uicons-solid-rounded !important;
+                }
+
+                &::after {
+                    content: "\f03d";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+
+            .cpc-search {
+                width: fit-content;
+                background: var(--cupid-primary);
+                border-radius: 20px;
+                margin: -10% auto 0;
+                padding: 5px 10px;
+                color: var(--cupid-bg);
+
+                font-family: 'Mitr', sans-serif;
+                font-weight: 300;
+                line-height: normal;
+                
+                display: flex;
+                align-items: center;
+                column-gap: 0.75rem;
+
+                &::before {
+                    content: "\f015";
+                    font-family: uicons-bold-rounded !important;
+                }
+            }
+
+            .cpc-text { margin-block: 2rem; }
+
+            .cpc-divide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 0.5rem;
+                width: 100%;
+                margin-block: 2rem;
+                font-size: 1.5rem;
+
+                .fi-sr-heart { color: var(--cupid-primary); }
+            }
+
+            .cpc-package {
+                position: relative;
+                width: 100%;
+                border-radius: 20px;
+                border: 5px solid var(--cupid-primary);
+                padding: 2rem;
+                margin-block-start: 3rem;
+
+                .cpc-pk-title {
                     position: absolute;
-                    inset: 0;
-                    background: rgba(255,255,255,0.05);
-                    backdrop-filter: blur(1.5px);
-                    border-radius: 5px;
-                    user-select: none;
-                    pointer-events: none;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, calc(-50% - 2.5px));
+
+                    width: fit-content;
+                    min-width: 300px;
+                    border-radius: 30px;
+                    background: var(--cupid-primary);
+                    color: var(--cupid-bg);
+                    padding: 2px 1rem 4px;
+
+                    font-family: 'Mitr', sans-serif;
+                    font-size: 1.2rem;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &::before, &::after {
+                        content: "\ee7f";
+                        position: absolute;
+                        top: 50%;
+                        
+                        width: 30px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        background: var(--cupid-primary);
+                        color: var(--cupid-bg);
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        font-family: uicons-bold-rounded !important;
+                        font-size: 1rem;
+                    }
+
+                    &::before {
+                        left: -5rem;
+                        transform: translateY(-50%);
+                    }
+
+                    &::after {
+                        right: -5rem;
+                        transform: translateY(-50%);
+                    }
                 }
 
-                .cupid-icon.al {
-                    top: 50%;
-                    left: 0;
-                    translate: -50% -50%;
+                p {
+                    margin-block-end: 0.5rem;
+                    color: var(--cupid-primary);
+                    font-family: 'Mitr', sans-serif;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    text-align: center;
                 }
 
-                .cupid-icon.x{
-                    bottom: 0;
-                    right: 20px;
-                    translate: 0 50%;
-                    text-shadow: 0 0 #000, 0 0 #000;
+                hr {
+                    max-width: 80%;
+                    border-top: 1px dashed var(--cupid-primary);
+                    background: transparent;
+                    margin: 1rem auto;
                 }
 
-                .cupid-icon.ht{
-                    bottom: 0;
-                    right: 44px;
-                    translate: 0 50%;
-                    text-shadow: none;
-                }
+                .cpc-hf {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-block-start: 1rem;
+                    gap: 1rem;
 
-                .cupid-cover {
-                    position: relative;
-                    height: 100%;
-                    aspect-ratio: 1;
-                    background: var(--cupid-cover) var(--cupid-pos)/var(--cupid-size) no-repeat;
-                    border-radius: 5px;
-                }
+                    .cpc-hf-1 {
+                        flex: 1;
+                        min-width: 300px;
+                        padding: 1rem;
+                        border: 1px dashed var(--cupid-primary);
+                        border-radius: 20px;
 
-                .cupid-song {
-                    position: relative;
-                    flex: 1;
-                    background: url(https://iili.io/FDoBv49.png) 50% 75%/contain no-repeat;
-                    text-transform: uppercase;
-                    padding: 2px;
-                    line-height: 1.25;
-
-                    b {
-                        font-size: 12px;
-                        font-weight: 400 !important;
+                        p { margin-block-start: 0; }
                     }
                 }
             }
 
-            .cupid-r {
-                position: relative;
-                flex: 1;
-                border-radius: 7.5px;
-                border: 2.5px solid #000;
-                background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
+            h1 {
+                & +br { display: none; }
+                width: fit-content;
+                margin-block: 2rem 1rem;
+                margin-inline: auto;
+                padding: 2px 1rem 4px;
+                border-radius: 2rem;
+                background: var(--cupid-primary);
+                color: var(--cupid-bg);
 
-                .cupid-icon.ar {
-                    top: 50%;
-                    right: 0;
-                    translate: 50% -50%;
-                }
-
-                .cupid-g {
-                    position: absolute;
-                    top: 4px;
-                    right: 4px;
-                    color: #000;
-                    font-size: 10px;
-                }
+                text-align: center;
+                font-family: 'Mitr', sans-serif;
+                font-size: 1.2rem;
+                font-weight: normal;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
-        }
-
-        .cupid-quote {
-            font-style: italic;
-            font-size: 7px;
-            padding-inline-start: 8px;
-            letter-spacing: 0.9px;
         }
     }
 }
-
-#CupidCall2:has(#cupidbanner) { margin-block: 1rem 0.5rem; }
