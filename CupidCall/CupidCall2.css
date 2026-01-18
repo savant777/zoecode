@@ -653,16 +653,15 @@
 
                         p {
                             position: absolute;
-                            bottom: 0;
+                            bottom: -0.25rem;
                             left: 50%;
                             transform: translate(-50%, 100%);
                             
                             width: 100%;
-                            padding-inline-start: 0.25rem;
+                            padding-inline-start: 0.15rem;
                             margin: 0;
-
-                            font-size: 1.2rem;
-                            letter-spacing: 0.25rem;
+                            
+                            letter-spacing: 0.15rem;
                             line-height: 1;
                             text-align: center;
 
@@ -677,7 +676,7 @@
 
                     .cpc-icon {
                         display: flex;
-                        margin-block: 1.2rem 0.75rem;
+                        margin-block: 1.65rem 0.75rem;
                         font-size: min(1rem, 1vw);
 
                         .cpc-icon-1 { 
