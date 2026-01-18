@@ -750,7 +750,8 @@
                         grid-template-columns: clamp(80px, 8vw, 100px) 1fr;
                         gap: min(0.5rem, 0.75vw);
 
-                        .cpc-pic {
+                        &::before {
+                            content: "";
                             border-radius: 0.25rem;
                             background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
                         }
