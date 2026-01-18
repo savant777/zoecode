@@ -564,6 +564,7 @@
 
             .cpc-info-set {
                 display: flex;
+                align-items: flex-start;
                 column-gap: 1.5rem;
 
                 .cpc-info-left {
@@ -596,12 +597,7 @@
                         }
                     }
 
-                    .cpc-about {
-                        height: clamp(190px, 18vw, 245px);
-                        overflow: auto;
-                        scrollbar-width: 0;
-                        text-align: justify;
-                    }
+                    .cpc-about { text-align: justify; }
 
                     .cpc-gallery {
                         display: flex;
@@ -732,6 +728,20 @@
 
                         div { flex: 1; }
                     }
+                }
+            }
+
+            .cpc-more {
+                details { font-size: min(0.9rem, 1vw); }
+
+                details > summary {
+                    list-style: none;
+                    cursor: pointer;
+
+                    font-family: 'Mitr', sans-serif;
+                    text-align: center;
+
+                    &::marker, &::-webkit-details-marker { display: none; }
                 }
             }
 
