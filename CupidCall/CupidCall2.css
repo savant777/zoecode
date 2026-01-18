@@ -740,7 +740,7 @@
 
                 .cpc-mmr-set {
                     display: grid;
-                    grid-template: repeat(calc(var(--cupid-date) / 2), auto) / repeat(2, 1fr);
+                    grid-template-columns: repeat(2, 1fr);
                     gap: min(1rem, 1vw);
                     font-size: min(0.9rem, 1.15vw);
 
@@ -754,7 +754,7 @@
                         &::before {
                             content: "";
                             aspect-ratio: 1;
-                            border-radius: 0.5rem;
+                            border-radius: min(0.5rem, 0.5vw);
                             background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
                         }
 
