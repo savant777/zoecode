@@ -773,9 +773,12 @@
                         .cpc-info {
                             counter-increment: memories;
                             align-content: center;
+                            line-height: 1.6;
+                            padding-block: 0.25rem;
 
                             &::before {
                                 content: counter(memories, timed) " Time";
+                                font-size: min(1.1rem, 1.35vw);
                                 font-weight: bold;
                                 display: block;
                             }
