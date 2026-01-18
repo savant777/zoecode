@@ -667,11 +667,11 @@
                             text-align: center;
 
                             &::before { 
-                                content: "•";
+                                content: "●";
                                 color: var(--cupid-primary);
                             }
 
-                            &::after { content: "•••"; }
+                            &::after { content: "●●●"; }
                         }
                     }
 
