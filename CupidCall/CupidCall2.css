@@ -6,10 +6,14 @@
     --cupid-txt: #000;
     --cupid-bg: #fff;
     --cupid-primary: #d71920;
-    --cupid-pic: gray;
 
+    --cupid-pic: gray;
     --cupid-pos: center;
     --cupid-size: cover;
+
+    --cupid-bnpic: gray;
+    --cupid-bnpos: center;
+    --cupid-bnsize: cover;
 }
 
 #CupidCall2 { position: relative; }
@@ -49,7 +53,7 @@
 }
 
 #CupidCall2 {
-    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after {
+    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after, .cpc-mmr::before, .cpc-banner::before, .cpc-banner::after, .cpc-pic>a::before, .cpc-photo::before, .cpc-icon-1::before, .cpc-icon-1::after, .cpc-icon-2::before, .cpc-comment::before, .cpc-comment::after {
         font-style: normal;
         font-weight: normal !important;
         font-variant: normal;
@@ -362,6 +366,7 @@
 
             ic[name="l"], ic[name="r"], ic[name="h"], ic[name="x"] {
                 position: absolute;
+                z-index: 5;
                 width: 40px;
                 aspect-ratio: 1;
                 background: var(--cupid-bg);
@@ -395,7 +400,7 @@
             }
 
             ic[name="h"] {
-                bottom: 0;
+                bottom: -0.5rem;
                 right: 6rem;
                 transform: translate(0, calc(50% + 2.5px));
 
@@ -406,7 +411,7 @@
             }
 
             ic[name="x"] {
-                bottom: 0;
+                bottom: -0.5rem;
                 right: 2.75rem;
                 transform: translate(0, calc(50% + 2.5px));
 
@@ -418,10 +423,48 @@
                 }
             }
 
-            .cpc-nav {
+            .cpc-mmr {
+                position: absolute;
+                bottom: -0.5rem;
+                left: 2.75rem;
+                transform: translate(0, calc(50% + 2.5px));
+                z-index: 5;
+                
+                height: 40px;
+                background: var(--cupid-txt);
+                color: var(--cupid-bg);
+                padding: 0 1rem;
+                border-radius: 0.5rem;
+                
+                font-family: 'Mitr', sans-serif;
+                
+                display: flex;
+                align-items: center;
+                column-gap: 0.75rem;
+
+                &::before {
+                    content: "\e31a";
+                    font-family: uicons-bold-rounded !important;
+                }
+
+                &::after {
+                    content: "Cupid memories";
+                    padding-block: 0.2rem 0;
+                }
+            }
+
+            .cpc-banner {
+                position: relative;
+                width: calc(100% + 6rem);
+                aspect-ratio: 3.75;
+                border-radius: 15px 15px 0 0;
+                background: var(--cupid-bnpic) var(--cupid-bnpos)/var(--cupid-bnsize) no-repeat;
+                margin: -3rem -3rem 0;
+                padding: 1rem;
+                color: var(--cupid-bg);
+                
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
 
                 &::before {
                     content: "\e9d5";
@@ -432,6 +475,263 @@
                     content: "\f03d";
                     font-family: uicons-solid-rounded !important;
                 }
+
+                .cpc-pic {
+                    position: absolute;
+                    bottom: 0;
+                    left: 3rem;
+                    transform: translateY(50%);
+                    width: clamp(160px, 12vw, 180px);
+                    aspect-ratio: 1;
+                    background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
+                    border-radius: 50%;
+                    border: 5px solid var(--cupid-txt);
+
+                    a {
+                        position: absolute;
+                        right: 3%;
+                        bottom: 3%;
+                        
+                        width: clamp(30px, 2vw, 33.75px);
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        background: var(--cupid-primary);
+                        color: var(--cupid-bg);
+                        
+                        font-family: uicons-bold-rounded !important;
+                        font-size: clamp(1rem, 1vw, 1.125rem);
+                        -webkit-text-stroke: 0.5px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &::before {
+                            content: "\ee7f";
+                        }
+                    }
+                }
+            }
+
+            .cpc-info-name {
+                width: calc(100% - clamp(160px, 12vw, 180px) - 1.5rem);
+                margin-block: 1rem 1.5rem;
+                margin-left: auto;
+                
+                font-family: 'Mitr', sans-serif;
+                font-size: clamp(0.7rem, 0.7vw, 0.8rem);
+                line-height: 1;
+                
+                display: grid;
+                grid-template-columns: 1fr fit-content(clamp(85px, 7vw, 125px));
+                grid-row-gap: 0.5rem;
+
+                .cpc-font-l { font-size: clamp(1rem, 1.2vw, 1.2rem); }
+
+                .cpc-search {
+                    grid-column: 1/3;
+                    margin-inline: -10px;
+                    background: var(--cupid-primary);
+                    border-radius: 50px;
+                    padding: 5px 10px;
+                    color: var(--cupid-bg);
+                    font-weight: 300;
+                    
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.75rem;
+
+                    &::before {
+                        content: "\f015";
+                        font-family: uicons-bold-rounded !important;
+                    }
+
+                    div::before { content: "Looking for..."; }
+                }
+
+                .cpc-gender {
+                    grid-column: 1/3;
+                    font-weight: 300;
+
+                    b { font-weight: 500; }
+                    c { color: var(--cupid-primary); }
+                }
+            }
+
+            .cpc-info-set {
+                display: flex;
+                column-gap: 1.5rem;
+
+                .cpc-info-left {
+                    flex: 3;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.75rem;
+                    font-size: min(0.8rem, 1vw);
+
+                    .cpc-quote {
+                        border-block: 1px solid var(--cupid-txt);
+                        padding-block: 0.5rem;
+                        text-align: center;
+                        font-family: 'Mitr', sans-serif;
+                        font-weight: 500;
+                    }
+
+                    .cpc-tags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                        line-height: 1;
+
+                        p {
+                            margin: 0;
+                            border: 1px solid var(--cupid-txt);
+                            border-radius: 0.25rem;
+                            padding: 0.2rem 0.3rem;
+                        }
+                    }
+
+                    .cpc-about {
+                        height: clamp(185px, 18vw, 245px);
+                        overflow: auto;
+                        scrollbar-width: 0;
+                        text-align: justify;
+                    }
+
+                    .cpc-gallery {
+                        display: flex;
+                        column-gap: 0.5rem;
+
+                        .cpc-img {
+                            flex: 1;
+                            aspect-ratio: 1;
+                            background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
+                            border-radius: 0.5rem;
+                        }
+                    }
+                }
+
+                .cpc-info-right {
+                    flex: 2;
+                    background: var(--cupid-txt);
+                    color: var(--cupid-bg);
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+                    
+                    font-family: 'Mitr', sans-serif;
+                    font-weight: 300;
+
+                    .cpc-photo {
+                        position: relative;
+                        width: 100%;
+                        aspect-ratio: 1;
+                        background: red;
+                        border-radius: 0.25rem;
+
+                        &::before {
+                            content: "\ee7f";
+                            position: absolute;
+                            top: 50%;
+                            right: -1rem;
+                            transform: translate(50%, -50%);
+                            
+                            width: 1rem;
+                            aspect-ratio: 3/5;
+                            background: var(--cupid-primary);
+                            color: var(--cupid-bg);
+                            border-radius: 0.25rem;
+
+                            font-family: uicons-bold-rounded !important;
+                            font-size: 0.65rem;
+                            -webkit-text-stroke: 0.05vw;
+                            
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        &::after {
+                            content: "••••";
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translate(-50%, 100%);
+                            
+                            width: 100%;
+                            padding-inline-start: 0.25rem;
+
+                            font-size: 1.2rem;
+                            letter-spacing: 0.25rem;
+                            line-height: 1;
+                            text-align: center;
+                        }
+                    }
+
+                    .cpc-icon {
+                        display: flex;
+                        margin-block: 1.2rem 0.75rem;
+                        font-size: min(1rem, 1vw);
+
+                        .cpc-icon-1 { 
+                            letter-spacing: min(0.4rem, 0.4vw);
+                            
+                            &::before {
+                                content: "\e9a1";
+                                font-family: uicons-solid-rounded !important;
+                                color: var(--cupid-primary);
+                            }
+
+                            &::after {
+                                content: "\e4e5\ed67";
+                                font-family: uicons-bold-rounded !important;
+                            }
+                        }
+
+                        .cpc-icon-2 {
+                            margin-left: auto;
+
+                            &::before {
+                                content: "\e239";
+                                font-family: uicons-solid-rounded !important;
+                            }
+                        }
+                    }
+
+                    .cpc-post {
+                        font-size: min(0.8rem, 1vw);
+                        b { font-weight: 500; }
+                    }
+
+                    .cpc-comment {
+                        margin-block-start: 0.75rem;
+                        background: hsl(from var(--cupid-txt) h s calc(l + 15));
+                        border-radius: 0.25rem;
+                        padding: 5px 10px;
+
+                        font-size: min(0.8rem, 1vw);
+                        line-height: 1.2;
+                        
+                        display: flex;
+                        align-items: center;
+                        column-gap: 0.75rem;
+
+                        &::before {
+                            content: "\e463";
+                            font-family: uicons-solid-rounded !important;
+                        }
+
+                        &::after {
+                            content: "\ed69";
+                            font-family: uicons-bold-rounded !important;
+                        }
+
+                        div { flex: 1; }
+                    }
+                }
+            }
+
+            &:not(:first-child) {
+                margin-block-start: 1rem;
             }
         }
     }
