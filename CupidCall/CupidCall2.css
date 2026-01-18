@@ -63,6 +63,10 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
+    @counter-style timed {
+        symbols: "First" "Second" "Third" "Fourth" "Fifth" "Sixth" "Seventh" "Eighth" "Ninth" "Tenth" "Eleventh" "Twelfth" "Thirteenth" "Fourteenth" "Fifteenth" "Sixteenth" "Seventeenth" "Eighteenth" "Nineteenth" "Twentieth";
+    }
+
     #cupidthread.cupid-set {
         width: 800px;
         max-width: calc(100% - 3rem);
@@ -553,7 +557,7 @@
                     grid-column: 1/3;
                     font-weight: 300;
 
-                    b { font-weight: 500; }
+                    b { font-weight: normal; }
                     c { color: var(--cupid-primary); }
                 }
             }
@@ -567,7 +571,7 @@
                     display: flex;
                     flex-direction: column;
                     row-gap: 0.75rem;
-                    font-size: min(0.8rem, 1vw);
+                    font-size: min(0.9rem, 1vw);
 
                     .cpc-quote {
                         border-block: 1px solid var(--cupid-txt);
@@ -593,7 +597,7 @@
                     }
 
                     .cpc-about {
-                        height: clamp(185px, 18vw, 245px);
+                        height: clamp(190px, 18vw, 245px);
                         overflow: auto;
                         scrollbar-width: 0;
                         text-align: justify;
@@ -733,6 +737,35 @@
 
             &:not(:first-child) {
                 margin-block-start: 1rem;
+
+                .cpc-mmr-set {
+                    display: grid;
+                    grid-template: repeat(calc(var(--cpc-date) / 2), clamp(80px, 8vw, 100px)) / repeat(2, 1fr);
+                    gap: min(0.75rem, 1vw);
+
+                    counter-reset: memories;
+
+                    .cpc-date {
+                        display: grid;
+                        grid-template-columns: clamp(80px, 8vw, 100px) 1fr;
+                        gap: min(0.5rem, 0.75vw);
+
+                        .cpc-pic {
+                            border-radius: 0.25rem;
+                            background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
+                        }
+
+                        .cpc-info {
+                            counter-increment: memories;
+
+                            &::before {
+                                content: counter(memories, timed) " Time";
+                                font-weight: bold;
+                                display: block;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
