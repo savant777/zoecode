@@ -2,6 +2,10 @@
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
 
+@counter-style timed {
+    symbols: "First" "Second" "Third" "Fourth" "Fifth" "Sixth" "Seventh" "Eighth" "Ninth" "Tenth" "Eleventh" "Twelfth" "Thirteenth" "Fourteenth" "Fifteenth" "Sixteenth" "Seventeenth" "Eighteenth" "Nineteenth" "Twentieth";
+}
+
 :root {
     --cupid-txt: #000;
     --cupid-bg: #fff;
@@ -61,10 +65,6 @@
         line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-    }
-
-    @counter-style timed {
-        symbols: "First" "Second" "Third" "Fourth" "Fifth" "Sixth" "Seventh" "Eighth" "Ninth" "Tenth" "Eleventh" "Twelfth" "Thirteenth" "Fourteenth" "Fifteenth" "Sixteenth" "Seventeenth" "Eighteenth" "Nineteenth" "Twentieth";
     }
 
     #cupidthread.cupid-set {
@@ -740,24 +740,27 @@
 
                 .cpc-mmr-set {
                     display: grid;
-                    grid-template: repeat(calc(var(--cpc-date) / 2), clamp(80px, 8vw, 100px)) / repeat(2, 1fr);
-                    gap: min(0.75rem, 1vw);
+                    grid-template: repeat(calc(var(--cupid-date) / 2), auto) / repeat(2, 1fr);
+                    gap: min(1rem, 1vw);
+                    font-size: min(0.9rem, 1.15vw);
 
                     counter-reset: memories;
 
                     .cpc-date {
                         display: grid;
-                        grid-template-columns: clamp(80px, 8vw, 100px) 1fr;
-                        gap: min(0.5rem, 0.75vw);
+                        grid-template-columns: max-content max-content;
+                        gap: min(1rem, 1vw);
 
                         &::before {
                             content: "";
-                            border-radius: 0.25rem;
+                            aspect-ratio: 1;
+                            border-radius: 0.5rem;
                             background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
                         }
 
                         .cpc-info {
                             counter-increment: memories;
+                            align-content: center;
 
                             &::before {
                                 content: counter(memories, timed) " Time";
