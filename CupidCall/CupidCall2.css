@@ -732,6 +732,8 @@
             }
 
             .cpc-more {
+                margin-block-start: 1.5rem;
+
                 details { font-size: min(0.9rem, 1vw); }
 
                 details > summary {
