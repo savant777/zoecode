@@ -546,7 +546,7 @@
                         font-family: uicons-bold-rounded !important;
                     }
 
-                    div::before { content: "Looking for..."; }
+                    div::before { content: "Looking for... "; }
                 }
 
                 .cpc-gender {
