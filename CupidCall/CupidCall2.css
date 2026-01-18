@@ -571,7 +571,7 @@
                     flex: 3;
                     display: flex;
                     flex-direction: column;
-                    row-gap: 0.75rem;
+                    row-gap: 1rem;
                     font-size: min(0.9rem, 1vw);
 
                     .cpc-quote {
@@ -626,7 +626,7 @@
                         position: relative;
                         width: 100%;
                         aspect-ratio: 1;
-                        background: red;
+                        background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
                         border-radius: 0.25rem;
 
                         &::before {
