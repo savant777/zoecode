@@ -404,6 +404,9 @@
 
                     cursor: pointer;
                     user-select: none;
+                    
+                    transition: .2s ease;
+
 
                     &:hover { background: hsl(from var(--cupid-txt) h s 35%); }
                 }
