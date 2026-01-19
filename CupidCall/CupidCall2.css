@@ -794,4 +794,224 @@
             }
         }
     }
+
+    #cupidrole.cupid-set {
+        width: 650px;
+        max-width: calc(100% - 3rem);
+        margin: auto;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 16px;
+        color: var(--cupid-txt);
+
+        .cpc-head {
+            width: 100%;
+            height: 70px;
+            background: var(--cupid-txt);
+            color: var(--cupid-bg);
+            border-radius: 50px 20px 0 50px;
+            padding: 0 2.5rem;
+            margin-bottom: 1rem;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            div {
+                font-family: 'Mitr', sans-serif;
+                font-size: 25px;
+            }
+
+            &::after {
+                content: "\e576";
+                font-family: uicons-bold-rounded !important;
+            }
+        }
+
+        .cpc-body {
+            position: relative;
+            width: 100%;
+            background: var(--cupid-bg);
+            border: 5px solid var(--cupid-txt);
+            border-radius: 20px;
+            padding: 3rem;
+
+            ic[name="g"], ic[name="h"], ic[name="x"] {
+                position: absolute;
+                right: 0;
+                transform: translateX(50%);
+                z-index: 5;
+
+                width: 40px;
+                aspect-ratio: 1;
+                background: var(--cupid-bg);
+                border-radius: 50%;
+                border: 5px solid var(--cupid-txt);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            ic[name="g"] {
+                bottom: 7.5rem;
+                
+                &::before {
+                    content: "\f015";
+                    font-family: uicons-bold-rounded !important;
+                    -webkit-text-stroke: 0.5px;
+                }
+            }
+
+            ic[name="h"] {
+                bottom: 4.5rem;
+                
+                &::before {
+                    content: "\e9a1";
+                    font-family: uicons-solid-rounded !important;
+                }
+            }
+
+            ic[name="x"] {
+                bottom: 1.5rem;
+                
+                &::before {
+                    content: "\e576";
+                    font-family: uicons-bold-rounded !important;
+                    font-size: 12px;
+                    -webkit-text-stroke: 1px;
+                }
+            }
+
+            .cpc-top-set {
+                position: relative;
+                width: calc(100% + 6rem);
+                aspect-ratio: 3;
+                margin: -3rem -3rem 0;
+                padding: 1rem;
+                color: var(--cupid-bg);
+
+                display: flex;
+                justify-content: space-between;
+
+                ic[name="hh"], ic[name="st"] {
+                    position: relative;
+                    z-index: 5;
+                }
+                
+                ic[name="hh"]::before {
+                    content: "\e9d5";
+                    font-family: uicons-solid-rounded !important;
+                }
+
+                ic[name="st"]::before {
+                    content: "\f03d";
+                    font-family: uicons-solid-rounded !important;
+                }
+
+                .cpc-banner {
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 14px 14px 0 0;
+                    overflow: clip;
+
+                    &::before {
+                        position: absolute;
+                        inset: 0;
+                        transform: scale(1.05);
+                        will-change: transform;
+                        
+                        background: linear-gradient(rgba(0,0,0,0.2) 0 0), var(--cupid-bnpic) var(--cupid-bnpos)/var(--cupid-bnsize) no-repeat;
+                        filter: blur(2px);
+                    }
+                }
+
+                .cpc-song {
+                    position: absolute;
+                    top: 50%;
+                    right: 3rem;
+                    transform: translateY(-50%);
+                    
+                    width: 200px;
+                    background: url(https://iili.io/KS4Xmhb.png) center calc(100% - 0.5rem)/100% no-repeat;
+                    padding-inline: 0.15rem 1rem;
+                    padding-block-end: 3rem;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    
+                    font-family: 'Mitr', sans-serif;
+                    font-size: 10px;
+                    font-weight: 200;
+                    line-height: 1.25;
+                    text-align: start;
+
+                    b {
+                        font-size: 13px;
+                        font-weight: normal;
+                    }
+                }
+
+                .cpc-pic {
+                    position: absolute;
+                    bottom: 0;
+                    left: 3rem;
+                    transform: translateY(50%);
+                    
+                    width: clamp(160px, 12vw, 180px);
+                    aspect-ratio: 1;
+                    background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
+                    border-radius: 50%;
+                    border: 5px solid var(--cupid-txt);
+                }
+
+                .cpc-quote {
+                    position: absolute;
+                    bottom: -1rem;
+                    right: 3rem;
+                    left: calc(3rem + clamp(160px, 12vw, 180px) + 1.5rem);
+                    transform: translateY(100%);
+                    
+                    min-height: calc(calc(clamp(160px, 12vw, 180px) / 2) - 1rem);
+                    padding-bottom: 1rem;
+                    
+                    font-family: 'Mitr', sans-serif;
+                    line-height: 1.2;
+                    color: var(--cupid-txt);
+                    
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .cpc-role {
+                margin-block: calc(calc(clamp(160px, 12vw, 180px) / 2) + 1.5rem) 0;
+                text-align: justify;
+            }
+        }
+
+        .cpc-ps {
+            min-height: 70px;
+            background: var(--cupid-txt);
+            color: var(--cupid-bg);
+            margin-top: 1rem;
+            padding: 0 calc(1.25rem + 5px);
+            border-radius: 20px;
+            
+            display: flex;
+            align-items: center;
+            column-gap: 0.75rem;
+
+            &::before {
+                content: "\e463";
+                font-family: uicons-solid-rounded !important;
+            }
+
+            &::after {
+                content: "\ed69";
+                font-family: uicons-bold-rounded !important;
+            }
+
+            div { flex: 1; }
+        }
+    }
 }
