@@ -914,6 +914,7 @@
                     overflow: clip;
 
                     &::before {
+                        content: "";
                         position: absolute;
                         inset: 0;
                         transform: scale(1.05);
