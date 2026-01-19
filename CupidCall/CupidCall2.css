@@ -57,7 +57,7 @@
 }
 
 #CupidCall2 {
-    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after, .cpc-mmr::before, .cpc-banner::before, .cpc-banner::after, .cpc-pic>a::before, .cpc-photo::before, .cpc-icon-1::before, .cpc-icon-1::after, .cpc-icon-2::before, .cpc-comment::before, .cpc-comment::after, ic[name="g"]::before, ic[name="hh"]::before, ic[name="st"]::before, .cpc-ps::before, .cpc-ps::after {
+    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after, .cpc-mmr::before, .cpc-banner::before, .cpc-banner::after, .cpc-pic>a::before, .cpc-photo::before, .cpc-icon-1::before, .cpc-icon-1::after, .cpc-icon-2::before, .cpc-comment::before, .cpc-comment::after, ic[name="g"]::before, ic[name="hh"]::before, ic[name="st"]::before, .cpc-ps::before, .cpc-ps::after, .cpc-input::before {
         font-style: normal;
         font-weight: normal !important;
         font-variant: normal;
