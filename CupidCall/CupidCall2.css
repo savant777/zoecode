@@ -108,6 +108,11 @@
             border-radius: 20px;
             padding: 3rem;
 
+            img {
+                user-select: none;
+                pointer-events: none;
+            }
+
             ic[name="l"], ic[name="r"], ic[name="h"], ic[name="x"] {
                 position: absolute;
                 width: 40px;
@@ -301,6 +306,33 @@
                         border-radius: 20px;
 
                         p { margin-block-start: 0; }
+                    }
+                }
+            }
+
+            .cpc-member {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: min(1rem, 1vw);
+                font-size: min(0.9rem, 1.15vw);
+
+                .cpc-mb {
+                    display: grid;
+                    grid-template-columns: clamp(70px, 5vw, 75px) 1fr;
+                    gap: min(1rem, 1vw);
+
+                    a {
+                        aspect-ratio: 1;
+                        border-radius: min(0.5rem, 0.5vw);
+                        background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
+
+                        &+br { display: none; }
+                    }
+
+                    .cpc-name {
+                        align-content: center;
+                        font-family: 'Mitr', sans-serif;
+                        padding-block: 0.25rem;
                     }
                 }
             }
