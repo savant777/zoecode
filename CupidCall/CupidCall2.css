@@ -114,6 +114,12 @@
                 pointer-events: none;
             }
 
+            hr {
+                margin-block: 2rem;
+                background: transparent;
+                border-top: 1px dashed var(--cupid-primary);
+            }
+
             ic[name="l"], ic[name="r"], ic[name="h"], ic[name="x"] {
                 position: absolute;
                 z-index: 5;
