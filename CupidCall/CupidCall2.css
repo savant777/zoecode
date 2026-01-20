@@ -1325,7 +1325,7 @@
             }
 
             ic[name="h"] {
-                bottom: -0.5rem;
+                bottom: 0;
                 right: 6rem;
                 transform: translate(0, calc(50% + 2.5px));
 
@@ -1336,7 +1336,7 @@
             }
 
             ic[name="x"] {
-                bottom: -0.5rem;
+                bottom: 0;
                 right: 2.75rem;
                 transform: translate(0, calc(50% + 2.5px));
 
@@ -1418,7 +1418,7 @@
 
             .cpc-icon {
                 display: flex;
-                margin-block: 1.65rem 0.75rem;
+                margin-block: 1.65rem 1rem;
                 font-size: 1.5rem;
 
                 .cpc-icon-1 { 
@@ -1452,7 +1452,7 @@
             }
 
             details.cpc-comment {
-                margin-block-start: 0.75rem;
+                margin-block-start: 1rem;
             
                 &>summary {
                     list-style: none;
