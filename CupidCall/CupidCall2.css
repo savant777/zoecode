@@ -693,7 +693,7 @@
                 position: relative;
                 width: calc(100% + 6rem);
                 aspect-ratio: 3.75;
-                border-radius: 15px 15px 0 0;
+                border-radius: 14px 14px 0 0;
                 background: var(--cupid-bnpic) var(--cupid-bnpos)/var(--cupid-bnsize) no-repeat;
                 margin: -3rem -3rem 0;
                 padding: 1rem;
