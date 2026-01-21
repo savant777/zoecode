@@ -61,8 +61,8 @@
         }
 
         .emp-pic[mask] {
-            mask: linear-gradient(90deg, black 50%, transparent 95% 105%);
-            -webkit-mask: linear-gradient(90deg, black 50%, transparent 95% 105%);
+            mask: linear-gradient(90deg, black 70%, transparent 95% 105%);
+            -webkit-mask: linear-gradient(90deg, black 70%, transparent 95% 105%);
         }
 
         .emp-info {
