@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Ma+Shan+Zheng&display=swap');
+
+:root {
+    --emp-clr: gray;
+    --emp-font: 'Ma Shan Zheng';
+    --emp-fontth: 'Bai Jamjuree';
+    
+    --emp-bg: url(https://i.imgur.com/UbMuXaz.png);
+    --emp-bgpos: center;
+    --emp-bgsize: cover;
+
+    --emp-pic: gray;
+    --emp-pos: center;
+    --emp-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#TheEmperor.emp-box {
+    width: 650px;
+    max-width: 90%;
+    margin: auto;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #eee;
+
+    .emp-head {
+        display: flex;
+        background: var(--emp-bg) var(--emp-bgpos)/var(--emp-bgsize) no-repeat;
+        border: 2px solid;
+        border-radius: 10px;
+        color: var(--emp-clr);
+
+        .emp-pic {
+            width: 250px;
+            border-radius: inherit;
+            background: var(--emp-pic) var(--emp-pos)/var(--emp-size) no-repeat;
+        }
+
+        .emp-pic[mask] {
+            mask: linear-gradient(90deg, black 50%, transparent 95% 105%);
+            -webkit-mask: linear-gradient(90deg, black 50%, transparent 95% 105%);
+        }
+
+        .emp-info {
+            flex: 1;
+            padding: 1.5rem;
+            line-height: 1;
+            text-align: end;
+
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+
+            .emp-name {
+                font-family: var(--emp-font), sans-serif;
+                font-size: 3rem;
+            }
+
+            .emp-desc {
+                font-size: 14px;
+                font-weight: bold;
+                font-style: italic;
+                white-space: pre;
+            }
+        }
+    }
+
+    .emp-role {
+        padding-block: 1.25rem 0;
+
+        hr {
+            background: var(--emp-clr);
+            margin-block: 1.5rem 0.5rem;
+        }
+    }
+}
