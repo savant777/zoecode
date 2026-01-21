@@ -94,7 +94,7 @@
 
         hr {
             background: var(--emp-clr);
-            margin-block: 1.5rem 0.5rem;
+            margin-block: 2rem 0.5rem;
         }
     }
 }
