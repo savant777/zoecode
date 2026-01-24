@@ -800,8 +800,6 @@
         display: grid;
         grid-template-columns: 1fr 125px;
         column-gap: 0.5rem;
-        
-        color: #fff !important;
 
         .apt-name {
             grid-column: 1/3;
@@ -812,7 +810,8 @@
             font-family: 'Rounded Elegance', sans-serif;
             font-size: 10px;
             letter-spacing: 1px;
- 
+
+            b { color: #fff !important; }
             i { text-transform: uppercase; }
         }
 
@@ -877,6 +876,7 @@
                 text-align: start;
 
                 b {
+                    color: #fff !important;
                     font-size: 13px;
                     font-weight: normal;
                 }
@@ -889,7 +889,7 @@
             border-radius: 1rem;
             border: clamp(2px, 0.2vw, 3px) solid var(--apt-accent);
             background: var(--apt-pic) var(--apt-pos)/var(--apt-size) no-repeat;
-            color: var(--apt-accent) !important;
+            color: var(--apt-accent);
 
             i.fa-gear {
                 position: absolute;
