@@ -811,6 +811,7 @@
             font-size: 10px;
             letter-spacing: 1px;
 
+            b { color: #fff !important; }
             i { text-transform: uppercase; }
         }
 
