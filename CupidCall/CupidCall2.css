@@ -1005,7 +1005,7 @@
 
                     .cpc-date {
                         display: grid;
-                        grid-template-columns: clamp(65px, 5vw, 85px) 1fr;
+                        grid-template-columns: clamp(65px, calc(40.696px + 3.165vw), 85px) 1fr;
                         gap: min(1rem, 1vw);
 
                         &::before {
