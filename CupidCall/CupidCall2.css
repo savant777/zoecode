@@ -899,6 +899,7 @@
                             padding-inline-start: 0.15rem;
                             margin: 0;
                             
+                            font-size: min(1rem, 1vw);
                             letter-spacing: 0.15rem;
                             line-height: 1;
                             text-align: center;
@@ -914,7 +915,7 @@
 
                     .cpc-icon {
                         display: flex;
-                        margin-block: 1.65rem 0.75rem;
+                        margin-block: min(2vw, 1.65rem) min(0.7vw, 0.75rem);
                         font-size: min(1rem, 1vw);
 
                         .cpc-icon-1 { 
@@ -1004,7 +1005,7 @@
 
                     .cpc-date {
                         display: grid;
-                        grid-template-columns: max-content max-content;
+                        grid-template-columns: clamp(65px, 5vw, 85px) 1fr;
                         gap: min(1rem, 1vw);
 
                         &::before {
