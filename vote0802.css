@@ -30,7 +30,7 @@
   
 #Election0802::after {
     display: block;
-    content: "z";
+    content: "⛝";
     font-family: 'Courier New', Courier, monospace;
     font-size: x-small;
     color: gray !important;
@@ -38,7 +38,7 @@
     text-align: center;
 }
   
-#Election0802:hover::after { content: "zzzcode"; }
+#Election0802:hover::after { content: "made by zzzcode"; }
 
 #Election0802 {
     #ElectThread.elect-box {
@@ -103,8 +103,7 @@
             c {
                 background: var(--elect-b);
                 color: var(--elect-w);
-                padding-inline: 8px 10px;
-                padding-block-end: 4px;
+                padding: 0 8px 4px;
                 vertical-align: text-top;
                 
                 font-size: 13px;
@@ -190,6 +189,7 @@
                 flex: 1;
                 background: var(--elect-w);
                 border: 2px solid;
+                user-select: none;
                 pointer-events: none;
 
                 &:last-child { border-inline-start: 0; }
