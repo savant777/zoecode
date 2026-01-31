@@ -138,10 +138,10 @@
                 border: 2px solid var(--elect-b);
 
                 &+br { display: none; }
-                
+
                 &[s] { width: fit-content; }
-                &[s]+ans { flex: 1; }
-                &[l], &[l]+ans { width: 100%; }
+                &[s]~ans { flex: 1; }
+                &[l], &[l]~ans { width: 100%; }
                 
                 p {
                     margin: 0;
@@ -166,6 +166,8 @@
                 background: var(--elect-w);
                 border: 2px solid;
                 pointer-events: none;
+
+                &:last-child { border-inline-start: 0; }
 
                 &+br { display: none; }
 
