@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+@font-face {
+    font-family: 'FC SaveSpace';
+    src: url('https://savant777.github.io/zoecode/font/FC%20SaveSpace%20Regular%20ver%201.01.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+
+}
+
+#Vote0802 { position: relative; }
+#Vote0802 * { box-sizing: border-box; }
+
+#Vote0802 a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#Vote0802 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#Vote0802::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#Vote0802:hover::after { content: "zzzcode"; }
+
+#Vote0802 {
+    
+}
