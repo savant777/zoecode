@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css');
 
 @font-face {
     font-family: 'FC SaveSpace';
@@ -8,13 +9,16 @@
 }
 
 :root {
-
+    --elect-g: #2bb15c;
+    --elect-y: #fced52;
+    --elect-b: #000;
+    --elect-w: #fff;
 }
 
-#Vote0802 { position: relative; }
-#Vote0802 * { box-sizing: border-box; }
+#Election0802 { position: relative; }
+#Election0802 * { box-sizing: border-box; }
 
-#Vote0802 a[href="https://discord.com/users/625292873914515456/"] {
+#Election0802 a[href="https://discord.com/users/625292873914515456/"] {
     height: 12px;
     position: absolute;
     z-index: 1;
@@ -23,9 +27,9 @@
     right: 0;
 }
 
-#Vote0802 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#Election0802 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
-#Vote0802::after {
+#Election0802::after {
     display: block;
     content: "z";
     font-family: 'Courier New', Courier, monospace;
@@ -35,8 +39,175 @@
     text-align: center;
 }
   
-#Vote0802:hover::after { content: "zzzcode"; }
+#Election0802:hover::after { content: "zzzcode"; }
 
-#Vote0802 {
-    
+#Election0802 {
+    #ElectThread.elect-box {
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        padding: min(4vw, 4rem);
+        background: var(--elect-g);
+        color: var(--elect-b);
+        font-family: 'Sarabun', sans-serif;
+        font-size: min(1.5vw, 17px);
+
+        &::before {
+            content: "";
+            display: block;
+            width: 50%;
+            aspect-ratio: 500/95;
+            background: url(https://iili.io/fLrCHV2.png) center/contain no-repeat;
+            margin: min(2vw, 2rem) auto;
+        }
+
+        .elect-qt {
+            max-width: fit-content;
+            background: var(--elect-b);
+            color: var(--elect-w);
+            border-radius: 5vw;
+            padding: min(0.5vw, 0.5rem) min(2vw, 2rem);
+            margin: min(4vw, 4rem) auto min(3vw, 3rem);
+            
+            font-family: 'FC SaveSpace', sans-serif;
+            font-size: min(3vw, 3rem);
+            line-height: 1;
+            text-align: center;
+        }
+
+        .elect-content {
+            background: var(--elect-w);
+            border: 2px solid;
+            padding: min(1.5vw, 1rem);
+
+            sm {
+                color: red;
+                font-size: min(1.2vw, 0.8rem);
+                font-weight: bold;
+            }
+        }
+
+        h1.elect-h1 {
+            width: fit-content;
+            max-width: 100%;
+            background: var(--elect-b);
+            color: var(--elect-w);
+            
+            font-family: 'FC SaveSpace', sans-serif;
+            font-size: min(3vw, 3rem);
+            font-weight: normal;
+            line-height: 1;
+            
+            margin-block: 0;
+            padding: 0 min(1.5vw, 1rem);
+
+            &+br { display: none; }
+        }
+    }
+
+    #ElectForm.elect-box {
+        width: 600px;
+        max-width: 100%;
+        margin: auto;
+        background: var(--elect-g);
+        color: var(--elect-b);
+        font-family: 'Sarabun', sans-serif;
+        padding: 2rem;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 300px;
+            aspect-ratio: 500/95;
+            margin: auto;
+            background: url(https://iili.io/fLrCHV2.png) center/contain no-repeat;
+            margin-block: 1rem 3rem;
+        }
+
+        .elect-q {
+            display: flex;
+            flex-wrap: wrap;
+            margin-block: 0 1rem;
+
+            &:has(+hr), &:last-child { margin-block: 0; }
+
+            q {
+                background: var(--elect-b);
+                color: var(--elect-w);
+                padding: 0.5rem 1rem;
+                border: 2px solid var(--elect-b);
+
+                &[s] { width: fit-content; }
+                &[s]+ans { flex: 1; }
+                &[l], &[l]+ans { width: 100%; }
+            }
+
+            ans {
+                background: var(--elect-w);
+                border: 2px solid;
+                padding: 0.5rem 1rem;
+
+                p {
+                    margin: 0;
+                    color: var(--elect-y);
+                    font-size: 0.8rem;
+                }
+            }
+
+            label {
+                display: flex;
+                flex: 1;
+                background: var(--elect-w);
+                border: 2px solid;
+                pointer-events: none;
+
+                input[type="checkbox"] {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    height: 50.59px;
+                    margin: 0;
+                    aspect-ratio: 1;
+                    border-inline-end: 2px solid;
+
+                    user-select: none;
+                    pointer-events: none;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    
+                    &::before {
+                        content: "";
+                        
+                        font-style: normal;
+                        font-weight: normal !important;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+
+                    &:checked::before { content: "\e576"; }
+                    &:focus { outline: transparent; }
+                }
+
+                div { padding: 0.5rem 1rem; }
+            }
+        }
+
+        hr {
+            background: transparent;
+            border-block-start: 2px dashed var(--elect-b);
+            margin-block: 2rem;
+        }
+
+        .elect-extra {
+            text-align: center;
+            font-weight: bold;
+            color: var(--elect-y);
+            margin-block: 0 1rem;
+        }
+    }
 }
