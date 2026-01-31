@@ -172,6 +172,8 @@
                 &+br { display: none; }
 
                 input[type="checkbox"] {
+                    position: relative;
+
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -189,17 +191,11 @@
                     
                     &::before {
                         content: "";
-                        
-                        font-style: normal;
-                        font-weight: normal !important;
-                        font-variant: normal;
-                        text-transform: none;
-                        line-height: 1;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
+                        position: absolute;
+                        inset: 0;
                     }
 
-                    &:checked::before { content: "\e576"; }
+                    &:checked::before { background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22512%22%20height%3D%22512%22%20x%3D%220%22%20y%3D%220%22%20viewBox%3D%220%200%2024%2024%22%20style%3D%22enable-background%3Anew%200%200%20512%20512%22%20xml%3Aspace%3D%22preserve%22%20class%3D%22%22%3E%3Cg%3E%3Cpath%20d%3D%22M24%201.414%2022.586%200%2012%2010.586%201.414%200%200%201.414%2010.586%2012%200%2022.586%201.414%2024%2012%2013.414%2022.586%2024%2024%2022.586%2013.414%2012%2024%201.414z%22%20fill%3D%22%23000000%22%20opacity%3D%221%22%20data-original%3D%22%23000000%22%20class%3D%22%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E) center/80% no-repeat; }
                     &:focus { outline: transparent; }
                 }
 
