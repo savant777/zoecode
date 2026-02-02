@@ -142,13 +142,12 @@ a:has(.songmood-pic) + br {
 .songmood-content summary:hover .songmood-song h1,
 .songmood-label-group:hover .songmood-song h1 {
     color: var(--sm-mood-color);
+    c { color: var(--sm-mood-color1); }
 }
 
 .songmood-song h1 {
     line-height: 1.4;
     transition: all .5s ease;
-
-    c { color: var(--sm-mood-color1); }
 }
 
 .songmood-label-group {
