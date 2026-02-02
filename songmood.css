@@ -144,7 +144,12 @@ a:has(.songmood-pic) + br {
     color: var(--sm-mood-color);
 }
 
-.songmood-song h1 { line-height: 1.4; }
+.songmood-song h1 {
+    line-height: 1.4;
+    transition: all .5s ease;
+
+    c { color: var(--sm-mood-color1); }
+}
 
 .songmood-label-group {
     display: flex;
