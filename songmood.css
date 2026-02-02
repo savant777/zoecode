@@ -148,6 +148,8 @@ a:has(.songmood-pic) + br {
 .songmood-song h1 {
     line-height: 1.4;
     transition: all .5s ease;
+
+    c { transition: all .5s ease; }
 }
 
 .songmood-label-group {
