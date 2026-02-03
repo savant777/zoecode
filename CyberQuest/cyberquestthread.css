@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'iannnnnAMD';
+    src: url('https://savant777.github.io/zoecode/font/2005_iannnnnAMD.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --cbpic: black;
+    --cbpos: center;
+    --cbsize: cover;
+
+    --clr-primary: #ceff00;
+    --cbbg: url(https://iili.io/2XdKJ7R.png);
+    --cbbgpos: center;
+    --cbbgsize: cover;
+}
+
+#cyberquest { position: relative; }
+#cyberquest * { box-sizing: border-box; }
+
+#cyberquest a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#cyberquest a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+
+#cyberquest::after {
+    display: block;
+    content: "Cyber Quest";
+    font-family: monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#cyberquest:hover::after { content: "code by zzzcode"; }
+
+#cyberquest {
+    .cbthread-container {
+        width: 100%;
+        background:
+            url(https://iili.io/2XdKHdv.png) -3px -3px/550px 550px repeat,
+            linear-gradient(transparent, #131313 35% 65%, transparent),
+            var(--cbbg) var(--cbbgpos)/var(--cbbgsize) no-repeat;
+        border: 1.6px solid rgba(255,255,255,5%);
+        padding: 4rem 2rem 6rem;
+        font-family: 'Kanit';
+        font-size: min(1.2vw, 18px);
+
+        .cbthread-pic {
+            position: relative;
+            width: 800px;
+            max-width: 100%;
+            aspect-ratio: 1233/682;
+            margin: auto;
+            background: url(https://iili.io/ftnMOvI.png) center/contain no-repeat, var(--cbpic) var(--cbpos)/var(--cbsize) no-repeat, black;
+        }
+
+        .cbthread-topic {
+            position: relative;
+            width: 800px;
+            max-width: 100%;
+            margin: min(3.4vw, 3rem) auto min(1.7vw, 1.5rem);
+            
+            font-family: 'Pixelify Sans', 'iannnnnAMD', sans-serif;
+            font-size: min(3.1vw, 3rem);
+            font-size-adjust: 0.45;
+            line-height: 1;
+            text-align: center;
+            color: var(--clr-primary);
+        }
+
+        .cbthread-content {
+            position: relative;
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            background: rgba(0,0,0,0.75);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: clamp(1.5rem,2vw,2rem) clamp(2rem,2.5vw,2.5rem);
+            text-align: justify;
+            font-weight: 200;
+
+            .mycode_b { font-weight: 400 !important; }
+        }
+    }
+}
