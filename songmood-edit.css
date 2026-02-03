@@ -239,6 +239,8 @@
                     p { margin-block-end: 0; }
                     iframe + br { display: none; }
                 }
+
+                &:last-of-type .sm-ans { margin-bottom: 0 !important; }
             }
 
             details[open] {
@@ -259,8 +261,6 @@
                     }
                 }
             }
-
-            details:last-child .sm-ans, details:only-child .sm-ans { margin-bottom: 0 !important; }
         }
     }
 }
