@@ -189,7 +189,7 @@
 
                             i {
                                 font-size: 84px;
-                                color: #fff;
+                                color: #fff !important;
                                 transition: all 1s ease;
                                 -webkit-text-stroke: 0;
                                 opacity: 0;
@@ -218,7 +218,7 @@
                     &:hover {
                         .sm-label { 
                             background: var(--sm-mood-color);
-                            color: var(--sm-stroke);
+                            i { color: var(--sm-stroke); }
 
                             &[style^="--sm-pic:"] {
                                 &::before { opacity: 0.75; }
@@ -246,6 +246,7 @@
                 >summary {
                     .sm-label { 
                         background: var(--sm-mood-color);
+                        i { color: var(--sm-stroke); }
 
                         &[style^="--sm-pic:"] {
                             &::before { opacity: 0.75; }
