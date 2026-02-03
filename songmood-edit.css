@@ -226,7 +226,7 @@
                             }
                         }
 
-                        .sm-song {
+                        .sm-song h1 {
                             color: var(--sm-mood-color);
                             c { color: var(--sm-mood-color1); }
                         }
@@ -253,7 +253,7 @@
                         }
                     }
 
-                    .sm-song {
+                    .sm-song h1 {
                         color: var(--sm-mood-color);
                         c { color: var(--sm-mood-color1); }
                     }
