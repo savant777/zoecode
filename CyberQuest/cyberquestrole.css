@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap');
 
+@font-face {
+    font-family: 'iannnnnAMD';
+    src: url('https://savant777.github.io/zoecode/font/2005_iannnnnAMD.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
     --cbpic: black;
     --cbpos: center;
@@ -163,9 +170,9 @@
 
             padding-block: min(1.5vw, 1.5rem) 1rem;
             padding-inline: 1rem;
-            
+
             text-align: center;
-            font-family: 'Pixelify Sans', sans-serif;
+            font-family: 'Pixelify Sans', 'iannnnnAMD', sans-serif;
             color: var(--clr-primary);
             font-size: min(2.1vw, 2rem);
             line-height: 1;
