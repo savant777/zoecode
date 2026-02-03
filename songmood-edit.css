@@ -238,8 +238,6 @@
 
                     p { margin-block-end: 0; }
                 }
-
-                &:last-child .sm-ans { margin-block-end: 0; }
             }
 
             details[open] {
@@ -260,6 +258,8 @@
                     }
                 }
             }
+
+            details:last-child .sm-ans, details:only-child .sm-ans { margin-block-end: 0; }
         }
     }
 }
