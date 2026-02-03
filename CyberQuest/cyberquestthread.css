@@ -84,13 +84,18 @@
             width: 800px;
             max-width: 100%;
             margin: auto;
-            background: rgba(0,0,0,0.75);
-            border: 1px solid rgba(255,255,255,0.25);
-            padding: clamp(1.5rem,2vw,2rem) clamp(2rem,2.5vw,2.5rem);
+            background: rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: clamp(1.5rem, 2vw, 2rem) clamp(2rem, 2.5vw, 2.5rem);
             text-align: justify;
             font-weight: 200;
 
             .mycode_b { font-weight: 400 !important; }
+
+            hr {
+                margin-block: clamp(1.25rem, 1.75vw, 1.75rem) clamp(1rem, 1.5vw, 1.5rem);
+                background: rgba(255, 255, 255, 0.25);
+            }
         }
     }
 }
