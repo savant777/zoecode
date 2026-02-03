@@ -67,11 +67,12 @@
     .craft-set {
         display: flex;
         flex-direction: row;
-        column-gap: calc(var(--craft-width)/16);
+        column-gap: min(2vw, calc(var(--craft-width) / 16));
         align-items: center;
 
         .craft-grid {
             order: 1;
+            flex-shrink: 0;
             position: relative;
             width: calc(var(--craft-width)*6/16);
             height: calc(var(--craft-width)*6/16);
@@ -109,6 +110,7 @@
 
         .craft-pic {
             order: 3;
+            flex-shrink: 0;
             position: relative;
             width: calc(var(--craft-width)*4/16);
             height: calc(var(--craft-width)*4/16);
