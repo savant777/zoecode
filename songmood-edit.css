@@ -136,6 +136,7 @@
             hr { margin-block: 1rem; }
 
             details{
+                margin-block: 1rem;
                 &+br { display: none; }
 
                 >summary {
@@ -146,7 +147,7 @@
                     gap: 1rem;
 
                     &::marker, &::-webkit-details-marker { display: none; }
-                    &+br { display: none; }
+                    >br, &+br { display: none; }
 
                     a:has(.sm-label)+br, a:has(.sm-pic)+br { display: none; }
 
@@ -219,6 +220,8 @@
 
                     p { margin-block-end: 0; }
                 }
+
+                &:last-child .sm-ans { margin-block-end: 0; }
             }
 
             details[open] {
