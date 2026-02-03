@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap');
+
+:root {
+    --cbpic: black;
+    --cbpos: center;
+    --cbsize: cover;
+
+    --clr-primary: #ceff00;
+    --cbfont-size: 2;
+}
+
+#cyberquest { position: relative; }
+#cyberquest * { box-sizing: border-box; }
+
+#cyberquest a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#cyberquest a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+
+#cyberquest::after {
+    display: block;
+    content: "Cyber Quest";
+    font-family: monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#cyberquest:hover::after { content: "code by zzzcode"; }
+
+.cbrole-container {
+    width: 100%;
+    padding: 0.5rem 0.5rem 1rem;
+    font-family: 'Bai Jamjuree';
+    font-size: 1rem;
+}
+
+.cbrole-area {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: min(1vw, 1rem);
+
+    .cbrole-role {
+        position: relative;
+        flex: 1;
+        width: 66.4322%;
+        aspect-ratio: 664.322/348.135;
+        background: rgba(0,0,0,0.75);
+        border: 1px solid rgba(255,255,255,0.25);
+        padding-inline: clamp(2rem,3.25vw,3.5rem);
+        padding-block: clamp(2rem,3.25vw,3.5rem);
+
+        tpl + br, tpr + br, btl + br, btr + br { display: none; }
+
+        tpl {
+            position: absolute;
+            aspect-ratio: 338.697 / 276.853;
+            width: 50.98386%;
+            background: url(https://iili.io/2wUF8eR.png) center / contain no-repeat;
+            top: 0;
+            left: -1.553711%;
+            transform: translateY(-4%);
+        }
+
+        tpr {
+            position: absolute;
+            aspect-ratio: 353.72/187.58;
+            width: 66.55657949%;
+            background: url(https://iili.io/2wUFv5v.png) center/contain no-repeat;
+            top: 0;
+            right: -1.42382%;
+            transform: translateY(-5%);
+        }
+
+        btl {
+            position: absolute;
+            aspect-ratio: 353.72/187.58;
+            width: 66.55657949%;
+            background: url(https://iili.io/2wUFv5v.png) center/contain no-repeat;
+            bottom: 0;
+            left: -1.42382%;
+            transform: translateY(5%) scale(-1, -1);
+        }
+
+        btr {
+            position: absolute;
+            aspect-ratio: 338.697 / 276.853;
+            width: 50.98386%;
+            background: url(https://iili.io/2wUF8eR.png) center / contain no-repeat;
+            bottom: 0;
+            right: -1.553711%;
+            transform: translateY(4%) scale(-1, -1);
+        }
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        
+        .cbrole-ps{ text-align: right; }
+    }
+
+    .cbrole-player {
+        position: relative;
+        width: 250px;
+        
+        .cbrole-pic {
+            position: relative;
+            z-index: 2;
+            width: 86.97665669%;
+            aspect-ratio: 254.298/244.085;
+            border-top-right-radius: 15.7%;
+            background: var(--cbpic) var(--cbpos)/var(--cbsize) no-repeat;
+            margin-inline: auto;
+            margin-block-start: 0.5rem;
+        }
+
+        .cbrole-pic::before {
+            content: "";
+            position: absolute;
+            width: 115%;
+            aspect-ratio: 1;
+            top: -9.86%;
+            left: -8.88%;
+            background: url(https://iili.io/2wrHfII.png) center/contain no-repeat;
+        }
+
+        .cbrole-name { 
+            position: relative;
+            z-index: 1;
+            width: 80.69%;
+            aspect-ratio: 1;
+            background: rgba(0,0,0,0.75);
+            border-radius: 15%;
+            margin-inline: auto;
+            transform: translateY(-50%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            padding-block: 50% 1rem;
+            padding-inline: 1rem;
+            
+            text-align: center;
+            font-family: 'Pixelify Sans', sans-serif;
+            color: var(--clr-primary);
+            font-size: calc(var(--cbfont-size) * 1rem);
+            line-height: 1;
+        }
+
+        .cbrole-name::before {
+            content: "";
+            position: absolute;
+            width: 104%;
+            aspect-ratio: 1;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 2%);
+            background: url(https://iili.io/2XddRff.png) center/contain no-repeat;
+        }
+
+        @media screen and (max-width: 1150px) {
+            width: 200px;
+            .cbrole-name { font-size: calc(var(--cbfont-size) * 0.75rem); }
+        }
+    }
+}

@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --clr-main: #ceff00;
+    --clr-v1: #ffa800;
+    --clr-v2: #00d9ff;
+    --clr-v3: #ff00df;
+    --clr-v4: #6300ff;
+
+    --cbpic: black;
+    --cbpos: center;
+    --cbsize: cover;
+
+    --cbpic-main: black;
+    --cbpos-main: center;
+    --cbsize-main: cover;
+
+    --cbpic-v1: black;
+    --cbpos-v1: center;
+    --cbsize-v1: cover;
+
+    --cbpic-v2: black;
+    --cbpos-v2: center;
+    --cbsize-v2: cover;
+
+    --cbpic-v3: black;
+    --cbpos-v3: center;
+    --cbsize-v3: cover;
+}
+
+#cyberquest { position: relative; }
+#cyberquest * { box-sizing: border-box; }
+
+#cyberquest a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#cyberquest a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#cyberquest::after {
+    display: block;
+    content: "Cyber Quest";
+    font-family: monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: fit-content;
+    margin: auto;
+}
+  
+#cyberquest:hover::after { content: "code by zzzcode"; }
+
+#cyberquest input[type="radio"],
+#cyberquest input[type="radio"] + br {
+    display: none;
+}
+
+/* ==== INPUT CHECK : TEXTCOLOR ==== */
+
+[data-group] input[data-theme="main"]:checked ~ .cbprofile-avtr { --clr-primary: var(--clr-main); }
+
+[data-group] input[data-theme="v1"]:checked ~ .cbprofile-avtr { --clr-primary: var(--clr-v1); }
+
+[data-group] input[data-theme="v2"]:checked ~ .cbprofile-avtr { --clr-primary: var(--clr-v2); }
+
+[data-group] input[data-theme="v3"]:checked ~ .cbprofile-avtr { --clr-primary: var(--clr-v3); }
+
+[data-group] input[data-theme="v4"]:checked ~ .cbprofile-avtr { --clr-primary: var(--clr-v4); }
+
+/* ==== INPUT CHECK : PIC ==== */
+
+[data-group] input[data-theme="main"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-right,
+[data-group] input[data-theme="v4"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-right { 
+    --cbpic: var(--cbpic-main);
+    --cbpos: var(--cbpos-main);
+    --cbsize: var(--cbsize-main);
+}
+
+[data-group] input[data-theme="v1"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-right {
+    --cbpic: var(--cbpic-v1);
+    --cbpos: var(--cbpos-v1);
+    --cbsize: var(--cbsize-v1);
+}
+
+[data-group] input[data-theme="v2"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-right {
+    --cbpic: var(--cbpic-v2);
+    --cbpos: var(--cbpos-v2);
+    --cbsize: var(--cbsize-v2);
+}
+
+[data-group] input[data-theme="v3"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-right {
+    --cbpic: var(--cbpic-v3);
+    --cbpos: var(--cbpos-v3);
+    --cbsize: var(--cbsize-v3);
+}
+
+/* ==== INPUT CHECK : LABEL ==== */
+
+[data-group] input[data-theme="main"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-label > label[for^="main"]::before,
+[data-group] input[data-theme="v1"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-label > label[for^="v1"]:not([for*="lock"])::before,
+[data-group] input[data-theme="v2"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-label > label[for^="v2"]:not([for*="lock"])::before,
+[data-group] input[data-theme="v3"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-label > label[for^="v3"]:not([for*="lock"])::before,
+[data-group] input[data-theme="v4"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-label > label[for^="v4"]:not([for*="lock"])::before {
+    width: 70%;
+    height: 70%;
+    animation-play-state: running;
+}
+
+/* ==== INPUT CHECK : INFO DATA ==== */
+
+/* ---- MAIN ---- */
+[data-group] input[data-theme="main"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-info > div[info="main"],
+[data-group] input[data-theme="main"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-body > div[info="main"] { display: block; }
+
+/* ---- V1 ---- */
+[data-group] input[data-theme="v1"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-info > div[info="v1"],
+[data-group] input[data-theme="v1"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-body > div[info="v1"] { display: block; }
+
+/* ---- V2 ---- */
+[data-group] input[data-theme="v2"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-info > div[info="v2"],
+[data-group] input[data-theme="v2"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-body > div[info="v2"] { display: block; }
+
+/* ---- V3 ---- */
+[data-group] input[data-theme="v3"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-info > div[info="v3"],
+[data-group] input[data-theme="v3"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-body > div[info="v3"] { display: block; }
+
+/* ---- V4 ---- */
+[data-group] input[data-theme="v4"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-head > .cbprofile-info > div[info="v4"],
+[data-group] input[data-theme="v4"]:checked ~ .cbprofile-avtr > .cbprofile-avtr-left > .cbprofile-info-body > div[info="main"] { display: block; }
+
+@keyframes cdplay {
+    0% { rotate: 0deg; }
+    100% { rotate: 360deg; }
+}
+
+@-webkit-keyframes cdplay {
+    0% { rotate: 0deg; }
+    100% { rotate: 360deg; }
+}
+
+.cbprofile-container {
+    width: 100%;
+    background: 
+        url(https://iili.io/2XdKHdv.png) -3px -3px/550px 550px repeat, 
+        linear-gradient(transparent, #131313 35% 65%, transparent), 
+        url(https://iili.io/2XdKJ7R.png) top center/cover no-repeat;
+    border: 1.6px solid rgba(255,255,255,5%);
+    padding: 4rem 2rem 6rem;
+    font-family: 'Kanit';
+    font-size: min(1vw, 16px);
+}
+
+.cbprofile-avtr {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-block-start: 5rem;
+
+    .cbprofile-avtr-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400px;
+        aspect-ratio: 500/81;
+        background: url(https://iili.io/2Xdd7Ul.png) center/contain no-repeat;
+    }
+
+    .cbprofile-avtr-left {
+        position: relative;
+        width: 71.1046%;
+        aspect-ratio: 711.046/446.76;
+        background: rgba(0,0,0,0.75);
+        border: 1px solid rgba(255,255,255,0.25);
+        padding-inline: clamp(1rem,1vw,1.5rem) clamp(1.5rem,1.5vw,2rem);
+        padding-block: clamp(1.5rem,1.5vw,2rem) clamp(1rem,1vw,1.5rem);
+
+        tpl + br, btl + br, btr + br { display: none; }
+
+        tpl {
+            position: absolute;
+            aspect-ratio: 527/388;
+            width: 53.44%;
+            background: url(https://iili.io/2Xdddog.png) center/contain no-repeat;
+            top: -3.386%;
+            left: -1.688%;
+        }
+
+        btl {
+            position: absolute;
+            aspect-ratio: 227/263;
+            width: 22.96785%;
+            background: url(https://iili.io/2XdJyAP.png) center/contain no-repeat;
+            bottom: -2.14856%;
+            left: -0.9068%;
+        }
+
+        btr {
+            position: absolute;
+            aspect-ratio: 312/27;
+            width: 31.66658697%;
+            background: url(https://iili.io/2XdJpHB.png) center/contain no-repeat;
+            bottom: 0;
+            right: 10.37%;
+            transform: translateY(50%);
+        }
+
+        display: flex;
+        flex-direction: column;
+        row-gap: min(1vw, 20px);
+
+        .cbprofile-info-head {
+            display: flex;
+            column-gap: min(1vw, 20px);
+
+            .cbprofile-info {
+                flex: 1.5;
+                display: grid;
+                grid-template-columns: 1fr 1.3fr;
+                column-gap: 0.5vw;
+                line-height: 1;
+                align-items: center;
+                text-wrap: nowrap;
+                font-weight: 200;
+
+                bc + br { display: none; }
+
+                bc {
+                    color: var(--clr-primary);
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    text-align: justify;
+                    text-align-last: justify;
+                }
+
+                div[info] {display: none; }
+            }
+            
+            .cbprofile-label {
+                display: flex;
+                column-gap: min(0.5vw, 10px);
+
+                label + br { display: none; }
+                
+                label {
+                    width: min(3vw, 3rem);
+                    flex: 1;
+                    aspect-ratio: 1;
+                    background: url(https://iili.io/2Xdd3iJ.png) center/contain no-repeat, rgba(0,0,0,0.75);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    position: relative;
+                }
+
+                label::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    background: var(--cbkey) center/contain no-repeat;
+                    transition: all .5s ease;
+                }
+
+                label:not([for^="main"]):not([for*="lock"])::before,
+                label[for^="main"]::before {
+                    width: 50%;
+                    height: 50%;
+                    animation: cdplay 2s linear infinite;
+                    animation-play-state: paused;
+                }
+
+                label[for^="main"] { --cbkey: url(https://iili.io/2XyiY12.png); }
+                
+                label[for^="v1"][for*="lock"] { --cbkey: url(https://iili.io/2Xdd2Va.png); }
+                label[for^="v2"][for*="lock"] { --cbkey: url(https://iili.io/2XddKKv.png); }
+                label[for^="v3"][for*="lock"] { --cbkey: url(https://iili.io/2XddqSp.png); }
+                label[for^="v4"][for*="lock"] { --cbkey: url(https://iili.io/2XddCHN.png); }
+
+                label[for^="v1"]:not([for*="lock"]) { --cbkey: url(https://iili.io/2XyyLPe.png); }
+                label[for^="v2"]:not([for*="lock"]) { --cbkey: url(https://iili.io/2Xyytcb.png); }
+                label[for^="v3"]:not([for*="lock"]) { --cbkey: url(https://iili.io/2XyyZKu.png); }
+                label[for^="v4"]:not([for*="lock"]) { --cbkey: url(https://iili.io/2XyymHx.png); }
+
+                label[for^="main"]:hover::before,
+                label[for^="v1"]:not([for*="lock"]):hover::before,
+                label[for^="v2"]:not([for*="lock"]):hover::before,
+                label[for^="v3"]:not([for*="lock"]):hover::before,
+                label[for^="v4"]:not([for*="lock"]):hover::before {
+                    width: 70%;
+                    height: 70%;
+                }
+            }
+        }
+
+        .cbprofile-info-body {
+            flex: 1;
+            position: relative;
+            line-height: 1.4;
+
+            bc + br { display: none; }
+
+            bc {
+                color: var(--clr-primary);
+                text-transform: uppercase;
+                font-weight: 400;
+                text-align: justify;
+                text-align-last: justify;
+            }
+
+            .cbprofile-info {
+                position: absolute;
+                top: clamp(21px, 1.5vw, 24px);
+                max-height: 90%;
+                overflow: auto;
+                -webkit-mask: linear-gradient(black 80%, transparent 95%);
+                        mask: linear-gradient(black 80%, transparent 95%);
+                padding-block: 0 7.5%;
+                text-align: justify;
+                font-weight: 200;
+            }
+
+            .cbprofile-info::-webkit-scrollbar { width: 0; }
+
+            div[info] { display: none; }
+        }
+    }
+    
+    .cbprofile-avtr-right {
+        position: relative;
+        width: 26.0685%;
+        aspect-ratio: 260.685/453.971;
+        background: var(--cbpic) var(--cbpos)/var(--cbsize) no-repeat;
+        border-radius: 6px;
+    }
+
+    .cbprofile-avtr-right::before {
+        content: "";
+        position: absolute;
+        aspect-ratio: 303.255/493.405;
+        width: 116.33%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(https://iili.io/2XddaJ2.png) center/contain no-repeat;
+    }
+}
+
+.cbprofile-show {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin-inline: auto;
+    margin-block-start: 3vw;
+    display: flex;
+    column-gap: 2.5%;
+    padding-inline: 1.5vw 0.5vw;
+
+    .cbprofile-room {
+        position: relative;
+        width: 37.7947%;
+        aspect-ratio: 377.947/372.211;
+        background: var(--cbroom) center/cover no-repeat;
+        border-radius: 0 15% 5% 0;
+    }
+
+    .cbprofile-room::before {
+        content: "";
+        position: absolute;
+        top: -4.66587%;
+        left: -5.86474%;
+        width: 108.2067%;
+        aspect-ratio: 408.964/405.601;
+        background: url(https://iili.io/2XddcRS.png) center/contain no-repeat;
+    }
+
+    .cbprofile-room[tier="0"][ver="0"] { --cbroom: rgba(0,0,0,0.75); }
+
+    .cbprofile-room[tier="1"][ver="1"] { --cbroom: url(https://i.imgur.com/u8qEEPn.jpeg); }
+    .cbprofile-room[tier="1"][ver="2"] { --cbroom: url(https://i.imgur.com/pc2XI0a.jpeg); }
+    .cbprofile-room[tier="1"][ver="3"] { --cbroom: url(https://i.imgur.com/q4pqjbt.jpeg); }
+    .cbprofile-room[tier="1"][ver="4"] { --cbroom: url(https://i.imgur.com/yZWzSMl.jpeg); }
+    
+    .cbprofile-room[tier="2"][ver="1"] { --cbroom: url(https://i.imgur.com/yq17Gru.jpeg); }
+    .cbprofile-room[tier="2"][ver="2"] { --cbroom: url(https://i.imgur.com/VKEZIqA.jpeg); }
+    .cbprofile-room[tier="2"][ver="3"] { --cbroom: url(https://i.imgur.com/KXz902V.jpeg); }
+    .cbprofile-room[tier="2"][ver="4"] { --cbroom: url(https://i.imgur.com/2w2P9WF.jpeg); }
+    .cbprofile-room[tier="2"][ver="5"] { --cbroom: url(https://i.imgur.com/0xJvLjJ.jpeg); }
+    .cbprofile-room[tier="2"][ver="6"] { --cbroom: url(https://i.imgur.com/dmONCge.jpeg); }
+
+    .cbprofile-collection {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vw;
+        padding-block-start: 7.5%;
+        width: 56.9716%;
+
+        .cbprofile-collection-label {
+            position: absolute;
+            top: -4%;
+            right: -1%;
+            width: 103%;
+            aspect-ratio: 500/59;
+            background: url(https://iili.io/2XddHDF.png) center/contain no-repeat;
+        }
+
+        .cbprofile-item-big {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 1vw;
+
+            .item {
+                position: relative;
+                aspect-ratio: 1;
+                border-radius: 10%;
+                background: rgba(0,0,0,75%);
+                
+                i {
+                    position: absolute;
+                    inset: 0;
+                    overflow: hidden;
+
+                    b {
+                        position: absolute;
+                        inset: 0;
+                        background: var(--cbitem) center/contain no-repeat;
+                        transform-style: preserve-3d;
+                    }
+                    
+                    b::after {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        transform: translateZ(-1px);
+                        background: var(--cbitem) center / contain no-repeat;
+                        filter: blur(min(1.25vw, 20px)) saturate(3);
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .item::before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                inset: -2%;
+                aspect-ratio: 1;
+                background: url(https://iili.io/2XddRff.png) center/contain no-repeat;
+            }
+
+            --cbitem: ;
+        }
+
+        .cbprofile-item-small {
+            position: absolute;
+            bottom: 0;
+
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(9%, 1fr));
+            gap: 0.1vw;
+            overflow: auto;
+            max-height: 42.5%;
+            -webkit-mask: linear-gradient(black 80%, transparent 95%);
+                    mask: linear-gradient(black 80%, transparent 95%);
+            padding-block: 0 5%;
+
+            .item {
+                position: relative;
+                aspect-ratio: 1;
+                border: 1px solid rgba(255,255,255,0.25);
+                background: var(--cbitem) center/contain no-repeat, rgba(0,0,0,75%);
+            }
+
+            --cbitem: url(https://iili.io/2Xdd5l4.png);
+        }
+
+        .cbprofile-item-small::-webkit-scrollbar { width: 0; }
+    }
+
+}
