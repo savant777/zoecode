@@ -74,15 +74,15 @@
                 gap: 1rem;
                 align-items: center;
 
-                ic[m], ic[s], ic[x] {
+                ic[m]::before, ic[s]::before, ic[x]::before {
                     -moz-osx-font-smoothing: grayscale;
                     -webkit-font-smoothing: antialiased;
-                    display: inline-block;
+                    display: block;
                     font-style: normal;
                     font-variant: normal;
                     line-height: 1;
                     text-rendering: auto;
-                    font-family: "Font Awesome 6 Free";
+                    font-family: "Font Awesome 7 Free";
                 }
 
                 ic[m]::before {
