@@ -149,7 +149,7 @@
                     &::marker, &::-webkit-details-marker { display: none; }
                     >br, &+br { display: none; }
 
-                    a:has(.sm-label)+br, a:has(.sm-pic)+br { display: none; }
+                    a:has(.sm-label)+br, a:has(.sm-label)>br, a:has(.sm-pic)+br, a:has(.sm-pic)>br { display: none; }
 
                     .sm-label {
                         position: relative;
@@ -191,6 +191,7 @@
                                 font-size: 84px;
                                 color: #fff;
                                 transition: all 1s ease;
+                                -webkit-text-stroke: 0;
                                 opacity: 0;
                             }
                         }
@@ -213,6 +214,23 @@
                             transition: all .5s ease;
                         }
                     }
+
+                    &:hover {
+                        .sm-label { 
+                            background: var(--sm-mood-color);
+                            color: var(--sm-stroke);
+
+                            &[style^="--sm-pic:"] {
+                                &::before { opacity: 0.75; }
+                                &:hover i{ opacity: 0.9; }
+                            }
+                        }
+
+                        .sm-song {
+                            color: var(--sm-mood-color);
+                            c { color: var(--sm-mood-color1); }
+                        }
+                    }
                 }
 
                 .sm-ans {
@@ -233,6 +251,11 @@
                             &::before { opacity: 0.75; }
                             &:hover i{ opacity: 0.9; }
                         }
+                    }
+
+                    .sm-song {
+                        color: var(--sm-mood-color);
+                        c { color: var(--sm-mood-color1); }
                     }
                 }
             }
