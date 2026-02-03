@@ -212,6 +212,8 @@
                         h1 {
                             line-height: 1.4;
                             transition: all .5s ease;
+
+                            c { transition: all .5s ease; }
                         }
                     }
 
