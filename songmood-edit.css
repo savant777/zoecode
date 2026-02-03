@@ -232,8 +232,8 @@
 
         @media screen and (max-width: 1150px) {
             details > summary {
-                .sm-label { width: 100px; }
-                .sm-song { font-size: small; }
+                .sm-label { width: 100px !important; }
+                .sm-song { font-size: small !important; }
             }
         }
     }
