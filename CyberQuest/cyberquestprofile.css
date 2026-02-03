@@ -191,6 +191,8 @@
             background: url(https://iili.io/2Xdddog.png) center/contain no-repeat;
             top: -3.386%;
             left: -1.688%;
+            user-select: none;
+            pointer-events: none;
         }
 
         btl {
@@ -200,6 +202,8 @@
             background: url(https://iili.io/2XdJyAP.png) center/contain no-repeat;
             bottom: -2.14856%;
             left: -0.9068%;
+            user-select: none;
+            pointer-events: none;
         }
 
         btr {
@@ -210,6 +214,8 @@
             bottom: 0;
             right: 10.37%;
             transform: translateY(50%);
+            user-select: none;
+            pointer-events: none;
         }
 
         display: flex;
@@ -352,6 +358,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         background: url(https://iili.io/2XddaJ2.png) center/contain no-repeat;
+        user-select: none;
+        pointer-events: none;
     }
 }
 
@@ -381,6 +389,8 @@
         width: 108.2067%;
         aspect-ratio: 408.964/405.601;
         background: url(https://iili.io/2XddcRS.png) center/contain no-repeat;
+        user-select: none;
+        pointer-events: none;
     }
 
     .cbprofile-room[tier="0"][ver="0"] { --cbroom: rgba(0,0,0,0.75); }
@@ -457,6 +467,8 @@
                 inset: -2%;
                 aspect-ratio: 1;
                 background: url(https://iili.io/2XddRff.png) center/contain no-repeat;
+                user-select: none;
+                pointer-events: none;
             }
 
             --cbitem: ;
