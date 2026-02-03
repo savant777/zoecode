@@ -139,7 +139,7 @@
                 margin-block: 1rem;
                 &+br { display: none; }
 
-                >summary {
+                > summary {
                     list-style: none;
                     cursor: pointer;
 
@@ -148,8 +148,6 @@
 
                     &::marker, &::-webkit-details-marker { display: none; }
                     >br, &+br { display: none; }
-
-                    a:has(.sm-label)+br, a:has(.sm-label)>br, a:has(.sm-pic)+br, a:has(.sm-pic)>br { display: none; }
 
                     .sm-label {
                         position: relative;
@@ -162,38 +160,20 @@
                         aspect-ratio: 1;
                         border-radius: 1rem;
                         border: 2px solid var(--sm-border);
+                        background: var(--sm-pic) var(--sm-pos) / var(--sm-size) no-repeat !important;
+
+                        overflow: hidden;
                         transition: all 1s ease;
 
-                        i {
-                            font-size: 100px;
-                            line-height: 1;
-                            color: var(--sm-mood-color);
-                            -webkit-text-stroke: 2px var(--sm-stroke);
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            background: var(--sm-mood-color);
+                            mask: linear-gradient(transparent 50%, black);
+                            -webkit-mask: linear-gradient(transparent 50%, black);
+                            opacity: 0;
                             transition: all 1s ease;
-                        }
-
-                        &[style^="--sm-pic:"] {
-                            background: var(--sm-pic) var(--sm-pos) / var(--sm-size) no-repeat !important;
-                            overflow: hidden;
-
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                inset: 0;
-                                background: var(--sm-mood-color);
-                                mask: linear-gradient(transparent 50%, black);
-                                -webkit-mask: linear-gradient(transparent 50%, black);
-                                opacity: 0;
-                                transition: all 1s ease;
-                            }
-
-                            i {
-                                font-size: 84px;
-                                color: #fff !important;
-                                transition: all 1s ease;
-                                -webkit-text-stroke: 0;
-                                opacity: 0;
-                            }
                         }
                     }
 
@@ -218,15 +198,7 @@
                     }
 
                     &:hover {
-                        .sm-label { 
-                            background: var(--sm-mood-color);
-                            i { color: var(--sm-stroke); }
-
-                            &[style^="--sm-pic:"] {
-                                &::before { opacity: 0.75; }
-                                &:hover i{ opacity: 0.9; }
-                            }
-                        }
+                        .sm-label::before { opacity: 0.75; }
 
                         .sm-song h1 {
                             color: var(--sm-mood-color);
@@ -248,21 +220,20 @@
 
             details[open] {
                 >summary {
-                    .sm-label { 
-                        background: var(--sm-mood-color);
-                        i { color: var(--sm-stroke); }
-
-                        &[style^="--sm-pic:"] {
-                            &::before { opacity: 0.75; }
-                            &:hover i{ opacity: 0.9; }
-                        }
-                    }
+                    .sm-label::before { opacity: 0.75; }
 
                     .sm-song h1 {
                         color: var(--sm-mood-color);
                         c { color: var(--sm-mood-color1); }
                     }
                 }
+            }
+        }
+
+        @media screen and (max-width: 1150px) {
+            details > summary {
+                .sm-label { width: 100px; }
+                .sm-song { font-size: small; }
             }
         }
     }
