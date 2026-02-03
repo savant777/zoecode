@@ -260,7 +260,7 @@
                 }
             }
 
-            details:last-child .sm-ans, details:only-child .sm-ans { margin-block-end: 0; }
+            details:last-child .sm-ans, details:only-child .sm-ans { margin-bottom: 0 !important; }
         }
     }
 }
