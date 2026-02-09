@@ -10,17 +10,8 @@
     --bm-size: cover;
 }
 
-@keyframes spool-rotate {
-    from {
-        transform: rotate(360deg)
-    }
-}
-
-@-webkit-keyframes spool-rotate {
-    from {
-        transform: rotate(360deg)
-    }
-}
+@keyframes spool-rotate { from { transform: rotate(360deg) } }
+@-webkit-keyframes spool-rotate { from { transform: rotate(360deg) } }
 
 #Bitmap { position: relative; }
 #Bitmap * { box-sizing: border-box; }
@@ -128,7 +119,7 @@
                 padding-block: 0 0.5rem;
 
                 font-family: 'Monomaniac One', sans-serif;
-                font-size: 2.8rem;
+                font-size: 2.575rem;
                 text-transform: uppercase;
             }
 
