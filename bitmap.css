@@ -68,7 +68,7 @@
         .bitmap-grid-info {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            grid-template-rows: repeat(16, 2rem) 3.7rem;
+            grid-template-rows: repeat(17, 2rem) 3.7rem;
             column-gap: 0.625rem;
             
             margin-block: 0.825rem;
@@ -80,7 +80,7 @@
 
             .bitmap-pic {
                 grid-column: 1/2;
-                grid-row: 1/14;
+                grid-row: 1/15;
                 border: 1px solid;
                 position: relative;
 
@@ -96,7 +96,7 @@
 
             .bitmap-fc-name {
                 grid-column: 1/2;
-                grid-row: 14/16;
+                grid-row: 15/17;
                 align-content: center;
 
                 padding-block: 0 0.5rem;
@@ -108,7 +108,7 @@
 
             .bitmap-fc-topic {
                 grid-column: 1/2;
-                grid-row: 16/17;
+                grid-row: 17/18;
                 align-content: center;
                 
                 padding-block: 0.5rem 0.25rem;
@@ -233,8 +233,9 @@
 
                 .case-body {
                     padding: 0 1rem;
-                    background: repeating-linear-gradient(var(--bm-clr) 0 1px, transparent 1px calc(2rem + 1px));
+                    background: repeating-linear-gradient(transparent 0 2rem, var(--bm-clr) 2rem calc(2rem + 1px));
                     margin-block-start: 0.25rem;
+                    border-top: 1px solid;
                 }
             }
 
