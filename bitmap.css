@@ -214,7 +214,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-block: 1.25rem;
+            margin-block: calc(245px + 1.25rem) 1.25rem;
             
             font-family: 'Roboto Mono', 'IBM Plex Sans Thai', monospace;
             line-height: 1;
@@ -278,9 +278,31 @@
                     width: 550px;
                     height: 360px;
                     margin: auto;
+                    background: var(--bm-bg);
                     border-radius: 9px;
                     border: 1px solid;
+                    transform-style: preserve-3d;
 
+                    .cassette-player {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%, -88%) translateZ(-1px);
+                        width: 50%;
+                        aspect-ratio: 1;
+                        border: 1px solid;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            inset: 0;
+                            mix-blend-mode: color;
+                            background: var(--bm-clr);
+                        }
+
+                        iframe { filter: grayscale(1); }
+                    }
+                    
                     screw {
                         position: absolute;
                         display: block;
@@ -289,19 +311,19 @@
                         border-radius: 50%;
                         background: var(--bm-clr);
 
-                        &:nth-child(1) {
+                        &:nth-of-type(1) {
                             top: 6px;
                             left: 6px;
                         }
-                        &:nth-child(2) {
+                        &:nth-of-type(2) {
                             top: 6px;
                             right: 6px;
                         }
-                        &:nth-child(3) {
+                        &:nth-of-type(3) {
                             bottom: 6px;
                             right: 6px;
                         }
-                        &:nth-child(4) {
+                        &:nth-of-type(4) {
                             bottom: 6px;
                             left: 6px;
                         }
