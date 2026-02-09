@@ -133,7 +133,10 @@
                 &+br { display: none; }
             }
 
-            hr { margin-block: 1rem; }
+            hr {
+                margin-block: 1rem;
+                background: var(--sm-border);
+            }
 
             details{
                 margin-block: 1rem;
