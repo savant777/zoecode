@@ -232,10 +232,18 @@
                 }
 
                 .case-body {
+                    display: grid;
+                    grid-template-rows: repeat(8, 2rem);
                     padding: 0 1rem;
-                    background: repeating-linear-gradient(transparent 0 2rem, var(--bm-clr) 2rem calc(2rem + 1px));
                     margin-block-start: 0.25rem;
                     border-top: 1px solid;
+
+                    .case-song {
+                        display: grid;
+                        grid-template-columns: 2rem 1fr 4rem;
+                        align-items: baseline;
+                        padding-block: 0.5rem 0.25rem;
+                    }
                 }
             }
 
