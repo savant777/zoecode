@@ -298,8 +298,8 @@
                             content: '';
                             position: absolute;
                             inset: 0;
-                            mix-blend-mode: soft-light;
-                            background: var(--bm-clr);
+                            mix-blend-mode: overlay;
+                            background: rgb(from var(--bm-clr) r g b / 0.5);
                             user-select: none;
                             pointer-events: none;
                         }
