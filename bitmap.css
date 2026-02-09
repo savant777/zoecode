@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swaphttps://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0&icon_names=arrow_downward');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0&icon_names=arrow_downward');
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
 
 :root {
@@ -16,6 +16,11 @@
 #Bitmap {
     .bitmap-box {
         max-width: 100%;
+
+        &::selection {
+            background: var(--bm-clr);
+            color: var(--bm-bg);
+        }
 
         .bitmap-h1 {
             position: relative;
@@ -48,14 +53,14 @@
                 line-height: 18px;
                 text-transform: none;
                 text-align: end;
+            }
 
-                a.zzzcode {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    height: 12px;
-                    width: 2rem;
-                }
+            a.zzzcode {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 12px;
+                width: 2rem;
             }
         }
 
