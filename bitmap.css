@@ -10,6 +10,12 @@
     --bm-size: cover;
 }
 
+@keyframes spool-rotate {
+    from {
+        transform: rotate(360deg)
+    }
+}
+
 #Bitmap { position: relative; }
 #Bitmap * { box-sizing: border-box; }
 
@@ -368,6 +374,7 @@
                                 border-radius: 50%;
                                 box-shadow: 0 0 0 3px var(--bm-clr);
                                 background: var(--bm-bg);
+                                animation: spool-rotate 5s linear infinite;
 
                                 i {
                                     position: absolute;
