@@ -291,9 +291,10 @@
                         transform: translate(-50%, -88%) translateZ(-1px);
                         width: 50%;
                         aspect-ratio: 1;
+                        overflow: hidden;
                         border: 1px solid;
 
-                        &::before {
+                        &::after {
                             content: '';
                             position: absolute;
                             inset: 0;
