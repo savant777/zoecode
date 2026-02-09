@@ -214,7 +214,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-block: calc(245px + 1.25rem) 1.25rem;
+            margin-block: 1.25rem;
             
             font-family: 'Roboto Mono', 'IBM Plex Sans Thai', monospace;
             line-height: 1;
@@ -222,7 +222,7 @@
 
             .tape-flex {
                 flex: 1 0;
-                align-content: center;
+                align-content: end;
 
                 .bitmap-case {
                     position: relative;
@@ -278,6 +278,7 @@
                     width: 550px;
                     height: 360px;
                     margin: auto;
+                    margin-top: 240px;
                     background: var(--bm-bg);
                     border-radius: 9px;
                     border: 1px solid;
@@ -298,9 +299,19 @@
                             inset: 0;
                             mix-blend-mode: color;
                             background: var(--bm-clr);
+                            user-select: none;
+                            pointer-events: none;
                         }
 
-                        iframe { filter: grayscale(1); }
+                        iframe {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, calc(-50% + 1px));
+                            width: 274px;
+                            aspect-ratio: 1;
+                            filter: grayscale(1);
+                        }
                     }
                     
                     screw {
