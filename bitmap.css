@@ -18,6 +18,7 @@
         max-width: 100%;
 
         .bitmap-h1 {
+            position: relative;
             color: var(--bm-clr);
             font-family: 'Monomaniac One', sans-serif;
             font-size: 6rem;
@@ -26,7 +27,6 @@
 
             &::before {
                 content: '©zzzcode';
-                position: relative;
                 display: block;
                 min-height: 101px;
                 margin-top: 1rem;
