@@ -16,6 +16,12 @@
     }
 }
 
+@-webkit-keyframes spool-rotate {
+    from {
+        transform: rotate(360deg)
+    }
+}
+
 #Bitmap { position: relative; }
 #Bitmap * { box-sizing: border-box; }
 
