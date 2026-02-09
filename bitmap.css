@@ -297,7 +297,7 @@
                             content: '';
                             position: absolute;
                             inset: 0;
-                            mix-blend-mode: color;
+                            mix-blend-mode: soft-light;
                             background: var(--bm-clr);
                             user-select: none;
                             pointer-events: none;
