@@ -29,6 +29,7 @@
     content: "vibe journey";
     font-family: Georgia, serif;
     font-size: x-small;
+    font-style: italic;
     color: gray !important;
     width: 100%;
     text-align: center;
@@ -158,7 +159,9 @@
 
             .mosaic-content {
                 margin-block: 1em;
-                
+
+                ul { margin-block: 0; }
+
                 .codeblock {
                     background: var(--mosaic-txt);
                     color: var(--mosaic-bg);
@@ -168,8 +171,8 @@
                 c {
                     background: var(--mosaic-txt);
                     color: var(--mosaic-bg);
-                    padding: 0 8px 4px;
-                    vertical-align: text-top;
+                    padding: 0 8px 2px;
+                    vertical-align: text-bottom;
                     
                     font-size: 13px;
                     font-style: italic;
