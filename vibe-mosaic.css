@@ -69,6 +69,7 @@
                 align-items: center;
 
                 &::before, &::after {
+                    content: "";
                     width: 1rem;
                     height: 1px;
                     background: var(--mosaic-txt);
@@ -122,6 +123,7 @@
 
         &::before {
             content: "";
+            display: block;
             width: 477px;
             aspect-ratio: 666/243;
             margin: 2vw auto;
