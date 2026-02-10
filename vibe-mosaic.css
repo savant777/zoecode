@@ -156,7 +156,25 @@
                 &+br { display: none; }
             }
 
-            .mosaic-content { margin-block: 1em; }
+            .mosaic-content {
+                margin-block: 1em;
+                
+                .codeblock {
+                    background: var(--mosaic-txt);
+                    color: var(--mosaic-bg);
+                    user-select: all;
+                }
+
+                c {
+                    background: var(--mosaic-txt);
+                    color: var(--mosaic-bg);
+                    padding: 0 8px 4px;
+                    vertical-align: text-top;
+                    
+                    font-size: 13px;
+                    font-style: italic;
+                }
+            }
 
             &:last-child { margin-block: 2rem 0; }
         }
