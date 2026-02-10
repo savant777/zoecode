@@ -1,0 +1,162 @@
+@import url('https://fonts.cdnfonts.com/css/azfar');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+:root {
+    --mosaic-txt: #333;
+    --mosaic-bg: #e5e5e5;
+
+    --mosaic-pic: transparent;
+    --mosaic-pos: center;
+    --mosaic-size: cover;
+}
+
+#MosaicOfMe { position: relative; }
+#MosaicOfMe * { box-sizing: border-box; }
+
+#MosaicOfMe a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#MosaicOfMe a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#MosaicOfMe::after {
+    display: block;
+    content: "vibe journey";
+    font-family: Georgia, serif;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#MosaicOfMe:hover::after { content: "made by zzzcode"; }
+
+#MosaicOfMe {
+    #Mosaic-Vibe.mosaic-box {
+        width: 650px;
+        max-width: 95%;
+        margin: auto;
+        background: var(--mosaic-bg);
+        color: var(--mosaic-txt);
+        font-family: 'Google Sans', sans-serif;
+        font-size: 16px;
+        padding: 4rem;
+
+        details > summary {
+            list-style: none;
+            cursor: pointer;
+
+            &::marker, &::-webkit-details-marker { display: none; }
+
+            h1 {
+                margin-block: 0;
+                font-family: 'Azfar', serif;
+                font-weight: normal;
+                font-size: 3.5rem;
+                line-height: 1;
+
+                &+br { display: none; }
+            }
+
+            .mosaic-info {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+
+                &::before, &::after {
+                    width: 1rem;
+                    height: 1px;
+                    background: var(--mosaic-txt);
+                }
+
+                &::before { order: 2; }
+                &::after { order: 4; }
+
+                p {
+                    margin-block: 0;
+
+                    &:nth-of-type(1) { order: 1; }
+                    &:nth-of-type(2) { order: 3; }
+                    &:nth-of-type(3) { order: 5; }
+                }
+            }
+        }
+
+        details .mosaic-desc { margin-block: 1rem -1rem; }
+        details + br { display: none; }
+
+        .mosaic-vibe-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-block-start: 2rem;
+            border-top: 1px solid;
+            border-left: 1px solid;
+            
+            .mosaic-vibe {
+                width: 100%;
+                aspect-ratio: 1;
+                border-bottom: 1px solid;
+                border-right: 1px solid;
+
+                background: var(--mosaic-pic) var(--mosaic-pos)/var(--mosaic-size) no-repeat;
+
+                &[data="pic"] { grid-area: 2/2/4/4; }
+            }
+        }
+    }
+
+    #Mosaic-Thread.mosaic-box {
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        background: var(--mosaic-bg);
+        color: var(--mosaic-txt);
+        font-family: 'Google Sans', sans-serif;
+        font-size: 16px;
+        padding: 4rem;
+
+        &::before {
+            content: "";
+            width: 477px;
+            aspect-ratio: 666/243;
+            margin: 2vw auto;
+            background: url(https://iili.io/fy5xO4j.png) center/contain no-repeat;
+        }
+
+        .mosaic-section {
+            margin-block: 2rem 4rem;
+
+            h1 {
+                width: 100%;
+                margin-block: 0;
+
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                font-family: 'Azfar', serif;
+                font-size: 3rem;
+                line-height: 1;
+                letter-spacing: 0.15rem;
+
+                &::after {
+                    content: "";
+                    flex: 1;
+                    height: 1px;
+                    background: var(--mosaic-txt);
+                }
+
+                &+br { display: none; }
+            }
+
+            .mosaic-content { margin-block: 1em; }
+
+            &:last-child { margin-block: 2rem 0; }
+        }
+    }
+}
