@@ -366,7 +366,7 @@
                 
                 width: 100%;
                 aspect-ratio: 1000/57;
-                background: url(https://iili.io/KR7njcB.png) top center/cover no-repeat;
+                background: var(--gdgt-bg) var(--gdgt-pos)/var(--gdgt-size) repeat;
                 -webkit-mask: url(https://iili.io/KRCGDBf.png) top center/101%;
                         mask: url(https://iili.io/KRCGDBf.png) top center/101%;
             }
