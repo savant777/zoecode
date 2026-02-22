@@ -417,6 +417,7 @@
                         }
 
                         div::before {
+                            display: block;
                             font-size: 1rem;
                             line-height: 1.5;
                             color: var(--wots-txt-1);
@@ -424,6 +425,7 @@
                         }
 
                         div::after {
+                            display: block;
                             font-size: 0.875rem;
                             line-height: 1.25;
                             color: var(--wots-txt-2);
