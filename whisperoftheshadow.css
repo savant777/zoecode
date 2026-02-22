@@ -455,6 +455,15 @@
                 padding: 1rem 2rem;
                 color: var(--wots-txt-1);
             }
+
+            &:has(+iframe) { margin-block-end: 1rem; }
+        }
+
+        iframe {
+            display: block;
+            margin: auto;
+
+            &+br { display: none; }
         }
     }
 }
