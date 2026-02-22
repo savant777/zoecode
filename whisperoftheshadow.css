@@ -460,6 +460,8 @@
         iframe {
             display: block;
             margin: 1rem auto 0;
+            max-width: 100% !important;
+            min-height: 76px !important;
 
             &+br { display: none; }
         }
