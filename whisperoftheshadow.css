@@ -2,19 +2,7 @@
 
 :root {
     --wots-primary-clr: #D4AF37;
-    --wots-primary-hsl: from var(--wots-primary-clr) h s l;
-
-    --wots-bg-clr: hsl(from var(--wots-primary-clr) calc(h - 15.86) 18.18% 8.63% / 0.8);
-    --wots-bg-darker: hsl(from var(--wots-primary-clr) h 15% 5% / 0.8);
-    --wots-bg-lighter: hsl(from var(--wots-primary-clr) h 15% 10% / 0.7);
-
-    --wots-primary-gray: hsl(from var(--wots-primary-clr) calc(h + 175) 2% 29% / 0.03);
-
-    --wots-txt-1: hsl(from var(--wots-primary-clr) h 82% 78%);
-    --wots-txt-2: hsl(from var(--wots-primary-clr) h 96% 76% / 0.9);
-
-    --wots-shadow-base: from var(--wots-primary-clr) h 96% 56%;
-
+    
     --wots-pic: transparent;
     --wots-pos: center;
     --wots-size: cover;
@@ -60,13 +48,13 @@
             --wots-primary-clr: #7b7990;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770629962/seq_9_ssv3hd.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770612457/Fool_Symbol2_ydvwem.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักทำนาย";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — ตัวตลก";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักมายากล";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ผู้ไร้หน้า";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — นักเชิดหุ่น";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — จอมเวทพิสดาร";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักทำนาย";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — ตัวตลก";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักมายากล";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้ไร้หน้า";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — นักเชิดหุ่น";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — จอมเวทพิสดาร";}
         }
 
         /* --- เส้นทางหัวขโมย (Marauder) --- */
@@ -74,13 +62,13 @@
             --wots-primary-clr: #b2b5b2;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771316058/image_1_c1o0ip.png);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771316056/width_550_hgdcwm.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — หัวขโมย";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — มิจฉาชีพ";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักถอดรหัส";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ผู้ชิงไฟ";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ผู้ชิงฝัน";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — ปรสิต";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — หัวขโมย";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — มิจฉาชีพ";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักถอดรหัส";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้ชิงไฟ";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — ผู้ชิงฝัน";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — ปรสิต";}
         }
 
         /* --- เส้นทางลูกศิษย์ (Apprentice) --- */
@@ -88,13 +76,13 @@
             --wots-primary-clr: #5a9eac;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771227220/image_j7bayx.png);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771227184/Door_Symbol2_la159u.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — ลูกศิษย์";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — นักตุกติก";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — โหราจารย์";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — อาลักษณ์";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — นักเดินทาง";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — จอมเวทลึกลับ";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — ลูกศิษย์";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — นักตุกติก";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — โหราจารย์";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — อาลักษณ์";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — นักเดินทาง";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — จอมเวทลึกลับ";}
         }
 
         /* --- เส้นทางผู้ชม (Spectator) --- */
@@ -102,13 +90,13 @@
             --wots-primary-clr: #b3c2d0;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770780604/unnamed_t9cprq.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770780495/Visionary_Symbol2_mmcflu.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — ผู้ชม";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — นักอ่านใจ";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักจิตบำบัด";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — นักสะกดจิต";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — นักท่องฝัน";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — จอมบงการ";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — ผู้ชม";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — นักอ่านใจ";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักจิตบำบัด";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — นักสะกดจิต";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — นักท่องฝัน";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — จอมบงการ";}
         }
 
         /* --- เส้นทางกะลาสี (Sailor) --- */
@@ -116,12 +104,12 @@
             --wots-primary-clr: #5787b1;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770619898/tyrrant_seq_5_v4_ejy0rv.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770619961/Tyrant_Symbol2_osgium.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — กะลาสี";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — ผู้บันดาลโทสะ";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักเดินเรือ";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ผู้รับพรแห่งสายลม";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ขุนเพลงสมุทร";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — กะลาสี";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — ผู้บันดาลโทสะ";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักเดินเรือ";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้รับพรแห่งสายลม";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — ขุนเพลงสมุทร";}
         }
 
         /* --- เส้นทางนักล่า (Hunter) --- */
@@ -129,13 +117,13 @@
             --wots-primary-clr: #c95e4c;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388629/red_priest_seq_7_v2_irm2jw.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388609/Red_Priest_Symbol2_bt4qaf.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักล่า";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — นักยั่วยุ";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักวางเพลิง";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — นักวางแผน";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ยมทูต";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — อัศวินเลือดเหล็ก";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักล่า";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — นักยั่วยุ";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักวางเพลิง";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — นักวางแผน";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — ยมทูต";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — อัศวินเลือดเหล็ก";}
         }
 
         /* --- เส้นทางผู้ส่องความลับ (Mystery Pryer) --- */
@@ -143,13 +131,13 @@
             --wots-primary-clr: #67558c;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771390054/hermit_seq_1_mxb7ih.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771390011/Hermit_Symbol2_wqzrnl.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — ผู้ส่องความลับ";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — ผู้ศึกษาความวุ่นวาย";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — จอมเวท";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ศาสตราจารย์คัมภีร์";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — เจ้าจักรราศี";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — ปราชญ์ลี้ลับ";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — ผู้ส่องความลับ";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — ผู้ศึกษาความวุ่นวาย";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — จอมเวท";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ศาสตราจารย์คัมภีร์";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — เจ้าจักรราศี";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — ปราชญ์ลี้ลับ";}
         }
 
         /* --- เส้นทางนักปราชญ์ (Savant) --- */
@@ -157,13 +145,13 @@
             --wots-primary-clr: #bf8d59;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771389588/paragon_seq_5_whzdy8.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771389559/Paragon_Symbol2_y8cucj.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักปราชญ์";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — นักโบราณคดี";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักประเมิน";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ช่างฝีมือ";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — นักดาราศาสตร์";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — นักเล่นแร่แปรธาตุ";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักปราชญ์";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — นักโบราณคดี";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักประเมิน";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ช่างฝีมือ";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — นักดาราศาสตร์";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — นักเล่นแร่แปรธาตุ";}
         }
 
         /* --- เส้นทางนักรบ (Warrior) --- */
@@ -171,13 +159,13 @@
             --wots-primary-clr: #9c5a3f;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386423/twilight_giant_seq_8_v2_ogsrfl.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386373/Twilight_Giant_Symbol2_hfmybg.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักรบ";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — ผู้วิวาท";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — เจ้าศาสตรา";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — อัศวินอรุณรุ่ง";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ผู้พิทักษ์";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — นักล่าปีศาจ";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักรบ";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — ผู้วิวาท";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — เจ้าศาสตรา";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — อัศวินอรุณรุ่ง";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — ผู้พิทักษ์";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — นักล่าปีศาจ";}
         }
 
         /* --- เส้นทางนักฆ่า (Assassin) --- */
@@ -185,13 +173,13 @@
             --wots-primary-clr: #b86790;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388221/demoness_seq_9_v2_iu31yn.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388195/Demoness_Symbol2_z02wxy.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักฆ่า";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — นักกระตุ้น";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — แม่มด";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — สุขสม";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ทุกข์ระทม";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — สิ้นหวัง";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักฆ่า";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — นักกระตุ้น";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — แม่มด";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — สุขสม";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — ทุกข์ระทม";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — สิ้นหวัง";}
         }
 
         /* --- เส้นทางนักขับขาน (Bard) --- */
@@ -199,13 +187,13 @@
             --wots-primary-clr: #e3d683;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770783143/sun_seq_9_v2_jwpz1h.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770783110/Sun_Symbol2_smeglb.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักขับขาน";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — ผู้วิงวอนแสง";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักบวชสุริยัน";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ผู้รับรอง";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — สมณะแห่งแสง";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — ผู้เจิดจรัส";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักขับขาน";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — ผู้วิงวอนแสง";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักบวชสุริยัน";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้รับรอง";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — สมณะแห่งแสง";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — ผู้เจิดจรัส";}
         }
 
         /* --- เส้นทางเภสัชกร (Apothecary) --- */
@@ -213,13 +201,13 @@
             --wots-primary-clr: #ed9096;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407595/moon_seq_9_q2damr.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407581/Moon_Symbol2_xxfkrq.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — เภสัชกร";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — นักฝึกสัตว์";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — แวมไพร์";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ศาสตราจารย์โอสถ";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ปราชญ์สีชาด";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — ราชาหมอผี";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > .path-info > div::after { content: "ลำดับ 9 — เภสัชกร";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > .path-info > div::after { content: "ลำดับ 8 — นักฝึกสัตว์";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > .path-info > div::after { content: "ลำดับ 7 — แวมไพร์";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > .path-info > div::after { content: "ลำดับ 6 — ศาสตราจารย์โอสถ";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > .path-info > div::after { content: "ลำดับ 5 — ปราชญ์สีชาด";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > .path-info > div::after { content: "ลำดับ 4 — ราชาหมอผี";}
         }
 
         /* --- เส้นทางนักเพาะปลูก (Planter) --- */
@@ -227,13 +215,13 @@
             --wots-primary-clr: #7ca08b;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407622/mother_seq_9_jwhzco.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407637/Mother_Symbol2_afdigd.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักเพาะปลูก";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — แพทย์";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักบวชเก็บเกี่ยว";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — นักชีววิทยา";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ดรูอิด";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — นักแปรธาตุโบราณ";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักเพาะปลูก";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — แพทย์";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักบวชเก็บเกี่ยว";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — นักชีววิทยา";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — ดรูอิด";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — นักแปรธาตุโบราณ";}
         }
 
         /* --- เส้นทางผู้เก็บซากศพ (Corpse Collector) --- */
@@ -241,13 +229,13 @@
             --wots-primary-clr: #81866c;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386305/death_seq_2_-_v3_jedcw1.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386274/Death_Symbol2_bazus4.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — ผู้เก็บซากศพ";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — นักขุดสุสาน";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — ผู้สื่อวิญญาณ";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ผู้นำทางวิญญาณ";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ผู้พิทักษ์ประตู";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — อมรณา";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — ผู้เก็บซากศพ";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — นักขุดสุสาน";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — ผู้สื่อวิญญาณ";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้นำทางวิญญาณ";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — ผู้พิทักษ์ประตู";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — อมรณา";}
         }
 
         /* --- เส้นทางผู้ไม่นิทรา (Sleepless) --- */
@@ -255,13 +243,13 @@
             --wots-primary-clr: #536179;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386207/darkness_seq_5_v2_phuxww.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386173/Darkness_Symbol2_qzs7t2.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — ผู้ไม่นิทรา";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — นักกวีเที่ยงคืน";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — มารฝัน";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ผู้ปลอบวิญญาณ";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — จอมเวทวิญญาณ";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — ผู้พิทักษ์ราตรี";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — ผู้ไม่นิทรา";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — นักกวีเที่ยงคืน";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — มารฝัน";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้ปลอบวิญญาณ";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — จอมเวทวิญญาณ";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — ผู้พิทักษ์ราตรี";}
         }
 
         /* --- เส้นทางนักกฎหมาย (Lawyer) --- */
@@ -269,13 +257,13 @@
             --wots-primary-clr: #3d4b62;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407864/black_emperor_seq_8_htajmr.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407814/Black_Emperor_Symbol2_gm4upv.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักกฎหมาย";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — คนเถื่อน";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — ผู้ติดสินบน";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — บารอนแห่งความเสื่อมเสีย";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — เจ้าแห่งความไร้ระเบียบ";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — เอิร์ลแห่งการร่วงหล่น";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักกฎหมาย";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — คนเถื่อน";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — ผู้ติดสินบน";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — บารอนแห่งความเสื่อมเสีย";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — เจ้าแห่งความไร้ระเบียบ";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — เอิร์ลแห่งการร่วงหล่น";}
         }
 
         /* --- เส้นทางผู้ตัดสิน (Arbiter) --- */
@@ -283,13 +271,13 @@
             --wots-primary-clr: #a3998e;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407841/justiciar_seq_6_v2_ao8fxu.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407811/Justiciar_Symbol2_tt9fi9.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — ผู้ตัดสิน";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — เจ้าพนักงาน";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักสอบสวน";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ผู้พิพากษา";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — อัศวินวินัย";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — จอมเวทประกาศิต";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — ผู้ตัดสิน";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — เจ้าพนักงาน";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักสอบสวน";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้พิพากษา";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — อัศวินวินัย";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — จอมเวทประกาศิต";}
         }
 
         /* --- เส้นทางนักโทษ (Prisoner) --- */
@@ -297,13 +285,13 @@
             --wots-primary-clr: #4e4b62;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408076/chained_seq_5_v2_a9ipcn.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408024/Chained_Symbol2_jynmlm.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — นักโทษ";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — คนบ้า";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — มนุษย์หมาป่า";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ซอมบี้";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — วิญญาณอาฆาต";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — หุ่นกระบอก";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — นักโทษ";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — คนบ้า";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — มนุษย์หมาป่า";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ซอมบี้";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — วิญญาณอาฆาต";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — หุ่นกระบอก";}
         }
 
         /* --- เส้นทางอาชญากร (Criminal) --- */
@@ -311,12 +299,12 @@
             --wots-primary-clr: #952c20;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408035/abyss_seq_8_phicpl.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408025/Abyss_Symbol2_m8zazv.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — เทวทูตปีกหัก";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — ฆาตกรต่อเนื่อง";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — ผู้ชั่วช้า";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — สาวกแห่งแรงกระหาย";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — ปีศาจ";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — เทวทูตปีกหัก";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — ฆาตกรต่อเนื่อง";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้ชั่วช้า";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — สาวกแห่งแรงกระหาย";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — ปีศาจ";}
         }
 
         /* --- เส้นทางผู้วิงวอนความลับ (Secrets Supplicant) --- */
@@ -324,13 +312,13 @@
             --wots-primary-clr: #c14745;
             --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771321294/unnamed_2_a0gbab.jpg);
             --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771321380/hangman-logo_ikwqca.webp);
-            .wots-player > .wots-info > .wots-pathway > div::before { content: attr(pathway);}
-            &[lv="9"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 9 — ผู้วิงวอนความลับ";}
-            &[lv="8"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 8 — ผู้สดับ";}
-            &[lv="7"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 7 — นักบวชเงา";}
-            &[lv="6"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 6 — สังฆราชกุหลาบ";}
-            &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — คนเลี้ยงแกะ";}
-            &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — อัศวินมืด";}
+            .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: attr(pathway);}
+            &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — ผู้วิงวอนความลับ";}
+            &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — ผู้สดับ";}
+            &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักบวชเงา";}
+            &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — สังฆราชกุหลาบ";}
+            &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — คนเลี้ยงแกะ";}
+            &[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — อัศวินมืด";}
         }
 
         /* --- เส้นทางนักอ่าน (Reader) --- */
@@ -346,6 +334,19 @@
             &[lv="5"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 5 — ผู้ชี้นำจิตวิญญาณ";}
             &[lv="4"] .wots-player > .wots-info > .wots-pathway > div::after { content: "ลำดับ 4 — นักพยากรณ์";}
         }
+
+        --wots-primary-hsl: from var(--wots-primary-clr) h s l;
+
+        --wots-bg-clr: hsl(from var(--wots-primary-clr) calc(h - 15.86) 18.18% 8.63% / 0.8);
+        --wots-bg-darker: hsl(from var(--wots-primary-clr) h 15% 5% / 0.8);
+        --wots-bg-lighter: hsl(from var(--wots-primary-clr) h 15% 10% / 0.7);
+
+        --wots-primary-gray: hsl(from var(--wots-primary-clr) calc(h + 175) 2% 29% / 0.03);
+
+        --wots-txt-1: hsl(from var(--wots-primary-clr) h 82% 78%);
+        --wots-txt-2: hsl(from var(--wots-primary-clr) h 96% 76% / 0.9);
+
+        --wots-shadow-base: from var(--wots-primary-clr) h 96% 56%;
 
         .wots-player {
             display: flex;
