@@ -345,16 +345,16 @@
 
         --wots-primary-hsl: from var(--wots-primary-clr) h s l;
 
-        --wots-bg-clr: hsl(from var(--wots-primary-clr) calc(h - 15.86) calc(s - 46.43) calc(l - 43.72) / 0.8);
-        --wots-bg-darker: hsl(from var(--wots-primary-clr) h calc(s - 49.61) calc(l - 47.35) / 0.8);
-        --wots-bg-lighter: hsl(from var(--wots-primary-clr) h calc(s - 49.61) calc(l - 42.35) / 0.7);
+        --wots-bg-clr: hsl(from var(--wots-primary-clr) calc(h - 15.86) 18.18% 8.63% / 0.8);
+        --wots-bg-darker: hsl(from var(--wots-primary-clr) h 15% 5% / 0.8);
+        --wots-bg-lighter: hsl(from var(--wots-primary-clr) h 15% 10% / 0.7);
 
-        --wots-primary-gray: hsl(from var(--wots-primary-clr) calc(h + 175) calc(s - 62.61) calc(l - 23.35) / 0.03);
+        --wots-primary-gray: hsl(from var(--wots-primary-clr) calc(h + 175) 2% 29% / 0.03);
 
-        --wots-txt-1: hsl(from var(--wots-primary-clr) h calc(s + 17.39) calc(l + 25.65));
-        --wots-txt-2: hsl(from var(--wots-primary-clr) h calc(s + 31.39) calc(l + 23.65) / 0.9);
+        --wots-txt-1: hsl(from var(--wots-primary-clr) h 82% 78%);
+        --wots-txt-2: hsl(from var(--wots-primary-clr) h 96% 76% / 0.9);
 
-        --wots-shadow-base: from var(--wots-primary-clr) h calc(s + 31.39) calc(l + 3.65);
+        --wots-shadow-base: from var(--wots-primary-clr) h 96% 56%;
 
         .wots-player {
             display: flex;
