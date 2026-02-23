@@ -46,7 +46,7 @@
         /* --- Lord of Mysteries --- */
         /* --- เส้นทางนักทำนาย (Seer) --- */
         &[pathway="นักทำนาย"] {
-        --wots-primary-clr: #7b7990;
+        --wots-primary-clr: #71717b;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770629962/seq_9_ssv3hd.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770612457/Fool_Symbol2_ydvwem.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักทำนาย";}
@@ -60,7 +60,7 @@
 
         /* --- เส้นทางหัวขโมย (Marauder) --- */
         &[pathway="หัวขโมย"] {
-        --wots-primary-clr: #b2b5b2;
+        --wots-primary-clr: #71717b;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771316058/image_1_c1o0ip.png);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771316056/width_550_hgdcwm.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "หัวขโมย";}
@@ -74,7 +74,7 @@
 
         /* --- เส้นทางลูกศิษย์ (Apprentice) --- */
         &[pathway="ลูกศิษย์"] {
-        --wots-primary-clr: #5a9eac;
+        --wots-primary-clr: #71717b;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771227220/image_j7bayx.png);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771227184/Door_Symbol2_la159u.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "ลูกศิษย์";}
@@ -89,7 +89,7 @@
         /* --- God Almighty --- */
         /* --- เส้นทางผู้ชม (Spectator) --- */
         &[pathway="ผู้ชม"] {
-        --wots-primary-clr: #b3c2d0;
+        --wots-primary-clr: #fe9a00;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770780604/unnamed_t9cprq.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770780495/Visionary_Symbol2_mmcflu.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "ผู้ชม";}
@@ -103,7 +103,7 @@
 
         /* --- เส้นทางนักขับขาน (Bard) --- */
         &[pathway="นักขับขาน"] {
-        --wots-primary-clr: #e3d683;
+        --wots-primary-clr: #fe9a00;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770783143/sun_seq_9_v2_jwpz1h.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770783110/Sun_Symbol2_smeglb.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักขับขาน";}
@@ -117,7 +117,7 @@
 
         /* --- เส้นทางกะลาสี (Sailor) --- */
         &[pathway="กะลาสี"] {
-        --wots-primary-clr: #5787b1;
+        --wots-primary-clr: #fe9a00;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770619898/tyrrant_seq_5_v4_ejy0rv.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770619961/Tyrant_Symbol2_osgium.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "กะลาสี";}
@@ -126,11 +126,12 @@
         &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — นักเดินเรือ";}
         &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้รับพรแห่งสายลม";}
         &[lv="5"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 5 — ขุนเพลงสมุทร";}
+        /*&[lv="4"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 4 — ขุนเพลงสมุทร";}*/
         }
 
         /* --- เส้นทางนักอ่าน (Reader) --- */
         &[pathway="นักอ่าน"] {
-        --wots-primary-clr: #6172a2;
+        --wots-primary-clr: #fe9a00;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771321926/white_tower_seq_8_kx9f68.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771321966/reader-logo_f9hqqv.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักอ่าน";}
@@ -144,7 +145,7 @@
 
         /* --- เส้นทางผู้วิงวอนความลับ (Secrets Supplicant) --- */
         &[pathway="ผู้วิงวอนความลับ"] {
-        --wots-primary-clr: #c14745;
+        --wots-primary-clr: #fe9a00;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771321294/unnamed_2_a0gbab.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771321380/hangman-logo_ikwqca.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "ผู้วิงวอนความลับ";}
@@ -159,7 +160,7 @@
         /* --- Eternal Darkness --- */
         /* --- เส้นทางผู้ไม่นิทรา (Sleepless) --- */
         &[pathway="ผู้ไม่นิทรา"] {
-        --wots-primary-clr: #536179;
+        --wots-primary-clr: #1c398e;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386207/darkness_seq_5_v2_phuxww.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386173/Darkness_Symbol2_qzs7t2.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "ผู้ไม่นิทรา";}
@@ -173,7 +174,7 @@
 
         /* --- เส้นทางผู้เก็บซากศพ (Corpse Collector) --- */
         &[pathway="ผู้เก็บซากศพ"] {
-        --wots-primary-clr: #81866c;
+        --wots-primary-clr: #1c398e;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386305/death_seq_2_-_v3_jedcw1.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386274/Death_Symbol2_bazus4.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "ผู้เก็บซากศพ";}
@@ -187,7 +188,7 @@
 
         /* --- เส้นทางนักรบ (Warrior) --- */
         &[pathway="นักรบ"] {
-        --wots-primary-clr: #9c5a3f;
+        --wots-primary-clr: #1c398e;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386423/twilight_giant_seq_8_v2_ogsrfl.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386373/Twilight_Giant_Symbol2_hfmybg.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักรบ";}
@@ -202,7 +203,7 @@
         /* --- Calamity of Destruction --- */
         /* --- เส้นทางนักฆ่า (Assassin) --- */
         &[pathway="นักฆ่า"] {
-        --wots-primary-clr: #b86790;
+        --wots-primary-clr: #c10007;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388221/demoness_seq_9_v2_iu31yn.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388195/Demoness_Symbol2_z02wxy.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักฆ่า";}
@@ -216,7 +217,7 @@
 
         /* --- เส้นทางนักล่า (Hunter) --- */
         &[pathway="นักล่า"] {
-        --wots-primary-clr: #c95e4c;
+        --wots-primary-clr: #c10007;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388629/red_priest_seq_7_v2_irm2jw.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388609/Red_Priest_Symbol2_bt4qaf.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักล่า";}
@@ -231,7 +232,7 @@
         /* --- Demon of Knowledge --- */
         /* --- เส้นทางผู้ส่องความลับ (Mystery Pryer) --- */
         &[pathway="ผู้ส่องความลับ"] {
-        --wots-primary-clr: #67558c;
+        --wots-primary-clr: #59168b;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771390054/hermit_seq_1_mxb7ih.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771390011/Hermit_Symbol2_wqzrnl.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "ผู้ส่องความลับ";}
@@ -245,7 +246,7 @@
 
         /* --- เส้นทางนักปราชญ์ (Savant) --- */
         &[pathway="นักปราชญ์"] {
-        --wots-primary-clr: #bf8d59;
+        --wots-primary-clr: #59168b;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771389588/paragon_seq_5_whzdy8.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771389559/Paragon_Symbol2_y8cucj.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักปราชญ์";}
@@ -260,7 +261,7 @@
         /* --- Goddess of Origin --- */
         /* --- เส้นทางนักเพาะปลูก (Planter) --- */
         &[pathway="นักเพาะปลูก"] {
-        --wots-primary-clr: #7ca08b;
+        --wots-primary-clr: #009966;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407622/mother_seq_9_jwhzco.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407637/Mother_Symbol2_afdigd.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักเพาะปลูก";}
@@ -274,7 +275,7 @@
 
         /* --- เส้นทางเภสัชกร (Apothecary) --- */
         &[pathway="เภสัชกร"] {
-        --wots-primary-clr: #ed9096;
+        --wots-primary-clr: #009966;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407595/moon_seq_9_q2damr.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407581/Moon_Symbol2_xxfkrq.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "เภสัชกร";}
@@ -289,10 +290,11 @@
         /* --- Father of Devils --- */
         /* --- เส้นทางอาชญากร (Criminal) --- */
         &[pathway="อาชญากร"] {
-        --wots-primary-clr: #952c20;
+        --wots-primary-clr: #ff637e;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408035/abyss_seq_8_phicpl.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408025/Abyss_Symbol2_m8zazv.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "อาชญากร";}
+        &[lv="9"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 9 — อาชญากร";}
         &[lv="8"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 8 — เทวทูตปีกหัก";}
         &[lv="7"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 7 — ฆาตกรต่อเนื่อง";}
         &[lv="6"] .wots-player > .wots-info > .wots-pathway > .path-info > div::after { content: "ลำดับ 6 — ผู้ชั่วช้า";}
@@ -302,7 +304,7 @@
 
         /* --- เส้นทางนักโทษ (Prisoner) --- */
         &[pathway="นักโทษ"] {
-        --wots-primary-clr: #4e4b62;
+        --wots-primary-clr: #ff637e;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408076/chained_seq_5_v2_a9ipcn.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408024/Chained_Symbol2_jynmlm.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักโทษ";}
@@ -317,7 +319,7 @@
         /* --- The Anarchy --- */
         /* --- เส้นทางนักกฎหมาย (Lawyer) --- */
         &[pathway="นักกฎหมาย"] {
-        --wots-primary-clr: #3d4b62;
+        --wots-primary-clr: #79716b;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407864/black_emperor_seq_8_htajmr.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407814/Black_Emperor_Symbol2_gm4upv.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "นักกฎหมาย";}
@@ -331,7 +333,7 @@
 
         /* --- เส้นทางผู้ตัดสิน (Arbiter) --- */
         &[pathway="ผู้ตัดสิน"] {
-        --wots-primary-clr: #a3998e;
+        --wots-primary-clr: #79716b;
         --wots-path-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407841/justiciar_seq_6_v2_ao8fxu.jpg);
         --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407811/Justiciar_Symbol2_tt9fi9.webp);
         .wots-player > .wots-info > .wots-pathway > .path-info > div::before { content: "ผู้ตัดสิน";}
