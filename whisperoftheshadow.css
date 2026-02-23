@@ -609,7 +609,7 @@
                     --wots-church-clr: #b91c1c;
                     --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770699103/darkness_euxpng.jpg);
                     --wots-church-symbol: url(https://iili.io/qKTlLMl.png);
-                    .wots-info-church > div::after { content: "โบสถ์อันธกาลนิรันดิ์"; }
+                    .wots-info-church > div::after { content: "โบสถ์อันธกาลนิรันดิ์";max-width: 75%; }
                 }
 
                 &[church="3"] {
@@ -637,7 +637,7 @@
                     --wots-church-clr: #94a3b8;
                     --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770699794/paragon_qknpel.jpg);
                     --wots-church-symbol: url(https://iili.io/qKTlp9e.png);
-                    .wots-info-church > div::after { content: "โบสถ์เทพจักรกลไอน้ำ"; }
+                    .wots-info-church > div::after { content: "โบสถ์เทพจักรกลไอน้ำ";max-width: 95%; }
                 }
 
                 &[church="7"] {
@@ -684,7 +684,7 @@
                         flex: 1;
                         display: flex;
                         flex-wrap: wrap;
-                        column-gap: 0.75rem;
+                        gap: 0.25rem;
                         justify-content: center;
                         align-items: center;
                         padding: 0.75rem;
