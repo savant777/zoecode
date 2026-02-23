@@ -476,4 +476,489 @@
             &+br { display: none; }
         }
     }
+
+    #wots-profile.wots-container {
+        width: 800px;
+        max-width: 98%;
+        margin: auto;
+
+        --wots-primary-hsl: from var(--wots-primary-clr) h s l;
+        
+        --wots-bg-clr: hsl(from var(--wots-primary-clr) calc(h - 15.86) 18.18% 8.63% / 0.8);
+        --wots-bg-darker: hsl(from var(--wots-primary-clr) h 15% 5% / 0.8);
+        --wots-bg-lighter: hsl(from var(--wots-primary-clr) h 15% 10% / 0.7);
+        
+        --wots-primary-gray: hsl(from var(--wots-primary-clr) calc(h + 175) 2% 29% / 0.03);
+        
+        --wots-txt-1: hsl(from var(--wots-primary-clr) h 82% 78%);
+
+        .wots-basic-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-block: 0 1rem;
+
+            .wots-pic {
+                flex-shrink: 0;
+                width: 175px;
+                aspect-ratio: 1;
+                border-radius: 0.125rem;
+                border: 1px solid hsl(var(--wots-primary-hsl) / 0.5);
+                background: var(--wots-pic) var(--wots-pos)/var(--wots-size) no-repeat;
+            }
+
+            .wots-info-mid {
+                flex: 1 0 400px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.5rem;
+                justify-content: flex-end;
+
+                .wots-info-name {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+                    
+                    font-family: 'Kanit', sans-serif;
+                    line-height: 1;
+
+                    .wots-name {
+                        font-weight: 600;
+                        font-size: 3.5rem;
+                        letter-spacing: 0.025em;
+                        font-style: italic;
+                        
+                        background: linear-gradient(135deg, hsl(from var(--wots-primary-clr) h s calc(l + 8)), var(--wots-primary-clr) 40%, hsl(from var(--wots-primary-clr) h calc(s - 15) calc(l + 4)));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
+
+                    .wots-dp-name {
+                        font-weight: 300;
+                        font-size: 1.1rem;
+                        color: #ccc;
+
+                        &::before { content: "✦ — ";}
+
+                        &::after {
+                            content: " (previous life)";
+                            font-size: 0.625rem;
+                            color: var(--wots-txt-1);
+                        }
+                    }
+                }
+
+                .wots-info-tags {
+                    display: flex;
+                    column-gap: 1rem;
+
+                    .info-tags {
+                        position: relative;
+                        font-family: 'Google Sans', sans-serif;
+                        font-size: 1rem;
+                        
+                        width: max-content;
+                        color: var(--wots-txt-1);
+                        background: linear-gradient(135deg, hsl(var(--wots-primary-hsl) / 0.02), transparent 50%), linear-gradient(225deg, var(--wots-primary-gray), transparent 50%), linear-gradient(135deg, hsl(var(--wots-primary-hsl) / 0.08), transparent 40% 60%, hsl(var(--wots-primary-hsl) / 0.02));
+                        background-color: var(--wots-bg-clr);
+                        border: 1px solid hsl(var(--wots-primary-hsl) / 0.3);
+                        padding: 0.25rem 1rem;
+                        margin-block: 0 1rem;
+
+                        &::after {
+                            content: "✦ " attr(data);
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transform: translateY(calc(100% + 0.3rem));
+                            font-family: 'Kanit', sans-serif;
+                            font-size: 0.7rem;
+                            line-height: 1;
+                            color: #ccc;
+                        }
+                    }
+                }
+            }
+
+            .wots-info-last {
+                position: relative;
+                flex: 1;
+                min-width: 150px;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1rem;
+
+                &[church="0"] {
+                    --wots-church-clr: #D4AF37;
+                    --wots-church-bg: transparent;
+                    .wots-info-church > div::before { display: none; }
+                    .wots-info-church > div::after { content: "ไม่มีศาสนา"; }
+                }
+
+                &[church="1"] {
+                    --wots-church-clr: #9333ea;
+                    --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770704166/fool_3_rkawkr.jpg);
+                    --wots-church-symbol: url(https://iili.io/qKTlQP2.png);
+                    .wots-info-church > div::after { content: "โบสถ์คนโง่"; }
+                }
+
+                &[church="2"] {
+                    --wots-church-clr: #b91c1c;
+                    --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770699103/darkness_euxpng.jpg);
+                    --wots-church-symbol: url(https://iili.io/qKTlLMl.png);
+                    .wots-info-church > div::after { content: "โบสถ์อันธกาลนิรันดิ์"; }
+                }
+
+                &[church="3"] {
+                    --wots-church-clr: #059669;
+                    --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770703338/moon_wnbmaa.jpg);
+                    --wots-church-symbol: url(https://iili.io/qKTl6wG.png);
+                    .wots-info-church > div::after { content: "โบสถ์พระแม่ธรณี"; }
+                }
+
+                &[church="4"] {
+                    --wots-church-clr: #2563eb;
+                    --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770699514/the_tyrrant_xa11dj.jpg);
+                    --wots-church-symbol: url(https://iili.io/qKTltFS.png);
+                    .wots-info-church > div::after { content: "โบสถ์เทพวายุสลาตัน"; }
+                }
+
+                &[church="5"] {
+                    --wots-church-clr: #f59e0b;
+                    --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770703215/sun_seq_2_v2_oebsiv.jpg);
+                    --wots-church-symbol: url(https://iili.io/qKTlbS9.png);
+                    .wots-info-church > div::after { content: "โบสถ์สุริยันเจิดจรัส"; }
+                }
+
+                &[church="6"] {
+                    --wots-church-clr: #94a3b8;
+                    --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770699794/paragon_qknpel.jpg);
+                    --wots-church-symbol: url(https://iili.io/qKTlp9e.png);
+                    .wots-info-church > div::after { content: "โบสถ์เทพจักรกลไอน้ำ"; }
+                }
+
+                &[church="7"] {
+                    --wots-church-clr: #b45309;
+                    --wots-church-bg: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770704000/white_tower2_mgfpjt.webp);
+                    --wots-church-symbol: url(https://iili.io/qKTlyAu.png);
+                    .wots-info-church > div::after { content: "โบสถ์เทพปัญญาความรู้"; }
+                }
+
+                --wots-church-hsl: from var(--wots-church-clr) h s l;
+        
+                --wots-bg-clr: hsl(from var(--wots-church-clr) calc(h - 15.86) 18.18% 8.63% / 0.8);
+                --wots-bg-darker: hsl(from var(--wots-church-clr) h 15% 5% / 0.8);
+                --wots-bg-lighter: hsl(from var(--wots-church-clr) h 15% 10% / 0.7);
+        
+                --wots-txt-1: hsl(from var(--wots-church-clr) h 82% 78%);
+
+                &::after {
+                    content: "✦ " attr(data);
+                    display: block;
+                    position: absolute;
+                    bottom: 0.05rem;
+                    font-family: 'Kanit', sans-serif;
+                    font-size: 0.7rem;
+                    line-height: 1;
+                    color: #ccc;
+                }
+
+                .wots-info-church {
+                    position: relative;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: min(5.5rem, calc(5vw + 1.5rem));
+                    background-color: var(--wots-bg-clr);
+                    border: 1px solid hsl(var(--wots-church-hsl) / 0.3);
+                    border-radius: 0.125rem;
+                    overflow: hidden;
+
+                    div {
+                        position: relative;
+                        z-index: 2;
+                        flex: 1;
+                        display: flex;
+                        flex-wrap: wrap;
+                        column-gap: 0.75rem;
+                        align-items: center;
+                        padding: 0.75rem;
+
+                        &::before {
+                            content: "";
+                            width: min(4rem, 5vw);
+                            aspect-ratio: 1;
+                            margin: 0 auto;
+                            background: var(--wots-church-symbol) center/contain no-repeat;
+                        }
+
+                        &::after {
+                            flex: 1;
+                            min-width: 124px;
+                            font-family: 'Google Sans', sans-serif;
+                            font-size: 1rem;
+                            color: var(--wots-txt-1);
+                        }
+                    }
+
+                    &::before, &::after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        inset: 0;
+                    }
+
+                    &::before {
+                        opacity: 0.35;
+                        background: var(--wots-church) center/cover no-repeat;
+                    }
+
+                    &::after { background: linear-gradient(to right, var(--wots-bg-darker), var(--wots-bg-lighter), var(--wots-bg-darker)); }
+                }
+            }
+        }
+
+        section.wots-info {
+            margin-block: 0 1rem;
+
+            &:last-child { margin-block: 0 0.25rem !important; }
+            &>br,&+br { display: none; }
+
+            h1 {
+                margin-block: min(1.5rem, 1.5vw) 1rem;
+                font-family: 'Kanit', sans-serif;
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 1;
+                letter-spacing: 0.1rem;
+                color: var(--wots-txt-1);
+
+                &+br { display: none; }
+            }
+
+            .wots-box {
+                background: linear-gradient(135deg, hsl(var(--wots-primary-hsl) / 0.02), transparent 50%), linear-gradient(225deg, var(--wots-primary-gray), transparent 50%), linear-gradient(135deg, hsl(var(--wots-primary-hsl) / 0.08), transparent 40% 60%, hsl(var(--wots-primary-hsl) / 0.02));
+                background-color: var(--wots-bg-clr);
+                border: 1px solid hsl(var(--wots-primary-hsl) / 0.3);
+                border-radius: 0.125rem;
+                box-shadow: 0 0 #0000, 0 0 #0000, inset 0 0 20px hsl(var(--wots-primary-hsl) / 0.08);
+                font-family: 'Google Sans', sans-serif;
+                font-size: 1rem;
+                padding: 2rem;
+                color: #fff;
+
+                ul {
+                    margin-block: 0;
+                    padding-left: 1.125rem;
+                }
+            }
+
+            .wots-path-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                .path-tags {
+                    /* --- Lord of Mysteries --- */
+                    /* --- เส้นทางนักทำนาย (Seer) --- */
+                    &[pathway="นักทำนาย"] {
+                        --wots-path-clr: #71717b;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770612457/Fool_Symbol2_ydvwem.webp);
+                        div::before { content: "นักทำนาย";}
+                    }
+
+                    /* --- เส้นทางหัวขโมย (Marauder) --- */
+                    &[pathway="หัวขโมย"] {
+                        --wots-path-clr: #71717b;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771316056/width_550_hgdcwm.webp);
+                        div::before { content: "หัวขโมย";}
+                    }
+
+                    /* --- เส้นทางลูกศิษย์ (Apprentice) --- */
+                    &[pathway="ลูกศิษย์"] {
+                        --wots-path-clr: #71717b;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771227184/Door_Symbol2_la159u.webp);
+                        div::before { content: "ลูกศิษย์";}
+                    }
+
+                    /* --- God Almighty --- */
+                    /* --- เส้นทางผู้ชม (Spectator) --- */
+                    &[pathway="ผู้ชม"] {
+                        --wots-path-clr: #fe9a00;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770780495/Visionary_Symbol2_mmcflu.webp);
+                        div::before { content: "ผู้ชม";}
+                    }
+
+                    /* --- เส้นทางนักขับขาน (Bard) --- */
+                    &[pathway="นักขับขาน"] {
+                        --wots-path-clr: #fe9a00;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770783110/Sun_Symbol2_smeglb.webp);
+                        div::before { content: "นักขับขาน";}
+                    }
+
+                    /* --- เส้นทางกะลาสี (Sailor) --- */
+                    &[pathway="กะลาสี"] {
+                        --wots-path-clr: #fe9a00;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1770619961/Tyrant_Symbol2_osgium.webp);
+                        div::before { content: "กะลาสี";}
+                    }
+
+                    /* --- เส้นทางนักอ่าน (Reader) --- */
+                    &[pathway="นักอ่าน"] {
+                        --wots-path-clr: #fe9a00;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771321966/reader-logo_f9hqqv.webp);
+                        div::before { content: "นักอ่าน";}
+                    }
+
+                    /* --- เส้นทางผู้วิงวอนความลับ (Secrets Supplicant) --- */
+                    &[pathway="ผู้วิงวอนความลับ"] {
+                        --wots-path-clr: #fe9a00;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771321380/hangman-logo_ikwqca.webp);
+                        div::before { content: "ผู้วิงวอนความลับ";}
+                    }
+
+                    /* --- Eternal Darkness --- */
+                    /* --- เส้นทางผู้ไม่นิทรา (Sleepless) --- */
+                    &[pathway="ผู้ไม่นิทรา"] {
+                        --wots-path-clr: #1c398e;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386173/Darkness_Symbol2_qzs7t2.webp);
+                        div::before { content: "ผู้ไม่นิทรา";}
+                    }
+
+                    /* --- เส้นทางผู้เก็บซากศพ (Corpse Collector) --- */
+                    &[pathway="ผู้เก็บซากศพ"] {
+                        --wots-path-clr: #1c398e;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386274/Death_Symbol2_bazus4.webp);
+                        div::before { content: "ผู้เก็บซากศพ";}
+                    }
+
+                    /* --- เส้นทางนักรบ (Warrior) --- */
+                    &[pathway="นักรบ"] {
+                        --wots-path-clr: #1c398e;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771386373/Twilight_Giant_Symbol2_hfmybg.webp);
+                        div::before { content: "นักรบ";}
+                    }
+
+                    /* --- Calamity of Destruction --- */
+                    /* --- เส้นทางนักฆ่า (Assassin) --- */
+                    &[pathway="นักฆ่า"] {
+                        --wots-path-clr: #c10007;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388195/Demoness_Symbol2_z02wxy.webp);
+                        div::before { content: "นักฆ่า";}
+                    }
+
+                    /* --- เส้นทางนักล่า (Hunter) --- */
+                    &[pathway="นักล่า"] {
+                        --wots-path-clr: #c10007;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771388609/Red_Priest_Symbol2_bt4qaf.webp);
+                        div::before { content: "นักล่า";}
+                    }
+
+                    /* --- Demon of Knowledge --- */
+                    /* --- เส้นทางผู้ส่องความลับ (Mystery Pryer) --- */
+                    &[pathway="ผู้ส่องความลับ"] {
+                        --wots-path-clr: #59168b;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771390011/Hermit_Symbol2_wqzrnl.webp);
+                        div::before { content: "ผู้ส่องความลับ";}
+                    }
+
+                    /* --- เส้นทางนักปราชญ์ (Savant) --- */
+                    &[pathway="นักปราชญ์"] {
+                        --wots-path-clr: #59168b;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771389559/Paragon_Symbol2_y8cucj.webp);
+                        div::before { content: "นักปราชญ์";}
+                    }
+
+                    /* --- Goddess of Origin --- */
+                    /* --- เส้นทางนักเพาะปลูก (Planter) --- */
+                    &[pathway="นักเพาะปลูก"] {
+                        --wots-path-clr: #009966;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407637/Mother_Symbol2_afdigd.webp);
+                        div::before { content: "นักเพาะปลูก";}
+                    }
+
+                    /* --- เส้นทางเภสัชกร (Apothecary) --- */
+                    &[pathway="เภสัชกร"] {
+                        --wots-path-clr: #009966;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407581/Moon_Symbol2_xxfkrq.webp);
+                        div::before { content: "เภสัชกร";}
+                    }
+
+                    /* --- Father of Devils --- */
+                    /* --- เส้นทางอาชญากร (Criminal) --- */
+                    &[pathway="อาชญากร"] {
+                        --wots-path-clr: #ff637e;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408025/Abyss_Symbol2_m8zazv.webp);
+                        div::before { content: "อาชญากร";}
+                    }
+
+                    /* --- เส้นทางนักโทษ (Prisoner) --- */
+                    &[pathway="นักโทษ"] {
+                        --wots-path-clr: #ff637e;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771408024/Chained_Symbol2_jynmlm.webp);
+                        div::before { content: "นักโทษ";}
+                    }
+
+                    /* --- The Anarchy --- */
+                    /* --- เส้นทางนักกฎหมาย (Lawyer) --- */
+                    &[pathway="นักกฎหมาย"] {
+                        --wots-path-clr: #79716b;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407814/Black_Emperor_Symbol2_gm4upv.webp);
+                        div::before { content: "นักกฎหมาย";}
+                    }
+
+                    /* --- เส้นทางผู้ตัดสิน (Arbiter) --- */
+                    &[pathway="ผู้ตัดสิน"] {
+                        --wots-path-clr: #79716b;
+                        --wots-path-symbol: url(https://res.cloudinary.com/dehp6efwc/image/upload/v1771407811/Justiciar_Symbol2_tt9fi9.webp);
+                        div::before { content: "ผู้ตัดสิน";}
+                    }
+
+                    --wots-path-hsl: from var(--wots-path-clr) h s l;
+                    --wots-bg-clr: hsl(from var(--wots-path-clr) calc(h - 15.86) 18.18% 8.63% / 0.8);
+                    --wots-path-gray: hsl(from var(--wots-path-clr) calc(h + 175) 2% 29% / 0.03);
+                    --wots-txt-1: hsl(from var(--wots-path-clr) h 82% 78%);
+                    
+                    position: relative;
+                    font-family: 'Google Sans', sans-serif;
+                    font-size: 1rem;
+                    width: max-content;
+                    color: var(--wots-txt-1);
+                    background: linear-gradient(135deg, hsl(var(--wots-path-hsl) / 0.02), transparent 50%), linear-gradient(225deg, var(--wots-path-gray), transparent 50%), linear-gradient(135deg, hsl(var(--wots-path-hsl) / 0.08), transparent 40% 60%, hsl(var(--wots-path-hsl) / 0.02));
+                    background-color: var(--wots-bg-clr);
+                    border: 1px solid hsl(var(--wots-path-hsl) / 0.3);
+                    padding: 0.25rem 1rem;
+                    margin-block: 0 1rem;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.5rem;
+
+                    &::before {
+                        content: "";
+                        width: 1.5rem;
+                        aspect-ratio: 1;
+                        background: var(--wots-path-symbol) center/contain no-repeat;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transform: translateY(calc(100% + 0.3rem));
+                        font-family: 'Kanit', sans-serif;
+                        font-size: 0.7rem;
+                        line-height: 1;
+                        color: #ccc;
+                    }
+
+                    &:nth-child(1)::after { content: "✦ อันดับ 1"; }
+                    &:nth-child(2)::after { content: "✦ อันดับ 2"; }
+                    &:nth-child(3)::after { content: "✦ อันดับ 3"; }
+                }
+            }
+        }
+    }
 }
