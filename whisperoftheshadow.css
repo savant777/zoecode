@@ -542,9 +542,10 @@
                         &::before { content: "✦ — ";}
 
                         &::after {
-                            content: " (previous life)";
+                            content: "(previous life)";
                             font-size: 0.625rem;
                             color: var(--wots-txt-1);
+                            margin-inline-start: 5px;
                         }
                     }
                 }
@@ -655,7 +656,7 @@
                 --wots-txt-1: hsl(from var(--wots-church-clr) h 82% 78%);
 
                 &::after {
-                    content: "✦ " attr(data);
+                    content: "✦ ศาสนา";
                     display: block;
                     position: absolute;
                     bottom: 0.05rem;
@@ -684,6 +685,7 @@
                         display: flex;
                         flex-wrap: wrap;
                         column-gap: 0.75rem;
+                        justify-content: center;
                         align-items: center;
                         padding: 0.75rem;
 
@@ -691,16 +693,14 @@
                             content: "";
                             width: min(4rem, 5vw);
                             aspect-ratio: 1;
-                            margin: 0 auto;
-                            background: var(--wots-church-symbol) center/contain no-repeat;
+                            background: var(--wots-church-symbol) center / contain no-repeat;
                         }
 
                         &::after {
-                            flex: 1;
-                            min-width: 124px;
                             font-family: 'Google Sans', sans-serif;
                             font-size: 1rem;
                             color: var(--wots-txt-1);
+                            text-align: center;
                         }
                     }
 
@@ -713,7 +713,7 @@
 
                     &::before {
                         opacity: 0.35;
-                        background: var(--wots-church) center/cover no-repeat;
+                        background: var(--wots-church-bg) center/cover no-repeat;
                     }
 
                     &::after { background: linear-gradient(to right, var(--wots-bg-darker), var(--wots-bg-lighter), var(--wots-bg-darker)); }
@@ -925,20 +925,20 @@
                     position: relative;
                     font-family: 'Google Sans', sans-serif;
                     font-size: 1rem;
-                    width: max-content;
+                    flex: 1;
                     color: var(--wots-txt-1);
                     background: linear-gradient(135deg, hsl(var(--wots-path-hsl) / 0.02), transparent 50%), linear-gradient(225deg, var(--wots-path-gray), transparent 50%), linear-gradient(135deg, hsl(var(--wots-path-hsl) / 0.08), transparent 40% 60%, hsl(var(--wots-path-hsl) / 0.02));
                     background-color: var(--wots-bg-clr);
                     border: 1px solid hsl(var(--wots-path-hsl) / 0.3);
-                    padding: 0.25rem 1rem;
+                    padding: 0.75rem;
                     margin-block: 0 1rem;
                     display: flex;
                     align-items: center;
-                    column-gap: 0.5rem;
+                    column-gap: 0.75rem;
 
                     &::before {
                         content: "";
-                        width: 1.5rem;
+                        width: 2.5rem;
                         aspect-ratio: 1;
                         background: var(--wots-path-symbol) center/contain no-repeat;
                     }
