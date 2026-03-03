@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bodoni-moda');
+@import url('https://fonts.cdnfonts.com/css/gondessy');
+
+:root {
+    --mrm-bg: #fff;
+    --mrm-txt: #000;
+    --mrm-primary: #44648d;
+    --mrm-rad: 1rem;
+
+    --mrm-pic: transparent;
+    --mrm-pos: center;
+    --mrm-size: cover;
+
+    --mrm-bgpic: transparent;
+    --mrm-bgpos: center;
+    --mrm-bgsize: cover;
+}
+
+#MarryMeMary { position: relative; }
+#MarryMeMary * { box-sizing: border-box; }
+
+#MarryMeMary a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#MarryMeMary a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#MarryMeMary::after {
+    display: block;
+    content: "୨୧";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#MarryMeMary:hover::after { content: "made by zzzcode"; }
+
+#MarryMeMary {
+    #marryme-thread.mrm-box {
+        --mrm-border: hsl(from var(--mrm-primary) calc(h + 2) calc(s + 61) calc(l + 48));
+        --mrm-dark: hsl(from var(--mrm-primary) calc(h + 11) calc(s - 13) calc(l + 11));
+        --mrm-shadow: hsl(from var(--mrm-primary) calc(h + 11) calc(s - 13) calc(l + 11) / 0.6);
+        
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        background: url(https://iili.io/qBF0Obe.png) top left/50% auto repeat;
+        padding: 4vw;
+        color: var(--mrm-txt);
+
+        .mrm-stamp {
+            position: relative;
+            width: 100%;
+            background: 
+                radial-gradient(circle var(--mrm-rad), #0000 98%, var(--mrm-border)) calc(var(--mrm-rad) * -1.5) calc(var(--mrm-rad) * -1.5)/calc(var(--mrm-rad) * 3) calc(var(--mrm-rad) * 3) round,
+                linear-gradient(var(--mrm-border) 0 0) center/calc(100% - calc(var(--mrm-rad) * 3)) calc(100% - calc(var(--mrm-rad) * 3)) no-repeat;
+            padding: 2vw;
+            filter: drop-shadow(0 0 0.25rem #00000040) drop-shadow(0 0 0.75rem var(--mrm-shadow));
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0px;
+                z-index: 1;
+                background: 
+                    radial-gradient(circle calc(var(--mrm-rad) + 3px), #0000 98%, var(--mrm-bg)) calc(var(--mrm-rad) * -1.5) calc(var(--mrm-rad) * -1.5)/calc(var(--mrm-rad) * 3) calc(var(--mrm-rad) * 3) round,
+                    linear-gradient(var(--mrm-bg) 0 0) center/calc(100% - calc(var(--mrm-rad) * 3)) calc(100% - calc(var(--mrm-rad) * 3)) no-repeat;
+                -webkit-mask: linear-gradient(#000 0 0) center/calc(100% - 6px) calc(100% - 6px) no-repeat;
+                mask: linear-gradient(#000 0 0) center/calc(100% - 6px) calc(100% - 6px) no-repeat;
+            }
+
+            .mrm-content {
+                position: relative;
+                z-index: 2;
+                width: 90%;
+                margin: 2vw auto;
+                font-family: 'Bai Jamjuree', sans-serif;
+                font-size: min(1.2vw, 1rem);
+
+                .mrm-header {
+                    position: relative;
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    font-family: 'Mitr', sans-serif;
+                    font-size: clamp(12px, 0.8vw, 14px);
+                    font-weight: 200;
+                    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 20%;
+                        aspect-ratio: 1;
+                        background: url(https://iili.io/qBVZ4u2.png) center/contain no-repeat;
+                    }
+                }
+
+                .mrm-title {
+                    h1 {
+                        margin-block-end: 0;
+
+                        font-family: 'Bodoni Moda', sans-serif;
+                        font-size: clamp(2.25rem, 3vw, 3.25rem);
+                        font-weight: 600;
+                        line-height: 1;
+                        text-transform: uppercase;
+                        text-align: center;
+                        
+                        color: var(--mrm-primary);
+
+                        &+br { display: none; }
+                    }
+
+                    p {
+                        margin-block: 0;
+
+                        font-family: 'Gondessy', sans-serif;
+                        font-size: min(3vw, 2.5rem);
+                        line-height: 1;
+                        letter-spacing: 0.5vw;
+                        text-align: center;
+                        text-shadow: 0 0 black, 0 0 black;
+                    }
+                }
+
+                .mrm-img {
+                    width: 100%;
+                    user-select: none;
+                    pointer-events: none;
+                }
+
+                .mrm-desc {
+                    margin-block: 2em;
+                    text-align: center;
+                }
+
+                hr {
+                    width: 80%;
+                    background: var(--mrm-dark);
+                }
+
+                .mrm-section {
+                    margin-block: 1.5em 2em;
+
+                    h2 {
+                        margin-block: 0;
+                        font-size: 1.25rem;
+                        text-align: center;
+
+                        &+br { display: none; }
+                    }
+
+                    ps {
+                        display: block;
+                        width: max-content;
+                        max-width: 70%;
+                        margin: auto;
+
+                        font-size: min(1vw, 0.9rem);
+                        text-align: center;
+                        color: var(--mrm-primary);
+                        text-decoration: underline;
+
+                        &+br { display: none; }
+                    }
+
+                    .mrm-item {
+                        width: 100px;
+                        aspect-ratio: 1;
+                        margin: 1rem auto;
+                        border-radius: 6px;
+                        background: var(--mrm-item) center/80px no-repeat, #202020;
+                    }
+
+                    #mrm-reward {
+                        display: flex;
+                        margin-block: min(1.5vw, 1.5rem);
+
+                        div {
+                            flex: 1;
+                            padding-inline: 1rem;
+
+                            ul {
+                                margin-block: 0;
+                                padding-inline-start: 20px;
+                            }
+                        }
+
+                        div:not(:last-of-type) { border-right: 1px solid var(--mrm-primary); }
+                    }
+
+                    #mrm-duration {
+                        max-width: max-content;
+                        margin: min(1.5vw, 1.5rem) auto;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        column-gap: 1.5rem;
+
+                        b { text-align: end; }
+                        p { margin-block: 0; }
+                        b[c], p[c] { color: var(--mrm-primary); }
+                    }
+                }
+            }
+        }
+    }
+
+    #marryme-role.mrm-box {
+        --mrm-shadow: hsl(from var(--mrm-primary) h s 25 / 0.6);
+
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        background: var(--mrm-bgpic) var(--mem-bgpos)/var(--mrm-bgsize) no-repeat;
+        padding: 4vw;
+        color: var(--mrm-txt);
+
+        .mrm-stamp {
+            position: relative;
+            width: 100%;
+            background: 
+                radial-gradient(circle var(--mrm-rad), #0000 98%, var(--mrm-primary)) calc(var(--mrm-rad) * -1.5) calc(var(--mrm-rad) * -1.5)/calc(var(--mrm-rad) * 3) calc(var(--mrm-rad) * 3) round,
+                linear-gradient(var(--mrm-primary) 0 0) center/calc(100% - calc(var(--mrm-rad) * 3)) calc(100% - calc(var(--mrm-rad) * 3)) no-repeat;
+            padding: 2vw;
+            filter: drop-shadow(0 0 0.25rem #00000040) drop-shadow(0 0 0.75rem var(--mrm-shadow));
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0px;
+                z-index: 1;
+                background: 
+                    radial-gradient(circle calc(var(--mrm-rad) + 3px), #0000 98%, var(--mrm-bg)) calc(var(--mrm-rad) * -1.5) calc(var(--mrm-rad) * -1.5)/calc(var(--mrm-rad) * 3) calc(var(--mrm-rad) * 3) round,
+                    linear-gradient(var(--mrm-bg) 0 0) center/calc(100% - calc(var(--mrm-rad) * 3)) calc(100% - calc(var(--mrm-rad) * 3)) no-repeat;
+                -webkit-mask: linear-gradient(#000 0 0) center/calc(100% - 6px) calc(100% - 6px) no-repeat;
+                mask: linear-gradient(#000 0 0) center/calc(100% - 6px) calc(100% - 6px) no-repeat;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 3;
+                top: calc(-2vw + 1rem);
+                left: calc(50% - 1rem);
+                transform: translateX(calc(-50% + 1vw));
+                width: 15%;
+                aspect-ratio: 1;
+                background: url(https://iili.io/qBjpvhG.png) center/contain no-repeat;
+            }
+
+            .mrm-content {
+                position: relative;
+                z-index: 2;
+                width: 90%;
+                margin: 2vw auto;
+                font-family: 'Bai Jamjuree', sans-serif;
+                font-size: min(1.2vw, 1rem);
+
+                .mrm-header {
+                    position: relative;
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    font-family: 'Mitr', sans-serif;
+                    font-size: clamp(12px, 0.8vw, 14px);
+                    font-weight: 200;
+                }
+
+                .mrm-title {
+                    h1 {
+                        margin-block-end: 0;
+
+                        font-family: 'Bodoni Moda', sans-serif;
+                        font-size: clamp(2.25rem, 3vw, 3.25rem);
+                        font-weight: 600;
+                        line-height: 1;
+                        text-transform: uppercase;
+                        text-align: center;
+                        
+                        color: var(--mrm-primary);
+
+                        &+br { display: none; }
+                    }
+
+                    p {
+                        margin-block: 0;
+
+                        font-family: 'Gondessy', sans-serif;
+                        font-size: min(3vw, 2.5rem);
+                        line-height: 1;
+                        letter-spacing: 0.5vw;
+                        text-align: center;
+                        text-shadow: 0 0 black, 0 0 black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) { #marryme-role.mrm-box .mrm-stamp::after { top: calc(-2vw + 0.8rem); } }
+@media (max-width: 1024px) { #marryme-role.mrm-box .mrm-stamp::after { top: calc(-2vw + 0.8vw); } }
