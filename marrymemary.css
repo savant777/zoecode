@@ -411,6 +411,7 @@
             }
 
             .mrm-vibe {
+                position: relative;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 1vw;
@@ -421,18 +422,57 @@
                     aspect-ratio: 1;
                     background: var(--mrm-pic) var(--mrm-pos)/var(--mrm-size) no-repeat;
                 }
+
+                p {
+                    position: absolute;
+                    bottom: 0;
+                    right: -2vw;
+                    transform: translateY(60%) rotate(-6deg);
+                    
+                    margin-block: 0;
+                    font-family:'Gondessy', sans-serif;
+                    font-size: min(6vw, 6rem);
+                    line-height: 1;
+                    letter-spacing: 0.25vw;
+                    text-align: end;
+                    text-shadow: 0 0 black, 0 0 black, 1px -1px var(--mrm-bg), -1px -1px var(--mrm-bg), 1px 1px var(--mrm-bg), -1px 1px var(--mrm-bg);
+                }
             }
 
             .mrm-section { margin-block: 1.5em 2em; }
             .mrm-section h2 {
-                margin-block: 0;
+                margin-block: 1em 0;
                 font-size: 1.25rem;
-                text-align: center;
+                text-transform: uppercase;
+                font-weight: 400;
 
                 &+br { display: none; }
             }
 
-            .mrm-section ol { padding-inline-start: 1rem; }
+            details + br { display: none; }
+            details > summary { list-style: none; cursor: pointer; }
+            details > summary::marker, 
+            details > summary::-webkit-details-marker { display: none; }
+
+            .mrm-quest { counter-reset: quests; }
+            .mrm-quest summary { counter-increment: quests; }
+            .mrm-quest summary::before { content: counter(quests, decimal) ". "; }
+
+            .mrm-quest-send {
+                display: flex;
+
+                div {
+                    flex: 1;
+                    padding-inline: 1rem;
+
+                    ul {
+                        margin-block: 0;
+                        padding-inline-start: 20px;
+                    }
+                }
+
+                div:not(:last-of-type) { border-right: 1px solid var(--mrm-primary); }
+            }
 
             hr {
                 width: 80%;
