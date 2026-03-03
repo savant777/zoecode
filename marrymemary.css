@@ -15,6 +15,8 @@
     --mrm-bgpic: transparent;
     --mrm-bgpos: center;
     --mrm-bgsize: cover;
+    
+    interpolate-size: allow-keywords;
 }
 
 #MarryMeMary { position: relative; }
@@ -444,7 +446,7 @@
                 margin-block: 1em 0;
                 font-size: min(1.5vw, 1.25rem);
                 text-transform: uppercase;
-                font-weight: 400;
+                font-weight: 500;
 
                 &+br { display: none; }
             }
@@ -455,8 +457,19 @@
             details > summary::-webkit-details-marker,
             details > summary + br { display: none; }
 
+            details::details-content {
+                height: 0;
+                overflow: hidden;
+                transition: height 0.3s ease-in-out, content-visibility 0.3s allow-discrete;
+            }
+
+            details[open]::details-content { height: auto; }
+
             .mrm-quest { counter-reset: quests; }
-            .mrm-quest summary { counter-increment: quests; }
+            .mrm-quest summary { 
+                counter-increment: quests;
+                font-size: min(1.35vw, 1.1rem);
+            }
             .mrm-quest summary::before { 
                 content: counter(quests, decimal) ". ";
                 font-weight: bold;
@@ -464,6 +477,8 @@
 
             .mrm-quest-send {
                 display: flex;
+                padding-inline-start: min(1.35vw, 1.1rem);
+                padding-block-end: 0.5rem;
 
                 div {
                     flex: 1;
