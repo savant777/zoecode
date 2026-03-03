@@ -492,15 +492,17 @@
                     user-select: none;
                     position: absolute;
                     bottom: 0;
-                    right: -2vw;
-                    transform: translateY(60%) rotate(-6deg);
-                    
+                    right: -1.5vw;
+                    transform: translateY(0.5vw) rotate(-6deg);
+                    transform-origin: bottom right;
+
                     margin-block: 0;
-                    font-family:'Gondessy', sans-serif;
+                    font-family: 'Gondessy', sans-serif;
                     font-size: min(6vw, 6rem);
-                    line-height: 1;
+                    line-height: 0.5;
                     letter-spacing: 0.25vw;
                     text-align: end;
+                    
                     text-shadow: 0 0 black, 0 0 black, 1px -1px var(--mrm-bg), -1px -1px var(--mrm-bg), 1px 1px var(--mrm-bg), -1px 1px var(--mrm-bg);
                 }
             }
