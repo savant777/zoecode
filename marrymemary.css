@@ -489,6 +489,8 @@
                 }
 
                 p {
+                    max-width: 60%;
+
                     user-select: none;
                     position: absolute;
                     bottom: 0;
@@ -502,14 +504,14 @@
                     line-height: 0.5;
                     letter-spacing: 0.25vw;
                     text-align: end;
-                    
+
                     text-shadow: 0 0 black, 0 0 black, 1px -1px var(--mrm-bg), -1px -1px var(--mrm-bg), 1px 1px var(--mrm-bg), -1px 1px var(--mrm-bg);
                 }
             }
 
             .mrm-section { margin-block: 1.5em 2em; }
             .mrm-section h2 {
-                margin-block: 1em 0;
+                margin-block: 0;
                 font-size: min(1.5vw, 1.25rem);
                 text-transform: uppercase;
                 font-weight: 500;
@@ -563,8 +565,9 @@
             }
 
             hr {
-                width: 80%;
+                width: 100%;
                 background: var(--mrm-primary);
+                margin-block: 1.5em;
             }
         }
     }
