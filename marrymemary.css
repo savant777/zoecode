@@ -489,4 +489,7 @@
     }
 }
 
-@media (max-width: 1024px) { #marryme-role.mrm-box .mrm-stamp::after { top: calc(-2vw + 0.9rem) !important; } }
+@media (max-width: 1024px) { 
+    #marryme-role.mrm-box .mrm-stamp::after,
+    #marryme-quest.mrm-box .mrm-stamp::after { top: calc(-2vw + 0.9rem) !important; }
+}
