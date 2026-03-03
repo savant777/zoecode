@@ -253,7 +253,7 @@
                 content: "";
                 position: absolute;
                 z-index: 3;
-                top: calc(-2vw + 1rem);
+                top: calc(-2vw + 0.8vw);
                 left: calc(50% - 1rem);
                 transform: translateX(calc(-50% + 1vw));
                 width: 15%;
@@ -314,5 +314,4 @@
     }
 }
 
-@media (max-width: 768px) { #marryme-role.mrm-box .mrm-stamp::after { top: calc(-2vw + 0.8rem); } }
-@media (max-width: 1024px) { #marryme-role.mrm-box .mrm-stamp::after { top: calc(-2vw + 0.8vw); } }
+@media (max-width: 1024px) { #marryme-role.mrm-box .mrm-stamp::after { top: calc(-2vw + 0.9rem) !important; } }
