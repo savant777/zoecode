@@ -253,7 +253,7 @@
                 content: "";
                 position: absolute;
                 z-index: 3;
-                top: calc(-2vw + 0.8vw);
+                top: max(-17.28px, calc(-2vw + 0.8vw));
                 left: calc(50% - 1rem);
                 transform: translateX(calc(-50% + 1vw));
                 width: 15%;
@@ -311,9 +311,9 @@
                 }
 
                 .mrm-vibe {
-                    display:flex;
-                    justify-content: center;
-                    column-gap: min(2vw, 1.5rem);
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: min(2vw, 1.5rem);
                     margin-block: 2em;
 
                     .mrm-pic {
