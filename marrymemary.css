@@ -158,7 +158,7 @@
 
                 h2 {
                     margin-block: 0;
-                    font-size: 1.25rem;
+                    font-size: min(1.5vw, 1.25rem);
                     text-align: center;
 
                     &+br { display: none; }
@@ -306,7 +306,7 @@
             .mrm-section { margin-block: 1.5em 2em; }
             .mrm-section h2 {
                 margin-block: 0;
-                font-size: 1.25rem;
+                font-size: min(1.5vw, 1.25rem);
                 text-align: center;
 
                 &+br { display: none; }
@@ -442,7 +442,7 @@
             .mrm-section { margin-block: 1.5em 2em; }
             .mrm-section h2 {
                 margin-block: 1em 0;
-                font-size: 1.25rem;
+                font-size: min(1.5vw, 1.25rem);
                 text-transform: uppercase;
                 font-weight: 400;
 
