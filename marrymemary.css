@@ -368,6 +368,7 @@
             .mrm-title {
                 display: flex;
                 justify-content: space-between;
+                align-items: baseline;
 
                 h1 {
                     margin-block-end: 0;
@@ -384,8 +385,9 @@
                 }
 
                 .mrm-palette {
+                    height: max(2.25vw, 1.8rem);
                     display: flex;
-                    gap: min(1.2vw, 1rem);
+                    gap: min(0.75vw, 0.75rem);
 
                     --mrm-clr1: #ccc;
                     --mrm-clr2: #999;
@@ -397,6 +399,8 @@
                         flex: 1;
                         aspect-ratio: 1;
                         border-radius: 50%;
+
+                        &+br { display: none; }
                     }
 
                     c:nth-child(1) { background-color: var(--mrm-clr1); }
