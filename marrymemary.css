@@ -452,11 +452,15 @@
             details + br { display: none; }
             details > summary { list-style: none; cursor: pointer; }
             details > summary::marker, 
-            details > summary::-webkit-details-marker { display: none; }
+            details > summary::-webkit-details-marker,
+            details > summary + br { display: none; }
 
             .mrm-quest { counter-reset: quests; }
             .mrm-quest summary { counter-increment: quests; }
-            .mrm-quest summary::before { content: counter(quests, decimal) ". "; }
+            .mrm-quest summary::before { 
+                content: counter(quests, decimal) ". ";
+                font-weight: bold;
+            }
 
             .mrm-quest-send {
                 display: flex;
@@ -470,6 +474,9 @@
                         padding-inline-start: 20px;
                     }
                 }
+
+                div:first-of-type { padding-inline-start: 0; }
+                div:last-of-type { padding-inline-end: 0; }
 
                 div:not(:last-of-type) { border-right: 1px solid var(--mrm-primary); }
             }
