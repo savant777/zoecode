@@ -217,13 +217,28 @@
                     b[c], p[c] { color: var(--mrm-primary); }
                 }
 
+                details + br { display: none; }
+                details > summary { list-style: none; cursor: pointer; }
+                details > summary::marker, 
+                details > summary::-webkit-details-marker,
+                details > summary + br { display: none; }
+
+                details::details-content {
+                    height: 0;
+                    overflow: hidden;
+                    transition: height 0.3s ease-in-out, content-visibility 0.3s allow-discrete;
+                }
+
+                details[open]::details-content { height: auto; }
+
                 .codeblock { user-select: all; }
                 .codeblock::selection { background: var(--mrm-primary); }
 
                 c {
-                    background: var(--mrm-txt);
+                    background: #202020;
                     color: var(--mrm-bg);
                     padding: 0 8px 4px;
+                    border-radius: 3px;
                     vertical-align: text-top;
                     
                     font-size: 13px;
