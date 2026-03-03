@@ -216,6 +216,19 @@
                     p { margin-block: 0; }
                     b[c], p[c] { color: var(--mrm-primary); }
                 }
+
+                .codeblock { user-select: all; }
+                .codeblock::selection { background: var(--mrm-primary); }
+
+                c {
+                    background: var(--mrm-txt);
+                    color: var(--mrm-bg);
+                    padding: 0 8px 4px;
+                    vertical-align: text-top;
+                    
+                    font-size: 13px;
+                    font-style: italic;
+                }
             }
         }
     }
