@@ -168,6 +168,7 @@
         
         width: 500px;
         max-width: calc(100% - 2rem);
+        height: 400px;
         margin: auto;
         background: repeating-linear-gradient(-45deg, var(--tc-red) 0 1rem, var(--tc-paper) 1rem 2rem, var(--tc-blue) 2rem 3rem, var(--tc-paper) 3rem 4rem);
         padding: 1rem;
@@ -176,7 +177,11 @@
         .tc-capsule {
             background: var(--tc-paper);
             padding: 2rem;
+            height: 100%;
+            overflow: auto;
         }
+
+        .tc-capsule::-webkit-scrollbar { width: 0; }
     }
 
     .tc-capsule-bd[set="last"] {
