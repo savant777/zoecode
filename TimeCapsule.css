@@ -119,8 +119,6 @@
     color: var(--tc-red);
 }
 
-bc + br { display: none; }
-
 .tc-topic {
     text-align: center;
     color: var(--tc-red);
@@ -207,3 +205,37 @@ input#tc-24-rowena:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24
 input#tc-24-silvia:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-silvia"],
 input#tc-24-valeska:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-valeska"],
 input#tc-24-zoe:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="24-zoe"] { display: block; }
+
+/* ========= 2025 ========= */
+input#tc-25-alfredius:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-alfredius"],
+input#tc-25-asteria:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-asteria"],
+input#tc-25-belgin:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-belgin"],
+input#tc-25-bellanie:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-bellanie"],
+input#tc-25-bethany:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-bethany"],
+input#tc-25-blair:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-blair"],
+input#tc-25-charlotte:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-charlotte"],
+input#tc-25-hans:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-hans"],
+input#tc-25-janis:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-janis"],
+input#tc-25-jerome:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-jerome"],
+input#tc-25-jewel:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-jewel"],
+input#tc-25-jonathan:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-jonathan"],
+input#tc-25-laura:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-laura"],
+input#tc-25-leigh:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-leigh"],
+input#tc-25-marine:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-marine"],
+input#tc-25-miner:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-miner"],
+input#tc-25-nyx:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-nyx"],
+input#tc-25-penelope:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-penelope"],
+input#tc-25-pinkberry:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-pinkberry"],
+input#tc-25-rexxyr:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-rexxyr"],
+input#tc-25-richard:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-richard"],
+input#tc-25-rowena:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-rowena"],
+input#tc-25-selene:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-selene"],
+input#tc-25-simon:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-simon"],
+input#tc-25-valeska:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-valeska"],
+input#tc-25-winter:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-winter"],
+input#tc-25-yoshikawa:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-yoshikawa"],
+input#tc-25-zantino:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-zantino"],
+input#tc-25-zinnia:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-zinnia"],
+input#tc-25-desdemona:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-desdemona"],
+input#tc-25-josephine:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-josephine"],
+input#tc-25-zoe:checked ~ .tc-content > .tc-stamp-set > .tc-capsule-bd[tc="25-zoe"] { display: block; }
