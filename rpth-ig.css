@@ -116,8 +116,6 @@
                         order: 1;
                         cursor: pointer;
                         font-weight: 600;
-
-                        &+br { display: none; }
                     }
 
                     b::after {
@@ -296,8 +294,6 @@
                 b {
                     cursor: pointer;
                     font-weight: 600;
-
-                    &+br { display: none; }
                 }
 
                 b::after {
