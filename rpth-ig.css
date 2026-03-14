@@ -7,6 +7,12 @@
     100% { transform: scale(1); }
 }
 
+@counter-style dot {
+    system: numeric;
+    symbols: "•" "••" "•••" "••••" "•••••" "••••••" "•••••••" "••••••••" "•••••••••" "••••••••••" "•••••••••••" "••••••••••••" "•••••••••••••" "••••••••••••••" "•••••••••••••••" "••••••••••••••••" "•••••••••••••••••" "••••••••••••••••••" "•••••••••••••••••••" "••••••••••••••••••••" ;
+    suffix: " ";
+}
+
 :root {
     --rpthig-pic: transparent;
     --rpthig-pos: center;
@@ -187,7 +193,7 @@
 
             &::after {
                 content: items-placeholder;
-                content: counters(dots, '', disc);
+                content: counter(dots, dot);
 
                 position: absolute;
                 bottom: 17px;
@@ -238,7 +244,7 @@
                         margin-inline-end: -2px;
                         background: var(--rpthig-txt);
                         
-                        transition: transform .15s ease-out, background 0.45s ease-in-out, mask 0.45s ease-in-out, -webkit-mask 0.45s ease-in-out;
+                        transition: transform .15s ease-out, background 0.1s ease-in-out, mask 0.45s ease-in-out, -webkit-mask 0.45s ease-in-out;
                     }
 
                     &:hover::before { transform: scale(1.05); }
