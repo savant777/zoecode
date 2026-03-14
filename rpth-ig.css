@@ -8,8 +8,9 @@
 }
 
 @counter-style dot {
-    system: numeric;
-    symbols: "•" "••" "•••" "••••" "•••••" "••••••" "•••••••" "••••••••" "•••••••••" "••••••••••";
+    system: additive;
+    range: 1 20;
+    additive-symbols: 10 "••••••••••", 1 "•";
     suffix: " ";
 }
 
