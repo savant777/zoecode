@@ -55,6 +55,9 @@
     --rpthig-border: #262626;
 }
 
+[verified] > .ig-header .ig-info > .ig-name > b::after,
+[verified] .ig-body .ig-conten > b::after { content: ""; }
+
 #RPTHINSTAGRAM {
     #rpth-ig-post.ig-container {
         width: 470px;
@@ -110,8 +113,7 @@
                         &+br { display: none; }
                     }
 
-                    b[verified]::after {
-                        content: "";
+                    b::after {
                         display: inline-block;
                         margin-inline-start: 4px;
                         width: 12px;
@@ -293,8 +295,7 @@
                     &+br { display: none; }
                 }
 
-                b[verified]::after {
-                    content: "";
+                b::after {
                     display: inline-block;
                     margin-inline-start: 4px;
                     width: 12px;
@@ -332,6 +333,7 @@
                 }
 
                 ul { margin-block-start: 8px; }
+                a { color: var(--rpthig-link) !important; }
             }
         }
     }
