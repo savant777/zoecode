@@ -238,7 +238,7 @@
                         margin-inline-end: -2px;
                         background: var(--rpthig-txt);
                         
-                        transition: transform .15s ease-out, background-color 0.2s ease, mask 0.2s ease, -webkit-mask 0.2s ease;
+                        transition: transform .15s ease-out, background 0.45s ease-in-out, mask 0.45s ease-in-out, -webkit-mask 0.45s ease-in-out;
                     }
 
                     &:hover::before { transform: scale(1.05); }
@@ -330,7 +330,7 @@
                     line-height: 16px;
                 }
 
-                ul { margin-block: 8px 0; }
+                ul { margin-block: 8px 0; line-height: 1.5; }
                 a { color: var(--rpthig-link) !important; }
             }
         }
