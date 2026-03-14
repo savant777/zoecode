@@ -56,7 +56,7 @@
 }
 
 [verified] > .ig-header .ig-info > .ig-name > b::after,
-[verified] .ig-body .ig-conten > b::after { content: ""; }
+[verified] .ig-body .ig-content > b::after { content: ""; }
 
 #RPTHINSTAGRAM {
     #rpth-ig-post.ig-container {
@@ -162,6 +162,7 @@
             border: 1px solid var(--rpthig-border);
             border-radius: 6px;
             overflow: hidden;
+            transition: 0.3s ease-in-out;
 
             ul {
                 list-style: none;
@@ -202,7 +203,7 @@
                 line-height: 0;
 
                 opacity: 0;
-                transition: 0.2s ease-in-out;
+                transition: 0.3s ease-in-out;
             }
 
             &:hover::after { opacity: 0.4; }
@@ -231,16 +232,17 @@
                     &::before {
                         content: "";
                         display: inline-block;
-                        width: 40px;
-                        height: 40px;
+                        width: 24px;
+                        height: 24px;
                         padding: 8px;
                         margin-inline-end: -2px;
                         background: var(--rpthig-txt);
                         
-                        transition: transform 0.1s ease, background-color 0.2s ease, mask 0.2s ease, -webkit-mask 0.2s ease;
+                        transition: transform .15s ease-out, background-color 0.2s ease, mask 0.2s ease, -webkit-mask 0.2s ease;
                     }
 
                     &:hover::before { transform: scale(1.05); }
+                    &+br { display: none; }
                 }
 
                 label.ig-like {
@@ -270,16 +272,12 @@
                     margin-inline-start: auto;
 
                     &::before {
-                        width: 24px;
-                        height: 24px;
                         mask: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpolygon%20fill%3D%22none%22%20points%3D%2220%2021%2012%2013.44%204%2021%204%203%2020%203%2020%2021%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E) center/contain no-repeat content-box;-webkit-mask: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpolygon%20fill%3D%22none%22%20points%3D%2220%2021%2012%2013.44%204%2021%204%203%2020%203%2020%2021%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E) center/contain no-repeat content-box;
                     }
 
                     &:has(input:checked)::before {
                         mask: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M20%2022a.999.999%200%200%201-.687-.273L12%2014.815l-7.313%206.912A1%201%200%200%201%203%2021V3a1%201%200%200%201%201-1h16a1%201%200%200%201%201%201v18a1%201%200%200%201-1%201Z%22%2F%3E%3C%2Fsvg%3E) center/contain no-repeat content-box;
                         -webkit-mask: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M20%2022a.999.999%200%200%201-.687-.273L12%2014.815l-7.313%206.912A1%201%200%200%201%203%2021V3a1%201%200%200%201%201-1h16a1%201%200%200%201%201%201v18a1%201%200%200%201-1%201Z%22%2F%3E%3C%2Fsvg%3E) center/contain no-repeat content-box;
-
-                        animation: heartPop 0.45s ease-in-out;
                     }
                 }
             }
@@ -332,7 +330,7 @@
                     line-height: 16px;
                 }
 
-                ul { margin-block-start: 8px; }
+                ul { margin-block: 8px 0; }
                 a { color: var(--rpthig-link) !important; }
             }
         }
