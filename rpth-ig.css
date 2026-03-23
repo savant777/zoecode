@@ -18,6 +18,7 @@
     --rpthig-pic: transparent;
     --rpthig-pos: center;
     --rpthig-size: cover;
+    interpolate-size: allow-keywords;
 }
 
 #RPTHINSTAGRAM { position: relative; }
@@ -311,19 +312,19 @@
                 }
             }
 
-            details + br { display: none; }
-            details > summary { list-style: none; cursor: pointer; }
-            details > summary::marker, 
-            details > summary::-webkit-details-marker,
-            details > summary + br { display: none; }
+            details.ig-link + br { display: none; }
+            details.ig-link > summary { list-style: none; cursor: pointer; }
+            details.ig-link > summary::marker, 
+            details.ig-link > summary::-webkit-details-marker,
+            details.ig-link > summary + br { display: none; }
 
-            details::details-content {
+            details.ig-link::details-content {
                 height: 0;
                 overflow: hidden;
                 transition: height 0.3s ease-in-out, content-visibility 0.3s allow-discrete;
             }
 
-            details[open]::details-content { height: auto; }
+            details.ig-link[open]::details-content { height: auto; }
 
             details.ig-link {
                 margin-top: 8px;
