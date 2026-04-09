@@ -235,6 +235,68 @@
                 .fi-sr-heart { color: var(--cupid-primary); }
             }
 
+            .cpc-prize-display {
+                max-width: 451px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                text-align: center;
+
+                p {
+                    margin-block: 0.5rem 0;
+                    color: var(--cupid-primary);
+                    font-family: 'Mitr', sans-serif;
+                }
+
+                .cpc-prize-big {
+                    grid-column: 1/3;
+
+                    .cpc-item {
+                        position: relative;
+                        overflow: hidden;
+                        width: 200px;
+                        height: 200px;
+                        margin: auto;
+                        border-radius: 6px;
+                        background: #202020;
+                        pointer-events: none;
+                        user-select: none;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+
+                        &::before, &::after {
+                            content: "";
+                            inset: 0;
+                            background: var(--cupid-item) center/contain no-repeat;
+                        }
+
+                        &::before {
+                            position: relative;
+                            z-index: 2;
+                        }
+
+                        &::after {
+                            z-index: 1;
+                            position: absolute;
+                            bottom: 0;
+                            transform: translateY(50%);
+                            filter: blur(50px) saturate(3);
+                            opacity: 0.35;
+                        }
+                    }
+                }
+
+                .cpc-prize-small .cpc-item {
+                    width: 100px;
+                    height: 100px;
+                    margin: auto;
+                    border-radius: 6px;
+                    background: var(--cupid-item) center/80px no-repeat;
+                    background-color: #202020;
+                }
+            }
+
             .cpc-package {
                 position: relative;
                 width: 100%;
