@@ -791,13 +791,14 @@
                     div::before { content: "Looking for... "; }
                 }
 
-                .cpc-gender {
-                    grid-column: 1/3;
+                .cpc-gender, .cpc-height {
                     font-weight: 300;
 
                     b { font-weight: normal; }
                     c { color: var(--cupid-primary); }
                 }
+
+                .cpc-age, .cpc-height { text-align: end; }
             }
 
             .cpc-info-set {
