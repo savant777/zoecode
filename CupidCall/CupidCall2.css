@@ -247,6 +247,7 @@
                     margin-block: 0.5rem 0;
                     color: var(--cupid-primary);
                     font-family: 'Mitr', sans-serif;
+                    font-weight: 500;
                 }
 
                 .cpc-prize-big {
