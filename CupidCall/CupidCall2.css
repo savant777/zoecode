@@ -267,7 +267,9 @@
 
                         &::before, &::after {
                             content: "";
-                            inset: 0;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
                             background: var(--cupid-item) center/contain no-repeat;
                         }
 
