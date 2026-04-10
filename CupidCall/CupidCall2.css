@@ -493,7 +493,7 @@
                         padding: 1rem 1rem 1.25rem;
                     }
 
-                    p { font-weight: 600; }
+                    div[q] { font-weight: 600; }
                 }
 
                 .cpc-a {
@@ -512,7 +512,7 @@
                     }
                 }
 
-                p {
+                div[a], div[q] {
                     flex: 1;
                     margin-block: 0 -0.25rem;
                     padding: 1.35rem 1rem 1.35rem 0;
