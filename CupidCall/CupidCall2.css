@@ -478,7 +478,7 @@
                 margin-inline-start: -2rem;
                 margin-block: 1rem;
 
-                .cpq {
+                .cpc-q {
                     --cupid-bg: #eee;
                     display: flex;
                     column-gap: 0.5rem;
@@ -496,7 +496,7 @@
                     p { font-weight: 600; }
                 }
 
-                .cpa {
+                .cpc-a {
                     --cupid-primary: #888;
                     display: flex;
                     column-gap: 0.5rem;
