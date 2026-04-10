@@ -1656,44 +1656,31 @@
                 b { color: var(--cupid-txt); }
             }
 
-            details.cpc-comment {
+            .cpc-comment {
                 margin-block-start: 1rem;
-            
-                &>summary {
-                    list-style: none;
-                    cursor: pointer;
+                background: var(--cupid-txt);
+                border-radius: 0.25rem;
+                padding: 0.75rem;
 
-                    background: var(--cupid-txt);
-                    border-radius: 0.25rem;
-                    padding: 0.75rem;
+                font-family: 'Mitr', sans-serif;
+                line-height: 1.2;
+                color: var(--cupid-bg);
 
-                    font-family: 'Mitr', sans-serif;
-                    line-height: 1.2;
-                    color: var(--cupid-bg);
+                display: flex;
+                align-items: center;
+                column-gap: 0.75rem;
 
-                    display: flex;
-                    align-items: center;
-                    column-gap: 0.75rem;
-
-                    &::marker, &::-webkit-details-marker { display: none; }
-
-                    &::before {
-                        content: "\e463";
-                        font-family: uicons-solid-rounded !important;
-                    }
-
-                    &::after {
-                        content: "\ed69";
-                        font-family: uicons-bold-rounded !important;
-                    }
-
-                    div { flex: 1; }
+                &::before {
+                    content: "\e463";
+                    font-family: uicons-solid-rounded !important;
                 }
 
-                .cpc-role {
-                    padding-top: 1rem;
-                    text-align: justify;
+                &::after {
+                    content: "\ed69";
+                    font-family: uicons-bold-rounded !important;
                 }
+                
+                div { flex: 1; }
             }
         }
     }
