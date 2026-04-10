@@ -425,6 +425,30 @@
                 }
             }
 
+            .cpc-list {
+                padding-inline-start: 2rem;
+
+                ol, ul { padding-inline-start: 2rem; }
+
+                > li { margin-block-end: 1rem; }
+
+                > li::marker {
+                    color: var(--cupid-primary);
+                    font-weight: bold;
+                }
+
+                .cpc-form {
+                    --cupid-bg: #eee;                    
+                    border-radius: 0.5rem;
+                    background: var(--cupid-bg);
+                    border: 1px solid var(--cupid-primary);
+                    border-left-width: 5px;
+                    margin-inline-start: -4rem;
+                }
+
+                hr { margin-inline-start: -2rem; }
+            }
+
             .cpc-login {
                 width: 350px;
                 margin: -10% auto 0;
