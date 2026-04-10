@@ -338,6 +338,22 @@
                 tbody > tr:last-child > td { border-bottom: 0; }
             }
 
+            .cpc-table#cpc-schedule {
+                tbody > tr > td {
+                    vertical-align: baseline;
+
+                    &:last-child {
+                        padding: 0.5rem;
+                        text-align: unset;
+                        line-height: 1.2;
+                    }
+
+                    &[nb] { border-bottom: 0; padding-bottom: 0; }
+                    &[nt] { padding-top: 0; }
+                    &[time] { text-indent: 1rem; }
+                }
+            }
+
             .cpc-package {
                 position: relative;
                 width: 100%;
@@ -457,7 +473,7 @@
 
                 &::marker, &::-webkit-details-marker { display: none; }
             }
-            
+
             .cpc-login {
                 width: 350px;
                 margin: -10% auto 0;
