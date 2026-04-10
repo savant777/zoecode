@@ -449,6 +449,13 @@
                 }
 
                 hr:not(.mycode_hr) { margin-inline-start: -2rem; }
+
+                details > summary {
+                    list-style: none;
+                    cursor: pointer;
+
+                    &::marker, &::-webkit-details-marker { display: none; }
+                }
             }
 
             .cpc-login {
