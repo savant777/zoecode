@@ -474,6 +474,51 @@
                 &::marker, &::-webkit-details-marker { display: none; }
             }
 
+            .cpc-faq {
+                margin-inline-start: -2rem;
+                margin-block: 1rem;
+
+                .cpq {
+                    --cupid-bg: #eee;
+                    display: flex;
+                    column-gap: 0.5rem;
+                    border-inline-start: 5px solid var(--cupid-primary);
+                    background: var(--cupid-bg);
+                    
+                    &::before {
+                        content: "Q :";
+                        color: var(--cupid-primary);
+                        display: block;
+                        font: 500 2rem/1 'Mitr', sans-serif;
+                        padding: 1rem 1rem 1.25rem;
+                    }
+
+                    p { font-weight: 600; }
+                }
+
+                .cpa {
+                    --cupid-primary: #888;
+                    display: flex;
+                    column-gap: 0.5rem;
+                    border-inline-start: 5px solid var(--cupid-primary);
+                    background: var(--cupid-bg);
+
+                    &::before {
+                        content: "A :";
+                        color: var(--cupid-primary);
+                        display: block;
+                        font: 500 2rem/1 'Mitr', sans-serif;
+                        padding: 1rem 1rem 1.25rem;
+                    }
+                }
+
+                p {
+                    flex: 1;
+                    margin-block: 0 -0.25rem;
+                    padding: 1.35rem 1rem 1.35rem 0;
+                }
+            }
+
             .cpc-login {
                 width: 350px;
                 margin: -10% auto 0;
