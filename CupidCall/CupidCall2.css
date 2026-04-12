@@ -1211,6 +1211,7 @@
                             aspect-ratio: 1;
                             border-radius: min(0.5rem, 0.5vw);
                             background: var(--cupid-pic) var(--cupid-pos)/var(--cupid-size) no-repeat;
+                            background-color: gray;
                         }
 
                         .cpc-info {
