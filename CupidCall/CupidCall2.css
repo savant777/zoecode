@@ -962,7 +962,7 @@
                 line-height: 1;
                 
                 display: grid;
-                grid-template-columns: 1fr fit-content(clamp(85px, 7vw, 125px));
+                grid-template-columns: 1fr fit-content(clamp(95px, 7vw, 125px));
                 grid-row-gap: 0.5rem;
 
                 .cpc-font-l { font-size: clamp(1rem, 1.2vw, 1.2rem); }
