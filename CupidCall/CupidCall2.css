@@ -992,7 +992,7 @@
                     font-weight: 300;
 
                     b { font-weight: normal; }
-                    c { color: var(--cupid-primary); }
+                    c { font-weight: normal; color: var(--cupid-primary); }
                 }
 
                 .cpc-age, .cpc-height { text-align: end; }
