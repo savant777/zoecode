@@ -1214,6 +1214,8 @@
                             background-color: var(--cupid-pic, gray);
                         }
 
+                        &[style="--cupid-pic: url(--ลิงก์รูปคู่เดต--);"] { background-color: gray; }
+
                         .cpc-info {
                             counter-increment: memories;
                             align-content: center;
