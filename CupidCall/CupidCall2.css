@@ -920,7 +920,7 @@
                             width: 0%;
                             height: 100%;
                             background: var(--cupid-primary);
-                            animation: progress 24s linear infinite;
+                            animation: progress 20.5s linear infinite;
                         }
                     }
 
