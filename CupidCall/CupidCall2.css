@@ -7,7 +7,31 @@
     symbols: "First" "Second" "Third" "Fourth" "Fifth" "Sixth" "Seventh" "Eighth" "Ninth" "Tenth" "Eleventh" "Twelfth" "Thirteenth" "Fourteenth" "Fifteenth" "Sixteenth" "Seventeenth" "Eighteenth" "Nineteenth" "Twentieth";
 }
 
-@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.15); opacity: 0.9; } } @keyframes ripple { 0% { transform: scale(0.5); opacity: 0.6; } 100% { transform: scale(2.5); opacity: 0; } } @keyframes progress { 0% { width: 0%; } 100% { width: 100%; } } @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } } @keyframes rotateStatus { 0%, 15% { opacity: 0; transform: translateY(10px); } 20%, 35% { opacity: 1; transform: translateY(0); } 40%, 100% { opacity: 0; transform: translateY(-10px); } }
+@keyframes pulse { 
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.9; }
+}
+
+@keyframes ripple {
+    0% { transform: scale(0.5); opacity: 0.6; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes progress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes rotateStatus {
+    0%, 15% { opacity: 0; }
+    20%, 35% { opacity: 1; }
+    40%, 100% { opacity: 0; }
+}
 
 :root {
     --cupid-txt: #000;
@@ -854,7 +878,7 @@
                         position: relative;
                         z-index: 10;
                         width: 100%;
-                        margin-block: 0.5rem 2.5rem;
+                        margin-block: 1.5rem 3.5rem;
 
                         p {
                             margin-block: 0;
@@ -904,6 +928,7 @@
                         position: relative;
                         z-index: 10;
                         font-size: 0.875rem;
+                        font-weight: 300;
                         color: rgba(from var(--cupid-bg) r g b / 0.5);
                     }
                 }
