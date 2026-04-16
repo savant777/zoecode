@@ -7,6 +7,8 @@
     symbols: "First" "Second" "Third" "Fourth" "Fifth" "Sixth" "Seventh" "Eighth" "Ninth" "Tenth" "Eleventh" "Twelfth" "Thirteenth" "Fourteenth" "Fifteenth" "Sixteenth" "Seventeenth" "Eighteenth" "Nineteenth" "Twentieth";
 }
 
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.15); opacity: 0.9; } } @keyframes ripple { 0% { transform: scale(0.5); opacity: 0.6; } 100% { transform: scale(2.5); opacity: 0; } } @keyframes progress { 0% { width: 0%; } 100% { width: 100%; } } @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } } @keyframes rotateStatus { 0%, 15% { opacity: 0; transform: translateY(10px); } 20%, 35% { opacity: 1; transform: translateY(0); } 40%, 100% { opacity: 0; transform: translateY(-10px); } }
+
 :root {
     --cupid-txt: #000;
     --cupid-bg: #fff;
@@ -58,7 +60,7 @@
 }
 
 #CupidCall2 {
-    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after, .cpc-mmr::before, .cpc-banner::before, .cpc-banner::after, .cpc-pic>a::before, .cpc-photo::before, .cpc-icon-1::before, .cpc-icon-1::after, .cpc-icon-2::before, .cpc-comment::before, .cpc-comment::after, ic[name="g"]::before, ic[name="hh"]::before, ic[name="st"]::before, .cpc-ps::before, .cpc-ps::after, .cpc-input::before, ic[name="sm"]::before, ic[name="lc"]::before, ic[name="fr"]::before, details.cpc-comment>summary::before, details.cpc-comment>summary::after {
+    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after, .cpc-mmr::before, .cpc-banner::before, .cpc-banner::after, .cpc-pic>a::before, .cpc-photo::before, .cpc-icon-1::before, .cpc-icon-1::after, .cpc-icon-2::before, .cpc-comment::before, .cpc-comment::after, ic[name="g"]::before, ic[name="hh"]::before, ic[name="st"]::before, .cpc-ps::before, .cpc-ps::after, .cpc-input::before, ic[name="sm"]::before, ic[name="lc"]::before, ic[name="fr"]::before, details.cpc-comment>summary::before, details.cpc-comment>summary::after, .cpc-reaching .cpc-icon::before {
         font-style: normal;
         font-weight: normal !important;
         font-variant: normal;
@@ -756,6 +758,155 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+
+            .cpc-reaching-container {
+                width: calc(100% + 6rem);
+                margin: -20% -3rem -3rem;
+                padding-block: 10% 3rem;
+                overflow: hidden;
+
+                .cpc-reaching {
+                    position: relative;
+
+                    width: 100%;
+                    max-width: 450px;
+                    margin: auto;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    font-family: 'Mitr', sans-serif;
+                    color: var(--cupid-bg);
+                    text-align: center;
+
+                    .cpc-radar {
+                        position: absolute;
+                        z-index: 1;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        pointer-events: none;
+                        
+                        opacity: 0.5;
+
+                        r {
+                            position: absolute;
+
+                            width: 140px;
+                            height: 140px;
+                            border: 2px solid var(--cupid-primary);
+                            border-radius: 50%;
+                            
+                            animation: ripple 3s linear infinite;
+                            opacity: 0;
+
+                            &:nth-child(1) { animation-delay: 0s; }
+                            &:nth-child(2) { animation-delay: 1s; }
+                            &:nth-child(3) { animation-delay: 2s; }
+                        }
+                    }
+
+                    .cpc-icon {
+                        position: relative;
+                        z-index: 10;
+
+                        width: 100px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        border: 0.3rem solid transparent;
+
+                        background: linear-gradient(var(--cupid-txt) 0 0) padding-box, linear-gradient(to top, var(--cupid-primary), hsl(from var(--cupid-primary) h calc(s - 50) calc(l + 15))) border-box;
+                        margin-block-end: 0.5rem;
+
+                        animation: float 4s ease-in-out infinite;
+
+                        &::before {
+                            content: "\e9a1";
+                            font-family: uicons-solid-rounded !important;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            width: 100%;
+                            height: 100%;
+
+                            font-size: 50px;
+                            color: var(--cupid-primary);
+                            
+                            animation: pulse 1.5s ease-in-out infinite;
+                        }
+                    }
+
+                    .cpc-topic {
+                        position: relative;
+                        z-index: 10;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        line-height: 1;
+                    }
+
+                    .cpc-status {
+                        position: relative;
+                        z-index: 10;
+                        width: 100%;
+                        margin-block: 0.5rem 2.5rem;
+
+                        p {
+                            margin-block: 0;
+
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            
+                            color: var(--cupid-primary);
+                            font-style: italic;
+                            
+                            opacity: 0;
+                            animation: rotateStatus 15s linear infinite;
+
+                            &:nth-child(1) { animation-delay: 0s; }
+                            &:nth-child(2) { animation-delay: 3s; }
+                            &:nth-child(3) { animation-delay: 6s; }
+                            &:nth-child(4) { animation-delay: 9s; }
+                            &:nth-child(5) { animation-delay: 12s; }
+                        }
+                    }
+
+                    .cpc-progress {
+                        position: relative;
+                        z-index: 10;
+
+                        width: 280px;
+                        height: 4px;
+                        background: #eee;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        margin-bottom: 1rem;
+
+                        &::before {
+                            content: "";
+                            display: block;
+
+                            width: 0%;
+                            height: 100%;
+                            background: var(--cupid-primary);
+                            animation: progress 18s linear infinite;
+                        }
+                    }
+
+                    p.cpc-quote {
+                        position: relative;
+                        z-index: 10;
+                        font-size: 0.875rem;
+                        color: rgba(from var(--cupid-bg) r g b / 0.5);
+                    }
+                }
             }
 
             &:not(:first-child) { margin-block-start: 1rem; }
