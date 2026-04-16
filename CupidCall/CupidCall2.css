@@ -2,6 +2,7 @@
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://savant777.github.io/zoecode/CupidCall/CupidCall2_user.css');
 
 @counter-style timed {
     symbols: "First" "Second" "Third" "Fourth" "Fifth" "Sixth" "Seventh" "Eighth" "Ninth" "Tenth" "Eleventh" "Twelfth" "Thirteenth" "Fourteenth" "Fifteenth" "Sixteenth" "Seventeenth" "Eighteenth" "Nineteenth" "Twentieth";
@@ -84,7 +85,7 @@
 }
 
 #CupidCall2 {
-    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after, .cpc-mmr::before, .cpc-banner::before, .cpc-banner::after, .cpc-pic>a::before, .cpc-photo::before, .cpc-icon-1::before, .cpc-icon-1::after, .cpc-icon-2::before, .cpc-comment::before, .cpc-comment::after, ic[name="g"]::before, ic[name="hh"]::before, ic[name="st"]::before, .cpc-ps::before, .cpc-ps::after, .cpc-input::before, ic[name="sm"]::before, ic[name="lc"]::before, ic[name="fr"]::before, details.cpc-comment>summary::before, details.cpc-comment>summary::after, .cpc-reaching .cpc-icon::before {
+    .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after, .cpc-mmr::before, .cpc-banner::before, .cpc-banner::after, .cpc-pic>a::before, .cpc-photo::before, .cpc-icon-1::before, .cpc-icon-1::after, .cpc-icon-2::before, .cpc-comment::before, .cpc-comment::after, ic[name="g"]::before, ic[name="hh"]::before, ic[name="st"]::before, .cpc-ps::before, .cpc-ps::after, .cpc-input::before, ic[name="sm"]::before, ic[name="lc"]::before, ic[name="fr"]::before, details.cpc-comment>summary::before, details.cpc-comment>summary::after, .cpc-reaching .cpc-icon::before, .cpc-match::before {
         font-style: normal;
         font-weight: normal !important;
         font-variant: normal;
@@ -930,6 +931,73 @@
                         font-size: 0.875rem;
                         font-weight: 300;
                         color: rgba(from var(--cupid-bg) r g b / 0.5);
+                    }
+                }
+            }
+
+            .cpc-reaching-ann {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                column-gap: 1rem;
+                row-gap: 2rem;
+
+                .cpc-match {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &::before {
+                        content: "\e9a1";
+                        font-family: uicons-solid-rounded !important;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-block-end: 0.25rem;
+                        
+                        font-size: 0.8725rem;
+                        color: var(--cupid-primary);
+                        animation: pulse 1.5s ease-in-out infinite;
+                    }
+
+                    .cpc-pic {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 120px;
+                        height: 70px;
+
+                        &::before, &::after {
+                            content: "";
+                            position: absolute;
+                            width: 70px;
+                            height: 70px;
+                            border-radius: 50%;
+                            border: 3px solid var(--cupid-bg);
+                        }
+
+                        &::before {
+                            left: 0;
+                            transform: translateX(5px);
+                            background: var(--u1-pic, gray) center/cover no-repeat;
+                        }
+
+                        &::after {
+                            right: 0;
+                            transform: translateX(-5px);
+                            background: var(--u2-pic, gray) center/cover no-repeat;
+                        }
+                    }
+
+                    .cpc-name {
+                        font-family: 'Mitr', sans-serif;
+                        font-size: 0.85rem;
+                        text-align: center;
+
+                        &::before { content: var(--u1-name); }
+                        &::after { content: " & " var(--u2-name); }
                     }
                 }
             }
