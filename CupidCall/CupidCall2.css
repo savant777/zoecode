@@ -999,6 +999,14 @@
                         &::before { content: var(--u1-name); }
                         &::after { content: " & " var(--u2-name); }
                     }
+
+                    .cpc-hasgtag {
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                        color: var(--cupid-primary);
+                        opacity: 0.8;
+                        letter-spacing: 0.5px;
+                    }
                 }
             }
 
