@@ -63,6 +63,11 @@
     --u1-name: "Hunter";
 }
 
+[u1="Jeremy"] {
+    --u1-pic: url(https://cdn.imgchest.com/files/73d597eb2671.png);
+    --u1-name: "Jeremy";
+}
+
 [u1="Kalya"] {
     --u1-pic: url(https://cdn.imgchest.com/files/82b63ccaa5e1.png);
     --u1-name: "Kalya";
@@ -71,6 +76,11 @@
 [u1="Keith"] {
     --u1-pic: url(https://cdn.imgchest.com/files/deb9b5cb4ab3.png);
     --u1-name: "Keith";
+}
+
+[u1="Leo"] {
+    --u1-pic: url(https://cdn.imgchest.com/files/07376fae5406.png);
+    --u1-name: "Leo";
 }
 
 [u1="Lily"] {
@@ -123,6 +133,11 @@
     --u1-name: "Oliver";
 }
 
+[u1="Peyton"] {
+    --u1-pic: url(https://cdn.imgchest.com/files/c5c932c7e896.png);
+    --u1-name: "Peyton";    
+}
+
 [u1="Raffa"] {
     --u1-pic: url(https://cdn.imgchest.com/files/ecfe90e94bb7.png);
     --u1-name: "Raffa";
@@ -151,6 +166,11 @@
 [u1="Vivienne"] {
     --u1-pic: url(https://cdn.imgchest.com/files/48c910ce110a.png);
     --u1-name: "Vivienne";
+}
+
+[u1="Welt"] {
+    --u1-pic: url(https://cdn.imgchest.com/files/8598cacad26a.png);
+    --u1-name: "Welt";
 }
 
 [u1="Zayd"] {
@@ -228,6 +248,11 @@
     --u2-name: "Hunter";
 }
 
+[u2="Jeremy"] {
+    --u2-pic: url(https://cdn.imgchest.com/files/73d597eb2671.png);
+    --u2-name: "Jeremy";
+}
+
 [u2="Kalya"] {
     --u2-pic: url(https://cdn.imgchest.com/files/82b63ccaa5e1.png);
     --u2-name: "Kalya";
@@ -236,6 +261,11 @@
 [u2="Keith"] {
     --u2-pic: url(https://cdn.imgchest.com/files/deb9b5cb4ab3.png);
     --u2-name: "Keith";
+}
+
+[u2="Leo"] {
+    --u2-pic: url(https://cdn.imgchest.com/files/07376fae5406.png);
+    --u2-name: "Leo";
 }
 
 [u2="Lily"] {
@@ -288,6 +318,11 @@
     --u2-name: "Oliver";
 }
 
+[u2="Peyton"] {
+    --u2-pic: url(https://cdn.imgchest.com/files/c5c932c7e896.png);
+    --u2-name: "Peyton";    
+}
+
 [u2="Raffa"] {
     --u2-pic: url(https://cdn.imgchest.com/files/ecfe90e94bb7.png);
     --u2-name: "Raffa";
@@ -316,6 +351,11 @@
 [u2="Vivienne"] {
     --u2-pic: url(https://cdn.imgchest.com/files/48c910ce110a.png);
     --u2-name: "Vivienne";
+}
+
+[u2="Welt"] {
+    --u2-pic: url(https://cdn.imgchest.com/files/8598cacad26a.png);
+    --u2-name: "Welt";
 }
 
 [u2="Zayd"] {
