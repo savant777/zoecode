@@ -1952,3 +1952,5 @@
         }
     }
 }
+
+@media (max-width: 980px) { #CupidCall2 #cupidthread.cupid-set .cpc-body .cpc-member .cpc-mb:last-child { flex-grow: 1 !important; } }
