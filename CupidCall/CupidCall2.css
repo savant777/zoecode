@@ -1488,6 +1488,8 @@
                                 font-weight: bold;
                                 display: block;
                             }
+
+                            a { color: var(--cupid-primary) !important; }
                         }
                     }
                 }
