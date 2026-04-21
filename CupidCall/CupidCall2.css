@@ -746,7 +746,9 @@
                 justify-content: center;
 
                 .cpc-mb {
-                    flex: 1 0 min(220px, 20vw);
+                    flex-grow: 1;
+                    flex-shrink: 0;
+                    width: min(220px, 20vw);
                     display: grid;
                     grid-template-columns: clamp(70px, 5vw, 75px) 1fr;
                     gap: min(1rem, 1vw);
@@ -765,6 +767,8 @@
                         padding-block: 0.25rem;
                     }
                 }
+
+                .cpc-mb:last-child { flex-grow: 0 !important; }
             }
 
             h1 {
@@ -945,7 +949,9 @@
                 justify-content: center;
 
                 .cpc-match {
-                    flex: 1 0 180px;
+                    flex-grow: 1;
+                    flex-shrink: 0;
+                    width: 180px;
                     position: relative;
                     display: flex;
                     flex-direction: column;
@@ -1012,6 +1018,8 @@
                         letter-spacing: 0.5px;
                     }
                 }
+
+                .cpc-match:last-child { flex-grow: 0 !important; }
             }
 
             &:not(:first-child) { margin-block-start: 1rem; }
