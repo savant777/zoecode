@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --lj-bg: #fff;
+    --lj-txt: #000;
+
+    --lj-pic: gray;
+    --lj-pos: center;
+    --lj-size: cover;
+
+    --lj-img: gray;
+    --lj-imgpos: center;
+    --lj-imgsize: cover;
+
+    --lj-letter1: 'L';
+    --lj-letter2: 'J';
+}
+
+#LJ { position: relative; }
+#LJ * { box-sizing: border-box; }
+
+#LJ {
+    .lj-bg {
+        position: relative;
+        background: var(--lj-bg);
+        padding: 50px 20px;
+        font-family: 'Lora', serif;
+        color: var(--lj-txt);
+
+        .lj-box {
+            position: relative;
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+
+            &::before, &::after {
+                position: absolute;
+                font-family: 'Great Vibes', cursive;
+                color: hsl(from var(--lj-bg) h s calc(l - 6));
+                z-index: 0;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+            }
+
+            &::before {
+                content: var(--lj-letter1);
+                font-size: 300px;
+                top: -50px;
+                left: -20px;
+            }
+
+            &::after {
+                content: var(--lj-letter2);
+                font-size: 250px;
+                bottom: -50px;
+                right: 20px;
+            }
+
+            .lj-picture {
+                flex: 1;
+                width: 46.5%;
+                position: relative;
+                z-index: 2;
+                min-height: 400px;
+                display: flex;
+                align-items: flex-start;
+
+                .lj-pic {
+                    position: relative;
+                    width: 350px;
+                    max-width: 100%;
+                    aspect-ratio: 1;
+                    background: var(--lj-pic) var(--lj-pos)/var(--lj-size) no-repeat;
+                    background-color: #ddd;
+
+                    .lj-date {
+                        display: inline-block;
+                        background: rgb(from var(--lj-bg) r g b / 0.7);
+                        margin: 10px;
+                        padding: 10px;
+                        font-size: 10px;
+                    }
+
+                    .lj-img {
+                        position: absolute;
+                        bottom: min(-70px,-4.5vw);
+                        left: min(80px, 6vw);
+                        width: calc(242/350 * 100%);
+                        background: #f9f9f9;
+                        padding: min(10px, 0.6vw);
+                        padding-bottom: min(30px, 1.6vw);
+                        box-shadow: 5px 10px 20px rgba(0,0,0,0.1);
+                        border: 1px solid #eee;
+
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            aspect-ratio: 1;
+                            background: var(--lj-img) var(--lj-imgpos)/var(--lj-imgsize) no-repeat;
+                            background-color: #ccc;
+                        }
+
+                        &::after {
+                            content: attr(text);
+                            display: block;
+                            text-align: right;
+                            margin-top: 10px;
+                            color: #000;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .lj-role {
+                flex: 1;
+                padding-left: 40px;
+                z-index: 2;
+                background: var(--lj-bg);
+                font-family: 'Sarabun', sans-serif;
+
+                h2 {
+                    font-family: 'Playfair Display', serif;
+                    font-size: 32px;
+                    margin-block: 0 10px;
+                    
+                    &+br { display: none; }
+                }
+
+                .lj-content {
+                    height: 320px;
+                    overflow-y: auto;
+                    padding-right: 15px;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: hsl(from var(--lj-txt) h s calc(l + 27));
+                    text-align: justify;
+                    scrollbar-width: thin;
+                    scrollbar-color: #ddd transparent;
+
+                    p { margin-block: 0 15px; }
+                }
+
+                .lj-ps {
+                    margin-top: 30px;
+                    font-size: 14px;
+                    padding: 15px;
+                    border: 1px dashed hsl(from var(--lj-bg) h s calc(l - 20));
+                    line-height: 1.4;
+                    color: hsl(from var(--lj-txt) h s calc(l + 20));
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
