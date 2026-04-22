@@ -97,6 +97,7 @@
 
                         &::before {
                             content: "";
+                            display: block;
                             width: 100%;
                             aspect-ratio: 1;
                             background: var(--lj-img) var(--lj-imgpos)/var(--lj-imgsize) no-repeat;
