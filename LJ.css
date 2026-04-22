@@ -140,7 +140,7 @@
                     color: hsl(from var(--lj-txt) h s calc(l + 27));
                     text-align: justify;
                     scrollbar-width: thin;
-                    scrollbar-color: #ddd transparent;
+                    scrollbar-color: hsl(from var(--lj-txt) h s calc(l + 87)) transparent;
 
                     p { margin-block: 0 15px; }
                 }
@@ -149,7 +149,7 @@
                     margin-top: 30px;
                     font-size: 14px;
                     padding: 15px;
-                    border: 1px dashed hsl(from var(--lj-bg) h s calc(l - 20));
+                    border: 1px dashed hsl(from var(--lj-txt) h s calc(l + 80));
                     line-height: 1.4;
                     color: hsl(from var(--lj-txt) h s calc(l + 20));
                     text-align: justify;
