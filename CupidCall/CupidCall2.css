@@ -948,6 +948,16 @@
                 row-gap: 2rem;
                 justify-content: center;
 
+                .cpc-match[sa]::before {
+                    content: "\e9a2";
+                    --cupid-primary: #E91E63;
+                }
+
+                .cpc-match[rb]::before {
+                    content: "\ec94";
+                    --cupid-primary: #F44336;
+                }
+
                 .cpc-match {
                     width: 180px;
                     position: relative;
