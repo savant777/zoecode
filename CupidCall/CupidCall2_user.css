@@ -367,3 +367,23 @@
     --u2-pic: url(https://cdn.imgchest.com/files/81fd27864e16.png);
     --u2-name: "Zenyn";
 }
+
+[u1="KhanKluay"] {
+    --u1-pic: url(https://cdn.imgchest.com/files/58039ef062a8.png);
+    --u1-name: "KhanKluay";
+}
+
+[u2="KhanKluay"] {
+    --u2-pic: url(https://cdn.imgchest.com/files/58039ef062a8.png);
+    --u2-name: "KhanKluay";
+}
+
+[u1="Tissue"] {
+    --u1-pic: url(https://cdn.imgchest.com/files/d6c87c03bcd6.png);
+    --u1-name: "Tissue";
+}
+
+[u2="Tissue"] {
+    --u2-pic: url(https://cdn.imgchest.com/files/d6c87c03bcd6.png);
+    --u2-name: "Tissue";
+}
