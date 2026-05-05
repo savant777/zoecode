@@ -1028,7 +1028,7 @@
 
                             transform: translateY(0);
                             
-                            transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+                            transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
                             overflow: hidden;
 
                             &::before {
@@ -1041,13 +1041,12 @@
                                 background: var(--cupid-primary);
                                 border-radius: 50%;
                                 transform: scale(0);
+                                transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
                             }
 
                             i.fi {
                                 position: relative;
                                 font-size: 2rem;
-                                animation: float 4s ease-in-out infinite;
-                                animation-play-state: paused;
                             }
 
                             p {
@@ -1063,7 +1062,7 @@
 
                             &::before { transform: scale(280); }
 
-                            i.fi { animation-play-state: running; }
+                            i.fi { animation: float 4s ease-in-out infinite; }
                         }
                     }
 
@@ -1076,7 +1075,7 @@
                     }
                 }
             }
-            
+
             .cpc-reaching-ann {
                 display: flex;
                 flex-wrap: wrap;
