@@ -941,6 +941,142 @@
                 }
             }
 
+            .cpc-heartfelt-container {
+                width: calc(100% + 6rem);
+                margin: -20% -3rem -3rem;
+                padding-block: 10% 3rem;
+                overflow: hidden;
+
+                .cpc-heartfelt {
+                    position: relative;
+
+                    width: 100%;
+                    max-width: 450px;
+                    margin: auto;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    font-family: 'Mitr', sans-serif;
+                    color: var(--cupid-bg);
+                    text-align: center;
+
+                    .cpc-icon {
+                        position: relative;
+                        z-index: 10;
+
+                        width: 100px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        border: 0.3rem solid transparent;
+
+                        background: linear-gradient(var(--cupid-txt) 0 0) padding-box, linear-gradient(to top, var(--cupid-primary), hsl(from var(--cupid-primary) h calc(s - 50) calc(l + 15))) border-box;
+                        margin-block-end: 0.5rem;
+
+                        animation: float 4s ease-in-out infinite;
+
+                        &::before {
+                            content: "\e9a1";
+                            font-family: uicons-solid-rounded !important;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            width: 100%;
+                            height: 100%;
+
+                            font-size: 50px;
+                            color: var(--cupid-primary);
+                            
+                            animation: pulse 1.5s ease-in-out infinite;
+                        }
+                    }
+
+                    .cpc-topic {
+                        position: relative;
+                        z-index: 10;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        line-height: 1;
+                    }
+
+                    .cpc-choice-flex {
+                        width: 100%;
+                        display: flex;
+                        gap: 1.5rem;
+                        margin-block: 1em;
+
+                        .cpc-choice {
+                            cursor: pointer;
+                            user-select: none;
+                            -moz-user-select: none;
+                            -webkit-user-select: none;
+
+                            position: relative;
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            border: 3px solid var(--cupid-bg);
+                            border-radius: 1rem;
+                            padding: 1.5rem 2rem 1rem;
+
+                            transform: translateY(0);
+                            
+                            transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+                            overflow: hidden;
+
+                            &::before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 2.5rem;
+                                width: 1px;
+                                height: 1px;
+                                background: var(--cupid-primary);
+                                border-radius: 50%;
+                                transform: scale(0);
+                            }
+
+                            i.fi {
+                                position: relative;
+                                font-size: 2rem;
+                                animation: float 4s ease-in-out infinite;
+                                animation-play-state: paused;
+                            }
+
+                            p {
+                                position: relative;
+                                margin-bottom: 0;
+                                line-height: 1.3;
+                            }
+                        }
+
+                        .cpc-choice:hover {
+                            transform: translateY(-4px);
+                            border-color: var(--cupid-primary);
+
+                            &::before { transform: scale(280); }
+
+                            i.fi { animation-play-state: running; }
+                        }
+                    }
+
+                    p.cpc-quote {
+                        position: relative;
+                        z-index: 10;
+                        font-size: 0.875rem;
+                        font-weight: 300;
+                        color: rgba(from var(--cupid-bg) r g b / 0.5);
+                    }
+                }
+            }
+            
             .cpc-reaching-ann {
                 display: flex;
                 flex-wrap: wrap;
