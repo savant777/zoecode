@@ -1096,6 +1096,11 @@
                     --cupid-primary: #F44336;
                 }
 
+                .cpc-match[lc]::before {
+                    content: "\e9a9";
+                    --cupid-primary: #FE019A;
+                }
+
                 .cpc-match {
                     width: 180px;
                     position: relative;
