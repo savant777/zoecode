@@ -75,6 +75,12 @@
             position: absolute;
             width: 40%;
             aspect-ratio: 604/585;
+        }
+
+        nvl {
+            background: var(--nvherb-leaf);
+            mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
+            -webkit-mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
 
             &:nth-child(1) {
                 top: 0;
@@ -100,16 +106,33 @@
             }
         }
 
-        nvl {
-            background: var(--nvherb-leaf);
-            mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
-            -webkit-mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
-        }
-
         nvf {
             background: var(--nvherb-flower);
             mask: url(https://iili.io/BtoRMOb.png) center/contain no-repeat;
             -webkit-mask: url(https://iili.io/BtoRMOb.png) center/contain no-repeat;
+
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                top: 0;
+                right: 0;
+                transform: scaleX(-1);
+            }
+
+            &:nth-child(3) {
+                bottom: 0;
+                left: 0;
+                transform: scaleY(-1);
+            }
+
+            &:nth-child(4) {
+                bottom: 0;
+                right: 0;
+                transform: scale(-1);
+            }
         }
     }
 
