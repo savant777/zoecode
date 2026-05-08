@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Milonga&display=swap');
+
+:root {
+    --nvherb-leaf: #7e8559;
+    --nvherb-flower: #c66443;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#NouveauHerb.nvherb-box {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+
+    &::before {
+        content: "";
+        --nvherb-posx: clamp(220px, 20vw, 300px);
+        --nvherb-posy: clamp(200px, 17vw, 270px);
+        
+        position: absolute;
+        inset: clamp(23px, 2.4vw, 31px) clamp(8px, 0.8vw, 11px);
+        border-block: clamp(3px, 0.25vw, 4px) solid var(--nvherb-leaf);
+        border-inline: 3px solid var(--nvherb-leaf);
+        clip-path: polygon(
+            var(--nvherb-posx) 0,
+            calc(100% - var(--nvherb-posx)) 0,
+            calc(100% - var(--nvherb-posx)) var(--nvherb-posy),
+            100% var(--nvherb-posy),
+            100% calc(100% - var(--nvherb-posy)),
+            calc(100% - var(--nvherb-posx)) calc(100% - var(--nvherb-posy)),
+            calc(100% - var(--nvherb-posx)) 100%,
+            var(--nvherb-posx) 100%,
+            var(--nvherb-posx) calc(100% - var(--nvherb-posy)),
+            0 calc(100% - var(--nvherb-posy)),
+            0 var(--nvherb-posy),
+            var(--nvherb-posx) var(--nvherb-posy));
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .nvherb-frame {
+        position: absolute;
+        inset: 0;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+
+        nvl, nvf {
+            position: absolute;
+            width: 40%;
+            aspect-ratio: 604/585;
+
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                top: 0;
+                right: 0;
+                transform: scaleX(-1);
+            }
+
+            &:nth-child(3) {
+                bottom: 0;
+                left: 0;
+                transform: scaleY(-1);
+            }
+
+            &:nth-child(4) {
+                bottom: 0;
+                right: 0;
+                transform: scale(-1);
+            }
+        }
+
+        nvl {
+            background: var(--nvherb-leaf);
+            mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
+            -webkit-mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
+        }
+
+        nvf {
+            background: var(--nvherb-flower);
+            mask: url(https://iili.io/BtoRMOb.png) center/contain no-repeat;
+            -webkit-mask: url(https://iili.io/BtoRMOb.png) center/contain no-repeat;
+        }
+    }
+
+    .nvherb-content {
+        position: relative;
+        width: 100%;
+        padding: min(22vw, 280px) min(6vw, 75px) min(18vw, 230px);
+        font-family: 'Chakra Petch', sans-serif;
+        color: #fff;
+
+        h1 {
+            font-family: 'Milonga', sans-serif;
+            font-size: clamp(3rem, 4vw, 60px);
+            line-height: 1;
+            text-align: center;
+            color: var(--nvherb-flower);
+            margin-block-start: 0;
+
+            & + br { display: none; }
+        }
+
+        .nvherb-hr {
+            position: relative;
+            width: 40%;
+            aspect-ratio: 500/160;
+            margin: clamp(2rem, 2vw, 40px) auto;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+
+            hr {
+                display: block;
+                margin: 0;
+                height: unset;
+                border: 0;
+                color: unset;
+                position: absolute;
+                inset: 0;
+                background: var(--nvherb-leaf);
+                mask: url(https://iili.io/BtoRVbj.png) center/contain no-repeat;
+                -webkit-mask: url(https://iili.io/BtoRVbj.png) center/contain no-repeat;
+            }
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--nvherb-flower);
+            }
+
+            &::before {
+                mask: url(https://iili.io/BtoREJe.png) center/contain no-repeat;
+                -webkit-mask: url(https://iili.io/BtoREJe.png) center/contain no-repeat;
+            }
+
+            &::after {
+                mask: url(https://iili.io/BtoR0g9.png) center/contain no-repeat;
+                -webkit-mask: url(https://iili.io/BtoR0g9.png) center/contain no-repeat;
+                mix-blend-mode: multiply;
+            }
+        }
+
+        .nvherb-ps { text-align: center; }
+    }
+}
