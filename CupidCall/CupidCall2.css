@@ -1387,6 +1387,7 @@
                                 padding: 2px 8px;
                                 border-radius: 20px;
                                 margin-bottom: 4px;
+                                color: var(--cupid-bg);
                             }
 
                             .cpc-pic {
@@ -1407,8 +1408,7 @@
                         .cpc-f {
                             &::before {
                                 content: "Character";
-                                background: rgba(215, 25, 32, 0.08);
-                                color: var(--cupid-primary);
+                                background: var(--cupid-primary);
                             }
 
                             .cpc-pic {
@@ -1425,7 +1425,6 @@
                             &::before {
                                 content: "Player";
                                 background: var(--cupid-txt);
-                                color: var(--cupid-bg);
                             }
 
                             .cpc-pic {
