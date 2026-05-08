@@ -40,7 +40,7 @@
     &::before {
         content: "";
         --nvherb-posx: clamp(220px, 20vw, 300px);
-        --nvherb-posy: clamp(200px, 17vw, 270px);
+        --nvherb-posy: clamp(200px, 21vw, 278px);
         
         position: absolute;
         inset: clamp(23px, 2.4vw, 31px) clamp(8px, 0.8vw, 11px);
