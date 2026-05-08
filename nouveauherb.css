@@ -82,24 +82,24 @@
             mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
             -webkit-mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
 
-            &:nth-child(1) {
+            &:nth-of-type(1) {
                 top: 0;
                 left: 0;
             }
 
-            &:nth-child(2) {
+            &:nth-of-type(2) {
                 top: 0;
                 right: 0;
                 transform: scaleX(-1);
             }
 
-            &:nth-child(3) {
+            &:nth-of-type(3) {
                 bottom: 0;
                 left: 0;
                 transform: scaleY(-1);
             }
 
-            &:nth-child(4) {
+            &:nth-of-type(4) {
                 bottom: 0;
                 right: 0;
                 transform: scale(-1);
@@ -111,24 +111,24 @@
             mask: url(https://iili.io/BtoRMOb.png) center/contain no-repeat;
             -webkit-mask: url(https://iili.io/BtoRMOb.png) center/contain no-repeat;
 
-            &:nth-child(1) {
+            &:nth-of-type(1) {
                 top: 0;
                 left: 0;
             }
 
-            &:nth-child(2) {
+            &:nth-of-type(2) {
                 top: 0;
                 right: 0;
                 transform: scaleX(-1);
             }
 
-            &:nth-child(3) {
+            &:nth-of-type(3) {
                 bottom: 0;
                 left: 0;
                 transform: scaleY(-1);
             }
 
-            &:nth-child(4) {
+            &:nth-of-type(4) {
                 bottom: 0;
                 right: 0;
                 transform: scale(-1);
