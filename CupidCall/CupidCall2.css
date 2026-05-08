@@ -1341,6 +1341,106 @@
                 }
             }
 
+            .cpc-reveal-ann {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+                font-family: 'Mitr', sans-serif;
+
+                .cpc-card {
+                    width: 160px;
+                    height: 160px;
+                    perspective: 1000px;
+
+                    .cpc-inn {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                        transform-style: preserve-3d;
+                        cursor: pointer;
+
+                        user-select: none;
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+
+                        .cpc-f, .cpc-b {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            -webkit-backface-visibility: hidden;
+                            
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+
+                            &::before {
+                                display: block;
+                                font-size: 0.5rem;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                                letter-spacing: 1.5px;
+                                padding: 2px 8px;
+                                border-radius: 20px;
+                                margin-bottom: 4px;
+                            }
+
+                            .cpc-pic {
+                                width: 90px;
+                                height: 90px;
+                                border-radius: 50%;
+                                border: 3px solid;
+                                margin-bottom: 0.5rem;
+                            }
+
+                            &::after {
+                                display: block;
+                                font-size: 0.85rem;
+                                line-height: 1.2;
+                            }
+                        }
+
+                        .cpc-f {
+                            &::before {
+                                content: "Character";
+                                background: rgba(215, 25, 32, 0.08);
+                                color: var(--cupid-primary);
+                            }
+
+                            .cpc-pic {
+                                border-color: var(--cupid-primary);
+                                background: var(--u1-pic) center/cover no-repeat;
+                            }
+
+                            &::after { content: var(--u1-fullname); }
+                        }
+
+                        .cpc-b { 
+                            transform: rotateY(180deg);
+
+                            &::before {
+                                content: "Player";
+                                background: var(--cupid-txt);
+                                color: var(--cupid-bg);
+                            }
+
+                            .cpc-pic {
+                                border-color: var(--cupid-txt);
+                                background: var(--u1-realpic) center/cover no-repeat;
+                            }
+
+                            &::after { content: var(--u1-realname); }
+                        }
+                    }
+                }
+
+                .cpc-card:hover .cpc-inn { transform: rotateY(180deg); }
+            }
+
             &:not(:first-child) { margin-block-start: 1rem; }
         }
     }
