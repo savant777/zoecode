@@ -34,6 +34,32 @@
     15%, 100% { opacity: 0; }
 }
 
+[prize="เหรียญตรา"] {
+    --cupid-item: url(https://cdn.imgchest.com/files/3afb0ef7d1a6.png);
+    --cupid-item-name: "เหรียญตรา (ฟรี)";
+}
+
+[prize="สมบัติ"] {
+    --cupid-item: url(https://cdn.imgchest.com/files/8df5a975fad9.png);
+    --cupid-item-name: "ล้ำค่า (สุ่ม)";
+}
+
+[prize="ไอเทม"] {
+    --cupid-item: url(https://cdn.imgchest.com/files/af96f85c6151.png);
+    --cupid-item-name: "ไอเทมโปรไฟล์ (ฟรี)";
+}
+
+[prize="เงิน"] {
+    --cupid-item: url(https://iili.io/BD7Pp5J.png);
+    --cupid-item-size: 70%; 
+    --cupid-item-name: "$100";
+}
+
+[prize="คริสตัล"] {
+    --cupid-item: url(https://iili.io/Kil8ikQ.png);
+    --cupid-item-name: "4 ชิ้น";
+}
+
 :root {
     --cupid-txt: #000;
     --cupid-bg: #fff;
@@ -1438,6 +1464,107 @@
                 }
 
                 .cpc-card:hover .cpc-inn { transform: rotateY(180deg); }
+            }
+
+            .cpc-reward-section {
+                border: 1px solid var(--cupid-primary);
+                border-left-width: 5px;
+                border-radius: 1rem;
+                padding: 1rem 1.5rem;
+
+                .cpc-reward-head {
+                    display: flex;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+
+                    .cpc-reward-info {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 10px;
+
+                        .cpc-reward-tag {
+                            background: var(--cupid-primary);
+                            color: var(--cupid-bg);
+                            font-family: 'Mitr', sans-serif;
+                            font-size: 0.65rem;
+                            padding: 4px 12px;
+                            border-radius: 2rem;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            display: inline-block;
+                            width: fit-content;
+                        }
+
+                        h2 {
+                            margin-block: 0;
+                            font-size: 1.25rem;
+                            font-weight: bold;
+                            line-height: 1;
+
+                            & + br { display: none; }
+                        }
+
+                        p {
+                            margin-block: 0;
+                            font-size: 0.85rem;
+                            color: #666;
+                            font-style: italic;
+                        }
+                    }
+
+                    .cpc-prize {
+                        width: 100px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        border-radius: 6px;
+                        background: #202020;
+                        padding: 10px;
+                        padding-bottom: 0;
+
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            aspect-ratio: 1;
+                            background: var(--cupid-item) center/var(--cupid-item-size, contain) no-repeat;
+                        }
+
+                        &::after {
+                            content: var(--cupid-item-name);
+                            text-align: center;
+                            line-height: 1;
+                            color: var(--cupid-bg);
+                            font-size: 0.65rem;
+                        }
+                    }
+                }
+
+                .cpc-winner-list {
+                    margin-top: 1rem;
+                    padding-top: 1rem;
+                    border-top: 1px solid var(--cupid-primary);
+                    columns: 300px;
+                    column-gap: 1rem;
+
+                    .cpc-winner {
+                        font-size: 0.85rem;
+                        margin-bottom: 10px;
+                        padding-left: 18px;
+                        position: relative;
+                        break-inside: avoid;
+                        display: block;
+
+                        &::before {
+                            content: "•";
+                            color: var(--cupid-primary);
+                            position: absolute;
+                            left: 0;
+                            font-weight: 900;
+                        }
+                    }
+                }
             }
 
             &:not(:first-child) { margin-block-start: 1rem; }
