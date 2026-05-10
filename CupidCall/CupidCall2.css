@@ -2371,6 +2371,124 @@
             }
         }
     }
+
+    #cupidmailbox.cupid-set {
+        width: 694px;
+        max-width: 100%;
+        background: #eee;
+        padding: 2rem;
+        margin-inline: auto;
+        font-family: 'Bai Jamjuree', sans-serif;
+        color: var(--cupid-txt);
+        font-size: 16px;
+
+        h1 {
+            margin-block-start: 0;
+            font-size: 1.5rem;
+
+            & + br { display: none; }
+        }
+
+        .cpc-row {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.25rem;
+            margin-block-end: 1rem;
+
+            label {
+                font-weight: bold;
+                padding-inline: 0.25rem;
+
+                & + br { display: none; }
+            }
+
+            .cpc-input {
+                color: #333;
+                background: var(--cupid-bg);
+                border: 1px solid #cfcfcf;
+                border-radius: 3px;
+                padding-inline: 0.5rem;
+                padding-block: 0.25rem;
+            }
+
+            .cpc-like-set {
+                min-width: 300px;
+                margin-block-start: 0.5rem;
+                margin-inline: auto;
+                display: flex;
+                column-gap: 1rem;
+                justify-content: space-between;
+                align-items: center;
+
+                &::before { content: "ไม่พอใจเลย"; }
+                &::after { content: "พอใจมาก"; }
+
+                .cpc-like {
+                    position: relative;
+                    width: 152px;
+                    height: 24px;
+                    margin-inline: auto;
+                    --cplike: 0;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: calc(var(--cplike) * 20%);
+                        height: 100%;
+                        background: var(--cupid-primary);
+                        -webkit-mask: url(https://iili.io/2pgi8R1.png) 0% 50% / 152px 95% no-repeat;
+                        mask: url(https://iili.io/2pgi8R1.png) 0% 50% / 152px 95% no-repeat;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background: url(https://iili.io/2pgiSOF.png) center / contain no-repeat;
+                        mix-blend-mode: multiply;
+                    }
+                }
+            }
+
+            label.cpc-check {
+                font-weight: normal !important;
+                padding-inline: 0.5rem !important;
+                display: flex;
+                column-gap: 0.25rem;
+                align-items: center;
+                user-select: text;
+                pointer-events: none;
+
+                input[type="checkbox"] {
+                    position: relative;
+                    width: 1rem;
+                    height: 1rem;
+                    border: 1px solid #cfcfcf;
+                    border-radius: 3px;
+                    background: var(--cupid-bg);
+                    user-select: none;
+                    pointer-events: none;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        display: block;
+                        width: 0;
+                        height: 0.65rem;
+                        background: var(--cupid-primary);
+                        -webkit-mask: url(https://iili.io/2prsDSp.png) center / contain no-repeat;
+                        mask: url(https://iili.io/2prsDSp.png) center / contain no-repeat;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1213px) { #CupidCall2 #cupidthread.cupid-set .cpc-body .cpc-member .cpc-mb:last-child { flex-grow: 1 !important; } }
