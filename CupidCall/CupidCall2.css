@@ -1556,12 +1556,13 @@
                         position: relative;
                         break-inside: avoid;
                         display: block;
+                        font-weight: 600;
 
                         &::before {
                             content: "•";
                             color: var(--cupid-primary);
                             position: absolute;
-                            left: 0;
+                            left: 5px;
                             font-weight: 900;
                         }
                     }
