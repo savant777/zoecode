@@ -1559,7 +1559,7 @@
                         font-weight: 600;
 
                         &::before {
-                            content: "•";
+                            content: var(--cpc-order, "•");
                             color: var(--cupid-primary);
                             position: absolute;
                             left: 5px;
