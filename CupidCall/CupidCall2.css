@@ -1516,18 +1516,18 @@
 
                     .cpc-prize {
                         width: 100px;
+                        min-height: 100px;
                         display: flex;
                         flex-direction: column;
-                        gap: 4px;
+                        gap: 10px;
                         border-radius: 6px;
                         background: #202020;
                         padding: 10px;
-                        padding-bottom: 0;
+                        padding-bottom: 5px;
 
                         &::before {
                             content: "";
-                            width: 100%;
-                            aspect-ratio: 1;
+                            flex: 1;
                             background: var(--cupid-item) center/var(--cupid-item-size, contain) no-repeat;
                         }
 
@@ -1535,8 +1535,8 @@
                             content: var(--cupid-item-name);
                             text-align: center;
                             line-height: 1;
-                            color: var(--cupid-bg);
-                            font-size: 0.65rem;
+                            color: #ccc;
+                            font-size: 0.6rem;
                         }
                     }
                 }
