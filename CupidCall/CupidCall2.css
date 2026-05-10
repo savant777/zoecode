@@ -2382,7 +2382,7 @@
         color: var(--cupid-txt);
         font-size: 16px;
 
-        h1 {
+        h1.cpc-mail-topic {
             margin-block-start: 0;
             font-size: 1.5rem;
 
