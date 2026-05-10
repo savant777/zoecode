@@ -1474,6 +1474,7 @@
 
                 .cpc-reward-head {
                     display: flex;
+                    align-items: flex-start;
                     gap: 1rem;
                     margin-bottom: 1rem;
 
@@ -1515,8 +1516,8 @@
                     }
 
                     .cpc-prize {
-                        width: 100px;
-                        min-height: 100px;
+                        width: clamp(80px, 8vw, 100px);
+                        min-height: clamp(80px, 8vw, 100px);
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
