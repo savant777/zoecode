@@ -235,11 +235,11 @@
     }
 }
 
-#cyberquest:nth-child(even) {
+#cyberquest:nth-child(odd) {
     .cbprofile-avtr-left {
         order: 2;
         z-index: 1;
-        padding-inline: clamp(1.5rem,1.5vw,2rem) clamp(1rem,1vw,1.5rem);
+        padding-inline: clamp(1.5rem,1.5vw,2rem) clamp(1rem,1vw,1.5rem) !important;
 
         tpl {
             left: unset !important;
