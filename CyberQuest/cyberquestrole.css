@@ -47,6 +47,12 @@
     padding: 0.5rem 0.5rem 1rem;
     font-family: 'Bai Jamjuree';
     font-size: min(1.2vw, 1rem);
+    background:
+        url(https://iili.io/2XdKHdv.png) -3px -3px/550px 550px repeat,
+        linear-gradient(transparent, #131313 35%) border-box,
+        var(--cbbg) var(--cbbgpos)/var(--cbbgsize) no-repeat padding-box;
+    border: 1.6px solid rgba(255,255,255,5%);
+    padding: 4rem 2rem 6rem;
 }
 
 .cbrole-area {
@@ -175,6 +181,7 @@
             font-family: 'Pixelify Sans', 'iannnnnAMD', sans-serif;
             color: var(--clr-primary);
             font-size: min(2.1vw, 2rem);
+            font-size-adjust: 0.45;
             line-height: 1;
 
             &::before, &::after {
