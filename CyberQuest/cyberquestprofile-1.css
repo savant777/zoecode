@@ -36,7 +36,7 @@
 #cyberquest:hover::after { content: "code by zzzcode"; }
 
 #cyberquest {
-    .cbprofile-container:nth-child(even) {
+    .cbprofile-container {
         width: 100%;
         background: 
             url(https://iili.io/2XdKHdv.png) -3px -3px/550px 550px repeat, 
@@ -138,168 +138,39 @@
                             text-align-last: justify;
                         }
                     }
-                }
 
-                .cbprofile-info-body {
-                    flex: 1;
-                    position: relative;
-                    line-height: 1.4;
+                    .cbprofile-label {
+                        display: flex;
+                        column-gap: min(0.5vw, 10px);
 
-                    bc + br { display: none; }
+                        label {
+                            width: min(3vw, 3rem);
+                            flex: 1;
+                            aspect-ratio: 1;
+                            background: url(https://iili.io/2Xdd3iJ.png) center/contain no-repeat, rgba(0,0,0,0.75);
+                            border-radius: 50%;
+                            cursor: pointer;
+                            position: relative;
 
-                    bc {
-                        color: var(--clr-main);
-                        text-transform: uppercase;
-                        font-weight: 400;
-                        text-align: justify;
-                        text-align-last: justify;
-                    }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 50%;
+                                left: 50%;
+                                translate: -50% -50%;
+                                background: url(https://iili.io/2XyiY12.png) center/contain no-repeat;
+                                transition: all .5s ease;
+                            }
 
-                    .cbprofile-info {
-                        position: absolute;
-                        top: clamp(21px, 1.5vw, 24px);
-                        max-height: 90%;
-                        overflow: auto;
-                        -webkit-mask: linear-gradient(black 80%, transparent 95%);
-                                mask: linear-gradient(black 80%, transparent 95%);
-                        padding-block: 0 7.5%;
-                        text-align: justify;
-                        font-weight: 200;
-                    }
-
-                    .cbprofile-info::-webkit-scrollbar { width: 0; }
-                }
-            }
-            
-            .cbprofile-avtr-right {
-                position: relative;
-                width: 26.0685%;
-                aspect-ratio: 260.685/453.971;
-                background: var(--cbpic) var(--cbpos)/var(--cbsize) no-repeat;
-                border-radius: 6px;
-            }
-
-            .cbprofile-avtr-right::before {
-                content: "";
-                position: absolute;
-                aspect-ratio: 303.255/493.405;
-                width: 116.33%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: url(https://iili.io/2XddaJ2.png) center/contain no-repeat;
-                user-select: none;
-                pointer-events: none;
-            }
-        }
-    }
-
-    .cbprofile-container:nth-child(odd) {
-        width: 100%;
-        background: 
-            url(https://iili.io/2XdKHdv.png) -3px -3px/550px 550px repeat, 
-            linear-gradient(transparent, #131313 35% 65%, transparent), 
-            var(--cbbg) var(--cbbg-pos)/cover no-repeat;
-        border: 1.6px solid rgba(255,255,255,5%);
-        padding: 4rem 2rem 6rem;
-        font-family: 'Kanit';
-        font-size: min(1vw, 16px);
-
-        .cbprofile-avtr {
-            position: relative;
-            width: 800px;
-            max-width: 100%;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            padding-block-start: 5rem;
-
-            .cbprofile-avtr-label {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 400px;
-                aspect-ratio: 500/81;
-                background: url(https://iili.io/2Xdd7Ul.png) center/contain no-repeat;
-            }
-
-            .cbprofile-avtr-left {
-                order: 2;
-                z-index: 1;
-                position: relative;
-                width: 71.1046%;
-                aspect-ratio: 711.046/446.76;
-                background: rgba(0,0,0,0.75);
-                border: 1px solid rgba(255,255,255,0.25);
-                padding-inline: clamp(1rem,1vw,1.5rem) clamp(1.5rem,1.5vw,2rem);
-                padding-block: clamp(1.5rem,1.5vw,2rem) clamp(1rem,1vw,1.5rem);
-
-                tpl + br, btl + br, btr + br { display: none; }
-
-                tpl {
-                    position: absolute;
-                    aspect-ratio: 527/388;
-                    width: 53.44%;
-                    background: url(https://iili.io/2Xdddog.png) center/contain no-repeat;
-                    top: -3.386%;
-                    right: -1.688%;
-                    user-select: none;
-                    pointer-events: none;
-                    transform: scaleX(-1);
-                }
-
-                btl {
-                    position: absolute;
-                    aspect-ratio: 227/263;
-                    width: 22.96785%;
-                    background: url(https://iili.io/2XdJyAP.png) center/contain no-repeat;
-                    bottom: -2.14856%;
-                    right: -0.9068%;
-                    user-select: none;
-                    pointer-events: none;
-                    transform: scaleX(-1);
-                }
-
-                btr {
-                    position: absolute;
-                    aspect-ratio: 312/27;
-                    width: 31.66658697%;
-                    background: url(https://iili.io/2XdJpHB.png) center/contain no-repeat;
-                    bottom: 0;
-                    left: 10.37%;
-                    transform: translateY(50%);
-                    user-select: none;
-                    pointer-events: none;
-                    transform: scaleX(-1);
-                }
-
-                display: flex;
-                flex-direction: column;
-                row-gap: min(1vw, 20px);
-
-                .cbprofile-info-head {
-                    display: flex;
-                    column-gap: min(1vw, 20px);
-
-                    .cbprofile-info {
-                        flex: 1.5;
-                        display: grid;
-                        grid-template-columns: auto 1fr;
-                        column-gap: 0.5vw;
-                        line-height: 1;
-                        align-items: center;
-                        text-wrap: nowrap;
-                        font-weight: 200;
-
-                        bc + br { display: none; }
-
-                        bc {
-                            color: var(--clr-main);
-                            text-transform: uppercase;
-                            font-weight: 400;
-                            text-align: justify;
-                            text-align-last: justify;
+                            &:hover::before {
+                                width: 70%;
+                                height: 70%;
+                            }
                         }
+
+                        label + br { display: none; }
                     }
                 }
 
@@ -335,8 +206,6 @@
             }
             
             .cbprofile-avtr-right {
-                order: 1;
-                z-index: 2;
                 position: relative;
                 width: 26.0685%;
                 aspect-ratio: 260.685/453.971;
