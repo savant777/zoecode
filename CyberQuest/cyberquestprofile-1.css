@@ -235,7 +235,11 @@
     }
 }
 
-#cyberquest:nth-child(odd) {
+.cbprofile-avtr:not(:first-child) {
+    .cbprofile-avtr-label { display: none; }
+} 
+
+.cbprofile-avtr:nth-child(odd) {
     .cbprofile-avtr-left {
         order: 2;
         z-index: 1;
