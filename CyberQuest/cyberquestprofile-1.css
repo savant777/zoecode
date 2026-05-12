@@ -36,12 +36,12 @@
 #cyberquest:hover::after { content: "code by zzzcode"; }
 
 #cyberquest {
-    .cbprofile-container:nth-child(odd) {
+    .cbprofile-container:nth-child(even) {
         width: 100%;
         background: 
             url(https://iili.io/2XdKHdv.png) -3px -3px/550px 550px repeat, 
             linear-gradient(transparent, #131313 35% 65%, transparent), 
-            url(https://iili.io/2XdKJ7R.png) top center/cover no-repeat;
+            var(--cbbg) var(--cbbg-pos)/cover no-repeat;
         border: 1.6px solid rgba(255,255,255,5%);
         padding: 4rem 2rem 6rem;
         font-family: 'Kanit';
@@ -194,12 +194,12 @@
         }
     }
 
-    .cbprofile-container:nth-child(even) {
+    .cbprofile-container:nth-child(odd) {
         width: 100%;
         background: 
             url(https://iili.io/2XdKHdv.png) -3px -3px/550px 550px repeat, 
             linear-gradient(transparent, #131313 35% 65%, transparent), 
-            url(https://iili.io/2XdKJ7R.png) top center/cover no-repeat;
+            var(--cbbg) var(--cbbg-pos)/cover no-repeat;
         border: 1.6px solid rgba(255,255,255,5%);
         padding: 4rem 2rem 6rem;
         font-family: 'Kanit';
@@ -225,6 +225,7 @@
 
             .cbprofile-avtr-left {
                 order: 2;
+                z-index: 1;
                 position: relative;
                 width: 71.1046%;
                 aspect-ratio: 711.046/446.76;
@@ -335,6 +336,7 @@
             
             .cbprofile-avtr-right {
                 order: 1;
+                z-index: 2;
                 position: relative;
                 width: 26.0685%;
                 aspect-ratio: 260.685/453.971;
