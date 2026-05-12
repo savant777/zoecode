@@ -234,3 +234,34 @@
         }
     }
 }
+
+#cyberquest:nth-child(even) {
+    .cbprofile-avtr-left {
+        order: 2;
+        z-index: 1;
+        padding-inline: clamp(1.5rem,1.5vw,2rem) clamp(1rem,1vw,1.5rem);
+
+        tpl {
+            left: unset;
+            right: -1.688%;
+            transform: scaleX(-1);
+        }
+
+        btl {
+            left: unset;
+            right: -0.9068%;
+            transform: scaleX(-1);
+        }
+
+        btr {
+            right: unset;
+            left: 10.37%;
+            transform: translateY(50%) scaleX(-1);
+        }
+    }
+
+    .cbprofile-avtr-right {
+        order: 1;
+        z-index: 2;
+    }
+}
