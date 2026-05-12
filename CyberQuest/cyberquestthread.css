@@ -62,7 +62,23 @@
             max-width: 100%;
             aspect-ratio: 1233/682;
             margin: auto;
-            background: url(https://iili.io/BbE9Hw7.png) center/contain no-repeat, var(--cbpic) var(--cbpos)/var(--cbsize) no-repeat, black;
+            background: var(--cbpic) var(--cbpos)/var(--cbsize) no-repeat, black;
+
+            .cb-video {
+                width: 100%;
+                aspect-ratio: 1233/682;
+                height: auto;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: url(https://iili.io/BbE9Hw7.png) center/contain no-repeat;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+            }
         }
 
         .cbthread-topic {
