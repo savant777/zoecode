@@ -242,19 +242,19 @@
         padding-inline: clamp(1.5rem,1.5vw,2rem) clamp(1rem,1vw,1.5rem);
 
         tpl {
-            left: unset;
+            left: unset !important;
             right: -1.688%;
             transform: scaleX(-1);
         }
 
         btl {
-            left: unset;
+            left: unset !important;
             right: -0.9068%;
             transform: scaleX(-1);
         }
 
         btr {
-            right: unset;
+            right: unset !important;
             left: 10.37%;
             transform: translateY(50%) scaleX(-1);
         }
