@@ -50,7 +50,7 @@
     background:
         url(https://iili.io/2XdKHdv.png) -3px -3px/550px 550px repeat,
         linear-gradient(transparent, #131313 35%) border-box,
-        var(--cbbg) var(--cbbgpos)/var(--cbbgsize) no-repeat padding-box;
+        var(--cbbg) var(--cbbgpos)/cover no-repeat padding-box;
     border: 1.6px solid rgba(255,255,255,5%);
     padding: 4rem 2rem 6rem;
 }
