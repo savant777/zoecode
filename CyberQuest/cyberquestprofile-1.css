@@ -235,11 +235,11 @@
     }
 }
 
-.cbprofile-avtr:not(:first-child) {
+.cbprofile-avtr:not(:first-of-type) {
     .cbprofile-avtr-label { display: none; }
 } 
 
-.cbprofile-avtr:nth-child(odd) {
+.cbprofile-avtr:nth-of-type(odd) {
     .cbprofile-avtr-left {
         order: 2;
         z-index: 1;
