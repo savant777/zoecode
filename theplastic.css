@@ -432,6 +432,9 @@
                     padding: min(0.75vw, 0.75rem);
                     
                     h2.plst-name {
+                        margin: 0;
+                        color: var(--plst-primary);
+
                         width: fit-content;
                         margin-bottom: min(0.75vw, 0.75rem);
                         margin-left: max(-0.75vw, -0.75rem);
@@ -444,8 +447,12 @@
                         font-size: inherit;
                         font-family: 'Google Sans', sans-serif;
                         font-weight: 700;
-                    }
+                        line-height: 1;
+                        text-transform: uppercase;
 
+                        & + br { display: none; }
+                    }
+                    
                     .plst-btn-group {
                         display: flex;
                         margin-top: min(0.75vw, 0.75rem);
