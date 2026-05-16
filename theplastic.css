@@ -36,6 +36,7 @@
 
     width: max-content;
     height: 13px;
+    margin: auto;
 
     display: flex;
     align-items: center;
@@ -108,7 +109,7 @@
             position: relative;
             width: 100%;
             background: var(--plst-bg);
-            padding: min(2vw, 2rem);
+            padding: min(5vw, 5rem);
             color: var(--plst-txt);
             font-family: 'Bai Jamjuree', sans-serif;
             font-size: min(1vw, 1rem);
@@ -122,6 +123,7 @@
                 user-select: none;
                 -moz-user-select: none;
                 -webkit-user-select: none;
+                pointer-events: none;
             }
             
             h1.plst-head {
@@ -349,6 +351,7 @@
                                 grid-row: 3;
                                 display: flex;
                                 margin-top: min(0.75vw, 0.75rem);
+                                margin-left: auto;
 
                                 .plst-btn:nth-of-type(1) {
                                     border-right: 0;
