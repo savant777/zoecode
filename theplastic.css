@@ -37,13 +37,14 @@
     width: max-content;
     height: 13px;
     margin: auto;
+    margin-top: 4px;
 
     display: flex;
     align-items: center;
     justify-content: center;
     
     font-family: monospace;
-    font-size: 13px;
+    font-size: 10px;
     line-height: 1;
     color: gray !important;
     text-transform: uppercase;
@@ -312,7 +313,7 @@
                     margin-top: min(1vw, 1rem);
                     
                     display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+                    grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
                     grid-template-rows: auto auto 1fr auto;
                     column-gap: min(0.5vw, 0.5rem);
 
