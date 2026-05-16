@@ -237,8 +237,19 @@
                                     font-size: min(0.8vw, 0.8rem);
                                 }
 
-                                .plst-btn {
+                                &::after {
+                                    content: "more";
+                                    
+                                    width: fit-content;
                                     margin-top: auto;
+                                    border: 1px solid var(--plst-primary);
+                                    padding: min(0.25vw, 0.25rem) min(0.75vw, 0.75rem);
+                                    
+                                    font-family: 'Google Sans', sans-serif;
+                                    font-size: min(0.8vw, 0.8rem);
+                                    font-weight: 700;
+                                    line-height: 1;
+                                    text-transform: uppercase;
                                     color: var(--plst-primary);
                                 }
                             }
