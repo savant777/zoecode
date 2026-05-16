@@ -198,6 +198,7 @@
                             .plst-btn-group {
                                 display: flex;
                                 margin-top: min(0.75vw, 0.75rem);
+                                margin-left: auto;
 
                                 .plst-btn:nth-of-type(1) {
                                     border-right: 0;
@@ -219,7 +220,11 @@
                             display: flex;
                             border: 1px solid var(--plst-primary);
 
-                            .plst-pic { width: 40%; }
+                            .plst-pic { 
+                                width: 40%;
+                                border-width: 0;
+                                border-right-width: 1px;
+                            }
 
                             .plst-content {
                                 flex: 1;
@@ -244,6 +249,7 @@
 
                                     width: fit-content;
                                     margin-top: auto;
+                                    margin-left: auto;
                                     border: 1px solid var(--plst-primary);
                                     padding: min(0.25vw, 0.25rem) min(0.75vw, 0.75rem);
                                     
