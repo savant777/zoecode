@@ -239,7 +239,7 @@
 
                                 &::after {
                                     content: "more";
-                                    
+
                                     width: fit-content;
                                     margin-top: auto;
                                     border: 1px solid var(--plst-primary);
@@ -316,42 +316,47 @@
 
                         .plst-pic { aspect-ratio: 1; }
 
-                    }
-
-                    .plst-content {
-                        grid-row: span 3;
-                        display: grid;
-                        grid-template-rows: subgrid;
-                        border: 1px solid var(--plst-primary);
-                        padding: min(0.75vw, 0.75rem);
-
-                        h2.plst-name {
-                            grid-row: 1;
-
-                            width: fit-content;
-                            margin-bottom: min(0.75vw, 0.75rem);
-                            margin-left: max(-0.75vw, -0.75rem);
-                            margin-top: max(-0.75vw, -0.75rem);
+                        .plst-content {
+                            grid-row: span 3;
+                            display: grid;
+                            grid-template-rows: subgrid;
                             border: 1px solid var(--plst-primary);
-                            border-top: 0;
-                            border-left: 0;
                             padding: min(0.75vw, 0.75rem);
-                            
-                            font-size: inherit;
-                            font-family: 'Google Sans', sans-serif;
-                            font-weight: 700;
-                        }
-                        
-                        .plst-btn-group {
-                            display: flex;
-                            margin-top: min(0.75vw, 0.75rem);
 
-                            .plst-btn:nth-of-type(1) {
-                                border-right: 0;
-                                color: var(--plst-primary);
+                            h2.plst-name {
+                                grid-row: 1;
+
+                                width: fit-content;
+                                margin-bottom: min(0.75vw, 0.75rem);
+                                margin-left: max(-0.75vw, -0.75rem);
+                                margin-top: max(-0.75vw, -0.75rem);
+                                border: 1px solid var(--plst-primary);
+                                border-top: 0;
+                                border-left: 0;
+                                padding: min(0.75vw, 0.75rem);
+                                
+                                font-size: inherit;
+                                font-family: 'Google Sans', sans-serif;
+                                font-weight: 700;
                             }
 
-                            .plst-btn:nth-of-type(2) { color: var(--plst-txt); }
+                            p {
+                                margin: 0;
+                                grid-row: 2;
+                            }
+                            
+                            .plst-btn-group {
+                                grid-row: 3;
+                                display: flex;
+                                margin-top: min(0.75vw, 0.75rem);
+
+                                .plst-btn:nth-of-type(1) {
+                                    border-right: 0;
+                                    color: var(--plst-primary);
+                                }
+
+                                .plst-btn:nth-of-type(2) { color: var(--plst-txt); }
+                            }
                         }
                     }
                 }
