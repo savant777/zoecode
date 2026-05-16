@@ -169,22 +169,7 @@
                         grid-column: span 8;
                         margin-right: min(0.75vw, 0.75rem);
 
-                        .plst-pic {
-                            aspect-ratio: 26/9;
-
-                            .plst-btn-group {
-                                display: flex;
-                                margin-top: min(0.75vw, 0.75rem);
-
-                                .plst-btn:nth-of-type(1) {
-                                    border-right: 0;
-                                    color: var(--plst-primary);
-                                    margin-left: auto;
-                                }
-
-                                .plst-btn:nth-of-type(2) { color: var(--plst-txt); }
-                            }
-                        }
+                        .plst-pic { aspect-ratio: 26/9; }
 
                         .plst-content {
                             border: 1px solid var(--plst-primary);
@@ -208,6 +193,19 @@
                             c {
                                 color: var(--plst-primary);
                                 font-weight: bold;
+                            }
+
+                            .plst-btn-group {
+                                display: flex;
+                                margin-top: min(0.75vw, 0.75rem);
+
+                                .plst-btn:nth-of-type(1) {
+                                    border-right: 0;
+                                    color: var(--plst-primary);
+                                    margin-left: auto;
+                                }
+
+                                .plst-btn:nth-of-type(2) { color: var(--plst-txt); }
                             }
                         }
                     }
