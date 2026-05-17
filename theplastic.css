@@ -471,7 +471,7 @@
 
                         &::before {
                             display: block;
-                            content: "\eee6 \e73d";
+                            content: "\eee6" " " "\e73d";
                             border-right: 0;
                             color: var(--plst-primary);
                             margin-left: auto;
@@ -529,7 +529,7 @@
             }
 
             &::after {
-                content: "\eee6 \e73d";
+                content: "\eee6" " " "\e73d";
                 margin-left: 0.5rem;
                 font-family: uicons-solid-straight !important;
                 font-size: 1rem;
