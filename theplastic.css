@@ -492,4 +492,130 @@
             }
         }
     }
+
+    #ThePlasticRole.plst-box {
+        width: 650px;
+        max-width: 100%;
+        margin: auto;
+        font-family: 'Bai Jamjuree', sans-serif;
+
+        h1.plst-head {
+            position: relative;
+            width: fit-content;
+            background: var(--plst-primary);
+            border-left: 3px solid var(--plst-primary);
+            margin: 0;
+            margin-bottom: -3px;
+            color: var(--plst-txt);
+            padding: 0.625rem 0 0.5rem 1rem;
+            
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.25rem;
+            line-height: 1;
+            text-transform: uppercase;
+            transform-style: preserve-3d;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateZ(-1px) translateX(2rem) skewX(45deg);
+                transform-origin: top left;
+                width: 5rem;
+                height: 100%;
+                background: var(--plst-primary);
+            }
+
+            &::after {
+                display: block;
+                content: "\eee6 \e73d";
+                font-family: uicons-solid-straight !important;                                
+                font-style: normal;
+                font-weight: normal !important;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            & + br { display: none; }
+        }
+
+        .plst-body {
+            width: 100%;
+            background: var(--plst-bg);
+            color: var(--plst-txt);
+            border: 3px solid var(--plst-primary);
+            padding: 2rem;
+
+            .plst-header {
+                display: flex;
+                align-items: end;
+                gap: 1.25rem;
+
+                .plst-pic {
+                    width: 125px;
+                    aspect-ratio: 1;
+                    border: 2px solid var(--plst-primary);
+                    background: var(--plst-pic) var(--plst-pos)/var(--plst-size) no-repeat;
+                }
+
+                .plst-info {
+                    flex: 1;
+                    font-family: 'Google Sans', sans-serif;
+                    line-height: 1.3;
+                    margin-bottom: 0.5rem;
+
+                    h1, p { margin: 0; }
+                    h1 + br { display: none; }
+                    hl { background: color-mix(in srgb, var(--plst-primary) 43%, transparent 100%); }
+                }
+            }
+
+            .plst-role {
+                border-top: 1px solid var(--plst-primary);
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
+            }
+
+            .plst-ps {
+                margin-block: 1.5rem;
+                display: flex;
+                gap: 0.5rem;
+
+                div:nth-of-type(1) {
+                    width: fit-content;
+                    border: 1px solid;
+                    color: var(--plst-primary);
+                    padding: 0 0.5rem;
+                    font-family: 'Google Sans', sans-serif;
+                    font-weight: 600;
+                }
+
+                div:not(:nth-of-type(1)) { flex: 1; }
+            }
+
+            .plst-footer {
+                position: relative;
+                width: calc(100% + 4rem);
+                margin-left: -2rem;
+                margin-bottom: -2rem;
+                height: 3rem;
+                background: var(--plst-primary);
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    inset: 0;
+                    background: repeating-linear-gradient(-45deg, var(--plst-bg) 0 1px, transparent 0 50%) center/8px 8px repeat;
+                    mask: linear-gradient(to left, black, transparent 95%);
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
 }
