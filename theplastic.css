@@ -529,9 +529,10 @@
             }
 
             &::after {
-                display: block;
                 content: "\eee6 \e73d";
-                font-family: uicons-solid-straight !important;                                
+                margin-left: 0.5rem;
+                font-family: uicons-solid-straight !important;
+                font-size: 1rem;
                 font-style: normal;
                 font-weight: normal !important;
                 font-variant: normal;
