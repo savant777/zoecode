@@ -53,7 +53,7 @@
     border: 3px solid transparent;
     border-radius: 50%;
     background: var(--sinpic) var(--sinpos)/var(--sinsize) no-repeat padding-box, 
-    var(--sinborder) var(--sinpos)/var(--sinsize) no-repeat border-box;
+    var(--sinborder) var(--sinbdpos)/var(--sinbdsize) no-repeat border-box;
 }
 
 .sinr-name {
@@ -71,7 +71,7 @@
     border-radius: 50px;
     
     background: var(--sinnamebg) var(--sinpos)/var(--sinsize) no-repeat padding-box, 
-    var(--sinborder) var(--sinpos)/var(--sinsize) no-repeat border-box;
+    var(--sinborder) var(--sinbdpos)/var(--sinbdsize) no-repeat border-box;
 
     font-family: var(--sinfonten), serif;
     font-style: italic;
@@ -99,7 +99,7 @@
     border: 3px solid transparent;
     border-radius: 10px;
     
-    background: var(--sinboxbg) padding-box, var(--sinborder) var(--sinpos)/var(--sinsize) no-repeat border-box;
+    background: var(--sinboxbg) padding-box, var(--sinborder) var(--sinbdpos)/var(--sinbdsize) no-repeat border-box;
 
     font-size: clamp(14px, 1vw, 17px);
 }
