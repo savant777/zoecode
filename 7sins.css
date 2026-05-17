@@ -5,6 +5,8 @@
     --sinpic: url(https://static-00.iconduck.com/assets.00/person-icon-476x512-hr6biidg.png);
     --sinpos: center;
     --sinsize: cover;
+    --sinbdpos: center;
+    --sinbdsize: cover;
     --sinborder: linear-gradient(#b22222 0 0);
     --sinnamebg: linear-gradient(#4d3332 0 0);
     --sinnamecolor: #fff;
