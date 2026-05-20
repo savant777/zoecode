@@ -5,6 +5,10 @@
     --anml-txt: #fff;
     --anml-bg: #181818;
 
+    --anml-pic: gray;
+    --anml-pos: center;
+    --anml-size: cover;
+
     interpolate-size: allow-keywords;
 }
 
