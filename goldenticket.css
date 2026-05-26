@@ -7,6 +7,10 @@
     --gdtk-shadow1: #ad3304;
     --gdtk-shadow2: #cd5708;
     --gdtk-hero: url(https://iili.io/CdxiAbI.png);
+
+    --gdtk-pic: transparent;
+    --gdtk-pos: center;
+    --gdtk-size: cover;
 }
 
 #GoldenTicket { position: relative; }
