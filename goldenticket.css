@@ -116,9 +116,10 @@
 
                     &::before { content: var(--gdtk-name); }
 
-                    & + p { margin: 0; }
-                    & + p::before { content: var(--gdtk-province); }
+                    & + br { display: none; }
                 }
+
+                &::after { content: var(--gdtk-province); }
             }
 
             h1.gdtk-topic-winner { margin-bottom: 0; }
@@ -177,6 +178,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 2px var(--gdtk-shadow1)) drop-shadow(0 2px var(--gdtk-shadow2));
+
+            & + br { display: none; }
         }
 
         .gdtk-content { padding: 4rem 5rem; }
@@ -187,6 +190,7 @@
 
             &::after {
                 content: "";
+                display: block;
                 width: 300px;
                 aspect-ratio: 300/139;
                 margin: auto;
