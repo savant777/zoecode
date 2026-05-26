@@ -201,7 +201,7 @@
                 background: var(--gdtk-answer) center/contain no-repeat;
             }
 
-            &[ans="นนทบุรี"] { --gdtk-answer: url(https://iili.io/CdIu2Zx.png); }
+            &[ans="นนทบุรี"] { --gdtk-answer: url(https://iili.io/CdugrjS.png); }
             &[ans="สงขลา"] { --gdtk-answer: url(https://iili.io/CdIARDb.png); }
             &[ans="เพชรบูรณ์"] { --gdtk-answer: url(https://iili.io/CdIuJTb.png); }
         }
