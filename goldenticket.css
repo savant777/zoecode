@@ -6,7 +6,7 @@
     --gdtk-secondary: #ffbf15;
     --gdtk-shadow1: #ad3304;
     --gdtk-shadow2: #cd5708;
-    --gdtk-hero: url(https://iili.io/CdxiAbI.png);
+    --gdtk-hero: url(https://iili.io/CduXc1S.png);
 
     --gdtk-pic: transparent;
     --gdtk-pos: center;
@@ -66,19 +66,19 @@
         }
 
         &[winner="นนทบุรี"] {
-            --gdtk-hero: url(https://iili.io/CdItrlt.png);
+            --gdtk-hero: url(https://iili.io/CduXaB2.png);
             --gdtk-name: "โรงเรียนเตรียมอุดมศึกษา พัฒนาการนนทบุรี";
             --gdtk-province: "จ.นนทบุรี";
         }
 
         &[winner="สงขลา"] {
-            --gdtk-hero: url(https://iili.io/CdItSiN.png);
+            --gdtk-hero: url(https://iili.io/CduX7Ll.png);
             --gdtk-name: "โรงเรียนเทศบาล 5 (วัดหัวป้อมนอก)";
             --gdtk-province: "จ.สงขลา";
         }
 
         &[winner="เพชรบูรณ์"] {
-            --gdtk-hero: url(https://iili.io/CdItgfI.png);
+            --gdtk-hero: url(https://iili.io/CduX5X4.png);
             --gdtk-name: "โรงเรียนหล่มเก่าพิทยาคม";
             --gdtk-province: "จ.เพชรบูรณ์";
         }
@@ -128,7 +128,6 @@
 
             h1.gdtk-topic.winner { margin-bottom: 0; }
             p.gdtk-rewards { margin: 0; }
-            div.gdtk-rewards { margin-top: 1em; }
         }
     }
 
@@ -189,6 +188,7 @@
         .gdtk-content { padding: 4rem 5rem; }
         .gdtk-answer {
             text-align: center;
+            padding-bottom: 1em;
 
             p { color: var(--gdtk-primary); }
 
