@@ -1,0 +1,201 @@
+@import url('https://fonts.cdnfonts.com/css/glimmer-of');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --gdtk-primary: #fffd95;
+    --gdtk-secondary: #ffbf15;
+    --gdtk-shadow1: #ad3304;
+    --gdtk-shadow2: #cd5708;
+    --gdtk-hero: url(https://iili.io/CdxiAbI.png);
+}
+
+#GoldenTicket { position: relative; }
+#GoldenTicket * { box-sizing: border-box; }
+
+#GoldenTicket a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#GoldenTicket a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#GoldenTicket::after {
+    display: block;
+    content: "🎡";
+    font-family: 'glimmer of light', sans-serif;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#GoldenTicket:hover::after { content: "Golden Ticket"; }
+
+#GoldenTicket {
+    #gdtk-thread.gdtk-box {
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        background: url(https://iili.io/CdKFsx2.png) top center/100% no-repeat, url(https://iili.io/Cd2lb2f.png) top center/100% no-repeat, linear-gradient(to top, black -4vw, transparent), #002699;
+        padding-top: 8vw;
+        font-family: 'Bai Jamjuree', sans-serif;
+        color: #fff;
+
+        .gdtk-logo {
+            width: 40%;
+            aspect-ratio: 800/517;
+            margin: auto;
+            background: url(https://iili.io/CdqqcVR.png) center/contain no-repeat;
+            filter: drop-shadow(0 2px 8px #00000080);
+        }
+
+        .gdtk-hero {
+            width: 80%;
+            aspect-ratio: 600/340;
+            margin: auto;
+            margin-block: 2vw;
+            background: var(--gdtk-hero) top center/contain no-repeat;
+        }
+
+        &[winner="นนทบุรี"] {
+            --gdtk-hero: url(https://iili.io/CdItrlt.png);
+            --gdtk-name: "โรงเรียนเตรียมอุดมศึกษา พัฒนาการนนทบุรี";
+            --gdtk-province: "จ.นนทบุรี";
+        }
+
+        &[winner="สงขลา"] {
+            --gdtk-hero: url(https://iili.io/CdItSiN.png);
+            --gdtk-name: "โรงเรียนเทศบาล 5 (วัดหัวป้อมนอก)";
+            --gdtk-province: "จ.สงขลา";
+        }
+
+        &[winner="เพชรบูรณ์"] {
+            --gdtk-hero: url(https://iili.io/CdItgfI.png);
+            --gdtk-name: "โรงเรียนหล่มเก่าพิทยาคม";
+            --gdtk-province: "จ.เพชรบูรณ์";
+        }
+
+        .gdtk-content {
+            padding-inline: 4vw;
+            padding-bottom: 4vw;
+            font-size: min(1vw, 17px);
+
+            h1.gdtk-topic {
+                font-family: 'Kanit', sans-serif;
+                color: var(--gdtk-primary);
+
+                & + br { display: none; }
+            }
+
+            .gdtk-winner {
+                font-family: 'Kanit', sans-serif;
+                color: var(--gdtk-primary);
+                text-align: center;
+
+                h1.gdtk-name {
+                    width: fit-content;
+                    margin: auto;
+                    margin-block: 0;
+                    padding: 0.25vw;
+
+                    font-size: 2vw;
+                    line-height: 1.3;
+                    text-align: center;
+
+                    background: linear-gradient(var(--gdtk-primary), var(--gdtk-secondary));
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    filter: drop-shadow(0 0.15vw var(--gdtk-shadow1)) drop-shadow(0 0.15vw var(--gdtk-shadow2));
+
+                    &::before { content: var(--gdtk-name); }
+
+                    & + p { margin: 0; }
+                    & + p::before { content: var(--gdtk-province); }
+                }
+            }
+
+            h1.gdtk-topic-winner { margin-bottom: 0; }
+            p.gdtk-rewards { margin: 0; }
+            div.gdtk-rewards { margin-top: 1em; }
+        }
+    }
+
+    #gdtk-role.gdtk-box {
+        min-height: 600px;
+        width: 600px;
+        max-width: 100%;
+        margin: auto;
+        background: url(https://iili.io/CdKFsx2.png) top center/100% no-repeat, url(https://iili.io/Cd2lb2f.png) center -4rem/100% no-repeat, linear-gradient(to top, black -4vw, transparent), #002699;
+        padding-top: 100px;
+        font-family: 'Bai Jamjuree', sans-serif;
+        color: #fff;
+
+        .gdtk-pic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            width: 150px;
+            aspect-ratio: 390/330;
+            margin: auto;
+            background: url(https://iili.io/Cdz1jt9.png) center/contain no-repeat;
+            transform-style: preserve-3d;
+
+            &::before {
+                content: "";
+                display: block;
+                width: calc(300/390 * 100%);
+                aspect-ratio: 1;
+                border-radius: 50%;
+                background: var(--gdtk-pic) var(--gdtk-pos)/var(--gdtk-size) no-repeat;
+                transform: translateZ(-1px);
+            }
+        }
+
+        h1.gdtk-name {
+            width: fit-content;
+            margin: auto;
+            margin-block: 1rem 0;
+            padding-block: 4px 30px;
+            padding-inline: 4px;
+
+            font-family: 'glimmer of light', sans-serif;
+            font-size: 48px;
+            line-height: 1.3;
+            text-align: center;
+
+            background: linear-gradient(var(--gdtk-primary), var(--gdtk-secondary));
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px var(--gdtk-shadow1)) drop-shadow(0 2px var(--gdtk-shadow2));
+        }
+
+        .gdtk-content { padding: 4rem 5rem; }
+        .gdtk-answer {
+            text-align: center;
+
+            p { color: var(--gdtk-primary); }
+
+            &::after {
+                content: "";
+                width: 300px;
+                aspect-ratio: 300/139;
+                margin: auto;
+                background: var(--gdtk-answer) center/contain no-repeat;
+            }
+
+            &[ans="นนทบุรี"] { --gdtk-answer: url(https://iili.io/CdIu2Zx.png); }
+            &[ans="สงขลา"] { --gdtk-answer: url(https://iili.io/CdIARDb.png); }
+            &[ans="เพชรบูรณ์"] { --gdtk-answer: url(https://iili.io/CdIuJTb.png); }
+        }
+    }
+}
