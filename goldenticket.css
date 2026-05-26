@@ -126,7 +126,7 @@
                 &::after { content: var(--gdtk-province); }
             }
 
-            h1.gdtk-topic-winner { margin-bottom: 0; }
+            h1.gdtk-topic.winner { margin-bottom: 0; }
             p.gdtk-rewards { margin: 0; }
             div.gdtk-rewards { margin-top: 1em; }
         }
