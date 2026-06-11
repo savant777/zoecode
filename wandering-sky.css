@@ -391,6 +391,7 @@
 
                         font-weight: bold;
                         font-size: 1.5rem;
+                        line-height: calc(17px * 1.8);
                         height: calc(17px * 1.8);
                         color: var(--wdrsky-primary);
 
