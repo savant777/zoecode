@@ -7,6 +7,8 @@
     --wdrsky-paper: #eaeaea;
     --wdrsky-txt: #000;
     --wdrsky-primary: #624141;
+
+    interpolate-size: allow-keywords;
 }
 
 #WanderingSky { position: relative; }
@@ -380,6 +382,33 @@
                     ol, ul { margin: 0 }
 
                     img { height: 15lh; }
+
+                    details > summary {
+                        list-style: none;
+                        cursor: pointer;
+
+                        &::marker, &::-webkit-details-marker { display: none; }
+
+                        font-family: 'Witches Friend Script', sans-serif;
+                        font-size: 4rem;
+                        line-height: calc(17px * 1.8);
+                        color: var(--wdrsky-primary);
+
+                        &::before {
+                            content: "☁︎";
+                            font-size: 1rem;
+                            margin-right: 8px;
+                            align-self: center;
+                        }
+                    }
+
+                    details::details-content {
+                        height: 0;
+                        overflow: hidden;
+                        transition: height 0.3s ease-in-out, content-visibility 0.3s allow-discrete;
+                    }
+
+                    details[open]::details-content { height: auto; }
                 }
             }
         }
