@@ -7,7 +7,6 @@
     --wdrsky-paper: #eaeaea;
     --wdrsky-txt: #000;
     --wdrsky-primary: #624141;
-    --wdrsky-border: color-mix(in srgb , var(--wdrsky-primary), transparent 80%);
 }
 
 #WanderingSky { position: relative; }
@@ -46,6 +45,8 @@
 
 #WanderingSky {
     #wdrsky-role.wdrsky-box {
+        --wdrsky-border: color-mix(in srgb , var(--wdrsky-primary), transparent 80%);
+        
         position: relative;
         width: 650px;
         max-width: 100%;
