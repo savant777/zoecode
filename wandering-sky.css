@@ -28,16 +28,16 @@
     content: "☁️";
 
     width: fit-content;
-    height: 13px;
-    margin-block-start: 0.5rem;
+    height: 10px;
+    margin-block-start: 4px;
     margin-inline: auto;
 
     display: flex;
     align-items: center;
     justify-content: center;
     
-    font-family: 'Georgia', serif;
-    font-size: 13px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 10px;
     line-height: 1;
     color: gray !important;
     font-style: italic;
