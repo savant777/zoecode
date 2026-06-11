@@ -230,7 +230,7 @@
         }
     }
 
-    #wdrksy-thread.wdrsky-box {
+    #wdrsky-thread.wdrsky-box {
         --wdrsky-border: color-mix(in srgb , var(--wdrsky-primary), transparent 80%);
 
         position: relative;
