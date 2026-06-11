@@ -359,6 +359,22 @@
                     padding-block: calc(1lh + 4px) 2lh;
                     background: repeating-linear-gradient(transparent, transparent calc(1lh - 1px), var(--wdrsky-border) calc(1lh - 1px), var(--wdrsky-border) 1lh, transparent 1lh);
                     font-family: 'Bai Jamjuree', san-serif;
+
+                    hr {
+                        height: 2px;
+                        width: 500px;
+                        max-width: 100%;
+                        margin: auto;
+                        margin-block: calc(1lh - 5px);
+                        background: transparent;
+                        border: 2px dashed var(--wdrsky-primary);
+                    }
+
+                    h1 {
+                        font-size: x-large;
+                        margin: 0;
+                        margin-block: -4px;
+                    }
                 }
             }
         }
