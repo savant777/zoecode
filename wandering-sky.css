@@ -389,17 +389,15 @@
 
                         &::marker, &::-webkit-details-marker { display: none; }
 
-                        font-family: 'Witches Friend Script', sans-serif;
-                        font-size: 4rem;
-                        line-height: calc(17px * 1.8);
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        height: calc(17px * 1.8);
                         color: var(--wdrsky-primary);
-                        margin-bottom: -9px;
 
                         &::before {
                             content: "☁︎";
-                            font-size: 1.5rem;
                             margin-right: 0.75rem;
-                            align-self: center;
+                            vertical-align: middle;
                         }
                     }
 
