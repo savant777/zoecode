@@ -375,6 +375,8 @@
                         margin: 0;
                         margin-block: -4px;
                     }
+
+                    ol, ul { margin: 0 }
                 }
             }
         }
