@@ -400,6 +400,12 @@
                             margin-right: 0.75rem;
                             vertical-align: middle;
                         }
+
+                        &::after {
+                            content: "(คลิก)";
+                            font-family: 'Bai Jamjuree', sans-serif;
+                            font-size: 1rem;
+                        }
                     }
 
                     details::details-content {
