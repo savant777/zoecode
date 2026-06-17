@@ -619,4 +619,100 @@
             }
         }
     }
+
+    #ThePlasticProfile.plst-box {
+        max-width: 100%;
+        margin: auto;
+        background: var(--plst-bgpic) var(--plst-bgpos)/cover;
+        padding: min(1vw, 1rem);
+
+        .plst-container {
+            position: relative;
+            width: 100%;
+            background: var(--plst-bg);
+            padding: min(5vw, 5rem);
+            color: var(--plst-txt);
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: min(1vw, 1rem);
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                inset: min(1vw, 1rem);
+                border: 1px solid var(--plst-primary);
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                pointer-events: none;
+            }
+            
+            .plst-body {
+                min-height: clamp(160vh, 100vw, 180vh);
+                display: flex;
+                flex-direction: column;
+                gap: 10vh;
+                justify-content: space-between;
+                align-items: center;
+
+                h1.plst-head {
+                    margin: 0;
+                    color: var(--plst-primary);
+
+                    font-family: 'Teko', sans-serif;
+                    font-size: min(2.5vw, 2.5rem);
+                    font-weight: 400;
+                    text-align: center;                    
+                    line-height: 1;
+                    text-transform: uppercase;
+
+                    & + br { display: none; }
+                }
+
+                hr {
+                    width: 1px;
+                    height: 20vh;
+                    background: var(--plst-primary);
+                    margin: 0;
+                }
+
+                .plst-pic {
+                    position: relative;
+                    width: 300px;
+                    height: 300px;
+                    border: 1px solid var(--plst-primary);
+                    padding: min(0.75vw, 0.75rem);
+                    background: var(--plst-pic) var(--plst-pos)/var(--plst-size) no-repeat content-box;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: min(0.75vw, 0.75rem);
+                        background: var(--plst-primary);
+                        mix-blend-mode: multiply;
+                        backdrop-filter: grayscale(1);
+                        opacity: 1;
+                        transition: .3s ease-in-out;
+                    }
+
+                    &:hover::before { opacity: 0; }
+                }
+
+                &::after {
+                    content: "\eee6 \e73d";
+                    color: var(--plst-primary);
+                    font-family: uicons-solid-straight !important;
+                    font-size: min(2vw, 2rem);
+                    display: block;
+                    font-style: normal;
+                    font-weight: normal !important;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }        
+    }
 }
