@@ -651,7 +651,7 @@
                 min-height: calc(1910px - min(13.5vw, 13rem));
                 display: flex;
                 flex-direction: column;
-                gap: 10vw;
+                gap: 10rem;
                 justify-content: space-between;
                 align-items: center;
 
@@ -670,8 +670,8 @@
                 }
 
                 hr {
+                    flex: 1;
                     width: 1px;
-                    height: 20vw;
                     background: var(--plst-primary);
                     margin: 0;
                 }
