@@ -648,10 +648,10 @@
             }
             
             .plst-body {
-                min-height: clamp(160vh, 100vw, 180vh);
+                min-height: calc(1910px - min(13.5vw, 13rem));
                 display: flex;
                 flex-direction: column;
-                gap: 10vh;
+                gap: 10vw;
                 justify-content: space-between;
                 align-items: center;
 
@@ -671,7 +671,7 @@
 
                 hr {
                     width: 1px;
-                    height: 20vh;
+                    height: 20vw;
                     background: var(--plst-primary);
                     margin: 0;
                 }
