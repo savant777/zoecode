@@ -256,6 +256,11 @@
             aspect-ratio: 944/566;
             background: url(https://iili.io/CxRNGFs.png) center/contain no-repeat;
 
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            pointer-events: none;
+
             &::before {
                 content: "";
                 position: absolute;
