@@ -169,10 +169,14 @@
                         &::before {
                             content: "";
                             position: absolute;
-                            inset: 0;
-                            background: var(--sin3-pic) var(--sin3-pos)/var(--sin3-size) no-repeat;
-                            mask: url(https://iili.io/CxAhZBa.png) center/contain no-repeat;
-                            -webkit-mask: url(https://iili.io/CxAhZBa.png) center/contain no-repeat;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 69%;
+                            aspect-ratio: 1;
+                            background: var(--sin3-pic) var(--sin3-pos) / var(--sin3-size) no-repeat;
+                            mask: url(https://iili.io/CxEAnou.png) center / contain no-repeat;
+                            -webkit-mask: url(https://iili.io/CxEAnou.png) center / contain no-repeat;
                         }
 
                         &::after {
