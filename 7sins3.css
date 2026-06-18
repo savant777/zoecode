@@ -63,7 +63,7 @@
         margin: auto;
         color: var(--sin3-txt);
 
-        &[อาชีพ="นักดาบ"] { --sin3-primary: #ef5350; }
+        &[อาชีพ="นักดาบ"] { --sin3-primary: #f44336; }
         &[อาชีพ="นักเวทย์"] { --sin3-primary: #7e57c2; }
         &[อาชีพ="นักธนู"] { --sin3-primary: #4caf50; }
         &[อาชีพ="นักฆ่า"] { --sin3-primary: #808080; }
