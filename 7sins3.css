@@ -13,6 +13,7 @@
 #SevenSin3 * { box-sizing: border-box; }
 
 #SevenSin3 a[href="https://discord.com/users/625292873914515456/"] {
+    width: 100px;
     height: 12px;
     position: absolute;
     z-index: 1;
@@ -26,15 +27,6 @@
 #SevenSin3::after {
     content: "7 sins";
 
-    display: block;
-    box-sizing: border-box;
-
-    width: 650px;
-    max-width: 100%;
-    margin: auto;
-    margin-block: clamp(-6rem, -5vw, -5.5rem) clamp(3.5rem, 5vw, 5rem);
-    padding-inline: 1rem;
-    
     font-family: 'IM Fell English', sans-serif;
     font-size: 0.85rem;
     line-height: 1;
@@ -44,6 +36,24 @@
 }
   
 #SevenSin3:hover::after { content: "made by zzzcode"; }
+
+#SevenSin3:has(#sin3-player) {
+    width: 650px;
+    max-width: 100%;
+    margin: auto;
+
+    a[href="https://discord.com/users/625292873914515456/"] {
+        bottom: 4.5rem;
+        right: 1rem;
+        left: unset;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 4.5rem;
+        right: 1rem;
+    }
+}
 
 #SevenSin3 {
     #sin3-player.sin3-box {
