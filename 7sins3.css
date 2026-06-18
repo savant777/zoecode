@@ -242,7 +242,7 @@
             .sin3-content {
                 position: relative;
                 flex: 1;
-                padding: 1rem 3rem;
+                padding: 2rem 3rem;
                 font-family: 'Bai Jamjuree', sans-serif;
 
                 .sin3-role, .sin3-ps {
@@ -253,7 +253,7 @@
                 hr.sin3-hr {
                     position: relative;
                     z-index: 1;
-                    margin-block: 1rem;
+                    margin-block: 1.5rem;
                     background: #785023;
                     mix-blend-mode: multiply;
                     opacity: 30%;
