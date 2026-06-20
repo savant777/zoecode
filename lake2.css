@@ -296,7 +296,6 @@
 
                 .lake-gcontent {
                     grid-column: 2/3;
-                    height: 10vw;
                     position: relative;
                     padding: 1vw 1.5vw;
                     transform-style: preserve-3d;
@@ -313,17 +312,11 @@
                     }
 
                     .lake-title {
-                        height: 2vw;
                         align-content: center;
                     }
 
                     .lake-scroll {
-                        max-height: 4vw;
-                        overflow: auto;
-                        scrollbar-width: none;
                         padding-bottom: 1vw;
-                        mask: linear-gradient(to bottom, black 80%, transparent 100%);
-                        -webkit-mask: linear-gradient(to bottom, black 80%, transparent 100%);
                     }
 
                     .lake-foot {
