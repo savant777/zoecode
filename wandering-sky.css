@@ -170,7 +170,7 @@
 
                     .wdrsky-name, .wdrsky-date {
                         display: flex;
-                        align-items: end;
+                        align-items: baseline;
                         gap: 8px;
 
                         font-family: 'Witches Friend Script', sans-serif;
@@ -188,13 +188,17 @@
                             font-style: normal;
                             text-transform: uppercase;
                             color: var(--wdrsky-primary);
-                            
-                            margin-bottom: 0.75rem;
-                            margin-top: auto;
+
+                            margin-top: 0.75rem;
+                            margin-bottom: auto;
                         }
                     }
 
-                    .wdrsky-name { flex: 1.5; }
+                    .wdrsky-name {
+                        flex: 1.5;
+                        flex-shrink: 0;
+                        min-width: max-content;
+                    }
                     .wdrsky-name::before { content: "to."; }
                     .wdrsky-date { flex: 1; }
                     .wdrsky-date::before { content: "date."; }
