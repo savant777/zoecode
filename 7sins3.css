@@ -162,6 +162,7 @@
 
                     .sin3-pic {
                         position: relative;
+                        z-index: 1;
                         width: 200px;
                         height: 200px;
                         mix-blend-mode: multiply;
@@ -254,8 +255,11 @@
                 }
 
                 .sin3-stats {
+                    position: relative;
+                    z-index: 2;
                     background: var(--sin3-txt);
                     padding: 1.25rem 1.5rem;
+                    margin-top: 1rem;
                     color: #fff;
                     font-size: small;
                     box-shadow: 1rem 1rem 2rem 0 #00000040 inset, -1rem -1rem 2rem 0 #00000040 inset;
@@ -265,6 +269,8 @@
                         margin-block: 1rem;
                         background: #fff;
                     }
+
+                    &#stats { text-align: center; }
                 }
             }
         }
