@@ -81,7 +81,7 @@
         }
         &[อาชีพ="นักบวช"] {
             --sin3-primary: #e91e63;
-            --sin3-icon: url(https://iili.io/CIxK6gt.png);
+            --sin3-icon: url(https://iili.io/CIxgrnp.png);
         }
 
         &::before {
@@ -248,7 +248,6 @@
                                 margin-right: 0.25rem;
                                 background: var(--sin3-icon) center/contain no-repeat;
                                 margin-block: 0.15rem -0.15rem;
-                                mix-blend-mode: multiply;
                             }
                         }
                     }
