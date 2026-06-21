@@ -258,16 +258,17 @@
                     position: relative;
                     z-index: 2;
                     background: var(--sin3-txt);
-                    padding: 1rem 1.5rem;
-                    margin-top: 1rem;
+                    padding: 1rem 1.25rem;
+                    margin-top: 0.5rem;
                     color: #fff;
                     font-size: small;
                     box-shadow: 1rem 1rem 2rem 0 #00000040 inset, -1rem -1rem 2rem 0 #00000040 inset;
                     border-radius: 6px;
 
                     hr.mycode_hr {
-                        margin-block: 1rem;
+                        margin-block: 0.5em;
                         background: #fff;
+                        opacity: 0.5;
                     }
 
                     &#stats {
