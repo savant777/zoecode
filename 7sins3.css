@@ -241,21 +241,15 @@
 
             .sin3-content {
                 position: relative;
+                z-index: 1;
                 flex: 1;
                 padding: 2rem 3rem;
                 font-family: 'Bai Jamjuree', sans-serif;
-
-                .sin3-role, .sin3-ps {
-                    position: relative;
-                    z-index: 1;
-                }
+                mix-blend-mode: multiply;
 
                 hr.mycode_hr {
-                    position: relative;
-                    z-index: 1;
                     margin-block: 1.5rem;
                     background: #785023;
-                    mix-blend-mode: multiply;
                     opacity: 30%;
                 }
             }
