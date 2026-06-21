@@ -43,14 +43,14 @@
     margin: auto;
 
     a[href="https://discord.com/users/625292873914515456/"] {
-        bottom: 4.5rem;
+        bottom: 2.5rem;
         right: 1rem;
         left: unset;
     }
 
     &::after {
         position: absolute;
-        bottom: 4.5rem;
+        bottom: 2.5rem;
         right: 1rem;
     }
 }
@@ -91,8 +91,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            aspect-ratio: 944/566;
-            background: url(https://iili.io/CxRNVSf.png) center/contain no-repeat;
+            aspect-ratio: 944/512;
+            background: url(https://iili.io/CzeMiZX.png) center/contain no-repeat;
             user-select: none;
             -moz-user-select: none;
             -webkit-user-select: none;
@@ -103,7 +103,7 @@
             position: relative;
             width: 94.06779661%;
             margin: auto;
-            padding-block: clamp(3.5rem, 4.2vw, 4rem) clamp(9.25rem, 10.7vw, 10.25rem);
+            padding-block: clamp(3.5rem, 4.2vw, 4rem) clamp(7.25rem, 8.7vw, 8.25rem);
             display: flex;
             flex-direction: column;
 
@@ -113,9 +113,9 @@
                 z-index: 1;
                 inset: 0;
                 background: linear-gradient(95deg, #c7a577, #e7d1b9 10% 90%, #c7a577) content-box;
-                padding-block: clamp(220px, 16vw, 240px) clamp(310px, 22vw, 335px);
-                mask: linear-gradient(transparent 16rem, black 17rem calc(100% - 22rem), transparent calc(100% - 21rem));
-                -webkit-mask: linear-gradient(transparent 16rem, black 17rem calc(100% - 22rem), transparent calc(100% - 21rem));
+                padding-block: clamp(220px, 16vw, 240px) clamp(265px, 22vw, 290px);
+                mask: linear-gradient(transparent 16rem, black 17rem calc(100% - 20rem), transparent calc(100% - 19rem));
+                -webkit-mask: linear-gradient(transparent 16rem, black 17rem calc(100% - 20rem), transparent calc(100% - 19rem));
                 
                 user-select: none;
                 -moz-user-select: none;
@@ -250,7 +250,7 @@
                     z-index: 1;
                 }
 
-                hr.sin3-hr {
+                hr.mycode_hr {
                     position: relative;
                     z-index: 1;
                     margin-block: 1.5rem;
@@ -267,9 +267,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            aspect-ratio: 944/566;
-            background: url(https://iili.io/CxRNGFs.png) center/contain no-repeat;
-
+            aspect-ratio: 944/512;
+            background: url(https://iili.io/CzeMPjt.png) center/contain no-repeat;
             user-select: none;
             -moz-user-select: none;
             -webkit-user-select: none;
@@ -281,7 +280,7 @@
                 inset: 0;
                 mix-blend-mode: overlay;
                 background: var(--sin3-primary);
-                mask: url(https://iili.io/CxRNGFs.png) center/contain no-repeat;
+                mask: url(https://iili.io/CzeMPjt.png) center/contain no-repeat;
             }
         }
     }
