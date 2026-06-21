@@ -63,11 +63,26 @@
         margin: auto;
         color: var(--sin3-txt);
 
-        &[อาชีพ="นักดาบ"] { --sin3-primary: #db1414; }
-        &[อาชีพ="นักเวทย์"] { --sin3-primary: #7e57c2; }
-        &[อาชีพ="นักธนู"] { --sin3-primary: #4caf50; }
-        &[อาชีพ="นักฆ่า"] { --sin3-primary: #808080; }
-        &[อาชีพ="นักบวช"] { --sin3-primary: #e91e63; }
+        &[อาชีพ="นักดาบ"] {
+            --sin3-primary: #db1414;
+            --sin3-icon: url(https://iili.io/CIxK41I.png);
+        }
+        &[อาชีพ="นักเวทย์"] {
+            --sin3-primary: #7e57c2;
+            --sin3-icon: url(https://iili.io/CIxKrqN.png);
+        }
+        &[อาชีพ="นักธนู"] {
+            --sin3-primary: #4caf50;
+            --sin3-icon: url(https://iili.io/CIxKUsp.png);
+        }
+        &[อาชีพ="นักฆ่า"] {
+            --sin3-primary: #808080;
+            --sin3-icon: url(https://iili.io/CIxKSXR.png);
+        }
+        &[อาชีพ="นักบวช"] {
+            --sin3-primary: #e91e63;
+            --sin3-icon: url(https://iili.io/CIxK6gt.png);
+        }
 
         &::before {
             content: "";
@@ -231,7 +246,7 @@
                                 width: 0.8rem;
                                 height: 0.8rem;
                                 margin-right: 0.25rem;
-                                background: url(https://iili.io/CxlhDbf.png) center/contain no-repeat;
+                                background: var(--sin3-icon) center/contain no-repeat;
                                 margin-block: 0.15rem -0.15rem;
                                 mix-blend-mode: multiply;
                             }
