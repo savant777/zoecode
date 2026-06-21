@@ -66,22 +66,27 @@
         &[อาชีพ="นักดาบ"] {
             --sin3-primary: #db1414;
             --sin3-icon: url(https://iili.io/CIxK41I.png);
+            --sin3-class: "นักดาบ";
         }
         &[อาชีพ="นักเวทย์"] {
             --sin3-primary: #7e57c2;
             --sin3-icon: url(https://iili.io/CIxKrqN.png);
+            --sin3-class: "นักเวทย์";
         }
         &[อาชีพ="นักธนู"] {
             --sin3-primary: #4caf50;
             --sin3-icon: url(https://iili.io/CIxKUsp.png);
+            --sin3-class: "นักธนู";
         }
         &[อาชีพ="นักฆ่า"] {
             --sin3-primary: #808080;
             --sin3-icon: url(https://iili.io/CIxKSXR.png);
+            --sin3-class: "นักฆ่า";
         }
         &[อาชีพ="นักบวช"] {
             --sin3-primary: #e91e63;
             --sin3-icon: url(https://iili.io/CIxgrnp.png);
+            --sin3-class: "นักบวช";
         }
 
         &::before {
@@ -248,6 +253,10 @@
                                 margin-right: 0.25rem;
                                 background: var(--sin3-icon) center/contain no-repeat;
                                 margin-block: 0.15rem -0.15rem;
+                            }
+
+                            c:first-of-type::after {
+                                content: var(--sin3-class);
                             }
                         }
                     }
