@@ -450,7 +450,8 @@
                     background: var(--sin3-bar) 0.75rem center/calc(calc(var(--sin3-value)/var(--sin3-max) * 100%) - 0.75rem) 100% no-repeat, url(https://iili.io/CI5RckF.png) center/100% 100% no-repeat;
 
                     &::before {
-                        content: var(--sin3-value) " / " var(--sin3-max);
+                        counter-reset: val var(--sin3-value) max var(--sin3-max);
+                        content: counter(val) " / " counter(max);
                         position: absolute;
                         right: 4px;
                         bottom: 0;
@@ -464,7 +465,10 @@
                 &::before { background: url(https://iili.io/CTdtBl2.png) center/contain no-repeat; }
                 --sin3-bar: url(https://iili.io/CI5R1Ia.png);
 
-                &[no-max] .bars::before { content: var(--sin3-value); }
+                &[no-max] .bars::before {
+                    counter-reset: val var(--sin3-value);
+                    content: counter(val);
+                }
             }
 
             .sin3-bar[type="AC"] {
