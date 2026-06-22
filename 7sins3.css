@@ -456,7 +456,7 @@
                 --sin3-bar: url(https://iili.io/CI5R1Ia.png);
             }
 
-            .sin3-bar[type="HP"] {
+            .sin3-bar[type="AC"] {
                 &::before { background: url(https://iili.io/CI5Rlmg.png) center/contain no-repeat; }
                 --sin3-bar: url(https://iili.io/CTFwYx9.png);
             }
