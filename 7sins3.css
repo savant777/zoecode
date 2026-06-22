@@ -3,6 +3,8 @@
 
 :root {
     --sin3-txt: #6c4119;
+    --sin3-bg: #e7d1b9;
+    --sin3-bg2: #c7a577;
 
     --sin3-pic: #808080;
     --sin3-pos: center;
@@ -132,7 +134,7 @@
                 position: absolute;
                 z-index: 1;
                 inset: 0;
-                background: linear-gradient(90deg, #c7a577, #e7d1b9 10% 90%, #c7a577) content-box;
+                background: linear-gradient(90deg, var(--sin3-bg2), var(--sin3-bg) 10% 90%, var(--sin3-bg2)) content-box;
                 padding-block: clamp(210px, 16vw, 230px) clamp(265px, 22vw, 290px);
                 mask: linear-gradient(transparent 15rem, black 16rem calc(100% - 20rem), transparent calc(100% - 19rem));
                 -webkit-mask: linear-gradient(transparent 15rem, black 16rem calc(100% - 20rem), transparent calc(100% - 19rem));
@@ -269,11 +271,10 @@
                 flex: 1;
                 padding: 2rem 3rem;
                 font-family: 'Bai Jamjuree', sans-serif;
-                mix-blend-mode: multiply;
 
                 hr.mycode_hr {
                     margin-block: 1.5rem;
-                    background: #785023;
+                    background: var(--sin3-txt);
                     opacity: 30%;
                 }
 
@@ -322,6 +323,105 @@
                 mix-blend-mode: overlay;
                 background: var(--sin3-primary);
                 mask: url(https://iili.io/CzeMPjt.png) center/contain no-repeat;
+            }
+        }
+    }
+
+    #sin3-staff[role="NPC"] {
+        --sin3-bg: #18181b;
+        &.sin3-box::before {
+            background: url(https://iili.io/CID8jB2.png) top/100% no-repeat, url(https://iili.io/CTHX30P.png) center/100% 100% content-box, url(https://iili.io/CID8XLl.png) bottom/100% no-repeat;
+        }
+
+        &.sin3-box h1 {
+            background: linear-gradient(#ccc 0 15%, #fff, #999 50%, #ccc);
+            filter: drop-shadow(0px 0px #fff) drop-shadow(0px 0px #fff) drop-shadow(0px 0px #fff);
+            -webkit-filter: drop-shadow(0px 0px #fff) drop-shadow(0px 0px #fff) drop-shadow(0px 0px #fff);
+        }
+
+        &.sin3-box .sin3-content hr.mycode_hr {
+            background: linear-gradient(90deg, #ccc 0 15%, #fff, #999 50%, #ccc);
+        }
+    }
+
+    #sin3-staff[role="Sins"] {
+        --sin3-bg: #101010;
+        &.sin3-box::before {
+            background: url(https://iili.io/CTHWdSn.png) top/100% no-repeat, url(https://iili.io/CTHWJcX.png) center/100% 100% content-box, url(https://iili.io/CTHWFAG.png) bottom/100% no-repeat;
+        }
+
+        &.sin3-box h1 {
+            background: linear-gradient(#cfc09f 0 15%, #ffecb3, #3a2c0f 50%, #cfc09f);
+            filter: drop-shadow(0px 0px #ffecb3) drop-shadow(0px 0px #ffecb3) drop-shadow(0px 0px #ffecb3);
+            -webkit-filter: drop-shadow(0px 0px #ffecb3) drop-shadow(0px 0px #ffecb3) drop-shadow(0px 0px #ffecb3);
+        }
+
+        &.sin3-box .sin3-content hr.mycode_hr {
+            background: linear-gradient(90deg, #cfc09f 0 15%, #ffecb3, #3a2c0f 50%, #cfc09f);
+        }
+    }
+
+    #sin3-staff.sin3-box {
+        --sin3-txt: #fff;
+        position: relative;
+        width: 650px;
+        max-width: 100%;
+        margin: auto;
+        background: var(--sin3-bg);
+        color: var(--sin3-txt);
+        border-radius: 1rem;
+        padding: 1rem;
+        font-family: 'Bai Jamjuree', sans-serif;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            inset: 1rem;
+            padding-block: clamp(191px, 11vw, 206px);
+            
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            pointer-events: none;
+        }
+
+        .sin3-pic {
+            position: relative;
+            aspect-ratio: 16/9;
+            background: var(--sin3-pic) var(--sin3-pos)/var(--sin3-size) no-repeat;
+            border-radius: 1.5rem 1.5rem 0 0;
+            mask: url(https://iili.io/CT982MG.png) center/cover no-repeat;
+            -webkit-mask: url(https://iili.io/CT982MG.png) center/cover no-repeat;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 2;
+            transform: translateY(-50%);
+            margin: 0 auto;
+            width: fit-content;
+            font-family: 'Melostar', sans-serif;
+            font-size: 4rem;
+            font-weight: normal;
+            line-height: 1;            
+            padding: 5px 6px 13px;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            &+br { display: none; }
+        }
+
+        .sin3-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 4rem 5rem;
+
+            hr.mycode_hr {
+                width: 80%;
+                margin-block: min(2.5vw, 2.5rem);
             }
         }
     }
