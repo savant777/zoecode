@@ -690,11 +690,12 @@
             right: 14px;
             width: 82px;
             height: 36px;
-            background: url(https://iili.io/CuRdqRp.png) center/contain no-repeat;
+            background: url(https://iili.io/CulT2xS.png) center/contain no-repeat;
             user-select: none;
             -moz-user-select: none;
             -webkit-user-select: none;
             pointer-events: none;
+            filter: brightness(2.5) drop-shadow(0 0 1px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 4px rgba(0, 0, 0, 1)) contrast(1.5) sepia(0.75);
         }
     }
 }
