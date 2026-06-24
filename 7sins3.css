@@ -648,23 +648,23 @@
                         }
                     }
                 }
+            }
 
-                .sin3-bg {
-                    position: relative;
-                    width: 250px;
-                    height: 100px;
-                    mask: url(https://iili.io/CuAVr9s.png) right center/auto no-repeat;
-                    -webkit-mask: url(https://iili.io/CuAVr9s.png) right center/auto no-repeat;
-                    margin-left: -2rem;
+            .sin3-bg {
+                position: relative;
+                width: 250px;
+                height: 100px;
+                mask: url(https://iili.io/CuAVr9s.png) right center/auto no-repeat;
+                -webkit-mask: url(https://iili.io/CuAVr9s.png) right center/auto no-repeat;
+                margin-left: -2rem;
 
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        inset: 0;
-                        background: var(--sin3-bg) var(--sin3-pos)/var(--sin3-size) no-repeat;
-                        mask: linear-gradient(to right, transparent, black 50%);
-                        -webkit-mask: linear-gradient(to right, transparent, black 50%);
-                    }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: var(--sin3-bg) var(--sin3-pos)/var(--sin3-size) no-repeat;
+                    mask: linear-gradient(to right, transparent, black 50%);
+                    -webkit-mask: linear-gradient(to right, transparent, black 50%);
                 }
             }
         }
