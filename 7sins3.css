@@ -601,13 +601,21 @@
                     }
 
                     c {
-                        &[sin~="w"] { --sin3-c-1: #e81416; --sin3-count: 1; }
-                        &[sin~="o"] { --sin3-c-2: #ffa500; --sin3-count: 2; }
-                        &[sin~="e"] { --sin3-c-3: #faeb36; --sin3-count: 3; }
-                        &[sin~="v"] { --sin3-c-4: #79c314; --sin3-count: 4; }
-                        &[sin~="s"] { --sin3-c-5: #487de7; --sin3-count: 5; }
-                        &[sin~="l"] { --sin3-c-6: #4b369d; --sin3-count: 6; }
-                        &[sin~="p"] { --sin3-c-7: #70369d; --sin3-count: 7; }
+                        &[sin~="w"] { --sin3-c-1: #e81416; }
+                        &[sin~="o"] { --sin3-c-2: #ffa500; }
+                        &[sin~="e"] { --sin3-c-3: #faeb36; }
+                        &[sin~="v"] { --sin3-c-4: #79c314; }
+                        &[sin~="s"] { --sin3-c-5: #487de7; }
+                        &[sin~="l"] { --sin3-c-6: #4b369d; }
+                        &[sin~="p"] { --sin3-c-7: #70369d; }
+
+                        &[len="1"] { --sin3-count: 1; }
+                        &[len="2"] { --sin3-count: 2; }
+                        &[len="3"] { --sin3-count: 3; }
+                        &[len="4"] { --sin3-count: 4; }
+                        &[len="5"] { --sin3-count: 5; }
+                        &[len="6"] { --sin3-count: 6; }
+                        &[len="7"] { --sin3-count: 7; }
 
                         display: block;
                         flex-shrink: 0;
@@ -618,7 +626,7 @@
 
                         --sin3-count: 1;
                         --sin3-c-1: #eee;
-                        
+
                         --sin3-step: calc(100% / var(--sin3-count));
                         --sin3-pos1: calc(var(--sin3-step) * 0.5);
                         --sin3-pos2: calc(var(--sin3-step) * 1.5);
@@ -633,14 +641,14 @@
                             position: absolute;
                             inset: 0;
                             background: linear-gradient(to right,
-                                var(--sin3-c-1) var(--sin3-pos1),
-                                var(--sin3-c-2, var(--sin3-c-1)) var(--sin3-pos2),
-                                var(--sin3-c-3, var(--sin3-c-2)) var(--sin3-pos3),
-                                var(--sin3-c-4, var(--sin3-c-3)) var(--sin3-pos4),
-                                var(--sin3-c-5, var(--sin3-c-4)) var(--sin3-pos5),
-                                var(--sin3-c-6, var(--sin3-c-5)) var(--sin3-pos6),
-                                var(--sin3-c-7, var(--sin3-c-6)) var(--sin3-pos7)
-                            );
+                            var(--sin3-c-1) var(--sin3-pos1),
+                            var(--sin3-c-2, var(--sin3-c-1)) var(--sin3-pos2),
+                            var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))) var(--sin3-pos3),
+                            var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1)))) var(--sin3-pos4),
+                            var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))) var(--sin3-pos5),
+                            var(--sin3-c-6, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1)))))) var(--sin3-pos6),
+                            var(--sin3-c-7, var(--sin3-c-6, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))))) var(--sin3-pos7)
+                        );
 
                             mask: url(https://iili.io/Cu5RTvV.png) center/contain no-repeat;
                             -webkit-mask: url(https://iili.io/Cu5RTvV.png) center/contain no-repeat;
