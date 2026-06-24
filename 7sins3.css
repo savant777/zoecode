@@ -19,7 +19,7 @@
     height: 12px;
     position: absolute;
     z-index: 1;
-    bottom: -4px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -59,6 +59,27 @@
         bottom: 2.5rem;
         right: 1rem;
     }
+}
+
+#SevenSin3:has(#sin3-banner) {
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+
+    a[href="https://discord.com/users/625292873914515456/"] {
+        height: 8px;
+        bottom: 4px;
+        right: 4px;
+        left: unset;
+        transform: unset;
+    }
+
+    &::after {
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        font-size: 8px;
+    }  
 }
 
 #SevenSin3 {
@@ -475,6 +496,188 @@
                 &::before { background: url(https://iili.io/CTFwYx9.png) center/contain no-repeat; }
                 --sin3-bar: url(https://iili.io/CI5Rlmg.png);
             }
+        }
+    }
+
+    #sin3-banner.sin3-box {
+        [sin~="w"] { --sin3-c-1: #e81416; --sin3-count: 1; }
+        [sin~="o"] { --sin3-c-2: #ffa500; --sin3-count: 2; }
+        [sin~="e"] { --sin3-c-3: #faeb36; --sin3-count: 3; }
+        [sin~="v"] { --sin3-c-4: #79c314; --sin3-count: 4; }
+        [sin~="s"] { --sin3-c-5: #487de7; --sin3-count: 5; }
+        [sin~="l"] { --sin3-c-6: #4b369d; --sin3-count: 6; }
+        [sin~="p"] { --sin3-c-7: #70369d; --sin3-count: 7; }
+
+        position: relative;
+        width: 500px;
+        height: 100px;
+        max-width: 100%;
+        margin: auto;
+        background: url(https://iili.io/CuAVr9s.png) center/contain no-repeat;
+        color: var(--sin3-txt);
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            mix-blend-mode: multiply;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            pointer-events: none;
+        }
+
+        &::before {
+            background: url(https://iili.io/CuA8kaR.png) center/contain no-repeat;
+            opacity: 20.1%;
+        }
+
+        &::after { background: url(https://iili.io/CuAVUSn.png) center/contain no-repeat; }
+
+        .sin3-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 14px;
+
+            .sin3-pic {
+                flex-shrink: 0;
+                position: relative;
+                z-index: 2;
+                width: 100px;
+                height: 100px;
+                margin-right: 8px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                    width: 69%;
+                    aspect-ratio: 1;
+                    background: var(--sin3-pic) var(--sin3-pos)/var(--sin3-size) no-repeat, url(https://iili.io/CuRcrV1.png) center/contain no-repeat;
+                    background-blend-mode: multiply;
+                    mask: url(https://iili.io/CuRcrV1.png) center/contain no-repeat;
+                    -webkit-mask: url(https://iili.io/CuRcrV1.png) center/contain no-repeat;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(var(--sin3-primary) 0 0), url(https://iili.io/CuRrQG1.png) center/contain no-repeat, url(https://iili.io/CuRc4iF.png) center/contain no-repeat;
+                    background-blend-mode: multiply;
+                    mask: url(https://iili.io/CuRc4iF.png) center/contain no-repeat;
+                    -webkit-mask: url(https://iili.io/CuRc4iF.png) center/contain no-repeat;
+                }
+            }
+
+            .sin3-info-set {
+                flex: 1;
+                min-width: max-content;
+                position: relative;
+                z-index: 2;
+
+                h1 {
+                    margin: 0;
+                    font-family: 'Melostar', sans-serif;
+                    font-size: 24px;
+                    font-weight: normal;
+                    line-height: 1;
+
+                    & + br { display: none; }
+                }
+
+                .sin3-info {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-block: 4px 6px;
+                    margin-left: 2px;
+
+                    p {
+                        white-space: nowrap;
+                        margin: 0;
+                        font-family: 'IM Fell English', sans-serif;
+                        font-size: 8px;
+                        font-weight: bold;
+                        line-height: 1;
+                        text-transform: uppercase;
+
+                        &::after { content: " ¤ Brave";}
+                    }
+
+                    c {
+                        display: block;
+                        flex-shrink: 0;
+                        position: relative;
+                        height: 8px;
+                        aspect-ratio: 680/80;
+                        background: url(https://iili.io/Cu5Onb1.png) center/contain no-repeat;
+
+                        --sin3-count: 1;
+                        --sin3-c-1: #eee;
+
+                        --sin3-p1: calc(100% / var(--sin3-count) * 1);
+                        --sin3-p2: calc(100% / var(--sin3-count) * 2);
+                        --sin3-p3: calc(100% / var(--sin3-count) * 3);
+                        --sin3-p4: calc(100% / var(--sin3-count) * 4);
+                        --sin3-p5: calc(100% / var(--sin3-count) * 5);
+                        --sin3-p6: calc(100% / var(--sin3-count) * 6);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            background: linear-gradient(to right,
+                                var(--sin3-c-1) 0 var(--sin3-p1),
+                                var(--sin3-c-2, var(--sin3-c-1)) var(--sin3-p1) var(--sin3-p2),
+                                var(--sin3-c-3, var(--sin3-c-2)) var(--sin3-p2) var(--sin3-p3),
+                                var(--sin3-c-4, var(--sin3-c-3)) var(--sin3-p3) var(--sin3-p4),
+                                var(--sin3-c-5, var(--sin3-c-4)) var(--sin3-p4) var(--sin3-p5),
+                                var(--sin3-c-6, var(--sin3-c-5)) var(--sin3-p5) var(--sin3-p6),
+                                var(--sin3-c-7, var(--sin3-c-6)) var(--sin3-p6) 100%
+                            );
+
+                            mask: url(https://iili.io/Cu5RTvV.png) center/contain no-repeat;
+                            -webkit-mask: url(https://iili.io/Cu5RTvV.png) center/contain no-repeat;
+                            mix-blend-mode: overlay;
+                        }
+                    }
+                }
+
+                .sin3-bg {
+                    position: relative;
+                    width: 250px;
+                    height: 100px;
+                    mask: url(https://iili.io/CuAVr9s.png) right center/auto no-repeat;
+                    -webkit-mask: url(https://iili.io/CuAVr9s.png) right center/auto no-repeat;
+                    margin-left: -2rem;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background: var(--sin3-bg) var(--sin3-pos)/var(--sin3-size) no-repeat;
+                        mask: linear-gradient(to right, transparent, black 50%);
+                        -webkit-mask: linear-gradient(to right, transparent, black 50%);
+                    }
+                }
+            }
+        }
+
+        .sin3-logo {
+            position: absolute;
+            top: 18px;
+            right: 14px;
+            width: 82px;
+            height: 36px;
+            background: url(https://iili.io/CuRdqRp.png) center/contain no-repeat;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            pointer-events: none;
         }
     }
 }
