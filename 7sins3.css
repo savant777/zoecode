@@ -797,6 +797,8 @@
                 display: block;
                 margin-bottom: 0.75rem;
                 color: #eac355;
+
+                & + br { display: none; }
             }
         }
 
