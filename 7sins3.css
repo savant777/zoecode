@@ -588,6 +588,7 @@
                     margin-block: 4px 6px;
                     margin-left: 2px;
                     column-gap: 8px;
+                    width: 180px;
 
                     p {
                         white-space: nowrap;
