@@ -601,15 +601,22 @@
                         &::after { content: " ¤ Brave";}
                     }
 
-                    c {
-                        &[sin~="w"] { --sin3-c-1: #e81416; }
-                        &[sin~="o"] { --sin3-c-2: #ff7b00; }
-                        &[sin~="e"] { --sin3-c-3: #faeb36; }
-                        &[sin~="v"] { --sin3-c-4: #79c314; }
-                        &[sin~="s"] { --sin3-c-5: #487de7; }
-                        &[sin~="l"] { --sin3-c-6: #4b369d; }
-                        &[sin~="p"] { --sin3-c-7: #70369d; }
+                    c[sin~="w"] { --sin3-c-1: #e81416; }
+                    c:not([sin~="w"])[sin~="o"] { --sin3-c-1: #ff7b00; }
+                    c:not([sin~="w"]):not([sin~="o"])[sin~="e"] { --sin3-c-1: #faeb36; }
+                    c:not([sin~="w"]):not([sin~="o"]):not([sin~="e"])[sin~="v"] { --sin3-c-1: #79c314; }
+                    c:not([sin~="w"]):not([sin~="o"]):not([sin~="e"]):not([sin~="v"])[sin~="s"] { --sin3-c-1: #487de7; }
+                    c:not([sin~="w"]):not([sin~="o"]):not([sin~="e"]):not([sin~="v"]):not([sin~="s"])[sin~="l"] { --sin3-c-1: #4b369d; }
+                    c:not([sin~="w"]):not([sin~="o"]):not([sin~="e"]):not([sin~="v"]):not([sin~="s"]):not([sin~="l"])[sin~="p"] { --sin3-c-1: #9C27B0; }
 
+                    c[sin~="w"][sin~="o"] { --sin3-c-2: #ff7b00; }
+                    c[sin~="w"][sin~="e"], c[sin~="o"][sin~="e"] { --sin3-c-2: #faeb36; }
+                    c[sin~="w"][sin~="v"], c[sin~="o"][sin~="v"], c[sin~="e"][sin~="v"] { --sin3-c-2: #79c314; }
+                    c[sin~="w"][sin~="s"], c[sin~="o"][sin~="s"], c[sin~="e"][sin~="s"], c[sin~="v"][sin~="s"] { --sin3-c-2: #487de7; }
+                    c[sin~="w"][sin~="l"], c[sin~="o"][sin~="l"], c[sin~="e"][sin~="l"], c[sin~="v"][sin~="l"], c[sin~="s"][sin~="l"] { --sin3-c-2: #4b369d; }
+                    c[sin~="w"][sin~="p"], c[sin~="o"][sin~="p"], c[sin~="e"][sin~="p"], c[sin~="v"][sin~="p"], c[sin~="s"][sin~="p"], c[sin~="l"][sin~="p"] { --sin3-c-2: #9C27B0; }
+
+                    c {
                         &[len="1"] { --sin3-count: 1; }
                         &[len="2"] { --sin3-count: 2; }
                         &[len="3"] { --sin3-count: 3; }
@@ -641,13 +648,13 @@
                             position: absolute;
                             inset: 0;
                             background: linear-gradient(to right,
-                                var(--sin3-c-1, var(--sin3-c-2, var(--sin3-c-3, var(--sin3-c-4, var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, #eee))))))) var(--sin3-pos1),
-                                var(--sin3-c-2, var(--sin3-c-3, var(--sin3-c-4, var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-1, #eee))))))) var(--sin3-pos2),
-                                var(--sin3-c-3, var(--sin3-c-4, var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-2, var(--sin3-c-1, #eee))))))) var(--sin3-pos3),
-                                var(--sin3-c-4, var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1, #eee))))))) var(--sin3-pos4),
-                                var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1, #eee))))))) var(--sin3-pos5),
-                                var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1, #eee))))))) var(--sin3-pos6),
-                                var(--sin3-c-7, var(--sin3-c-6, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1, #eee))))))) var(--sin3-pos7)
+                                var(--sin3-c-1) var(--sin3-pos1),
+                                var(--sin3-c-2, var(--sin3-c-1)) var(--sin3-pos2),
+                                var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))) var(--sin3-pos3),
+                                var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1)))) var(--sin3-pos4),
+                                var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))) var(--sin3-pos5),
+                                var(--sin3-c-6, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1)))))) var(--sin3-pos6),
+                                var(--sin3-c-7, var(--sin3-c-6, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))))) var(--sin3-pos7)
                             );
 
                             mask: url(https://iili.io/Cu5RTvV.png) center/contain no-repeat;
