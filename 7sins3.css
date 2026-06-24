@@ -500,14 +500,6 @@
     }
 
     #sin3-banner.sin3-box {
-        [sin~="w"] { --sin3-c-1: #e81416; --sin3-count: 1; }
-        [sin~="o"] { --sin3-c-2: #ffa500; --sin3-count: 2; }
-        [sin~="e"] { --sin3-c-3: #faeb36; --sin3-count: 3; }
-        [sin~="v"] { --sin3-c-4: #79c314; --sin3-count: 4; }
-        [sin~="s"] { --sin3-c-5: #487de7; --sin3-count: 5; }
-        [sin~="l"] { --sin3-c-6: #4b369d; --sin3-count: 6; }
-        [sin~="p"] { --sin3-c-7: #70369d; --sin3-count: 7; }
-
         position: relative;
         width: 500px;
         height: 100px;
@@ -609,6 +601,14 @@
                     }
 
                     c {
+                        &[sin~="w"] { --sin3-c-1: #e81416; --sin3-count: 1; }
+                        &[sin~="o"] { --sin3-c-2: #ffa500; --sin3-count: 2; }
+                        &[sin~="e"] { --sin3-c-3: #faeb36; --sin3-count: 3; }
+                        &[sin~="v"] { --sin3-c-4: #79c314; --sin3-count: 4; }
+                        &[sin~="s"] { --sin3-c-5: #487de7; --sin3-count: 5; }
+                        &[sin~="l"] { --sin3-c-6: #4b369d; --sin3-count: 6; }
+                        &[sin~="p"] { --sin3-c-7: #70369d; --sin3-count: 7; }
+
                         display: block;
                         flex-shrink: 0;
                         position: relative;
