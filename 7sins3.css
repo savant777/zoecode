@@ -641,14 +641,14 @@
                             position: absolute;
                             inset: 0;
                             background: linear-gradient(to right,
-                            var(--sin3-c-1) var(--sin3-pos1),
-                            var(--sin3-c-2, var(--sin3-c-1)) var(--sin3-pos2),
-                            var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))) var(--sin3-pos3),
-                            var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1)))) var(--sin3-pos4),
-                            var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))) var(--sin3-pos5),
-                            var(--sin3-c-6, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1)))))) var(--sin3-pos6),
-                            var(--sin3-c-7, var(--sin3-c-6, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))))) var(--sin3-pos7)
-                        );
+                                var(--sin3-c-1) var(--sin3-pos1),
+                                var(--sin3-c-2, var(--sin3-c-3, var(--sin3-c-4, var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-1))))))) var(--sin3-pos2),
+                                var(--sin3-c-3, var(--sin3-c-4, var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-2, var(--sin3-c-1))))))) var(--sin3-pos3),
+                                var(--sin3-c-4, var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))))) var(--sin3-pos4),
+                                var(--sin3-c-5, var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))))) var(--sin3-pos5),
+                                var(--sin3-c-6, var(--sin3-c-7, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))))) var(--sin3-pos6),
+                                var(--sin3-c-7, var(--sin3-c-6, var(--sin3-c-5, var(--sin3-c-4, var(--sin3-c-3, var(--sin3-c-2, var(--sin3-c-1))))))) var(--sin3-pos7)
+                            );
 
                             mask: url(https://iili.io/Cu5RTvV.png) center/contain no-repeat;
                             -webkit-mask: url(https://iili.io/Cu5RTvV.png) center/contain no-repeat;
