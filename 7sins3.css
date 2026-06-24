@@ -618,26 +618,28 @@
 
                         --sin3-count: 1;
                         --sin3-c-1: #eee;
-
-                        --sin3-p1: calc(100% / var(--sin3-count) * 1);
-                        --sin3-p2: calc(100% / var(--sin3-count) * 2);
-                        --sin3-p3: calc(100% / var(--sin3-count) * 3);
-                        --sin3-p4: calc(100% / var(--sin3-count) * 4);
-                        --sin3-p5: calc(100% / var(--sin3-count) * 5);
-                        --sin3-p6: calc(100% / var(--sin3-count) * 6);
+                        
+                        --sin3-step: calc(100% / var(--sin3-count));
+                        --sin3-pos1: calc(var(--sin3-step) * 0.5);
+                        --sin3-pos2: calc(var(--sin3-step) * 1.5);
+                        --sin3-pos3: calc(var(--sin3-step) * 2.5);
+                        --sin3-pos4: calc(var(--sin3-step) * 3.5);
+                        --sin3-pos5: calc(var(--sin3-step) * 4.5);
+                        --sin3-pos6: calc(var(--sin3-step) * 5.5);
+                        --sin3-pos7: calc(var(--sin3-step) * 6.5);
 
                         &::before {
                             content: "";
                             position: absolute;
                             inset: 0;
                             background: linear-gradient(to right,
-                                var(--sin3-c-1) 0 var(--sin3-p1),
-                                var(--sin3-c-2, var(--sin3-c-1)) var(--sin3-p1) var(--sin3-p2),
-                                var(--sin3-c-3, var(--sin3-c-2)) var(--sin3-p2) var(--sin3-p3),
-                                var(--sin3-c-4, var(--sin3-c-3)) var(--sin3-p3) var(--sin3-p4),
-                                var(--sin3-c-5, var(--sin3-c-4)) var(--sin3-p4) var(--sin3-p5),
-                                var(--sin3-c-6, var(--sin3-c-5)) var(--sin3-p5) var(--sin3-p6),
-                                var(--sin3-c-7, var(--sin3-c-6)) var(--sin3-p6) 100%
+                                var(--sin3-c-1) var(--sin3-pos1),
+                                var(--sin3-c-2, var(--sin3-c-1)) var(--sin3-pos2),
+                                var(--sin3-c-3, var(--sin3-c-2)) var(--sin3-pos3),
+                                var(--sin3-c-4, var(--sin3-c-3)) var(--sin3-pos4),
+                                var(--sin3-c-5, var(--sin3-c-4)) var(--sin3-pos5),
+                                var(--sin3-c-6, var(--sin3-c-5)) var(--sin3-pos6),
+                                var(--sin3-c-7, var(--sin3-c-6)) var(--sin3-pos7)
                             );
 
                             mask: url(https://iili.io/Cu5RTvV.png) center/contain no-repeat;
