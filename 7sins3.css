@@ -600,8 +600,8 @@
                         text-transform: uppercase;
                     }
 
-                    &[role="player"]p::after { content: " ¤ Braver"; }
-                    &[role="npc"]p::after { content: " ¤ Adventurer"; }
+                    &[role="player"] p::after { content: " ¤ Braver"; }
+                    &[role="npc"] p::after { content: " ¤ Adventurer"; }
 
                     c {
                         &[s1="w"] { --sin3-c-1: #e81416; }
