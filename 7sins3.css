@@ -599,7 +599,8 @@
                         line-height: 1;
                         text-transform: uppercase;
 
-                        &::after { content: " ¤ Brave";}
+                        &[role="player"]::after { content: " ¤ Braver"; }
+                        &[role="npc"]::after { content: " ¤ Adventurer"; }
                     }
 
                     c {
