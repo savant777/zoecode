@@ -499,6 +499,8 @@
         margin: auto;
         font-family: 'Bai Jamjuree', sans-serif;
 
+        &[role="others"] .plst-body .plst-header { flex-direction: row-reverse; }
+
         h1.plst-head {
             position: relative;
             width: fit-content;
