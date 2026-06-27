@@ -601,7 +601,7 @@
                     }
 
                     &[role="player"] p::after { content: " ¤ Braver"; }
-                    &[role="npc"] p::after { content: " ¤ Adventurer"; }
+                    &[role="npc"] p::after { content: " ¤ NPC"; }
 
                     c {
                         &[s1="w"] { --sin3-c-1: #e81416; }
