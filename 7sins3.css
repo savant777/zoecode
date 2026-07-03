@@ -571,6 +571,7 @@
                 min-width: max-content;
                 position: relative;
                 z-index: 2;
+                text-align: left !important;
 
                 h1 {
                     margin: 0;
