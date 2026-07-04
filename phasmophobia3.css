@@ -135,7 +135,6 @@
                     aspect-ratio: 16/9;
                     background: var(--pmpb-pic) var(--pmpb-pos)/var(--pmpb-size) no-repeat;
                     box-shadow: min(0.1vw,0.1rem) min(0.1vw,0.1rem) min(0.7vw,0.7rem) #00000080, 0 0 min(0.7vw,0.7rem) #00000040;
-                    filter: brightness(0.74);
                 }
 
                 .pmpb-polaroid {
@@ -156,7 +155,6 @@
                         width: 100%;
                         aspect-ratio: 1;
                         background: var(--pmpb-pic) var(--pmpb-pos)/var(--pmpb-size) no-repeat;
-                        filter: brightness(0.74);
 
                         user-select: none;
                         -moz-user-select: none;
@@ -303,7 +301,6 @@
                         width: 100%;
                         aspect-ratio: 1;
                         background: var(--pmpb-pic) var(--pmpb-pos)/var(--pmpb-size) no-repeat;
-                        filter: brightness(0.74);
 
                         user-select: none;
                         -moz-user-select: none;
@@ -494,7 +491,6 @@
                         width: 100%;
                         aspect-ratio: 1;
                         background: var(--pmpb-pic) var(--pmpb-pos)/var(--pmpb-size) no-repeat;
-                        filter: brightness(0.74);
 
                         user-select: none;
                         -moz-user-select: none;
@@ -829,7 +825,7 @@
                     }
 
                     &[data="pmpb-page1"], &[data="pmpb-page4"] { --pmpb-size: contain; }
-                    &[data="pmpb-page3"] section .pmpb-pic { min-height: 300px;margin-bottom: 0.5rem; }
+                    &[data="pmpb-page3"] section .pmpb-pic { aspect-ratio: 4;margin-bottom: 0.5rem; }
 
                     &[data="pmpb-page0"] {
                         background: url(https://1.bp.blogspot.com/-8uaB3y9rlAA/Uiu2a3cikJI/AAAAAAAALoA/N4OD4lYTJ_8/w1200-h630-p-k-no-nu/Tileable_metal_scratch_texture.jpg) top left / auto repeat, linear-gradient(#80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), linear-gradient(90deg, #80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), #080808;
