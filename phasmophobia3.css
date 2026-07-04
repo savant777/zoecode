@@ -570,6 +570,8 @@
                             pointer-events: none;
                             filter: brightness(0.74);
                         }
+
+                        &::after { content: ".";color: transparent; }
                     }
                 }
 
@@ -605,6 +607,10 @@
 @media (min-width: 1441px) {
     #Phasmo3 #pmpb3-thread.pmpb-box .pmpb-board .pmpb-body { margin-top: 5vw; }
     #Phasmo3 #pmpb3-score.pmpb-box .pmpb-board .pmpb-body .pmpb-title { margin-bottom: 5vw; }
+}
+
+@media (min-width: 1500px) {
+    #Phasmo3 #pmpb3-score.pmpb-box .pmpb-board .pmpb-body .pmpb-paper { margin-top: 7vw; }
 }
 
 @media (min-width: 1720px) {
