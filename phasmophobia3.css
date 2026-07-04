@@ -816,7 +816,7 @@
                         }
 
                         section { margin-top: 1.5rem; }
-                        section + br, section > br { display: none; }
+                        section + br, section > br:first-of-type { display: none; }
 
                         section h3 { margin: 0; }
                         section h3 + br { display: none; }
