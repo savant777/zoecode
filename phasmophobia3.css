@@ -390,7 +390,7 @@
                     background: repeating-linear-gradient(transparent, transparent calc(1lh - 1px), #7aa1b2 calc(1lh - 1px), #7aa1b2 1lh, transparent 1lh), #bdbdbd;
                     line-height: min(1.8vw,1.8rem);
                     color: var(--pmpb-txt);
-                    padding: 2lh min(2vw,2rem);
+                    padding: 1lh min(4vw,4rem) 2lh min(8vw,8rem);
 
                     &::before {
                         content: "";
@@ -441,6 +441,5 @@
 }
 
 @media (min-width: 1025px) {
-    #Phasmo3 #pmpb3-thread.pmpb-box .pmpb-board .pmpb-body .pmpb-paper,
-    #Phasmo3 #pmpb3-score.pmpb-box .pmpb-board .pmpb-body .pmpb-paper { padding-top: 3lh; }
+    #Phasmo3 #pmpb3-thread.pmpb-box .pmpb-board .pmpb-body .pmpb-paper { padding-top: 3lh; }
 }
