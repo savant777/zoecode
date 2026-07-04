@@ -11,9 +11,6 @@
     --pmpb-pos: center;
     --pmpb-size: cover;
 
-    --pmpb-bgpic: #808080;
-    --pmpb-bgpos: center;
-
     interpolate-size: allow-keywords;
 }
 
@@ -82,7 +79,7 @@
             color: #fff;
         }
 
-        .pmbp-board {
+        .pmpb-board {
             position: relative;
             width: 100%;
             border-image: url(https://iili.io/C7XTpbj.png) 30/min(1vw,1rem) stretch;
@@ -138,7 +135,7 @@
                     filter: brightness(0.74);
                 }
 
-                .pmbp-polaroid {
+                .pmpb-polaroid {
                     position: absolute;
                     bottom: 0;
                     left: 1.6%;
@@ -248,9 +245,9 @@
 }
 
 @media (min-width: 1441px) {
-    #Phasmo3 #pmpb3-thread.pmpb-box .pmbp-board .pmpb-body { margin-top: 5vw; }
+    #Phasmo3 #pmpb3-thread.pmpb-box .pmpb-board .pmpb-body { margin-top: 5vw; }
 }
 
 @media (min-width: 1025px) {
-    #Phasmo3 #pmpb3-thread.pmpb-box .pmbp-board .pmpb-body .pmpb-paper { padding-top: 3lh; }
+    #Phasmo3 #pmpb3-thread.pmpb-box .pmpb-board .pmpb-body .pmpb-paper { padding-top: 3lh; }
 }
