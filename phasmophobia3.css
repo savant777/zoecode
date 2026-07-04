@@ -282,10 +282,10 @@
 
             .pmpb-body {
                 position: relative;
-                padding-top: 55px;
 
                 .pmpb-polaroid {
                     position: absolute;
+                    z-index: 2;
                     top: 0;
                     left: 1.6%;
                     transform: rotate(-8.17deg);
@@ -326,7 +326,67 @@
                     }
                 }
 
+                .pmpb-title {
+                    position: relative;
+                    margin-left: auto;
+                    margin-bottom: min(3vw,3rem);
+                    width: 67.24%;
+                    background: url(https://iili.io/CaETSuj.png) bottom/100% no-repeat, linear-gradient(#898989 calc(100% - min(2vw,2rem)), transparent calc(100% - min(2vw,2rem)));
+                    padding: min(2vw,2rem) min(3vw,3rem) min(4vw,4rem);
+                    font-size: min(1.8vw,1.8rem);
+                    line-height: 1.3;
+                    color: var(--pmpb-title);
+                    text-align: center;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background: var(--pmpb-primary);
+                        mix-blend-mode: overlay;
+                        mask: url(https://iili.io/CaEIrrX.png) bottom/100% no-repeat, linear-gradient(black calc(100% - min(3vw,3rem)), transparent calc(100% - min(3vw,3rem)));
+                        -webkit-mask: url(https://iili.io/CaEIrrX.png) bottom/100% no-repeat, linear-gradient(black calc(100% - min(3vw,3rem)), transparent calc(100% - min(3vw,3rem)));
+                        user-select: none;
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        pointer-events: none;
+                        filter: brightness(0.74);
+                    }
+
+                    .pmpb-tape {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%, 10%);
+                        max-width: max-content;
+                        font-size: min(1.5vw,1.5rem);
+                        line-height: 1;
+                        background: url(https://iili.io/C7j3qMu.png) right/100% 100%;
+                        padding: min(1vw,1rem) min(3vw,3rem) min(1vw,1rem) min(2vw,2rem);
+                        filter: drop-shadow(min(0.1vw,0.1rem) min(0.1vw,0.1rem) min(0.1vw,0.1rem) #00000080);
+                        color: #fff;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            background: red;
+                            mix-blend-mode: overlay;
+                            mask: url(https://iili.io/C7j3qMu.png) right/100% 100%;
+                            -webkit-mask: url(https://iili.io/C7j3qMu.png) right/100% 100%;
+                            user-select: none;
+                            -moz-user-select: none;
+                            -webkit-user-select: none;
+                            pointer-events: none;
+                            filter: brightness(0.74);
+                        }
+
+                        &::after { content: "เสร็จสิ้นภารกิจ"; }
+                    }
+                }
+
                 .pmpb-paper {
+                    position: relative;
                     background: repeating-linear-gradient(transparent, transparent calc(1lh - 1px), #7aa1b2 calc(1lh - 1px), #7aa1b2 1lh, transparent 1lh), #bdbdbd;
                     line-height: min(1.8vw,1.8rem);
                     color: var(--pmpb-txt);
@@ -338,6 +398,7 @@
                         position: absolute;
                         top: 0;
                         right: 12%;
+                        transform: translateY(-70%);
                         width: 8.4%;
                         aspect-ratio: 68/64;
                         background: url(https://iili.io/CacoCl4.png) center/contain no-repeat;
