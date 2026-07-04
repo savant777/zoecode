@@ -800,6 +800,7 @@
                     &:not([data="pmpb-page0"]){
                         &::before {
                             content: "phasmophobia";
+                            display: block;
                             font-family: 'October Crow', sans-serif;
                             line-height: 1;
                             text-align: center;
@@ -828,7 +829,7 @@
                     }
 
                     &[data="pmpb-page1"], &[data="pmpb-page4"] { --pmpb-size: contain; }
-                    &[data="pmpb-page3"] section .pmpb-pic { min-height: 300px; }
+                    &[data="pmpb-page3"] section .pmpb-pic { min-height: 300px;margin-bottom: 0.5rem; }
 
                     &[data="pmpb-page0"] {
                         background: url(https://1.bp.blogspot.com/-8uaB3y9rlAA/Uiu2a3cikJI/AAAAAAAALoA/N4OD4lYTJ_8/w1200-h630-p-k-no-nu/Tileable_metal_scratch_texture.jpg) top left / auto repeat, linear-gradient(#80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), linear-gradient(90deg, #80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), #080808;
