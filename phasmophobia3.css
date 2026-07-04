@@ -18,12 +18,13 @@
 #Phasmo3 * { box-sizing: border-box; }
 
 #Phasmo3 a[href="https://discord.com/users/625292873914515456/"] {
+    width: 100px;
     height: 13px;
     position: absolute;
     z-index: 1;
-    bottom: -4px;
-    left: 0;
-    right: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #Phasmo3 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
@@ -48,8 +49,10 @@
 }
   
 #Phasmo3:hover::after {
-    content: "the plastic";
+    content: "made by zzzcode";
     font-family: 'Courier New', Courier, monospace;
+    text-transform: lowercase;
+    font-size: 11px;
 }
 
 #Phasmo3 {
