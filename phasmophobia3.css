@@ -646,7 +646,7 @@
                 height: 2rem;
                 background: var(--pmpb-bg);
                 font-family: 'Google Sans', sans-serif;
-                color: #00000040;
+                color: hsl(from var(--pmpb-txt) h s l/30%);
                 padding-inline: 3rem;
                 clip-path: polygon(1.2rem 0, calc(100% - 1.2rem) 0, 100% 100%, 0 100%);
                 align-content: end;
