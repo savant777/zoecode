@@ -4,7 +4,7 @@
 :root {
     --pmpb-txt: #4c4d58;
     --pmpb-title: #000;
-    --pmpb-bg: #101010;
+    --pmpb-bg: #e8e8e8;
     --pmpb-primary: #808080;
 
     --pmpb-pic: #808080;
@@ -241,7 +241,7 @@
                     line-height: min(1.8vw,1.8rem);
                     color: var(--pmpb-txt);
                     padding: 2lh min(2vw,2rem);
-                    box-shadow: min(0.1vw,0.1rem) min(0.1vw,0.1rem) min(0.7vw,0.7rem) #00000080, 0 0 min(0.7vw,0.7rem) #00000040;
+                    box-shadow: 0 min(0.1vw,0.1rem) min(0.5vw,0.5rem) #00000080;
                 }
             }
         }
@@ -392,7 +392,7 @@
                     line-height: min(1.8vw,1.8rem);
                     color: var(--pmpb-txt);
                     padding: 1lh min(4vw,4rem) 2lh min(8vw,8rem);
-                    box-shadow: min(0.1vw,0.1rem) min(0.1vw,0.1rem) min(0.7vw,0.7rem) #00000080, 0 0 min(0.7vw,0.7rem) #00000040;
+                    box-shadow: 0 min(0.1vw,0.1rem) min(0.5vw,0.5rem) #00000080;
 
                     &::before {
                         content: "";
@@ -600,6 +600,130 @@
                         pointer-events: none;
                     }
                 }
+            }
+        }
+    }
+
+    #pmpb3-role.pmpb-box {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        background: url(https://1.bp.blogspot.com/-8uaB3y9rlAA/Uiu2a3cikJI/AAAAAAAALoA/N4OD4lYTJ_8/w1200-h630-p-k-no-nu/Tileable_metal_scratch_texture.jpg) top left / auto repeat, linear-gradient(#80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), linear-gradient(90deg, #80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), #080808;
+        background-blend-mode: color-dodge;
+        padding: min(4vw,4rem) min(4vw,4rem) min(6vw,6rem);
+        font-family: 'Bai Jamjuree', sans-serif;font-family: 'Google Sans', sans-serif;
+        font-size: 1rem;
+        color: var(--pmpb-txt);
+        --pmpb-txt: #000;
+
+        &::after {
+            content: "phasmophobia";
+            display: block;
+            position: absolute;
+            bottom: calc(min(4.25vw,4.25rem) / 2);
+            left: 50%;
+            transform: translateX(-50%);
+            width: fit-content;
+            font-family: 'October Crow', sans-serif;
+            font-size: min(2vw,2rem);
+            line-height: 1;
+            text-align: center;
+            color: #fff;
+        }
+
+        .pmpb-container {
+            position: relative;
+            width: 650px;
+            max-width: 100%;
+            margin: auto;
+            padding-top: calc(2rem - 1px);
+            
+            &::before {
+                content: "phasmophobia (ss3)";
+                position: absolute;
+                top: 0;
+                width: max-content;
+                height: 2rem;
+                background: var(--pmpb-bg);
+                font-family: 'Google Sans', sans-serif;
+                color: #00000040;
+                padding-inline: 3rem;
+                clip-path: polygon(1.2rem 0, calc(100% - 1.2rem) 0, 100% 100%, 0 100%);
+                align-content: end;
+            }
+
+            .pmpb-paper {
+                background: var(--pmpb-bg);
+
+                .pmpb-polaroid {
+                    position: relative;
+                    top: min(-0.5vw,-0.5rem);
+                    right: min(3.5vw,2.5rem);
+                    transform: rotate(-11.53deg);
+                    float: right;
+                    width: 37%;
+                    aspect-ratio: 295/324;
+                    background: #fff;
+                    padding: 2.5%;
+                    box-shadow: 0 min(0.2vw,0.2rem) min(0.5vw,0.5rem) #00000080;
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        aspect-ratio: 1;
+                        background: var(--pmpb-pic) var(--pmpb-pos)/var(--pmpb-size) no-repeat;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        top: unset;
+                        aspect-ratio: 295/348;
+                        background: url(https://iili.io/CaMRcaS.png) center/contain no-repeat;
+                    }
+                }
+
+                .pmpb-head {
+                    width: 50%;
+                    margin-left: min(4vw,4rem);
+                    padding: min(6vw,6rem) 0 min(1vw,1rem);
+
+                    .pmpb-name {
+                        display: flex;
+                        align-items: end;
+                        column-gap: min(0.1vw,0.1rem);
+                        margin-bottom: 1rem;
+                        font-size: min(3vw,2rem);
+                        line-height: 1;
+                        text-transform: uppercase;
+
+                        b {
+                            font-family: 'October Crow', sans-serif;
+                            font-size: min(9vw,6rem);
+                            font-weight: normal;
+                        }
+
+                        n { margin-bottom: min(0.5vw,0.5rem); }
+                    }
+
+                    s {
+                        display: inline-block;
+                        height: 1.5rem;
+                        aspect-ratio: 202/34;
+                        background: var(--pmpb-txt);
+                        mask: url(https://iili.io/CaMiE4n.png) center/contain no-repeat;
+                        vertical-align: text-top;
+                    }
+
+                    hr:not(.mycode_hr) {
+                        width: 85%;
+                        background: var(--pmpb-txt);
+                        margin: 1rem 0 0;
+                    }
+                }
+
+                .pmpb-body { padding: min(2vw,2rem) min(4vw,4rem) min(4vw,4rem); }
             }
         }
     }
