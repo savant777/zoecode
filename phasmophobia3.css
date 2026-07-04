@@ -610,7 +610,7 @@
 }
 
 @media (min-width: 1500px) {
-    #Phasmo3 #pmpb3-score.pmpb-box .pmpb-board .pmpb-body .pmpb-paper { margin-top: 7vw; }
+    #Phasmo3 #pmpb3-event.pmpb-box .pmpb-board .pmpb-body .pmpb-paper { margin-top: 7vw; }
 }
 
 @media (min-width: 1720px) {
