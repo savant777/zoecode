@@ -669,6 +669,7 @@
 
                     &::before {
                         content: "";
+                        display: block;
                         width: 100%;
                         aspect-ratio: 1;
                         background: var(--pmpb-pic) var(--pmpb-pos)/var(--pmpb-size) no-repeat;
