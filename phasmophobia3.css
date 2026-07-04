@@ -548,7 +548,8 @@
                         bottom: 0;
                         left: 50%;
                         transform: translate(-50%, 10%);
-                        max-width: max-content;
+                        width: 40%;
+                        aspect-ratio: 329/65;
                         font-size: min(1.5vw,1.5rem);
                         line-height: 1;
                         background: url(https://iili.io/C7j3qMu.png) right/100% 100%;
@@ -570,8 +571,6 @@
                             pointer-events: none;
                             filter: brightness(0.74);
                         }
-
-                        &::after { content: ".";color: transparent; }
                     }
                 }
 
