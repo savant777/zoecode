@@ -288,7 +288,7 @@
                     position: absolute;
                     top: 0;
                     left: 1.6%;
-                    transform: rotate(-8.17deg) translateY(50%);
+                    transform: rotate(-8.17deg);
 
                     width: 28%;
                     aspect-ratio: 226/249;
@@ -338,7 +338,6 @@
                         position: absolute;
                         top: 0;
                         right: 12%;
-                        transform: translateY(-70%);
                         width: 8.4%;
                         aspect-ratio: 68/64;
                         background: url(https://iili.io/CacoCl4.png) center/contain no-repeat;
