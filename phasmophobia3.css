@@ -575,7 +575,7 @@
 
                 .pmpb-paper {
                     position: relative;
-                    background: url(https://iili.io/CaG0eGs.png) bottom / 100% no-repeat, url(https://iili.io/CaG0k6G.png) bottom / 100% no-repeat, linear-gradient(#bdbdbd, transparent);
+                    background: linear-gradient(transparent 50%,rgba(0,0,0,0.05) calc(50% + 1px),transparent 55%), linear-gradient(90deg,transparent 50%,rgba(0,0,0,0.05) calc(50% + 1px),transparent 55%), url(https://iili.io/CaG0eGs.png) bottom / 100% no-repeat, url(https://iili.io/CaG0k6G.png) bottom / 100% no-repeat, linear-gradient(#bdbdbd calc(100% - min(1vw,1rem)), transparent calc(100% - min(1vw,1rem)));
                     line-height: min(1.8vw, 1.8rem);
                     color: var(--pmpb-txt);
                     padding: min(6vw, 6rem) min(4vw, 4rem);
