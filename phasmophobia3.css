@@ -728,7 +728,147 @@
             }
         }
     }
+
+    #pmpb3-encyclopedia.pmpb-box {
+        --pmpb-txt: #000;
+        width: 1000px;
+        max-width: 100%;
+        margin: auto;
+        font-family: 'Google Sans', sans-serif;
+        color: var(--pmpb-txt);
+
+        input[type="radio"], input[type="radio"] + br { display: none; }
+
+        [for="pmpb-page1"], [data="pmpb-page1"] { --pmpb-bg: #bdb6b6; }
+        [for="pmpb-page2"], [data="pmpb-page2"] { --pmpb-bg: #a3b2b2; }
+        [for="pmpb-page3"], [data="pmpb-page3"] { --pmpb-bg: #acb2a3; }
+        [for="pmpb-page4"], [data="pmpb-page4"] { --pmpb-bg: #ababab; }
+
+        .pmpb-container {
+            display: flex;
+            flex-direction: row-reverse;
+
+            .pmpb-tabs {
+                display: flex;
+                max-height: 1120px;
+                font-family: 'Google Sans', sans-serif;
+                line-height: 1;
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                text-transform: uppercase;
+                text-align: center;
+
+                label {
+                    position: relative;
+                    flex: 1;
+                    display: block;
+                    width: 2rem;
+                    min-height: 230px;
+                    background: var(--pmpb-bg);
+                    clip-path: polygon(100% 1.2rem, 100% calc(100% - 1.2rem), 0 100%, 0 0);
+                    cursor: pointer;
+                    padding-block: 0.2rem 0;
+                    padding-inline: 3rem;
+                    align-content: center;
+
+                    &:not(:first-of-type) { margin-top: -1rem; }
+                }
+
+                label[for="pmpb-page0"] {
+                    z-index: 5;
+                    background: url(https://1.bp.blogspot.com/-8uaB3y9rlAA/Uiu2a3cikJI/AAAAAAAALoA/N4OD4lYTJ_8/w1200-h630-p-k-no-nu/Tileable_metal_scratch_texture.jpg) top left / auto repeat, linear-gradient(#808080c0 0 0), #080808;
+                    background-blend-mode: color-dodge;
+                }
+
+                label[for="pmpb-page1"] { z-index: 4; }
+                label[for="pmpb-page2"] { z-index: 3; }
+                label[for="pmpb-page3"] { z-index: 2; }
+                label[for="pmpb-page4"] { z-index: 1; }
+            }
+
+            .pmpb-contents {
+                flex: 1;
+
+                .pmpb-page {
+                    width: 100%;
+                    min-height: 1120px;
+                    background: var(--pmpb-bg);
+                    padding: 2rem 4rem 4rem;
+                    display: none;
+
+                    &:not([data="pmpb-page0"]){
+                        &::before {
+                            content: "phasmophobia";
+                            font-family: 'October Crow', sans-serif;
+                            line-height: 1;
+                            text-align: center;
+                            margin-bottom: 2rem;
+                        }
+
+                        h2 {
+                            margin: 0;
+                            font-size: min(3vw,2rem);
+                            text-align: center;
+
+                            & + br { display: none; }
+                        }
+
+                        section { margin-top: 1.5rem; }
+                        section + br, section > br { display: none; }
+
+                        section h3 { margin: 0; }
+                        section h3 + br { display: none; }
+
+                        section .pmpb-pic {
+                            width: 100%;
+                            min-height: 150px;
+                            background: var(--pmpb-pic) center/var(--pmpb-size) no-repeat;
+                        }
+                    }
+
+                    &[data="pmpb-page1"], &[data="pmpb-page4"] { --pmpb-size: contain; }
+
+                    &[data="pmpb-page0"] {
+                        background: url(https://1.bp.blogspot.com/-8uaB3y9rlAA/Uiu2a3cikJI/AAAAAAAALoA/N4OD4lYTJ_8/w1200-h630-p-k-no-nu/Tileable_metal_scratch_texture.jpg) top left / auto repeat, linear-gradient(#80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), linear-gradient(90deg, #80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), #080808;
+                        background-blend-mode: color-dodge;
+                        
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+
+                        padding: 0;
+
+                        h1 {
+                            margin: 0;
+                            font-family: 'October Crow', sans-serif;
+                            font-size: min(8vw, 6rem);font-weight: normal;
+
+                            & + br { display: none; }
+                        }
+
+                        p {
+                            margin: 0;
+                            font-size: min(3vw,2rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+input#pmpb-page0:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page0"],
+input#pmpb-page1:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page1"],
+input#pmpb-page2:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page2"],
+input#pmpb-page3:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page3"],
+input#pmpb-page4:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page4"] { z-index: 5; }
+
+input#pmpb-page0:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page0"] { display: flex; }
+input#pmpb-page1:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page1"],
+input#pmpb-page2:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page2"],
+input#pmpb-page3:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page3"],
+input#pmpb-page4:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page4"] { display: block; }
 
 @media (min-width: 1441px) {
     #Phasmo3 #pmpb3-thread.pmpb-box .pmpb-board .pmpb-body { margin-top: 5vw; }
