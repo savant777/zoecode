@@ -425,6 +425,12 @@
                         -webkit-user-select: none;
                         pointer-events: none;
                     }
+
+                    .pmpb-score {
+                        display: grid;
+                        grid-template-columns: 1fr fit-content(min(3vw,3rem));
+                        column-gap: min(1.2vw,1.2rem);
+                    }
                 }
             }
         }
