@@ -828,6 +828,7 @@
                     }
 
                     &[data="pmpb-page1"], &[data="pmpb-page4"] { --pmpb-size: contain; }
+                    &[data="pmpb-page3"] section .pmpb-pic { min-height: 300px; }
 
                     &[data="pmpb-page0"] {
                         background: url(https://1.bp.blogspot.com/-8uaB3y9rlAA/Uiu2a3cikJI/AAAAAAAALoA/N4OD4lYTJ_8/w1200-h630-p-k-no-nu/Tileable_metal_scratch_texture.jpg) top left / auto repeat, linear-gradient(#80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), linear-gradient(90deg, #80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), #080808;
@@ -856,20 +857,20 @@
                 }
             }
         }
+
+        input#pmpb-page0:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page0"],
+        input#pmpb-page1:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page1"],
+        input#pmpb-page2:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page2"],
+        input#pmpb-page3:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page3"],
+        input#pmpb-page4:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page4"] { z-index: 5 !important; }
+
+        input#pmpb-page0:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page0"] { display: flex !important; }
+        input#pmpb-page1:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page1"],
+        input#pmpb-page2:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page2"],
+        input#pmpb-page3:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page3"],
+        input#pmpb-page4:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page4"] { display: block !important; }
     }
 }
-
-input#pmpb-page0:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page0"],
-input#pmpb-page1:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page1"],
-input#pmpb-page2:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page2"],
-input#pmpb-page3:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page3"],
-input#pmpb-page4:checked ~ .pmpb-container .pmpb-tabs label[for="pmpb-page4"] { z-index: 5; }
-
-input#pmpb-page0:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page0"] { display: flex; }
-input#pmpb-page1:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page1"],
-input#pmpb-page2:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page2"],
-input#pmpb-page3:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page3"],
-input#pmpb-page4:checked ~ .pmpb-container .pmpb-contents .pmpb-page[data="pmpb-page4"] { display: block; }
 
 @media (min-width: 1441px) {
     #Phasmo3 #pmpb3-thread.pmpb-box .pmpb-board .pmpb-body { margin-top: 5vw; }
