@@ -611,7 +611,7 @@
         background: url(https://1.bp.blogspot.com/-8uaB3y9rlAA/Uiu2a3cikJI/AAAAAAAALoA/N4OD4lYTJ_8/w1200-h630-p-k-no-nu/Tileable_metal_scratch_texture.jpg) top left / auto repeat, linear-gradient(#80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), linear-gradient(90deg, #80808080, #80808000 min(4vw,4rem) calc(100% - min(4vw,4rem)), #80808080), #080808;
         background-blend-mode: color-dodge;
         padding: min(4vw,4rem) min(4vw,4rem) min(6vw,6rem);
-        font-family: 'Bai Jamjuree', sans-serif;font-family: 'Google Sans', sans-serif;
+        font-family: 'Bai Jamjuree', sans-serif;
         font-size: 1rem;
         color: var(--pmpb-txt);
         --pmpb-txt: #000;
