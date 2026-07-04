@@ -436,6 +436,10 @@
     #Phasmo3 #pmpb3-score.pmpb-box .pmpb-board .pmpb-body .pmpb-title { margin-bottom: 5vw; }
 }
 
+@media (min-width: 1720px) {
+    #Phasmo3 #pmpb3-score.pmpb-box .pmpb-board .pmpb-body .pmpb-title { margin-bottom: 7vw; }
+}
+
 @media (min-width: 1025px) {
     #Phasmo3 #pmpb3-thread.pmpb-box .pmpb-board .pmpb-body .pmpb-paper,
     #Phasmo3 #pmpb3-score.pmpb-box .pmpb-board .pmpb-body .pmpb-paper { padding-top: 3lh; }
