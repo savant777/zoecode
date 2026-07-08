@@ -423,18 +423,20 @@
         h1 {
             position: relative;
             z-index: 2;
-            transform: translateY(-50%);
-            margin: 0 auto;
+            margin: -1lh auto 0;
             width: fit-content;
             font-family: 'Melostar', sans-serif;
             font-size: 4rem;
             font-weight: normal;
-            line-height: 1;
-            padding: 5px 6px 13px;
+            line-height: 1.2;
+            padding: 5px 18px 13px;
             color: transparent;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-align: center;
+            background-size: 100% 1lh;
+            background-repeat: repeat-y;
 
             &+br { display: none; }
         }
