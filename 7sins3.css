@@ -471,8 +471,7 @@
                     background: var(--sin3-bar) 0.75rem center/calc(calc(var(--sin3-value)/var(--sin3-max) * 100%) - 0.75rem) 100% no-repeat, url(https://iili.io/CI5RckF.png) center/100% 100% no-repeat;
 
                     &::before {
-                        counter-reset: val var(--sin3-value) max var(--sin3-max);
-                        content: counter(val) " / " counter(max);
+                        content: attr(data-value) " / " attr(data-max);
                         position: absolute;
                         right: 4px;
                         bottom: 0;
@@ -487,8 +486,7 @@
                 --sin3-bar: url(https://iili.io/CI5R1Ia.png);
 
                 &[no-max] .bars::before {
-                    counter-reset: val var(--sin3-value);
-                    content: counter(val);
+                    content: attr(data-value);
                 }
             }
 
