@@ -67,4 +67,83 @@
     }
 
     .thebloom-box#thebloom-Staff { --thebloom-bg: url(https://iili.io/CijHWx9.png); }
+
+    .thebloom-box#thebloom-Event {
+        --thebloom-bg: url(https://iili.io/CancN2t.png);
+
+        background:
+            linear-gradient(to top,rgba(15,0,6,0.6),rgba(9,0,3,0.7)), 
+            url(https://iili.io/CanNVHv.png) bottom/130%, 
+            url(https://i.pinimg.com/originals/70/31/1e/70311e33f550a83fbee04ccb8e82bc04.gif) bottom/cover, 
+            url(https://iili.io/CanE96l.png) 50% 30%/130%, 
+            var(--thebloom-bg, url(https://iili.io/CJZf1Js.png)) center/cover;
+        
+        .thebloom-header {
+            max-width: 75%;
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+
+        .thebloom-content {
+            border-radius: 20px;
+            box-shadow: 0 0 50px 1px #270615;
+            background: linear-gradient(to top,rgba(37,2,18,0.3),rgba(37,2,18,0));
+
+            h1 + br { display: none; }
+
+            h1 {
+                margin: auto;
+                margin-bottom: 30px;
+                font-size: 20pt;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+
+            .thebloom-img {
+                margin: auto;
+                max-width: 700px;
+                aspect-ratio: 2.35/1;
+                
+                border: 1px solid #111111;
+                border-image: linear-gradient(to top,rgba(79,47,55,1),rgba(49,0,19,1)) 1;
+                background: var(--thebloom-img) var(--thebloom-pos)/var(--thebloom-size);
+            }
+
+            .thebloom-txt {
+                margin: auto;
+                text-align: justify;
+                text-indent: 20px;
+                width: 95%;
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+
+            hr.thebloom-hr {
+                color: unset !important;
+                border: 0 !important;
+                margin-block: 40px;
+                background-color: unset !important;
+                background: linear-gradient(to right, transparent, #fff 15% 85%, transparent);
+                filter: drop-shadow(0 0 5px #c42d5b) drop-shadow(0 0 12px #c42d5b);
+            }
+
+            .thebloom-order {
+                margin: auto;
+                text-align: center;
+                font-size: 16pt;
+                font-weight: bold;
+                text-decoration: underline;
+                margin-bottom: 20px;
+            }
+        }
+
+        &::after {
+            margin-top: 35px;
+            margin-bottom: -5px;
+            max-width: 70%;
+            aspect-ratio: 1118/134;
+            background: url(https://iili.io/CanXMj1.png) center/contain no-repeat;
+        }
+    }
 }
