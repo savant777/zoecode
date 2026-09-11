@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
+:root {
+    --thebloom-bg: url(https://iili.io/CJZf1Js.png);
+    --thebloom-img: gray;
+    --thebloom-pos: center;
+    --thebloom-size: cover;
+}
+
 #TheBloom { position: relative; }
 #TheBloom * { box-sizing: border-box; }
 
