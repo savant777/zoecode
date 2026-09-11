@@ -86,7 +86,7 @@
 
         .thebloom-content {
             border-radius: 20px;
-            box-shadow: 0 0 50px 1px #270615;
+            box-shadow: unset;
             background: linear-gradient(to top,rgba(37,2,18,0.3),rgba(37,2,18,0));
 
             h1 + br { display: none; }
