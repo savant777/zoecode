@@ -71,7 +71,7 @@
             animation: cardUnFlip 0.275s linear forwards;
 }
 
-.goodporaloid:hover {
+.goodporaloidarea:hover .goodporaloid {
     -webkit-animation: cardFlip 0.275s linear .1s forwards;
             animation: cardFlip 0.275s linear .1s forwards;
 }

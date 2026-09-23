@@ -576,7 +576,7 @@
                 }
             }
 
-            .gdgt-postcard:hover {
+            &:hover .gdgt-postcard {
                 -webkit-animation: cardFlip 0.275s linear .1s forwards;
                         animation: cardFlip 0.275s linear .1s forwards;
             }
