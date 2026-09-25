@@ -66,11 +66,11 @@
     z-index: 1;
     inset: -2px;
     border: 10px solid transparent;
-    border-image-source: url(https://i.imgur.com/a14ESxk.png);
-    border-image-slice: 47;
-    border-image-width: 2.8;
-    border-image-outset: 1.3;
-    border-image-repeat: repeat round;
+    border-image-source: url(https://iili.io/nRfsyPa.png);
+    border-image-slice: 40;
+    border-image-width: 3;
+    border-image-outset: 1.6;
+    border-image-repeat: round;
     clip-path: polygon(
         var(--acdm-x1) var(--acdm-tlout),
         var(--acdm-x2) var(--acdm-tlout),
@@ -98,28 +98,28 @@
 }
 
 .academy-box bdtl {
-    --acdm-bd: url(https://i.imgur.com/cqRCnta.png);
+    --acdm-bd: url(https://iili.io/nRfIse4.png);
     --acdm-pos: top left;
     top: -1rem;
     left: -1rem;
 }
 
 .academy-box bdtr {
-    --acdm-bd: url(https://i.imgur.com/xCPv8CL.png);
+    --acdm-bd: url(https://iili.io/nRfIPdG.png);
     --acdm-pos: top right;
     top: -1rem;
     right: -1rem;
 }
 
 .academy-box bdbl {
-    --acdm-bd: url(https://i.imgur.com/lJUxG1v.png);
+    --acdm-bd: url(https://iili.io/nRfIZI2.png);
     --acdm-pos: bottom left;
     bottom: -1rem;
     left: -1rem;
 }
 
 .academy-box bdbr {
-    --acdm-bd: url(https://i.imgur.com/IW8eEge.png);
+    --acdm-bd: url(https://iili.io/nRfILml.png);
     --acdm-pos: bottom right;
     bottom: -1rem;
     right: -1rem;
@@ -158,14 +158,14 @@
 .academy-box acdmline {
     display: block;
     width: 100%;
-    height: 2rem;
-    background: url(https://i.imgur.com/lTwZKVh.png) center/contain no-repeat;
-    margin-block: 1rem;
+    height: clamp(1rem, 1.7vw, 2rem);
+    background: url(https://i.imgur.com/lTwZKVh.png) center / contain no-repeat;
+    margin-block: clamp(0.5rem, 0.8vw, 1rem);
 }
 
 .academy-content {
     display: block;
-    padding: 2rem 5rem;
+    padding: 2rem 5rem 5rem;
     text-align: justify;
     line-height: 1.8;
 }
@@ -208,9 +208,9 @@
 .academy-name {
     font-weight: 500;
     color: var(--acdm-gold);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1.7vw, 2rem);
     text-align: center;
-    filter: drop-shadow(0 0 15px #000);
+    filter: drop-shadow(0 0 2px #000) drop-shadow(0 0 15px #000);
 }
 
 .academy-title-flex acdmline {
@@ -218,7 +218,7 @@
 }
 
 .academy-roleplay {
-    padding: 2rem 5rem 5rem;
+    padding: 2rem 5rem 7rem;
     text-align: justify;
     line-height: 1.8;
 }
