@@ -134,6 +134,7 @@
             .zchat2-text .zchat2-bbs {
                 left: unset;
                 right: 6px;
+                margin-left: auto;
 
                 &::before {
                     left: unset;
@@ -142,9 +143,7 @@
                     margin-left: auto;
                 }
 
-                bb {
-                    margin-left: auto;
-                }
+                bb { margin-left: auto; }
             }
         }
 
