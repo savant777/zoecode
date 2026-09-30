@@ -46,7 +46,12 @@
 #zzzcode:hover::after { content: "zzzcode"; }
 
 details#ZCHATv2 + br { display: none; }
-details#ZCHATv2 > summary.zchat2-header { list-style: none; cursor: pointer; }
+details#ZCHATv2 > summary.zchat2-header {
+    list-style: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    border-bottom: none;
+}
 details#ZCHATv2 > summary.zchat2-header::marker, 
 details#ZCHATv2 > summary.zchat2-header::-webkit-details-marker,
 details#ZCHATv2 > summary.zchat2-header + br { display: none; }
@@ -58,6 +63,10 @@ details#ZCHATv2::details-content {
 }
 
 details#ZCHATv2[open]::details-content { height: auto; }
+details#ZCHATv2[open] > summary.zchat2-header {
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
 
 #ZCHATv2.zchat2-box {
     width: 100%;
