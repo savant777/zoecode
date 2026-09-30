@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+#ZCHATv2:root {
+    --zchat2-bg: #181818;
+    --zchat2-txt: #fff;
+
+    --zchat2-hbg: #202020;
+    --zchat2-htxt: #fff;
+
+    --zchat2-clr: #ff8c00;
+
+    --zchat2-bb: #303030;
+    --zchat2-bbtxt: #fff;
+
+    --zchat2-pic: url(https://i.imgur.com/Ey4gBc8.png);
+    --zchat2-pos: center;
+    --zchat2-size: cover;
+}
+
+#zzzcode { position: relative; }
+#zzzcode * { box-sizing: border-box; }
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#zzzcode a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#zzzcode::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#zzzcode:hover::after { content: "zzzcode"; }
+
+#ZCHATv2.zchat2-box {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background: var(--zchat2-bg);
+    color: var(--zchat2-txt);
+    border-radius: 1rem;
+    font-size: clamp(14px, 1vw, 1rem);
+
+    text-shadow: none !important;
+
+    .zchat2-header {
+        background: var(--zchat2-hbg);
+        color: var(--zchat2-htxt);
+        border-radius: 1rem 1rem 0 0;
+        padding: 1rem 2rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        font-size: clamp(21px, 1.25vw, 1.5rem);
+        font-weight: bold;
+    }
+
+    .zchat2-body {
+        padding: 1rem;
+
+        .zchat2-chat {
+            display: flex;
+            gap: 1rem;
+            margin-block-end: 1rem;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: var(--zchat2-pic) var(--zchat2-pos)/var(--zchat2-size) no-repeat;
+            }
+
+            &:last-of-type { margin-block-end: 0; }
+
+            .zchat2-text {
+                flex: 1;
+                position: relative;
+                margin-bottom: -1.5rem;
+                
+                &::before {
+                    content: attr(name);
+                    display: block;
+                    color: var(--zchat2-clr);
+                    font-weight: bold;
+                }
+
+                .zchat2-bbs {
+                    position: relative;
+                    left: 6px;
+                    width: calc(100% - (62px + 1rem));
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 5px;
+                        left: -5px;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background: var(--zchat2-bb);
+                        clip-path: polygon(0% 0%, 100% 15%, 100% 100%);
+                    }
+
+                    bb {
+                        position: relative;
+                        display: block;
+                        width: fit-content;
+                        border-radius: 1rem;
+                        background: var(--zchat2-bb);
+                        padding: 0.2rem 1rem;
+                        margin-block-end: 0.3rem;
+
+                        & + br { display: none; }
+                        &:last-of-type { margin-block-end: 0; }
+                    }
+                }
+            }
+        }
+
+        .zchat2-chat[r] {
+            flex-direction: row-reverse;
+
+            .zchat2-text::before { text-align: right; }
+            .zchat2-text .zchat2-bbs {
+                left: unset;
+                right: 6px;
+
+                &::before {
+                    left: unset;
+                    right: -5px;
+                    clip-path: polygon(0% 15%, 100% 0%, 0% 100%);
+                    margin-left: auto;
+                }
+
+                bb {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        .zchat2-center {
+            width: fit-content;
+            background: color-mix(in srgb, var(--zchat2-bb) 100%, transparent 25%);
+            padding: 0.5rem 1.5rem;
+            border-radius: 1rem;
+            margin: auto;
+            color: color-mix(in srgb, var(--zchat2-bbtxt) 25%, transparent 100%);
+        }
+    }
+}
