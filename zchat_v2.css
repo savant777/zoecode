@@ -45,7 +45,7 @@
   
 #zzzcode:hover::after { content: "zzzcode"; }
 
-details#ZCHATv2 + br { display: none; }
+details#ZCHATv2 + br, details#ZCHATv2 > br { display: none; }
 details#ZCHATv2 > summary.zchat2-header {
     list-style: none;
     cursor: pointer;
