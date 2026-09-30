@@ -15,6 +15,8 @@
     --zchat2-pic: url(https://i.imgur.com/Ey4gBc8.png);
     --zchat2-pos: center;
     --zchat2-size: cover;
+
+    interpolate-size: allow-keywords;
 }
 
 #zzzcode { position: relative; }
@@ -42,6 +44,20 @@
 }
   
 #zzzcode:hover::after { content: "zzzcode"; }
+
+details#ZCHATv2 + br { display: none; }
+details#ZCHATv2 > summary.zchat2-header { list-style: none; cursor: pointer; }
+details#ZCHATv2 > summary.zchat2-header::marker, 
+details#ZCHATv2 > summary.zchat2-header::-webkit-details-marker,
+details#ZCHATv2 > summary.zchat2-header + br { display: none; }
+
+details#ZCHATv2::details-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out, content-visibility 0.3s allow-discrete;
+}
+
+details#ZCHATv2[open]::details-content { height: auto; }
 
 #ZCHATv2.zchat2-box {
     width: 100%;
