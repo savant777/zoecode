@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Thai:wght@100..900&display=swap');
 
-#ZCHATv2:root {
+:root {
     --zchat2-bg: #181818;
     --zchat2-txt: #fff;
 
@@ -86,7 +86,6 @@
             .zchat2-text {
                 flex: 1;
                 position: relative;
-                margin-bottom: -1.5rem;
                 
                 &::before {
                     content: attr(name);
@@ -104,7 +103,7 @@
                         content: "";
                         position: absolute;
                         top: 5px;
-                        left: -5px;
+                        left: -11px;
                         width: 1.5rem;
                         height: 1.5rem;
                         background: var(--zchat2-bb);
@@ -138,7 +137,7 @@
 
                 &::before {
                     left: unset;
-                    right: -5px;
+                    right: -11px;
                     clip-path: polygon(0% 15%, 100% 0%, 0% 100%);
                     margin-left: auto;
                 }
