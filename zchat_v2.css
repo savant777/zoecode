@@ -125,17 +125,6 @@ details#ZCHATv2[open] > summary.zchat2-header {
                     left: 6px;
                     width: calc(100% - (62px + 1rem));
 
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 5px;
-                        left: -11px;
-                        width: 1.5rem;
-                        height: 1.5rem;
-                        background: var(--zchat2-bb);
-                        clip-path: polygon(0% 0%, 100% 15%, 100% 100%);
-                    }
-
                     bb {
                         position: relative;
                         display: block;
@@ -144,6 +133,19 @@ details#ZCHATv2[open] > summary.zchat2-header {
                         background: var(--zchat2-bb);
                         padding: 0.2rem 1rem;
                         margin-block-end: 0.3rem;
+
+                        &:not([emj])::before {
+                            content: "";
+                            position: absolute;
+                            top: 5px;
+                            left: -11px;
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            background: var(--zchat2-bb);
+                            clip-path: polygon(0% 0%, 100% 15%, 100% 100%);
+                        }
+
+                        &:not([emj]) ~ bb:not([emj])::before { display: none; }
 
                         & + br { display: none; }
                         &:last-of-type { margin-block-end: 0; }
@@ -159,9 +161,9 @@ details#ZCHATv2[open] > summary.zchat2-header {
                     }
 
                     bb[emj] {
-                        padding: 0.2rem 0 0 0;
+                        padding: 0.2rem 0 0;
                         --zchat2-bb: transparent;
-                        
+
                         img { width: 50px; }
                     }
                 }
@@ -172,19 +174,21 @@ details#ZCHATv2[open] > summary.zchat2-header {
             flex-direction: row-reverse;
 
             .zchat2-text::before { text-align: right; }
+
             .zchat2-text .zchat2-bbs {
                 left: unset;
                 right: 6px;
                 margin-left: auto;
 
-                &::before {
-                    left: unset;
-                    right: -11px;
-                    clip-path: polygon(0% 15%, 100% 0%, 0% 100%);
+                bb {
                     margin-left: auto;
-                }
 
-                bb { margin-left: auto; }
+                    &:not([emj])::before {
+                        left: unset;
+                        right: -11px;
+                        clip-path: polygon(0% 15%, 100% 0%, 0% 100%);
+                    }
+                }
             }
         }
 
