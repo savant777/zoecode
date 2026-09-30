@@ -149,11 +149,11 @@
 
         .zchat2-center {
             width: fit-content;
-            background: color-mix(in srgb, var(--zchat2-bb) 100%, transparent 25%);
+            background: color-mix(in srgb, var(--zchat2-bb) 25%, transparent 100%);
             padding: 0.5rem 1.5rem;
             border-radius: 1rem;
             margin: auto;
-            color: color-mix(in srgb, var(--zchat2-bbtxt) 25%, transparent 100%);
+            color: color-mix(in srgb, var(--zchat2-bbtxt) 100%, transparent 25%);
         }
     }
 }
