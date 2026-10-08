@@ -279,6 +279,7 @@
     .zcode-container#z-price {
         padding-left: 0;
         margin-top: 0.5rem;
+        counter-reset: zcode-price;
 
         .zcode-price {
             flex: 1 0 500px;
@@ -288,7 +289,7 @@
             align-items: baseline;
             border: 1px solid var(--z-primary);
             padding: 0.5rem;
-            counter-reset: zcode-price;
+            counter-increment: zcode-price;
 
             &::before {
                 content: counter(zcode-price, decimal-leading-zero);
