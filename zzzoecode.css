@@ -242,6 +242,7 @@
         &[b] {
             --z-pbg: var(--z-bg);
             --z-ptxt: var(--z-txt);
+            border-color: var(--z-txt);
         }
 
         &[g] {
