@@ -233,6 +233,7 @@
         border: 1px solid var(--z-pbg);
         padding: 0 0.5rem;
         transition: all 0.3s ease;
+        cursor: pointer;
 
         &[w] {
             --z-pbg: var(--z-txt);
@@ -304,7 +305,7 @@
                 justify-content: space-between;
                 padding-top: 2px;
 
-                &[p]::after, &[pb]::after {
+                &[p]::before, &[pb]::before {
                     font-family: uicons-bold-straight !important;
                     font-style: normal;
                     font-weight: normal !important;
@@ -316,8 +317,20 @@
                     margin-top: -2px;
                 }
 
-                &[p]::after { content: "\ec4f"; }
-                &[pb]::after { content: "\e974"; }
+                &[p]::before { content: "\ec4f"; }
+                &[pb]::before { content: "\e974"; }
+
+                &[p]:hover {
+                    color: var(--z-bg);
+                    background: var(--z-primary);
+                    border-color: var(--z-primary);
+                }
+
+                &[pb]:hover {
+                    color: var(--z-primary);
+                    background: var(--z-bg);
+                    border-color: var(--z-primary);
+                }
             }
         }
 
