@@ -60,7 +60,7 @@
     padding-inline: 12px;
     margin-top: -15px;
 
-    details + br, details > br { display: none; }
+    details + br, details > br:first-of-type { display: none; }
     details > summary {
         list-style: none;
         cursor: pointer;
