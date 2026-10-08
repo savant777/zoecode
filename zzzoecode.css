@@ -305,7 +305,7 @@
                 justify-content: space-between;
                 padding-top: 2px;
 
-                &[p]::before, &[pb]::before {
+                &[title="personal use"]::before, &[title="public use"]::before {
                     font-family: uicons-bold-straight !important;
                     font-style: normal;
                     font-weight: normal !important;
@@ -317,16 +317,16 @@
                     margin-top: -2px;
                 }
 
-                &[p]::before { content: "\ec4f"; }
-                &[pb]::before { content: "\e974"; }
+                &[title="personal use"]::before { content: "\ec4f"; }
+                &[title="public use"]::before { content: "\e974"; }
 
-                &[p]:hover {
+                &[title="personal use"]:hover {
                     color: var(--z-bg);
                     background: var(--z-primary);
                     border-color: var(--z-primary);
                 }
 
-                &[pb]:hover {
+                &[title="public use"]:hover {
                     color: var(--z-primary);
                     background: var(--z-bg);
                     border-color: var(--z-primary);
