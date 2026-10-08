@@ -109,7 +109,10 @@
             background: var(--z-primary);
             mask: var(--z-pic) var(--z-pos)/var(--z-size) no-repeat;
             -webkit-mask: var(--z-pic) var(--z-pos)/var(--z-size) no-repeat;
+            transition: all 0.3s ease;
         }
+
+        &:hover::before { opacity: 0.3; }
 
         .zcode-status {
             position: absolute;
@@ -198,6 +201,8 @@
     .z-link {
         border-bottom: 1px dotted var(--z-primary);
         color: var(--z-primary);
+
+        &:hover { --z-primary: #ffd5a2; }
     }
 
     .zcode-p {
@@ -288,9 +293,12 @@
             grid-template-columns: 1.5rem 1fr 100px 100px;
             gap: 0.5rem;
             align-items: baseline;
-            border: 1px solid var(--z-primary);
+            border: 1px solid color-mix(in srgb, var(--z-primary) 75%, transparent 100%);
             padding: 0.5rem;
+            transition: all 0.3s ease;
             counter-increment: zcode-price;
+
+            &:hover { border-color: var(--z-primary); }
 
             &::before {
                 content: counter(zcode-price, decimal-leading-zero);
@@ -305,7 +313,7 @@
                 justify-content: space-between;
                 padding-top: 2px;
 
-                &[title="personal use"]::before, &[title="public use"]::before {
+                &[title="personal use"]::before, &[title="public use"]::before, &[o]::before {
                     font-family: uicons-bold-straight !important;
                     font-style: normal;
                     font-weight: normal !important;
@@ -319,8 +327,9 @@
 
                 &[title="personal use"]::before { content: "\ec4f"; }
                 &[title="public use"]::before { content: "\e974"; }
+                &[o]::before { content: "\f37b"; }
 
-                &[title="personal use"]:hover {
+                &[title="personal use"]:hover, &[o]:hover {
                     color: var(--z-bg);
                     background: var(--z-primary);
                     border-color: var(--z-primary);
@@ -334,6 +343,10 @@
             }
         }
 
-        .zcode-price#z-long { width: 100%; }
+        .zcode-price#z-long {
+            width: 100%;
+            flex: none;
+            grid-template-columns: 1.5rem 1fr 208px;
+        }
     }
 }
