@@ -416,11 +416,16 @@
 
                 transition: all 0.3s ease;
 
-                &:hover { background: color-mix(in srgb, var(--z-primary) 75%, transparent 100%); }
-
-                &:active {
+                &:hover { 
                     background: var(--z-primary);
                     color: var(--z-bg);
+                }
+
+                &:active {
+                    background: color-mix(in srgb, var(--z-primary) 100%, var(--z-bg) 25%);
+                    border-color: color-mix(in srgb, var(--z-primary) 100%, var(--z-bg) 25%);
+                    color: var(--z-bg);
+                    transform: translateY(1px);
                 }
             }
 
@@ -429,21 +434,22 @@
                 background: var(--z-primary);
                 color: var(--z-bg);
                 border: 1px solid var(--z-primary);
+                padding: 0 0.5rem;
+
                 transition: all 0.3s ease;
 
-                &:hover { background: color-mix(in srgb, var(--z-primary) 75%, transparent 100%); }
+                &:hover {
+                    background: var(--z-bg);
+                    color: var(--z-primary);
+                }
+
                 &:active {
-                    background: var(--z-primary);
-                    color: var(--z-bg);
+                    background: color-mix(in srgb, var(--z-primary) 20%, var(--z-bg) 80%);
+                    color: var(--z-primary);
+                    transform: translateY(1px);
                 }
 
-                .z-link { --z-primary: var(--z-bg); }
-                .z-link:hover { --z-primary: color-mix(in srgb, var(--z-bg) 75%, transparent 100%); }
-
-                i.fi {
-                    font-size: 0.65rem;
-                    text-shadow: 0 0 var(--z-primary), 0 0 var(--z-primary), 0 0 var(--z-primary);
-                }
+                i.fi { font-size: 0.65rem; }
             }
         }
     }
