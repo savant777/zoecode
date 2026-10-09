@@ -120,7 +120,7 @@
 
     hr {
         background: var(--z-primary);
-        margin-block: 1rem;
+        margin-block: 2rem;
     }
 
     .zcode-pic {
@@ -187,17 +187,23 @@
         }
     }
 
-    .zcode-list { padding-inline-start: 12px; }
+    ul.zcode-list { padding-inline-start: 30px; }
 
     ul.zcode-list > li {
         margin-bottom: 0.25rem;
         
         &::marker { color: var(--z-primary); }
+
+        > ul {
+            padding-inline-start: 1.5rem;
+            margin-block-start: 0.25rem;
+        }
     }
 
     ol.zcode-list {
         list-style: none;
         counter-reset: zcode-counter;
+        padding-inline-start: 12px;
 
         > li {
             counter-increment: zcode-counter;
@@ -379,15 +385,28 @@
     }
 
     .zcode-giveaway {
+        max-width: 800px;
+        margin: auto;
+
+        c {
+            font-family: 'Google Sans Code', monospace;
+            font-size: 0.8rem;
+            font-style: italic;
+            background: color-mix(in srgb, var(--z-primary) 20%, var(--z-bg) 100%);
+            padding: 0.2rem 0.5rem;
+        }
+
         .codeblock {
-            max-width: 800px;
-            margin: auto;
             color: var(--z-txt);
             background: var(--z-bg);
             padding: 0.5rem 12px;
             border-radius: 0 !important;
-            font-size: 12px;
-            border: 1px solid var(--z-primary);
+            border: 1px solid color-mix(in srgb, var(--z-primary) 50%, transparent 100%);
+
+            code {
+                font-family: 'Google Sans Code', monospace;
+                font-size: 0.8rem;
+            }
         }
 
         .zcode-actions {
@@ -417,13 +436,14 @@
                 transition: all 0.3s ease;
 
                 &:hover { 
-                    background: var(--z-primary);
+                    background: var(--z-txt);
+                    border-color: var(--z-txt);
                     color: var(--z-bg);
                 }
 
                 &:active {
-                    background: color-mix(in srgb, var(--z-primary) 100%, var(--z-bg) 25%);
-                    border-color: color-mix(in srgb, var(--z-primary) 100%, var(--z-bg) 25%);
+                    background: color-mix(in srgb, var(--z-txt) 100%, var(--z-bg) 25%);
+                    border-color: color-mix(in srgb, var(--z-txt) 100%, var(--z-bg) 25%);
                     color: var(--z-bg);
                     transform: translateY(1px);
                 }
@@ -440,12 +460,14 @@
 
                 &:hover {
                     background: var(--z-bg);
-                    color: var(--z-primary);
+                    color: var(--z-txt);
+                    border-color: var(--z-txt);
                 }
 
                 &:active {
-                    background: color-mix(in srgb, var(--z-primary) 20%, var(--z-bg) 80%);
-                    color: var(--z-primary);
+                    background: var(--z-bg);
+                    color: color-mix(in srgb, var(--z-txt) 100%, transparent 25%);
+                    border-color: color-mix(in srgb, var(--z-txt) 100%, transparent 25%);
                     transform: translateY(1px);
                 }
 
