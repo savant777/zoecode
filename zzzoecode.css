@@ -118,7 +118,7 @@
         }
     }
 
-    hr {
+    .z-hr {
         background: var(--z-primary);
         margin-block: 2rem;
     }
