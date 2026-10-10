@@ -273,6 +273,11 @@
                 --z-ptxt: var(--z-bg);
             }
 
+            &[o] {
+                --z-pbg: var(--z-primary);
+                --z-ptxt: var(--z-bg);
+            }
+
             &:hover {
                 background: var(--z-ptxt);
                 color: var(--z-pbg);
