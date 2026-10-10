@@ -35,7 +35,6 @@
         color: var(--z-txt);
         font-family: 'Google Sans', sans-serif;
         font-size: 16px;
-        padding-inline: 12px;
         margin-top: -15px;
 
         details.z-details > br:first-of-type { display: none; }
