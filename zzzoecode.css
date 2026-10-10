@@ -401,6 +401,7 @@
 
                 .z-btn {
                     width: 200px;
+                    min-height: 2rem;
                     background: var(--z-bg);
                     color: var(--z-primary);
                     border: 1px solid var(--z-primary);
@@ -430,6 +431,7 @@
 
                 .z-btn2 {
                     width: 200px;
+                    min-height: 2rem;
                     background: var(--z-primary);
                     color: var(--z-bg);
                     border: 1px solid var(--z-primary);
