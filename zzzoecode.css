@@ -460,6 +460,14 @@
                     i.fi { font-size: 0.65rem; }
                 }
             }
+
+            .zcode-actions[disable] {
+                filter: grayscale(1);
+                pointer-events: none;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+            }
         }
     }
 }
