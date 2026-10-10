@@ -436,6 +436,7 @@
                     color: var(--z-bg);
                     border: 1px solid var(--z-primary);
                     padding: 0 0.5rem;
+                    align-content: center;
 
                     transition: all 0.3s ease;
 
