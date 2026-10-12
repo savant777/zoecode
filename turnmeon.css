@@ -65,7 +65,7 @@
             .tmo-info-set {
                 position: relative;
                 margin-bottom: min(2vw, 2rem);
-                padding-inline: calc(3rem + clamp(5px, 0.5vw, 8px) + clamp(150px, 15vw, 200px)) clamp(5px, 0.5vw, 8px);
+                padding-inline: calc(max(1rem, 1.5vw) + clamp(5px, 0.5vw, 8px) + clamp(150px, 15vw, 200px) + 2rem) clamp(5px, 0.5vw, 8px);
                 min-height: calc(clamp(150px, 15vw, 200px) / 2);
                 display: flex;
 
@@ -73,7 +73,7 @@
                     content: "";
                     position: absolute;
                     top: 0;
-                    left: calc(2rem + clamp(5px, 0.5vw, 8px));
+                    left: calc(max(1rem, 1.5vw) + clamp(5px, 0.5vw, 8px));
                     transform: translateY(-50%);
                     
                     width: clamp(150px, 15vw, 200px);
