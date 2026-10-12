@@ -44,6 +44,7 @@
         margin: auto;
         background-image: url(https://iili.io/nV7PHS2.png);
         background-color: var(--tmo-bg);
+        color: var(--tmo-txt);
         padding: 1rem;
         box-shadow: 0 0 8px rgba(0,0,0,0.8) inset;
         border-radius: 6px;
