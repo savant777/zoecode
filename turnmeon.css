@@ -64,7 +64,7 @@
 
             .tmo-info-set {
                 position: relative;
-                margin-bottom: min(1.5vw, 1.5rem);
+                margin-bottom: min(2vw, 2rem);
                 padding-inline: calc(3rem + clamp(5px, 0.5vw, 8px) + clamp(150px, 15vw, 200px)) clamp(5px, 0.5vw, 8px);
                 min-height: calc(clamp(150px, 15vw, 200px) / 2);
                 display: flex;
@@ -114,7 +114,7 @@
                     background: transparent;
                     border: 1px dashed var(--tmo-pptxt);
                     opacity: 0.1;
-                    margin-block: min(1vw, 1rem);
+                    margin-block: min(1.5vw, 1.5rem);
                 }
             }
         }
