@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kalnia:wght@100..700&display=swap');
+
+:root {
+    --tmo-bg: #300F07;
+    --tmo-txt: #fff;
+    --tmo-ppbg: #100000;
+    --tmo-pptxt: #fff;
+
+    --tmo-pic: gray;
+    --tmo-pos: center;
+    --tmo-size: cover;
+}
+
+#TurnMeOn { position: relative; }
+#TurnMeOn * { box-sizing: border-box; }
+
+#TurnMeOn a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#TurnMeOn a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#TurnMeOn::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#TurnMeOn:hover::after { content: "zzzcode"; }
+
+#TurnMeOn {
+    .tmo-box {
+        width: 800px;
+        max-width: 100%;
+        margin: auto;
+        background-image: url(https://iili.io/nV7PHS2.png);
+        background-color: var(--tmo-bg);
+        padding: 1rem;
+        box-shadow: 0 0 8px rgba(0,0,0,0.8) inset;
+        border-radius: 6px;
+
+        .tmo-paper {
+            background-image: url(https://iili.io/nV7QmYv.png);
+            background-color: var(--tmo-ppbg);
+            color: var(--tmo-pptxt);
+            padding: 1rem;
+            box-shadow: 0 0 8px rgba(0,0,0,0.8);
+
+            .tmo-banner {
+                aspect-ratio: 3;
+                border: clamp(5px, 0.5vw, 8px) solid #fff;
+                background: var(--tmo-pic) var(--tmo-pos)/var(--tmo-size) no-repeat;
+                box-shadow: 0 0 3px 2px rgba(0,0,0,0.1);
+            }
+
+            .tmo-info-set {
+                position: relative;
+                margin-bottom: min(1.5vw, 1.5rem);
+                padding-inline: calc(3rem + clamp(5px, 0.5vw, 8px) + clamp(150px, 15vw, 200px)) clamp(5px, 0.5vw, 8px);
+                min-height: calc(clamp(150px, 15vw, 200px) / 2);
+                display: flex;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: calc(2rem + clamp(5px, 0.5vw, 8px));
+                    transform: translateY(-50%);
+                    
+                    width: clamp(150px, 15vw, 200px);
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    border: clamp(5px, 0.5vw, 8px) solid #fff;
+                    background: var(--tmo-pic) var(--tmo-pos)/var(--tmo-size) no-repeat;
+                    filter: drop-shadow(0 0 3px rgba(0,0,0,0.2)) drop-shadow(0 0 3px rgba(0,0,0,0.1));
+                }
+
+                .tmo-info {
+                    flex: 1;
+                    align-content: center;
+                    padding-top: 1rem;
+                    text-align: end;
+                    line-height: normal;
+
+                    p {
+                        margin: 0;
+                        font-style: italic;
+                    }
+
+                    h1 {
+                        margin: 0;
+                        font-size: clamp(1.75rem, 2vw, 2rem);
+
+                        &+br { display: none; }
+                    }
+                }
+            }
+
+            .tmo-content {
+                padding-inline: clamp(5px, 0.5vw, 8px);
+                font-family: 'Bai Jamjuree', sans-serif;
+                text-align: justify;
+
+                hr.tmo-hr {
+                    background: transparent;
+                    border: 1px dashed var(--tmo-pptxt);
+                    opacity: 0.1;
+                    margin-block: min(1vw, 1rem);
+                }
+            }
+        }
+
+        .tmo-footer {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+
+            .tmo-letter {
+                flex-shrink: 0;
+                font-family: 'Kalnia', sans-srif;
+                font-size: 4rem;
+                font-style: italic;
+                line-height: 1;
+                text-transform: uppercase;
+                filter: drop-shadow(-1px -1px 1px rgba(255, 255, 255, 0.1)) drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+
+                &::before {
+                    content: attr(letter);
+                    background-image: url(https://iili.io/nV7PHS2.png);
+                    background-color: var(--tmo-bg);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                    padding-right: clamp(5px, 0.5vw, 8px);
+                }
+            }
+
+            .tmo-song {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                text-align: end;
+                line-height: normal;
+
+                .tmo-artist {
+                    font-size: 0.75rem;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
