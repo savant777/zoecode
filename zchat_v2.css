@@ -45,26 +45,52 @@
   
 #zzzcode:hover::after { content: "zzzcode"; }
 
-details#ZCHATv2 + br, details#ZCHATv2 > br { display: none; }
-details#ZCHATv2 > summary.zchat2-header {
+details#ZCHATv2 + br, details#ZCHATv2 > br:first-of-type { display: none; }
+
+details#ZCHATv2 > summary {
     list-style: none;
     cursor: pointer;
-    border-radius: 1rem !important;
-    border-bottom: 2px solid rgba(0, 0, 0, 0) !important;
-    transition: border-radius 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
-details#ZCHATv2 > summary.zchat2-header::marker, 
-details#ZCHATv2 > summary.zchat2-header::-webkit-details-marker,
-details#ZCHATv2 > summary.zchat2-header + br { display: none; }
+
+details#ZCHATv2 > summary::marker,
+details#ZCHATv2 > summary::-webkit-details-marker,
+details#ZCHATv2 > summary + br {
+    display: none;
+}
+
+details#ZCHATv2 > summary:not(.zchat2-header):not(:has(.zchat2-header))::before {
+    content: "Chat";
+    display: block;
+    padding: 0.75rem 1rem;
+}
+
+details#ZCHATv2[open] > summary:not(.zchat2-header):not(:has(.zchat2-header))::before {
+    content: "ปิดแชต";
+}
+
+details#ZCHATv2 > summary.zchat2-header,
+details#ZCHATv2 > summary > .zchat2-header {
+    border-radius: 1rem !important;
+    border-bottom: 2px solid transparent !important;
+    transition:
+        border-radius 0.3s ease-in-out,
+        border-bottom 0.3s ease-in-out;
+}
 
 details#ZCHATv2::details-content {
     height: 0;
     overflow: hidden;
-    transition: height 0.3s ease-in-out, content-visibility 0.3s allow-discrete;
+    transition:
+        height 0.3s ease-in-out,
+        content-visibility 0.3s allow-discrete;
 }
 
-details#ZCHATv2[open]::details-content { height: auto; }
-details#ZCHATv2[open] > summary.zchat2-header {
+details#ZCHATv2[open]::details-content {
+    height: auto;
+}
+
+details#ZCHATv2[open] > summary.zchat2-header,
+details#ZCHATv2[open] > summary > .zchat2-header {
     border-radius: 1rem 1rem 0 0 !important;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1) !important;
 }
