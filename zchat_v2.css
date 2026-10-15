@@ -59,13 +59,13 @@ details#ZCHATv2 > summary + br {
 }
 
 details#ZCHATv2 > summary:not(.zchat2-header):not(:has(.zchat2-header))::before {
-    content: "Chat";
+    content: "Open Chat";
     display: block;
     padding: 0.75rem 1rem;
 }
 
 details#ZCHATv2[open] > summary:not(.zchat2-header):not(:has(.zchat2-header))::before {
-    content: "ปิดแชต";
+    content: "Close Chat";
 }
 
 details#ZCHATv2 > summary.zchat2-header,
