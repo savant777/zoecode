@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/raverist');
+@import url('https://fonts.cdnfonts.com/css/year-supply-of-fairy-cakes');
+@import url('https://fonts.cdnfonts.com/css/oldschool-tag');
+
+:root {
+    --dntrsh-bg: #ea5831;
+    --dntrsh-fg: #fff;
+    --dntrsh-txt: #000;
+    --dntrsh-clr1: #ffbe23;
+    --dntrsh-clr2: #ffe44d;
+
+    --dntrsh-pic: gray;
+    --dntrsh-pos: center;
+    --dntrsh-size: cover;
+}
+
+#DontRush { position: relative; }
+#DontRush * { box-sizing: border-box; }
+
+#DontRush a[href="https://discord.com/users/625292873914515456/"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#DontRush a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+  
+#DontRush::after {
+    display: block;
+    content: "z";
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray !important;
+    width: 100%;
+    text-align: center;
+}
+  
+#DontRush:hover::after { content: "zzzcode"; }
+
+#DontRush {
+    .dntrsh-box {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: var(--dntrsh-bg);
+        color: var(--dntrsh-txt);
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: min(4vw, 4rem);
+        
+        font-family: 'Prompt', sans-serif;
+        font-size: min(1.2vw, 1rem);
+
+        .dntrsh-center {
+            position: relative;
+
+            h1.dntrsh-title {
+                position: relative;
+                width: fit-content;
+                margin: auto;
+                font-family: 'Raverist', sans-serif;
+                font-size: min(5vw, 5rem);
+                line-height: 1;
+
+                &::after {
+                    content: "'s";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transform: translate(80%, 30%) rotate(15deg);
+
+                    width: min(4vw, 4rem);
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background: var(--dntrsh-clr1);
+
+                    font-family: 'Year supply of fairy cakes', sans-serif;
+                    font-size: min(2.5vw, 2.5rem);
+                    line-height: 1;
+                    text-align: center;
+
+                    padding: min(0.3vw, 0.3rem) min(0.3vw, 0.3rem) 0 0;
+                }
+
+                &+br { display: none; }
+            }
+
+            .dntrsh-subtitle {
+                max-width: clamp(200px, 19vw, 370px);
+                margin: auto;
+                background: var(--dntrsh-txt);
+                color: var(--dntrsh-fg);
+
+                font-family: 'Oldschool Tag', sans-serif;
+                font-size: min(3vw, 3rem);
+                line-height: 1;
+                text-align: center;
+
+                padding: min(0.6vw, 0.6rem) min(1vw, 1rem) min(0.4vw, 0.4rem);
+            }
+
+            p.dntrsh-desc {
+                text-align: center;
+                letter-spacing: min(0.1vw, 0.1rem);
+                font-weight: 600;
+            }
+
+            .dntrsh-flex {
+                display: flex;
+                flex-wrap: wrap;
+                gap: min(1vw, 1rem);
+                justify-content: center;
+                align-items: center;
+                margin-top: min(4vw, 4rem);
+
+                a.dr-tape {
+                    --fold: min(1.2vw,1.2rem);
+                    --border: min(0.2vw,0.2rem);
+                    --half-border: min(0.35vw,0.35rem);
+                    --hover-bg: var(--dntrsh-clr2);
+                    
+                    position: relative;
+                    display: inline-block;
+                    width: fit-content;
+                    padding: min(0.25vw, 0.25rem) min(1.5vw, 1.5rem);
+                    background: var(--dntrsh-fg);
+                    color: var(--dntrsh-txt) !important;
+                    border: var(--border) solid;
+                    font-weight: 500;
+                    clip-path: polygon(0 0, calc(100% - var(--fold)) 0, 100% var(--fold), 100% 100%, 0 100%);
+                    transition: clip-path .3s ease, background-color .3s ease, transform .3s ease;
+
+                    &::before {
+                        content: "";
+                        box-sizing: border-box;
+                        position: absolute;
+                        top: calc(-1 * var(--border));
+                        right: calc(-1 * var(--border));
+
+                        width: var(--fold);
+                        height:var(--fold);
+                        border-left: var(--border) solid;
+                        border-bottom: var(--border) solid;
+                        background: linear-gradient(45deg, #000 0 calc(50% + var(--half-border)), transparent 0);
+                        pointer-events: none;
+                        transition: transform .3s ease, opacity .3s ease;
+                    }
+
+                    &:hover {
+                        background-color: var(--hover-bg);
+                        transform: scale(1.05);
+                        clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
+
+                        &::before {
+                            transform: translate(100%, -100%);
+                            opacity: 0;
+                        }
+                    }
+
+                    &+br { display: none; }
+                }
+            }
+        }
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            z-index: 100;
+            background: url(data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noiseFilter%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.65%22%20numOctaves%3D%223%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23noiseFilter%29%22%2F%3E%3C%2Fsvg%3E) top left/20%;
+            mix-blend-mode: overlay;
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+        }
+    }
+}
