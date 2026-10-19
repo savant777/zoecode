@@ -340,7 +340,7 @@
                 display: block;
                 width: fit-content;
                 padding: min(3vw, 2.5rem) min(3vw, 2.5rem) min(3.8vw, 3.3rem);
-                background: var(--dntrsh-clr1);
+                background: var(--dntrsh-clr2);
                 rotate: 1deg;
                 
                 font-family: 'Year supply of fairy cakes', sans-serif;
@@ -400,7 +400,10 @@
 
                         &::before {
                             content: '#' counter(dntrsh-postit);
-                            text-decoration: underline;
+                            background: var(--dntrsh-b);
+                            color: var(--dntrsh-w);
+                            padding: 0 min(0.5vw, 0.5rem);
+                            margin-right: 0.5lh;
                         }
                     }
                 }
