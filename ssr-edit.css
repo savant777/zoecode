@@ -1,0 +1,80 @@
+.ssr-py-container {
+    margin: min(1vw, 1rem) auto !important;
+    grid-template-columns: min(4vw, 4rem) 1fr min(4vw, 4rem) !important;
+    grid-template-rows: auto min(1vw, 1rem) !important;
+
+    .ssr-py-hd {
+        margin-left: min(4vw, 4rem) !important;
+        gap: min(2.3vw, 2.3rem) !important;
+
+        .ssr-py-pic {
+            border-width: min(0.1vw, 0.1rem) !important;
+            border-radius: min(1.2vw, 1.2rem) !important;
+            margin-top: min(1vw, 1rem) !important;
+        }
+
+        .ssr-py-hdde {
+            margin-top: min(1.65vw, 1.65rem) !important;
+
+            .ssr-py-lastname { font-size: min(1.6vw, 1.6rem) !important; }
+
+            .ssr-py-name {
+                font-size: min(5vw, 5rem) !important;
+                margin-left: min(5vw, 5rem) !important;
+                margin-top: calc(-1 * min(1.6vw, 1.6rem)) !important;
+            }
+
+            .ssr-py-add {
+                gap: min(1.5vw, 1.5rem) !important;
+                font-size: min(1vw, 1rem) !important;
+                margin-top: min(1.8vw, 1.8rem) !important;
+
+                .ssr-py-addc {
+                    padding: min(0.5vw, 0.5rem) min(0.85vw, 0.85rem) !important;
+                    border-width: min(0.1vw, 0.1rem) !important;
+                    border-radius: min(0.4vw, 0.4rem) !important;
+                }
+            }
+        }
+    }
+
+    .ssr-py-content {
+        border-width: min(0.1vw, 0.1rem) !important;
+        border-radius: min(0.85vw, 0.85rem) !important;
+        margin-top: min(10vw, 10rem) !important;
+
+        .ssr-py-text {
+            padding: min(6vw, 6rem) min(2.6vw, 2.6rem) min(4vw, 4rem) !important;
+            font-size: min(1.05vw, 1.05rem) !important;
+        }
+    }
+
+    .ssr-py-note {
+        padding: min(0.4vw, 0.4rem) min(0.85vw, 0.85rem) !important;
+        border-width: min(0.1vw, 0.1rem) !important;
+        border-radius: min(0.6vw, 0.6rem) !important;
+        font-size: min(1vw, 1rem) !important;
+        margin-right: min(2.4vw, 2.4rem) !important;
+    }
+
+    .ssr-py-locket {
+        margin-top: min(1.6vw, 1.6rem) !important;
+        margin-right: calc(-1 * min(1vw, 1rem)) !important;
+    }
+
+    .ssr-py-wand {
+        margin-left: calc(-1 * min(8vw, 8rem)) !important;
+        margin-bottom: min(4.5vw, 4.5rem) !important;
+    }
+
+    .ssr-py-ssr {
+        font-size: min(1.5vw, 1.5rem) !important;
+        margin-bottom: min(9vw, 9rem) !important;
+        margin-left: min(0.4vw, 0.4rem) !important;
+    }
+
+    .ssr-py-sp {
+        margin-left: min(3vw, 3rem) !important;
+        margin-top: min(1vw, 1rem) !important;
+    }
+}
