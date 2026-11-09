@@ -451,7 +451,9 @@
 
                 &::before, &::after {
                     content: "";
+                    position: absolute;
                     inset: 0;
+                    display: block;
                 }
 
                 &::before {
@@ -527,7 +529,7 @@
                 }
             }
 
-            .bkb-body {
+            .bkb-content {
                 flex: 1;
                 border: 1px solid;
                 text-align: justify;
