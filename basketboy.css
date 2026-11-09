@@ -321,7 +321,7 @@
                 .bkb-info {
                     border-top: 1px solid;
                     border-bottom: 1px solid;
-                    padding: 1% 3%;
+                    padding: 6px 17px;
 
                     &:nth-child(1) { grid-column: span 2; }
                     &:nth-child(2) { border-top: 0; }
