@@ -19,28 +19,40 @@
 #FREEBIE-TRIAD { position: relative; }
 #FREEBIE-TRIAD * { box-sizing: border-box; }
 
-#FREEBIE-TRIAD a[href="https://toyhou.se/Pinky"] {
-    height: 12px;
+#FREEBIE-TRIAD > a:first-child[href="https://toyhou.se/Pinky"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px var(--triad-fonten);
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#FREEBIE-TRIAD a[href="https://toyhou.se/Pinky"] ~ div:first-child { position: relative; }
+#FREEBIE-TRIAD > a:first-child[href="https://toyhou.se/Pinky"] ~ div:first-child { position: relative; }
   
 #FREEBIE-TRIAD::after {
+    content: "";
     display: block;
+    height: 1rem;
+}
+
+#FREEBIE-TRIAD > a:first-child[href="https://toyhou.se/Pinky"]::after {
     content: "♥ PINKY";
-    font-family: var(--triad-fonten);
+    display: block;
     font-size: x-small;
-    color: gray !important;
-    width: fit-content;
-    margin: auto;
 }
   
-#FREEBIE-TRIAD:hover::after { content: "edit by zzzcode"; }
+#FREEBIE-TRIAD:hover > a:first-child[href="https://toyhou.se/Pinky"]::after { content: "©zzzcode_ edited"; }
 
 #FREEBIE-TRIAD h1 + br,
 #FREEBIE-TRIAD img + br,

@@ -18,28 +18,40 @@
 #PottedGreenhouse { position: relative; }
 #PottedGreenhouse * { box-sizing: border-box; }
 
-#PottedGreenhouse a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#PottedGreenhouse > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px sans-serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#PottedGreenhouse a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#PottedGreenhouse > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #PottedGreenhouse::after {
+    content: "";
     display: block;
+    height: 1rem;
+}
+
+#PottedGreenhouse > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
     content: "᯽";
-    font-family: sans-serif;
+    display: block;
     font-size: x-small;
-    color: gray !important;
-    width: 100%;
-    text-align: center;
 }
   
-#PottedGreenhouse:hover::after { content: "potted ᯽ greenhouse"; }
+#PottedGreenhouse:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after { content: "potted ᯽ greenhouse"; }
 
 #PottedGreenhouse details + br, #PottedGreenhouse summary + br, #PottedGreenhouse label + br { display: none; }
 #PottedGreenhouse summary { cursor: pointer; }

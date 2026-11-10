@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/raverist');
 @import url('https://fonts.cdnfonts.com/css/year-supply-of-fairy-cakes');
@@ -26,28 +27,45 @@
 #DontRush { position: relative; }
 #DontRush * { box-sizing: border-box; }
 
-#DontRush a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#DontRush > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'Google Sans Code', monospace;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#DontRush a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#DontRush > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #DontRush::after {
+    content: "";
     display: block;
-    content: "z";
-    font-family: 'Courier New', Courier, monospace;
-    font-size: x-small;
-    color: gray !important;
-    width: 100%;
-    text-align: center;
+    height: 1rem;
+}
+
+#DontRush > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "z_";
+    display: block;
 }
   
-#DontRush:hover::after { content: "zzzcode"; }
+#DontRush:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "©zzzcode_";
+    font: normal 400 x-small/12px 'Google Sans Code', monospace;
+    font-variant: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
 
 #DontRush {
     #dontrush-head.dntrsh-box {

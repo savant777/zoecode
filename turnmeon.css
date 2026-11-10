@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kalnia:wght@100..700&display=swap');
 
 :root {
@@ -14,28 +15,45 @@
 #TurnMeOn { position: relative; }
 #TurnMeOn * { box-sizing: border-box; }
 
-#TurnMeOn a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#TurnMeOn > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'Google Sans Code', monospace;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#TurnMeOn a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#TurnMeOn > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #TurnMeOn::after {
+    content: "";
     display: block;
-    content: "z";
-    font-family: 'Courier New', Courier, monospace;
-    font-size: x-small;
-    color: gray !important;
-    width: 100%;
-    text-align: center;
+    height: 1rem;
+}
+
+#TurnMeOn > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "z_";
+    display: block;
 }
   
-#TurnMeOn:hover::after { content: "zzzcode"; }
+#TurnMeOn:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "©zzzcode_";
+    font: normal 400 x-small/12px 'Google Sans Code', monospace;
+    font-variant: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
 
 #TurnMeOn {
     .tmo-box {

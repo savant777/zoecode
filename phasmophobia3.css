@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/october-crow');
 
@@ -17,42 +18,46 @@
 #Phasmo3 { position: relative; }
 #Phasmo3 * { box-sizing: border-box; }
 
-#Phasmo3 a[href="https://discord.com/users/625292873914515456/"] {
-    width: 100px;
-    height: 13px;
+#Phasmo3 > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'October Crow', sans-serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#Phasmo3 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#Phasmo3 > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #Phasmo3::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    margin-block-start: 4px;
+}
+
+#Phasmo3 > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
     content: "p";
-
-    width: max-content;
-    height: 13px;
-    margin: auto;
-    margin-top: 4px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    font-family: 'October Crow', sans-serif;
-    font-size: 13px;
-    line-height: 1;
-    color: gray !important;
+    display: block;
     text-transform: uppercase;
 }
   
-#Phasmo3:hover::after {
-    content: "made by zzzcode";
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: lowercase;
-    font-size: 11px;
+#Phasmo3:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "©zzzcode_";
+    font: normal 300 0.8em/12px 'Google Sans Code', monospace;
+    font-variant: normal;
+    letter-spacing: normal;
+    text-transform: none;
 }
 
 #Phasmo3 {

@@ -16,28 +16,40 @@
 #GoldenTicket { position: relative; }
 #GoldenTicket * { box-sizing: border-box; }
 
-#GoldenTicket a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#GoldenTicket > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'glimmer of light', sans-serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#GoldenTicket a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#GoldenTicket > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #GoldenTicket::after {
+    content: "";
     display: block;
+    height: 1rem;
+}
+
+#GoldenTicket > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
     content: "🎡";
-    font-family: 'glimmer of light', sans-serif;
+    display: block;
     font-size: x-small;
-    color: gray !important;
-    width: 100%;
-    text-align: center;
 }
   
-#GoldenTicket:hover::after { content: "Golden Ticket"; }
+#GoldenTicket:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after { content: "Golden Ticket"; }
 
 #GoldenTicket {
     #gdtk-thread.gdtk-box {

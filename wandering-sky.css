@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 @import url('https://fonts.cdnfonts.com/css/witches-friend-script');
 @import url('https://fonts.cdnfonts.com/css/magical-horison');
@@ -14,36 +15,46 @@
 #WanderingSky { position: relative; }
 #WanderingSky * { box-sizing: border-box; }
 
-#WanderingSky a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#WanderingSky > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'Sarabun', sans-serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#WanderingSky a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#WanderingSky > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #WanderingSky::after {
-    content: "☁︎";
-
-    width: fit-content;
-    height: 10px;
+    content: "";
+    display: block;
+    height: 1rem;
     margin-block-start: 4px;
-    margin-inline: auto;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    font-family: 'Sarabun', sans-serif;
-    font-size: 10px;
-    line-height: 1;
-    color: gray !important;
+#WanderingSky > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "☁︎";
+    display: block;
 }
   
-#WanderingSky:hover::after { content: "made by zzzcode"; }
+#WanderingSky:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "©zzzcode_";
+    font: normal 300 0.8em/12px 'Google Sans Code', monospace;
+    font-variant: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
 
 #WanderingSky {
     #wdrsky-role.wdrsky-box {

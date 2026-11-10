@@ -20,28 +20,39 @@
 #Apartment { position: relative; }
 #Apartment * { box-sizing: border-box; }
 
-#Apartment a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#Apartment > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'Rounded Elegance', sans-serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#Apartment a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
-  
+#Apartment > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+
 #Apartment::after {
+    content: "";
     display: block;
-    content: "✩";
-    font-family: 'Rounded Elegance', sans-serif;
-    font-size: x-small;
-    color: gray !important;
-    width: 100%;
-    text-align: center;
+    height: 1rem;
 }
-  
-#Apartment:hover::after { content: "© Early Birds Co."; }
+
+#Apartment > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "✩";
+    display: block;
+}
+
+#Apartment:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after { content: "© Early Birds Co."; }
 
 #Apartment {
     #apt-role.apt-box {
@@ -1208,19 +1219,18 @@
 #Apartment:has(#apt-banner) {
     width: 500px;
     margin: auto;
-    
-    a[href="https://discord.com/users/625292873914515456/"] {
-        height: 10px !important;
-        bottom: 0.25rem !important;
-        left: unset !important;
-        right: 4px !important;
-        width: 120px;
+
+    > a:first-child[href="https://discord.com/users/625292873914515456/"] {
+        bottom: 0.25rem;
+        right: 4px;
+        left: auto;
+        transform: none;
+        font-size: 9px;
     }
 
-    &::after { content: "" !important; }
-    &:hover::after { content: "" !important; }
+    &::after { display: none; }
 
-    &:hover #apt-banner::after { content: "© Early Birds Co."; }
+    #apt-banner::after { visibility: hidden; }
 }
 
 [data-group] input[data-npc="npc1"]:checked ~ .apt-npc-flex > .apt-npc-l > .apt-npc-list label.apt-npc[for^="npc1-"],

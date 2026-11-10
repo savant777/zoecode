@@ -14,28 +14,40 @@
 #WhisperOfTheShadow { position: relative; }
 #WhisperOfTheShadow * { box-sizing: border-box; }
 
-#WhisperOfTheShadow a[href="https://discord.com/users/625292873914515456/"] {
-    height: 13px;
+#WhisperOfTheShadow > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'Kanit', sans-serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#WhisperOfTheShadow a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#WhisperOfTheShadow > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #WhisperOfTheShadow::after {
+    content: "";
     display: block;
+    height: 1rem;
+}
+
+#WhisperOfTheShadow > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
     content: "✦";
-    font-family: 'Kanit', sans-serif;
+    display: block;
     font-size: 13px;
-    color: gray !important;
-    width: 100%;
-    text-align: center;
 }
   
-#WhisperOfTheShadow:hover::after { content: "Whisper of The Shadow"; }
+#WhisperOfTheShadow:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after { content: "Whisper of The Shadow"; }
 
 #WhisperOfTheShadow {
     #wots-role.wots-container {

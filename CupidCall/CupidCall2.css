@@ -79,38 +79,40 @@
 #CupidCall2 { position: relative; }
 #CupidCall2 * { box-sizing: border-box; }
 
-#CupidCall2 a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#CupidCall2 > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'Georgia', serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#CupidCall2 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#CupidCall2 > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #CupidCall2::after {
+    content: "";
+    display: block;
+    height: 1rem;
+}
+
+#CupidCall2 > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
     content: "♡";
-
-    width: 100%;
-    height: 13px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    font-family: 'Georgia', serif;
+    display: block;
     font-size: 13px;
-    line-height: 1;
-    color: gray !important;
 }
   
-#CupidCall2:hover::after {
-    content: "CupidCall";
-    font-style: italic;
-    font-size: 10px;
-}
+#CupidCall2:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after { content: "CupidCall"; font-size: 10px; font-style: italic; }
 
 #CupidCall2 {
     .cpc-head::after, ic[name="l"]::before, ic[name="r"]::before, ic[name="h"]::before, ic[name="x"]::before, .cpc-nav::before, .cpc-nav::after, .cpc-search::before, .cpc-pk-title::before, .cpc-pk-title::after, .cpc-mmr::before, .cpc-banner::before, .cpc-banner::after, .cpc-pic>a::before, .cpc-photo::before, .cpc-icon-1::before, .cpc-icon-1::after, .cpc-icon-2::before, .cpc-comment::before, .cpc-comment::after, ic[name="g"]::before, ic[name="hh"]::before, ic[name="st"]::before, .cpc-ps::before, .cpc-ps::after, .cpc-input::before, ic[name="sm"]::before, ic[name="lc"]::before, ic[name="fr"]::before, details.cpc-comment>summary::before, details.cpc-comment>summary::after, .cpc-reaching .cpc-icon::before, .cpc-match::before {

@@ -11,40 +11,43 @@
 #derusso2025 { position: relative; }
 #derusso2025 * { box-sizing: border-box; }
 
-#derusso2025 a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#derusso2025 > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'Libre Baskerville', serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#derusso2025 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#derusso2025 > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #derusso2025::after {
-    content: "☠︎︎";
-
-    width: 100%;
-    height: 13px;
+    content: "";
+    display: block;
+    height: 1rem;
     margin-block-start: 0.5rem;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    font-family: 'Libre Baskerville', serif;
+#derusso2025 > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "☠︎︎";
+    display: block;
     font-size: small;
     font-weight: 900;
-    line-height: 1;
     text-transform: uppercase;
-    color: gray !important;
 }
   
-#derusso2025:hover::after {
-    content: "The Derusso";
-    font-size: x-small;
-}
+#derusso2025:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after { content: "The Derusso"; font-size: x-small; }
 
 #derusso2025 {
     #derusso-role.derusso-box {

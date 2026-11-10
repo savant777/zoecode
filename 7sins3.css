@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=IM+Fell+English:ital@0;1&display=swap');
 @import url('https://fonts.cdnfonts.com/css/melostar');
 
@@ -14,51 +15,73 @@
 #SevenSin3 { position: relative; }
 #SevenSin3 * { box-sizing: border-box; }
 
-#SevenSin3 a[href="https://discord.com/users/625292873914515456/"] {
-    width: 100px;
-    height: 12px;
+#SevenSin3 > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-}
-
-#SevenSin3 a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
-  
-#SevenSin3::after {
-    content: "7 sins";
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
     font-family: 'IM Fell English', sans-serif;
     font-size: 0.85rem;
     line-height: 1;
     color: #fff !important;
     opacity: 0.3;
     text-align: end;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#SevenSin3 > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+
+#SevenSin3::after {
+    content: "";
     display: block;
-    margin: auto;
-    width: max-content;
+    height: 1rem;
     margin-top: 4px;
 }
-  
-#SevenSin3:hover::after { content: "made by zzzcode"; }
+
+#SevenSin3 > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "7 sins";
+    display: block;
+}
+
+#SevenSin3:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "©zzzcode_";
+    font: normal 300 0.6em/12px 'Google Sans Code', monospace;
+    font-variant: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
 
 #SevenSin3:has(#sin3-player) {
     width: 650px;
     max-width: 100%;
     margin: auto;
 
-    a[href="https://discord.com/users/625292873914515456/"] {
+    > a:first-child[href="https://discord.com/users/625292873914515456/"] {
         bottom: 2.5rem;
         right: 1rem;
-        left: unset;
-        transform: unset;
+        left: auto;
+        transform: none;
     }
 
-    &::after {
-        position: absolute;
-        bottom: 2.5rem;
-        right: 1rem;
+    > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+        height: 0.85rem;
+        line-height: 0.85rem;
     }
+
+    &:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+        font-size: 0.75em;
+        line-height: 0.85rem;
+    }
+
+    &::after { display: none; }
 }
 
 #SevenSin3:has(#sin3-banner) {
@@ -66,20 +89,20 @@
     max-width: 100%;
     margin: auto;
 
-    a[href="https://discord.com/users/625292873914515456/"] {
-        height: 8px;
+    > a:first-child[href="https://discord.com/users/625292873914515456/"] {
         bottom: 4px;
         right: 4px;
-        left: unset;
-        transform: unset;
+        left: auto;
+        transform: none;
+        font-size: 8px;
     }
 
-    &::after {
-        position: absolute;
-        right: 4px;
-        bottom: 4px;
-        font-size: 8px;
-    }  
+    &:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+        font-size: 6px;
+        line-height: 1;
+    }
+
+    &::after { display: none; }
 }
 
 #SevenSin3 {

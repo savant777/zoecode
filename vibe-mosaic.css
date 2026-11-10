@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 @import url('https://fonts.cdnfonts.com/css/azfar');
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
@@ -13,29 +14,46 @@
 #MosaicOfMe { position: relative; }
 #MosaicOfMe * { box-sizing: border-box; }
 
-#MosaicOfMe a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#MosaicOfMe > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px Georgia, serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#MosaicOfMe a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#MosaicOfMe > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #MosaicOfMe::after {
+    content: "";
     display: block;
+    height: 1rem;
+}
+
+#MosaicOfMe > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
     content: "vibe journey";
-    font-family: Georgia, serif;
-    font-size: x-small;
+    display: block;
     font-style: italic;
-    color: gray !important;
-    width: 100%;
-    text-align: center;
 }
   
-#MosaicOfMe:hover::after { content: "made by zzzcode"; }
+#MosaicOfMe:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "©zzzcode_";
+    font: normal 300 0.8em/12px 'Google Sans Code', monospace;
+    font-variant: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
 
 #MosaicOfMe {
     #Mosaic-Vibe.mosaic-box {

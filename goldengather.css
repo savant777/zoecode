@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/varuna');
 
@@ -22,38 +23,46 @@
 #GoldenGather { position: relative; }
 #GoldenGather * { box-sizing: border-box; }
 
-#GoldenGather a[href="https://discord.com/users/625292873914515456/"] {
-    height: 12px;
+#GoldenGather > a:first-child[href="https://discord.com/users/625292873914515456/"] {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: max-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: normal normal x-small/12px 'Georgia', serif;
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: gray !important;
+    text-decoration: none;
 }
 
-#GoldenGather a[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
+#GoldenGather > a:first-child[href="https://discord.com/users/625292873914515456/"] ~ div:first-child { position: relative; }
   
 #GoldenGather::after {
-    content: "🍂";
-
-    width: 100%;
-    height: 13px;
+    content: "";
+    display: block;
+    height: 1rem;
     margin-block-start: 0.5rem;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    font-family: 'Georgia', serif;
-    font-size: 13px;
-    line-height: 1;
-    color: gray !important;
+#GoldenGather > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "🍂";
+    display: block;
     font-style: italic;
 }
   
-#GoldenGather:hover::after {
-    content: "made by zzzcode";
-    font-style: normal;
+#GoldenGather:hover > a:first-child[href="https://discord.com/users/625292873914515456/"]::after {
+    content: "©zzzcode_";
+    font: normal 300 0.8em/12px 'Google Sans Code', monospace;
+    font-variant: normal;
+    letter-spacing: normal;
+    text-transform: none;
 }
 
 #GoldenGather {
