@@ -4,6 +4,7 @@
 :root {
     --srrreg-main-color: #000;
     --srrreg-hover: #000;
+    --srrreg-txt-hover: #131313;
     --srrreg-topic-bd: var(--srrreg-main-color);
     --srrreg-pic: #000;
     --srrreg-fpic: url(https://i.imgur.com/RZopSYy.png);
@@ -100,6 +101,7 @@
 
 .srrregbutton:hover {
     background: var(--srrreg-hover);
+    color: var(--srrreg-txt-hover) !important;
 }
 
 .srrregdivide {
